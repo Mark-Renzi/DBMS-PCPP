@@ -22,15 +22,13 @@ cpuBench = cpuBench.rename(columns={'cpuMark': 'CPUMark', 'threadMark': 'ThreadM
 
 benchmarksCPU = pd.DataFrame(columns=['BenchmarkID', 'ChipsetID', 'Type', 'Score'])
 
-benchmark_ids = [str(uuid.uuid4()) for _ in range(len(cpuBench.index) * 2)]
-
 # Iterate through cpuBench and create entries for CPUMark and ThreadMark
 for index, row in cpuBench.iterrows():
     chipset_id = row['ChipsetID']
     
     # Entry for CPUMark
     cpumark_entry = {
-        'BenchmarkID': benchmark_ids.pop(0),
+        'BenchmarkID': str(uuid.uuid4()),
         'ChipsetID': chipset_id,
         'Type': 'CPUMark',
         'Score': row['CPUMark']
@@ -38,7 +36,7 @@ for index, row in cpuBench.iterrows():
     
     # Entry for ThreadMark
     threadmark_entry = {
-        'BenchmarkID': benchmark_ids.pop(0),
+        'BenchmarkID': str(uuid.uuid4()),
         'ChipsetID': chipset_id,
         'Type': 'ThreadMark',
         'Score': row['ThreadMark']
@@ -48,6 +46,52 @@ for index, row in cpuBench.iterrows():
     benchmarksCPU = benchmarksCPU._append(cpumark_entry, ignore_index=True)
     benchmarksCPU = benchmarksCPU._append(threadmark_entry, ignore_index=True)
 
-benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/processed-data/CPUBenchmarks.csv', index=False)
+# benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/processed-data/CPUBenchmarks.csv', index=False)
 
+
+
+
+
+
+
+cpuBenchR = pd.read_csv('data/benchmarks/CPU_r23_v2.csv')
+chipsets = pd.read_csv('data/processed-data/Chipset.csv')
+
+cpuBenchR['cpuName'] = cpuBenchR['cpuName'].str.replace(r'i([3|5|7|9])', r'i\1-', regex=True)
+cpuBenchR['cpuName'] = cpuBenchR['cpuName'].str.replace('- ', '-', regex=True)
+cpuBenchR = cpuBenchR.merge(chipsets[['Name', 'ChipsetID']], left_on='cpuName', right_on='Name', how='inner')
+cpuBenchR = cpuBenchR.drop(columns=['Name'])
+
+cpuBenchR = cpuBenchR.rename(columns={'singleScore': 'R23SingleScore', 'multiScore': 'R23MultiScore'})
+
+# Iterate through cpuBenchR and create entries for singleScore and multiScore
+for index, row in cpuBenchR.iterrows():
+    chipset_id = row['ChipsetID']
+    
+    # Entry for singleScore
+    single_score_entry = {
+        'BenchmarkID': str(uuid.uuid4()),
+        'ChipsetID': chipset_id,
+        'Type': 'R23SingleScore',
+        'Score': row['R23SingleScore']
+    }
+    
+    # Append the singleScore entry to the benchmarksCPU DataFrame
+    benchmarksCPU = benchmarksCPU._append(single_score_entry, ignore_index=True)
+    
+    # Entry for multiScore
+    multi_score_entry = {
+        'BenchmarkID': str(uuid.uuid4()),
+        'ChipsetID': chipset_id,
+        'Type': 'R23MultiScore',
+        'Score': row['R23MultiScore']
+    }
+    
+    # Append the multiScore entry to the benchmarksCPU DataFrame
+    benchmarksCPU = benchmarksCPU._append(multi_score_entry, ignore_index=True)
+
+# Print the resulting DataFrame
 print(benchmarksCPU)
+
+# Save the DataFrame to a CSV file
+benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/processed-data/CPUBenchmarks.csv', index=False)
