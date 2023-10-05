@@ -165,3 +165,70 @@ psu[['PartID', 'FormFactor', 'Efficiency', 'Wattage', 'Modular', 'Color']].to_cs
 case[['PartID', 'FormFactor', 'StorageBays', 'Color', 'SidePanel', 'Size', 'PSU']].to_csv('data/processed-data/Case.csv', index=False)
 cpucooler[['PartID', 'Size', 'Color', 'RPM_Min', 'RPM_Max', 'NoiseLevel_Min', 'NoiseLevel_Max']].to_csv('data/processed-data/CPUCooler.csv', index=False)
 chipset[['ChipsetID', 'Name']].to_csv('data/processed-data/Chipset.csv', index=False)
+
+# Read the benchmark files
+# cpuBench = pd.read_csv('data/benchmarks/CPU_benchmark_v4.csv')
+# cpuCineBench = pd.read_csv('data/benchmarks/CPU_r23_v2.csv')
+# cpuPassMarkLowEnd = pd.read_csv('data/benchmarks/LowEnd-2023-10-5-cpu.csv')
+# cpuPassMarkLowMid = pd.read_csv('data/benchmarks/LowMid-2023-10-5-cpu.csv')
+# cpuPassMarkMidHigh = pd.read_csv('data/benchmarks/MidHigh-2023-10-5-cpu.csv')
+# cpuPassMarkHighEnd = pd.read_csv('data/benchmarks/HighEnd-2023-10-5-cpu.csv')
+gpuBench = pd.read_csv('data/benchmarks/GPU_benchmarks_v7.csv')
+gpuGraphicsAPI = pd.read_csv('data/benchmarks/GPU_scores_graphicsAPIs.csv')
+gpuPassMarkLowEnd = pd.read_csv('data/benchmarks/LowEnd-2023-10-5-gpu.csv')
+gpuPassMarkLowMid = pd.read_csv('data/benchmarks/LowMid-2023-10-5-gpu.csv')
+gpuPassMarkMidHigh = pd.read_csv('data/benchmarks/MidHigh-2023-10-5-gpu.csv')
+gpuPassMarkHighEnd = pd.read_csv('data/benchmarks/HighEnd-2023-10-5-gpu.csv')
+
+# make a benchmarks table that holds a unique benchmarkID (uuid), a chipsetID, a type (CPUMark, ThreadMark, etc.), and a score
+benchmarks = pd.DataFrame(columns=['BenchmarkID', 'ChipsetID', 'Type', 'Score'])
+
+# import each benchmark from each of the benchmark dataframes into the benchmarks table
+# For gpuBench
+for index, row in gpuBench.iterrows():
+    matching_chipset = chipset[chipset['Name'] == row['gpuName']]
+    if not matching_chipset.empty:
+        chipset_id = matching_chipset['ChipsetID'].values[0]
+        benchmarks = benchmarks.append({
+            'BenchmarkID': uuid.uuid4(),
+            'ChipsetID': chipset_id,
+            'Type': 'G3Dmark',
+            'Score': row['G3Dmark']
+        }, ignore_index=True)
+        benchmarks = benchmarks.append({
+            'BenchmarkID': uuid.uuid4(),
+            'ChipsetID': chipset_id,
+            'Type': 'G2Dmark',
+            'Score': row['G2Dmark']
+        }, ignore_index=True)
+
+# For gpuGraphicsAPI
+for index, row in gpuGraphicsAPI.iterrows():
+    matching_chipset = chipset[chipset['Name'] == row['Device']]
+    if not matching_chipset.empty:
+        chipset_id = matching_chipset['ChipsetID'].values[0]
+        for api_type in ['CUDA', 'Metal', 'OpenCL', 'Vulkan']:
+            benchmarks = benchmarks.append({
+                'BenchmarkID': uuid.uuid4(),
+                'ChipsetID': chipset_id,
+                'Type': api_type,
+                'Score': row[api_type]
+            }, ignore_index=True)
+
+# For PassMark files
+passmark_files = [gpuPassMarkLowEnd, gpuPassMarkLowMid, gpuPassMarkMidHigh, gpuPassMarkHighEnd]
+for file in passmark_files:
+    for index, row in file.iterrows():
+        matching_chipset = chipset[chipset['Name'] == row[1]]
+        if not matching_chipset.empty:
+            chipset_id = matching_chipset['ChipsetID'].values[0]
+            benchmarks = benchmarks.append({
+                'BenchmarkID': uuid.uuid4(),
+                'ChipsetID': chipset_id,
+                'Type': 'PassMark',
+                'Score': row[2]
+            }, ignore_index=True)
+
+print(benchmarks)
+
+benchmarks.to_csv('data/processed-data/Benchmark.csv', index=False)
