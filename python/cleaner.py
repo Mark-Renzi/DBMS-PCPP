@@ -34,7 +34,27 @@ print(gpu)
 
 part = part.append(gpu[['id', 'price', 'manufacturer', 'model']])
 
-gpu = gpu.rename(columns={'id': 'PartID', 'core_clock': 'CoreClock', 'boost_clock': 'BoostClock', 'memory': 'Memory', 'chipset': 'Chipset', 'length': 'Length', 'color': 'Color'})
+# make a new table called chipset that holds an integer value (chipsetID) for each chipset, and a string value (name) for each chipset like a dictionary
+chipset = pd.DataFrame(columns=['chipsetID', 'name'])
+chipset['name'] = gpu['chipset'].unique()
+chipset['chipsetID'] = range(1, len(chipset.index) + 1)
+
+# merge the chipset table with the gpu table to get the chipsetID for each gpu
+gpu = gpu.merge(chipset, left_on='chipset', right_on='name', how='left')
+
+gpu = gpu.rename(columns={'id': 'PartID', 'core_clock': 'CoreClock', 'boost_clock': 'BoostClock', 'memory': 'Memory', 'chipset': 'Chipset', 'length': 'Length', 'color': 'Color', 'chipsetID': 'ChipsetID'})
+
+# add unique cpu models to the chipset table
+unique_cpu_models = pd.DataFrame({'name': cpu['model'].unique()})
+chipset = chipset.append(unique_cpu_models, ignore_index=True)
+chipset['chipsetID'] = range(1, len(chipset.index) + 1)
+
+# merge the chipset table with the cpu table to get the chipsetID for each cpu
+cpu = cpu.merge(chipset, left_on='model', right_on='name', how='left')
+
+cpu = cpu.rename(columns={'id': 'PartID', 'core_count': 'Cores', 'boost_clock': 'BoostClock', 'core_clock': 'CoreClock', 'graphics': 'Graphics', 'smt': 'SMT', 'tdp': 'TDP', 'chipsetID': 'ChipsetID'})
+
+chipset = chipset.rename(columns={'chipsetID': 'ChipsetID', 'name': 'Name'})
 
 motherboard = pd.read_json('data/pcpartpicker/motherboard.json')
 motherboard['id'] = [uuid.uuid4() for _ in range(len(motherboard.index))]
@@ -144,3 +164,4 @@ storage[['PartID', 'PricePerGB', 'Capacity', 'FormFactor', 'Interface', 'Cache',
 psu[['PartID', 'FormFactor', 'Efficiency', 'Wattage', 'Modular', 'Color']].to_csv('data/processed-data/PSU.csv', index=False)
 case[['PartID', 'FormFactor', 'StorageBays', 'Color', 'SidePanel', 'Size', 'PSU']].to_csv('data/processed-data/Case.csv', index=False)
 cpucooler[['PartID', 'Size', 'Color', 'RPM_Min', 'RPM_Max', 'NoiseLevel_Min', 'NoiseLevel_Max']].to_csv('data/processed-data/CPUCooler.csv', index=False)
+chipset[['ChipsetID', 'Name']].to_csv('data/processed-data/Chipset.csv', index=False)
