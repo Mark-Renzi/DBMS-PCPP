@@ -6,6 +6,8 @@ import re
 import numpy as np
 import uuid
 
+##############################V4
+
 cpuBench = pd.read_csv('data/benchmarks/CPU_benchmark_v4.csv')
 chipsets = pd.read_csv('data/processed-data/Chipset.csv')
 
@@ -52,7 +54,7 @@ for index, row in cpuBench.iterrows():
 
 
 
-
+##############################R23
 
 cpuBenchR = pd.read_csv('data/benchmarks/CPU_r23_v2.csv')
 chipsets = pd.read_csv('data/processed-data/Chipset.csv')
@@ -94,4 +96,41 @@ for index, row in cpuBenchR.iterrows():
 print(benchmarksCPU)
 
 # Save the DataFrame to a CSV file
+# benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/benchmarks/CPUBenchmarks.csv', index=False)
+
+
+##############################PassMark
+
+cpuBenchP1 = pd.read_csv('data/benchmarks/HighEnd-2023-10-5-cpu.csv')
+cpuBenchP2 = pd.read_csv('data/benchmarks/LowEnd-2023-10-5-cpu.csv')
+cpuBenchP3 = pd.read_csv('data/benchmarks/LowMid-2023-10-5-cpu.csv')
+cpuBenchP4 = pd.read_csv('data/benchmarks/MidHigh-2023-10-5-cpu.csv')
+cpuBenchP = pd.concat([cpuBenchP1, cpuBenchP2, cpuBenchP3, cpuBenchP4], ignore_index=True)
+chipsets = pd.read_csv('data/processed-data/Chipset.csv')
+
+splitname = cpuBenchP['cpuName'].str.split(' ', n=1, expand=True)
+cpuBenchP['manufacturer'] = splitname[0]
+cpuBenchP['model'] = splitname[1]
+
+cpuBenchP = cpuBenchP.merge(chipsets[['Name', 'ChipsetID']], left_on='model', right_on='Name', how='inner')
+cpuBenchP = cpuBenchP.drop(columns=['Name'])
+
+
+# Iterate through cpuBenchR and create entries for singleScore and multiScore
+for index, row in cpuBenchP.iterrows():
+    chipset_id = row['ChipsetID']
+    
+    # Entry for singleScore
+    single_score_entry = {
+        'BenchmarkID': str(uuid.uuid4()),
+        'ChipsetID': chipset_id,
+        'Type': 'PassMark',
+        'Score': row['PassMark']
+    }
+    
+    # Append the singleScore entry to the benchmarksCPU DataFrame
+    benchmarksCPU = benchmarksCPU._append(single_score_entry, ignore_index=True)
+
+
 benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/benchmarks/CPUBenchmarks.csv', index=False)
+print(benchmarksCPU)
