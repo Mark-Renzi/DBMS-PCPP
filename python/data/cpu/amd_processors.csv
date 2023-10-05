@@ -8,18 +8,18 @@ id,cores,threads,name,launch_date,lithography,base_frequency,turbo_frequency,cac
 7,12,24,AMD Ryzen 9 3900XT,7/2020,7,3800,4700,,6144,65536,105,AMD Ryzen 9 Desktop Processors,,DDR4,https://www.amd.com/en/product/9931,Boxed Processor,95,3200,9931
 8,8,16,AMD Ryzen 7 3800XT,7/2020,7,3900,4700,,4096,32768,105,AMD Ryzen 7 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/9941,Boxed Processor,95,3200,9941
 9,6,12,AMD Ryzen 5 3600XT,7/2020,7,3800,4500,,3072,32768,95,AMD Ryzen 5 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/9936,Boxed Processor,95,3200,9936
-10,64,128,AMD Ryzen Threadripper PRO 3995WX,7/14/2020,7,2700,4200,4096,32768,262144,280,AMD Ryzen Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10181,Desktop,90,3200,10181
-11,32,64,AMD Ryzen Threadripper PRO 3975WX,7/14/2020,7,3500,4200,2048,16384,131072,280,AMD Ryzen Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10176,Desktop,90,3200,10176
-12,16,32,AMD Ryzen Threadripper PRO 3955WX,7/14/2020,7,3900,4300,1024,8192,65536,280,AMD Ryzen Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10186,Desktop,90,3200,10186
-13,12,24,AMD Ryzen Threadripper PRO 3945WX,7/14/2020,7,4000,4300,768,6144,65536,280,AMD Ryzen Threadripper PRO Processors,,DDR4,https://www.amd.com/en/product/10191,Desktop,90,3200,10191
-14,64,128,AMD Ryzen Threadripper 3990X,2/7/2020,7,2900,4300,4096,32768,262144,280,AMD Ryzen Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/9111,Boxed Processor,95,3200,9111
+10,64,128,AMD Threadripper PRO 3995WX,7/14/2020,7,2700,4200,4096,32768,262144,280,AMD Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10181,Desktop,90,3200,10181
+11,32,64,AMD Threadripper PRO 3975WX,7/14/2020,7,3500,4200,2048,16384,131072,280,AMD Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10176,Desktop,90,3200,10176
+12,16,32,AMD Threadripper PRO 3955WX,7/14/2020,7,3900,4300,1024,8192,65536,280,AMD Threadripper PRO Processors,sWRX8,DDR4,https://www.amd.com/en/product/10186,Desktop,90,3200,10186
+13,12,24,AMD Threadripper PRO 3945WX,7/14/2020,7,4000,4300,768,6144,65536,280,AMD Threadripper PRO Processors,,DDR4,https://www.amd.com/en/product/10191,Desktop,90,3200,10191
+14,64,128,AMD Threadripper 3990X,2/7/2020,7,2900,4300,4096,32768,262144,280,AMD Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/9111,Boxed Processor,95,3200,9111
 15,8,16,AMD Ryzen 9 5980HX,1/12/2021,7,3300,4800,,4096,16384,45,AMD Ryzen 9 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10801,Laptop,105,,10801
 16,8,16,AMD Ryzen 9 5980HS,1/12/2021,7,3000,4800,,4096,16384,35,AMD Ryzen 9 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10806,Laptop,105,,10806
-17,32,64,AMD Ryzen Threadripper 3970X,11/25/2019,7,3700,4500,2048,16384,131072,280,AMD Ryzen Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/8941,Boxed Processor,95,3200,8941
+17,32,64,AMD Threadripper 3970X,11/25/2019,7,3700,4500,2048,16384,131072,280,AMD Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/8941,Boxed Processor,95,3200,8941
 18,8,16,AMD Ryzen 9 5900HX,1/12/2021,7,3300,4600,,4096,16384,45,AMD Ryzen 9 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10811,Laptop,105,,10811
 19,8,16,AMD Ryzen 9 5900HS,1/12/2021,7,3000,4600,8,4096,16384,35,AMD Ryzen 9 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10816,Laptop,105,,10816
 20,8,16,AMD Ryzen 7 5800H,1/12/2021,7,3200,4400,,4096,16384,45,AMD Ryzen 7 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10821,Laptop,105,,10821
-21,24,48,AMD Ryzen Threadripper 3960X,11/25/2019,7,3800,4500,1536,12288,131072,280,AMD Ryzen Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/8946,Boxed Processor,95,3200,8946
+21,24,48,AMD Threadripper 3960X,11/25/2019,7,3800,4500,1536,12288,131072,280,AMD Threadripper Processors,sTRX4,DDR4,https://www.amd.com/en/product/8946,Boxed Processor,95,3200,8946
 22,8,16,AMD Ryzen 7 5800HS,1/12/2021,7,2800,4400,,4096,16384,35,AMD Ryzen 7 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10826,Laptop,105,,10826
 23,6,12,AMD Ryzen 5 5600H,1/12/2021,7,3300,4200,,3072,16384,45,AMD Ryzen 5 Mobile Processors with Radeon Graphics,FP6,"DDR4 - Up to 3200MHz, LPDDR4 - Up to 4266MHz",https://www.amd.com/en/product/10831,Laptop,105,,10831
 24,16,32,AMD Ryzen 9 3950X,,7,3500,4700,1024,8192,65536,105,AMD Ryzen 9 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/8486,Boxed Processor,,3200,8486
@@ -95,10 +95,10 @@ id,cores,threads,name,launch_date,lithography,base_frequency,turbo_frequency,cac
 94,2,4,AMD 3015e,7/6/2020,14,1200,2300,,1024,4096,6,AMD 3000 Series Mobile Processors with Radeon Graphics,FT5,DDR4,https://www.amd.com/en/product/10166,Laptop,105,1600,10166
 95,2,4,AMD Athlon Silver 3050GE (OEM Only),7/21/2020,14,3400,3400,192,1024,4096,35,AMD Athlon 3000 G-Series Desktop Processors with Radeon Graphics,AM4,DDR4,https://www.amd.com/en/product/10236,Desktop,95,2667,10236
 96,2,4,AMD 3015Ce,4/29/2021,14,1200,2300,,1024,4096,6,AMD 3000 Series Mobile Processors with Radeon Graphics,FT5,DDR4,https://www.amd.com/en/product/11201,Laptop,105,1600,11201
-97,32,64,AMD Ryzen Threadripper 2990WX,8/13/2018,12,3000,4200,3072,16384,65536,250,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7921,Boxed Processor,68,2933,7921
-98,24,48,AMD Ryzen Threadripper 2970WX,10/18,12,3000,4200,2304,12288,65536,250,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7936,Boxed Processor,68,2933,7936
-99,16,32,AMD Ryzen Threadripper 2950X,8/31/2018,12,3500,4400,1536,8192,32768,180,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7926,Boxed Processor,68,2933,7926
-100,12,24,AMD Ryzen Threadripper 2920X,10/18,12,3500,4300,1152,6144,32768,180,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7941,Boxed Processor,68,2933,7941
+97,32,64,AMD Threadripper 2990WX,8/13/2018,12,3000,4200,3072,16384,65536,250,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7921,Boxed Processor,68,2933,7921
+98,24,48,AMD Threadripper 2970WX,10/18,12,3000,4200,2304,12288,65536,250,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7936,Boxed Processor,68,2933,7936
+99,16,32,AMD Threadripper 2950X,8/31/2018,12,3500,4400,1536,8192,32768,180,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7926,Boxed Processor,68,2933,7926
+100,12,24,AMD Threadripper 2920X,10/18,12,3500,4300,1152,6144,32768,180,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/7941,Boxed Processor,68,2933,7941
 101,8,16,AMD Ryzen 7 2700X,04/19/2018,12,3700,4300,768,4096,16384,105,AMD Ryzen 7 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/7656,Boxed Processor,85,2933,7656
 102,8,16,AMD Ryzen 7 2700,04/19/2018,12,3200,4100,768,4096,16384,65,AMD Ryzen 7 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/7661,Boxed Processor,95,2933,7661
 103,8,16,AMD Ryzen 7 2700E Processor,September 2018,12,2800,4000,768,4096,16384,45,AMD Ryzen 7 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/8266,Desktop,95,2667,8266
@@ -117,9 +117,9 @@ id,cores,threads,name,launch_date,lithography,base_frequency,turbo_frequency,cac
 116,4,8,AMD Ryzen 5 2500U,10/26/2017,14,2000,3600,384,2048,4096,15,AMD Ryzen 5 Mobile Processors with Radeon Vega Graphics,FP5,DDR4,https://www.amd.com/en/product/5311,Laptop,95,2400,5311
 117,4,4,AMD Ryzen 3 2300U,1/8/2018,14,2000,3400,384,2048,4096,15,AMD Ryzen 3 Mobile Processors with Radeon Vega Graphics,FP5,DDR4,https://www.amd.com/en/product/7236,Laptop,95,2400,7236
 118,2,4,AMD Ryzen 3 2200U,1/8/2018,14,2500,3400,384,1024,4096,15,AMD Ryzen 3 Mobile Processors with Radeon Vega Graphics,FP5,DDR4,https://www.amd.com/en/product/7231,Laptop,95,2400,7231
-119,16,32,AMD Ryzen Threadripper 1950X,7/31/2017,14,3400,4000,1536,8192,32768,180,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/2066,Boxed Processor,68,2667,2066
-120,12,24,AMD Ryzen Threadripper 1920X,7/31/2017,14,3500,4000,1152,6144,32768,180,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/2061,Boxed Processor,68,2667,2061
-121,8,16,AMD Ryzen Threadripper 1900X,8/31/2017,14,3800,4000,768,4096,16384,180,AMD Ryzen Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/3011,Boxed Processor,68,2667,3011
+119,16,32,AMD Threadripper 1950X,7/31/2017,14,3400,4000,1536,8192,32768,180,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/2066,Boxed Processor,68,2667,2066
+120,12,24,AMD Threadripper 1920X,7/31/2017,14,3500,4000,1152,6144,32768,180,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/2061,Boxed Processor,68,2667,2061
+121,8,16,AMD Threadripper 1900X,8/31/2017,14,3800,4000,768,4096,16384,180,AMD Threadripper Processors,sTR4,DDR4,https://www.amd.com/en/product/3011,Boxed Processor,68,2667,3011
 122,8,16,AMD Ryzen 7 1800X,3/2/2017,14,3600,4000,768,4096,16384,95,AMD Ryzen 7 Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/1221,Boxed Processor,95,2667,1221
 123,6,12,AMD Ryzen 5 PRO 5650G,6/1/2021,7,3900,4400,,3072,16384,65,AMD Ryzen 5 PRO 5000 Series Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/11241,Desktop,95,3200,11241
 124,6,12,AMD Ryzen 5 PRO 5650GE,6/1/2021,7,3400,4400,,3072,16384,35,AMD Ryzen 5 PRO 5000 Series Desktop Processors,AM4,DDR4,https://www.amd.com/en/product/11236,Desktop,95,3200,11236

@@ -254,7 +254,6 @@ for index, row in cpuBench.iterrows():
 for index, row in cpuBench.iterrows():
     matching_chipset = chipset[chipset['Name'] == row['model']]
     if not matching_chipset.empty:
-        print(matching_chipset)
         chipset_id = matching_chipset['ChipsetID'].values[0]
         cpu.loc[cpu['ChipsetID'] == chipset_id, 'Socket'] = row['socket']
 
@@ -262,10 +261,39 @@ for index, row in cpuBench.iterrows():
 for index, row in gpuBench.iterrows():
     matching_chipset = chipset[chipset['Name'] == row['gpuName']]
     if not matching_chipset.empty:
-        print(matching_chipset)
         chipset_id = matching_chipset['ChipsetID'].values[0]
         gpu.loc[gpu['ChipsetID'] == chipset_id, 'TDP'] = row['TDP']
 
+
+# import CPU info
+intelcpus = pd.read_csv('data/cpu/intel_processors.csv')
+amdcpus = pd.read_csv('data/cpu/amd_processors.csv')
+
+for index, row in intelcpus.iterrows():
+    splitname = intelcpus['name'].str.split(' ', n=1, expand=True)
+    intelcpus['manufacturer'] = splitname[0]
+    intelcpus['model'] = splitname[1]
+
+for index, row in amdcpus.iterrows():
+    splitname = amdcpus['name'].str.split(' ', n=1, expand=True)
+    amdcpus['manufacturer'] = splitname[0]
+    amdcpus['model'] = splitname[1]
+
+# For intelcpus
+for index, row in intelcpus.iterrows():
+    matching_chipset = chipset[chipset['Name'] == row['model']]
+    if not matching_chipset.empty:
+        print(matching_chipset)
+        chipset_id = matching_chipset['ChipsetID'].values[0]
+        cpu.loc[cpu['ChipsetID'] == chipset_id, 'Socket'] = row['socket']
+
+# For amdcpus
+for index, row in amdcpus.iterrows():
+    matching_chipset = chipset[chipset['Name'] == row['model']]
+    if not matching_chipset.empty:
+        print(matching_chipset)
+        chipset_id = matching_chipset['ChipsetID'].values[0]
+        cpu.loc[cpu['ChipsetID'] == chipset_id, 'Socket'] = row['socket']
 
 # re-export gpu and cpu tables
 cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP', 'Socket']].to_csv('data/processed-data/CPU.csv', index=False)
