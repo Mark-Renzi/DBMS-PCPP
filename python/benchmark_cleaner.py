@@ -94,4 +94,4 @@ for index, row in cpuBenchR.iterrows():
 print(benchmarksCPU)
 
 # Save the DataFrame to a CSV file
-benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/processed-data/CPUBenchmarks.csv', index=False)
+benchmarksCPU[['BenchmarkID', 'ChipsetID', 'Type', 'Score']].to_csv('data/benchmarks/CPUBenchmarks.csv', index=False)
