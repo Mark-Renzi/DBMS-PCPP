@@ -6,7 +6,7 @@ import re
 import numpy as np
 import uuid
 
-##############################V4
+# V4
 
 cpuBench = pd.read_csv('data/benchmarks/CPU_benchmark_v4.csv')
 chipsets = pd.read_csv('data/processed-data/Chipset.csv')
@@ -39,7 +39,7 @@ for index, row in cpuBench.iterrows():
     benchmarksCPU = benchmarksCPU._append(cpumark_entry, ignore_index=True)
     benchmarksCPU = benchmarksCPU._append(threadmark_entry, ignore_index=True)
 
-##############################R23
+# R23
 
 cpuBenchR = pd.read_csv('data/benchmarks/CPU_r23_v2.csv')
 chipsets = pd.read_csv('data/processed-data/Chipset.csv')
@@ -71,7 +71,7 @@ for index, row in cpuBenchR.iterrows():
     
     benchmarksCPU = benchmarksCPU._append(multi_score_entry, ignore_index=True)
 
-##############################PassMark
+# PassMark
 
 cpuBenchP1 = pd.read_csv('data/benchmarks/HighEnd-2023-10-5-cpu.csv')
 cpuBenchP2 = pd.read_csv('data/benchmarks/LowEnd-2023-10-5-cpu.csv')
