@@ -1,707 +1,707 @@
 PartID,Socket,FormFactor,MaxMemory,MemorySlots,Color
-69483e83-c484-4dd7-b066-8ba390b1fe98,AM4,0,128,4,Black / Silver
-d9a32036-d55e-4365-88ee-e784be6c4511,AM5,0,192,4,Black / Silver
-cf39be8c-ee27-45f2-ac46-8205aa51e29d,AM4,0,128,4,Black / Silver
-1f96edc4-2cc9-4012-a4f5-43ba3d349914,AM4,0,128,4,Black
-e3356e28-3efa-4457-9bc3-0db5b8309e6b,LGA1700,0,192,4,Black
-c7ea75c5-2285-4235-ae08-e648da5dc314,AM4,1,128,4,Black
-2cd82c3f-312b-43d5-949f-dec62d6c4cb4,AM5,0,192,4,Black
-229ee459-b043-43e1-bb4d-272bd596faf6,LGA1700,0,192,4,Black
-ca012a8a-9aa2-429e-a382-07758df5328f,AM4,1,128,4,
-0828af25-681d-4142-acc7-8a3fa0cf6d9d,AM4,0,128,4,Black / Red
-e7a1debd-f5bb-464d-8941-e3452deebb6f,AM5,0,192,4,Black / Gray
-3bd492a5-37c0-4f74-a9dd-e10b4990f5a0,LGA1700,0,128,4,Black / Silver
-02220763-3c77-4e10-8c83-8f898aa097f7,LGA1700,1,128,4,Gray / Black
-d4d05983-ad7c-4922-8337-3cdaba4f530a,AM4,0,128,4,Black / White
-749ec2b9-2d5c-42b2-8c8e-0447c7ea0420,LGA1700,0,128,4,Black
-7619498b-2cd8-4378-ab12-0847f59dca95,AM5,1,192,4,Black
-e6207508-3755-4902-be6f-35c013faa2fa,AM4,1,64,4,Black / Silver
-f10ace78-2a49-4092-a7d5-f6a2d444cf08,AM4,0,128,4,Black / Gold
-bb760de1-88bf-4be6-92c6-2851e5581780,AM4,0,128,4,Black / Gray
-7df1d504-3021-4591-ad16-6a8d67a3b0b7,AM5,0,192,4,Black
-626fcd15-479c-4a20-a80d-1b12e6d5afaa,AM5,1,192,4,Black / Silver
-908e62d5-32a0-4bcd-8c32-990ad1237a04,LGA1700,0,192,4,Black / Silver
-d42cbb73-6e3c-420d-80b0-6ff6ec124d66,LGA1700,0,192,4,Black
-02021e77-645e-4d06-834b-1c91f8ebb84d,AM4,1,128,4,Black / Gold
-75d06c82-1af7-42f5-b867-3f79aae67367,AM5,0,192,4,Black
-727e07f5-644b-495c-b408-d343ef4e7bf8,AM5,0,192,4,Black / Silver
-968d065c-3207-4152-8d4a-103dee183207,AM4,1,128,4,Black
-34665941-a201-48fb-a8e9-77f025577ee2,AM4,1,128,4,Silver / Black
-b90d48b5-2209-4979-af0c-1dd206c9262d,LGA1700,2,96,2,Black
-dfd6f91e-3f0f-4d91-ae6d-929d2b045017,AM4,0,128,4,Silver / Black
-34dc6f00-2c06-4f12-9d0d-e3acfe9f0a00,AM5,2,96,2,Black / Silver
-e2868352-79b2-4bb5-9b15-0b3592b3e26c,LGA1700,0,192,4,Black / Gray
-d7e17a8a-8f30-4a3e-a4f4-0b3148bf332e,AM4,0,128,4,Black
-490f678a-dec1-44ea-82b3-952774f5725b,AM4,1,64,2,Black / Silver
-3346296c-0704-489f-8ac4-e24e75c7714f,AM4,0,128,4,Black
-f0f5ed85-8bf7-47d6-bc19-468e1662a20e,AM5,0,192,4,Black
-03225444-de29-44ff-838c-502f3c4387d6,AM4,1,64,4,Brown / Black
-077e4ac0-2425-4bf9-b70f-57e11f345102,AM5,0,192,4,Black
-d338f3ee-e323-4abc-b8df-c98b60137b57,LGA1700,0,192,4,Black
-719d1ab9-9d03-4a95-a82f-25478f53163b,LGA1700,1,64,2,Black / Silver
-02e21819-abf6-4262-a9ae-1678195be86e,AM4,2,64,2,Black / Silver
-8a6f245c-3f6c-4246-979f-f47a18c64970,AM4,1,32,2,Black
-31aeab30-bac5-4c1c-8d64-ae83e27ea985,AM4,0,128,4,Black / Silver
-561f8930-4ce3-441f-98f6-611d6fa5a2a9,LGA1700,0,192,4,Black / Silver
-8fecc571-e011-48e8-bfe9-896694b0937b,AM4,1,128,4,Blue / Silver
-905d9301-56a9-45c7-bd0a-cc9ebdc5dd9b,sTRX4,3,256,8,Black / Silver
-dadf3825-8032-42d8-9c34-b34a4e0059fa,AM4,2,64,2,Black
-81c8fd81-ac1b-4ea7-9a3c-a73062c789ec,AM5,1,96,2,Silver / Black
-37b8f765-5973-4420-bd8b-5375de18dd22,LGA1700,0,192,4,Black / Silver
-430606de-f361-43b4-9d8a-44ceee3116bb,LGA1700,1,128,4,Black / Silver
-c3302a28-866a-492b-be7a-541797bc9e5a,AM5,0,192,4,Black / Silver
-0709275d-cde7-4838-8ea0-ecf167b621b5,AM5,0,128,4,Black
-448d22e3-e408-4d3d-9b72-23e602182dda,AM4,1,128,4,Brown / Silver
-620fa435-e5be-4a5b-b12c-b0534774331a,AM4,1,128,4,Black / Orange
-134c5f83-2d70-4b3b-8f90-1d41a2d6f735,LGA1700,0,128,4,Black / Silver
-1cc2c5fe-bee9-49ba-8e3f-0905aabc6c4d,LGA1700,1,128,4,Black
-d2ee29df-87ef-47d8-a0cf-d63cc3373589,LGA1700,0,192,4,Black / Gray
-fe8e49e9-69f2-4462-a5bc-fb6879c05868,AM5,0,192,4,Black / White
-ea1cbf83-9f02-4e71-856a-d48de7120ba7,LGA1700,0,192,4,Silver / Black
-963dc2ff-5788-408a-a945-3e76cac7edb0,AM4,2,64,2,Silver / Black
-98ba6328-c910-4628-aa58-bef0b9a2eb80,LGA1700,0,192,4,Black / Gray
-5c49a0fc-cb70-4302-a339-4e5c736e985b,AM4,1,64,2,Black
-cc566d5c-7e09-4bfd-a3ba-9ebe9e933ac6,AM5,2,96,2,Black
-03ac0e00-37ab-4853-bec1-91f5aabb2753,AM4,0,128,4,Black
-79e2ea6c-4974-4d01-a5fd-801763cfc253,AM5,1,192,4,Black
-5d334ef9-9907-45f0-983b-fd100e0256af,AM5,0,192,4,Black
-e683fc73-cf35-402e-a407-a991d2776275,LGA1700,0,192,4,Black / Silver
-a7a63f89-c0ce-4632-9533-7029030e85fc,LGA1700,0,192,4,Black / Silver
-68fd1e82-f91d-487c-baae-c5aa2f7f690f,AM4,1,128,4,Black / Orange
-34aa469d-11e9-4b46-a5da-46f72d57f4f8,AM5,2,96,2,Black / Silver
-9309d543-b815-442b-b80b-7dee22774049,LGA1700,0,128,4,Silver / Black
-7b95364c-6e24-4d34-9366-16412a91ab5c,LGA1200,0,128,4,Black / Silver
-8fa3f96b-ce1b-4802-902a-32e5aa902067,AM5,0,128,4,White
-72fa155e-86a1-4de7-9068-4535ecf09e5a,LGA1700,0,192,4,Black
-f9375032-cf4c-4b9a-9883-64aedf0ee630,AM4,1,64,2,Black
-3a7f0ed0-4e5c-4c0e-8508-80996c0c1a5f,AM5,1,192,4,Brown / Black
-341c8197-508f-4cba-b774-bb808e375f08,LGA1700,0,128,4,Silver / Black
-438a114a-fe6e-45ac-8ccf-ce2ecb099896,AM5,1,192,4,Black / Silver
-5b573a3d-5b47-4102-bc10-70c41f8569ac,AM4,0,128,4,White / Black
-7997af42-cc91-48da-a370-5a05251ad90c,AM4,1,128,4,Black
-ca4005b3-d2e6-4e23-9834-e15c96793ef0,LGA1700,0,192,4,Black
-ceb07e92-958b-4d11-a2c7-fae0b615665a,AM4,0,128,4,Black / White
-86455e7b-d075-4c2a-907a-ff53ae85d9a2,LGA1700,2,64,2,Silver / Black
-b67d996d-2377-477f-83b6-07b611099d49,LGA1700,0,128,4,White / Black
-6f2040f1-06ef-405a-be4b-ec4065fedfbc,LGA1700,0,128,4,Black / Silver
-226a8bc0-0f70-460d-8164-bf99ad08ace2,LGA1700,0,192,4,Black
-56dc322b-3fb0-4079-94c2-72f46906da9a,AM5,0,192,4,Black / Orange
-c8590618-3766-452e-9791-46e6f473267e,AM5,0,192,4,Black / White
-d6fab89b-4aa2-4c83-a98a-2cd034ad5a90,LGA1700,1,192,4,Black
-0502cdb5-fa69-43f9-bd75-e4bcbce78da8,AM5,1,192,4,Brown / Silver
-846d78df-190e-405c-a255-b0eb9be5300a,LGA1700,0,128,4,Silver / Black
-641f4d1b-5baf-4bb8-856e-3ee52a811f14,LGA1700,0,192,4,Black
-e1c19a0d-5ba9-4f4a-bd77-fa0db7f4a5dc,LGA1200,1,64,2,Gray / Black
-a2a3500c-429c-41de-81d8-71238f32a471,AM4,1,32,2,Black / White
-c93ed79a-f58b-4fbb-9db3-35140828d77f,AM5,0,192,4,Black / Silver
-a2b59eea-9320-483f-b58d-6176794ff653,AM4,1,128,4,Black
-4e433449-1e88-46f8-ac1b-553e9b29f951,AM5,0,192,4,Black / Silver
-6e6fbaa5-8f6c-456f-91d5-2be5c6f8ca9e,LGA1700,0,192,4,Black / Silver
-2b4b2204-4f99-4f43-8cac-0cdd894e51a0,LGA1700,3,192,4,Black
-f4f2b5b3-51c2-4b19-b5cb-827d36aaa1fd,AM5,1,192,4,Silver / Black
-b137cdce-c298-4ca0-981f-77464a65455b,AM4,0,128,4,Brown / Black
-15379ad9-4df9-4956-b60d-dc0be82dae15,AM4,1,64,2,Black
-e73c6249-2741-4a9a-a13f-a564c3dc3db1,AM4,0,128,4,Black / Silver
-fa6ef6ef-4050-4bc8-9889-db89701f68c3,LGA1700,0,192,4,Silver / Black
-ca17fc4b-ae30-48db-bfff-cf6f05a983b0,AM5,0,192,4,Silver / Black
-f552d0c7-35bc-4387-9555-e268013b3997,LGA1700,1,192,4,Silver / Black
-775ed5ff-c03a-4943-8d22-3e70da998d10,AM4,2,64,2,Black / Silver
-84ec7aae-6a4b-4379-bf08-7eddd179632b,AM4,1,128,4,Silver / Black
-db3a25fe-6a90-4fb0-a11a-fbc9b035a0b1,LGA1700,0,192,4,Black
-292e4bdd-4390-4c4c-a9d0-32c3b080a4fe,LGA1700,0,128,4,Black
-f9c52913-8425-4c86-918b-42cc9bf36e83,LGA1200,0,128,4,Black / Silver
-311e7dd9-ac4b-4f9a-b1ef-e55aacc6847f,AM4,0,128,4,Silver / Black
-abe73666-8046-40e1-ba8f-c881a24ec55c,AM5,0,192,4,Black
-20d2f94d-6420-49b0-8247-311101fad291,LGA1700,0,192,4,Black
-3bc90b10-735a-4bd3-ba8f-42b95943aa8e,LGA1700,0,128,4,Black
-9de1dd6c-94c6-42cc-9068-50a10ce05f96,LGA1700,1,64,2,Gray / Black
-f6cc635d-8f8c-4cd4-8dca-a9856b50a607,LGA1700,1,128,4,Black
-8e78161b-5e7e-4bf5-9923-91b2b2175033,AM4,1,128,4,Silver / Black
-7ca8d11b-2f6f-4479-a6ce-21685c7a63db,AM5,1,192,4,Black / Silver
-cf602568-0796-465b-86eb-d1dd78e3187c,LGA1200,1,64,2,Black / Silver
-c51a055c-ca42-4560-8fe8-eebe92688de6,AM4,1,128,4,Black / Gray
-f2e59ee6-8e7e-4a73-ae23-efb4c1322e97,AM5,0,192,4,Silver / Black
-9cc6647e-d94a-4be3-8895-d35fb89a0714,LGA1700,1,192,4,Black / Silver
-914d50a1-b082-499d-b9fa-7114fbee44ce,AM4,0,128,4,Black
-c14a313e-d6f2-4b2f-9991-e69f8b225998,AM4,1,128,4,Black / Silver
-6120992a-8381-4843-bfb8-e45d0d7fc208,AM5,1,96,2,Black
-9c7cebe5-610f-47a2-b9cf-bfad2d3238fe,LGA1700,0,128,4,Black
-987a76fc-b2a0-4dc4-a10d-8803e5a87f98,AM5,2,96,2,Black / Silver
-26919d1e-8494-4d95-9cec-254411cce297,LGA1151,0,128,4,Brown / Black
-e4c5edc2-e613-4c46-9bbb-5e3451e8d33b,AM4,1,128,4,
-c6d9bc4c-eacf-401d-84ac-47f153fe4f79,LGA1700,0,192,4,Black
-f82355cd-2cf6-4eb0-a9c6-d3ba2ab15fe1,LGA775,2,4,2,Green / Blue
-f42de5b6-95dc-495f-8a15-2c02618e1c2a,AM5,1,192,4,Black
-a0de0a22-8e72-40a9-9f7a-9c28b30fd2a3,LGA1700,1,192,4,Silver / Black
-19ec01b4-3434-4739-93d0-ed0899b16bb3,AM5,0,192,4,Black
-1e253de6-b039-4a19-b7e5-480dbf5bb697,AM4,1,64,4,Black / White
-d5f290a9-6788-4757-a408-022ea0fd3d24,LGA1700,1,128,4,Black
-82a02b18-50e3-45fb-957b-214b0697cc3d,AM4,2,64,2,Black / Silver
-49c54b5f-d39f-4b62-8538-4a72a5b878a3,AM5,0,192,4,Black / Copper
-23f69e6c-1e53-4bc3-93d5-9b11fec004ce,AM5,0,192,4,Black
-f30f4612-2baa-42c5-9dfe-59e9965acbed,AM4,1,128,4,Gray / Black
-9810f547-821d-4b1f-b0a2-a82d15287117,LGA1151,0,128,4,Silver / Black
-2504b1cc-a584-4229-8a9e-ca23da3b457c,LGA1700,2,96,2,Silver / Black
-54222bb1-66f9-4bbb-8ba5-ef8014a19cad,AM4,0,128,4,Black / Silver
-26c8fb5e-2a39-456b-b338-9fa32cad6efa,AM5,1,192,4,Black
-41a6f02c-0dbb-452c-8335-30a3d03aa416,AM4,0,128,4,Black / Silver
-b43472ba-0658-406a-a63e-fb908672e030,AM4,1,64,2,Black
-abcb104e-dec6-4ce2-82a6-c3073ef8b6d6,AM5,2,96,2,Black / Gray
-880e098f-4ee8-4672-9cf0-cb28b0fa4fb6,LGA1200,0,128,4,Black / Silver
-6cda9adb-823d-40bd-9ea8-7caf9b22929f,AM4,1,64,4,Black
-d8b2c86f-d2a5-4943-b062-be6e3a55c131,LGA1700,1,64,2,Brown / Silver
-1639dc15-3237-4107-b7be-d2769abd5c81,LGA1700,1,128,4,Silver / Black
-5c3a9e98-9bf6-4e24-a978-256268308127,LGA1700,0,192,4,Black / Copper
-9af23308-e36b-44bd-a05a-fd8177c06e1b,LGA1700,2,96,2,Silver / Black
-9d5df1d5-06b3-4f01-9558-89e63938cc43,LGA1700,0,192,4,
-e602e5b5-682f-4c0d-a394-e67c5b6421e1,LGA1700,0,128,4,Silver / Black
-b16e1adf-1042-4cbc-ae50-62fc69f7243f,AM4,0,128,4,Silver / Black
-ccb5475f-672c-4703-a6d6-a1a27931d44a,LGA1700,0,192,4,Silver / Black
-8c22f389-1001-40b6-8f89-ec30e09d681c,LGA1700,2,64,2,Silver / Black
-5741cddb-78c4-4095-bc8e-765aed054d38,AM5,0,192,4,Black / Silver
-1c5b309c-e219-409c-bd26-885949542a64,LGA1151,1,32,2,Black
-069c3cb5-2436-4975-8e33-84d47561f148,AM4,2,64,2,Silver / Black
-3e3df59f-0e2d-4fd9-8ec3-3c39dd7c56b9,LGA1700,1,128,4,Silver / Black
-cee1e6fa-d1bf-487e-baf5-cefdd90aab8f,LGA1700,3,192,4,Black / Silver
-23867f15-07f0-4dce-b3bd-02cc109ff2a5,LGA1700,0,192,4,Black / Silver
-058774b9-cd6f-43fd-a560-226ca33d4721,AM4,1,128,4,Black
-e91aaf05-2100-4aea-8802-ae3030a8d628,LGA1700,0,128,4,Black
-e5bd1680-d667-4f8e-b961-37f9d93f8eae,AM4,0,128,4,Black
-695aa1c2-e61d-4b03-b3da-08180e9e6518,AM5,0,128,4,Black
-a085f79f-aaa4-4639-8797-4139af161096,AM5,3,192,4,Black
-5389ee47-978b-433a-979c-ee1235ad6917,AM4,0,128,4,Silver / Black
-4f20133f-b12d-43d9-a314-d8915c41ea32,AM4,1,128,4,Black / Silver
-b0f4e1a2-b3f5-4f4e-894e-d0e3e26d5eff,AM5,0,192,4,Black / Silver
-71674c54-3a3c-45fd-85c8-e78670ca6592,LGA1700,1,128,4,Black
-81e2c911-9756-44ad-a71f-eb292022058b,AM5,0,192,4,Black / Blue
-9c6c60fc-2fee-4d96-98c4-fcc3294c8ab9,LGA1700,0,128,4,Black / Silver
-ac98db99-3f82-4111-a99f-a83523da3844,AM5,0,192,4,Black / Silver
-ee3221a5-5bcb-4e98-b467-5c8d0bbd2993,LGA1700,0,192,4,Black
-e5013aff-6e69-436a-b668-9de77777ece8,LGA1700,1,128,4,Black
-7e8583b3-c785-4110-bc78-8f28e10a5208,LGA1700,0,128,4,Black / Gray
-74fa8f4a-007f-4b06-a17d-59a71edc6b38,LGA1700,1,128,4,Black / Orange
-4fdb83be-7e3f-488f-862b-9d13199bbf59,LGA1700,2,96,2,Black
-42062a05-35d0-49f9-8a89-0f5f52b4a472,AM5,0,192,4,Silver / Black
-c23b490a-4a2e-4ac8-a9d5-526d1e0d5da2,AM4,0,128,4,Black / Silver
-75babe6c-ef0e-4e97-882f-f078cb06ce7e,AM5,3,192,4,Black / Silver
-bdded9fe-1bcc-4ba5-b5b2-6a1c3825c10b,LGA1151,0,128,4,Silver / Black
-16c26ab7-8a98-4bc0-9d89-434bcd8ae8a2,LGA1700,0,128,4,Black / Silver
-a2fccdfe-9aa9-4e3a-b82c-bbfa61db9628,AM4,0,128,4,Red / Black
-be68365d-2d19-43dd-a16f-a5323391e58e,LGA1700,0,192,4,Silver / Black
-6f453008-7f59-4409-b90d-8005b9d3f750,LGA1200,0,128,4,Silver / Black
-2614fa75-7834-44d9-b703-7d0240ea88aa,LGA1700,0,192,4,Silver / Black
-3ee3a169-9a30-4342-aee3-cf13103d4387,LGA1700,2,96,2,Black / Silver
-22d72a20-346a-4da8-9dca-7788c06254c0,AM4,1,32,2,Black / White
-5663c798-d3df-44a8-871c-0ea2f179e438,LGA1700,0,192,4,Black
-f3ae9069-e67d-4090-b733-e686b4febd5f,AM4,1,64,2,Brown / Silver
-22189a34-f2be-46e5-85ab-c1f6b92f9530,AM4,0,128,4,Black
-624482ce-1b5e-475a-843d-d13117f7e5d8,LGA1700,0,128,4,Black / Silver
-010f01e0-b94c-4afe-b498-a2ce6716e196,LGA1151,0,128,4,Black
-fc66c3d6-b173-4a7b-a837-c1287d65e99d,AM4,1,128,4,Black / White
-d7b823ec-da6e-4afb-8a18-fd6bce47fc20,LGA1700,0,192,4,Black
-62e0af4e-d12f-4a48-95b0-c2813c7b660e,LGA1700,2,96,2,Black / Silver
-d9041f2c-f1d3-4673-ad7b-9b75610087c0,LGA1700,0,128,4,Silver / Black
-67d3394b-08a4-4720-be85-cc2a3d0f9862,AM5,3,192,4,Black / Gold
-8c2bc82f-d275-40d2-b5fa-250b5882a3cc,AM5,0,192,4,Black
-1363ea32-5c9d-4f86-ab10-c804222c3f1f,LGA1700,0,128,4,White / Black
-14adced8-6aef-486b-a795-6527f7188fa7,AM5,1,192,4,Black
-8c466942-06ff-4288-89b1-c2b5ab150840,LGA1700,1,128,4,Black
-1a0e985b-1e94-4868-8e51-c405ba58592a,LGA1700,2,96,2,Black
-320d64c9-810b-4753-8aeb-a702a8f3733b,AM5,2,96,2,Black / Red
-25b02879-d27f-4547-88da-56445e8f250c,LGA1700,2,64,2,Black / Gray
-c8b189a4-a5dd-4043-aa0d-3a45858c2d7b,AM4,1,64,2,Black / Silver
-22fdf795-55a3-4451-90ad-26acb758ad93,AM5,1,192,4,Black
-47d59971-5851-4c0c-a479-022791a8fe7e,LGA1700,0,192,4,Black
-f771b534-7dae-466b-96f5-1f3da6fdb26a,LGA1700,1,64,2,Silver / Black
-e1227e1c-8bf0-4e86-86b2-f7ad0a3c6020,LGA1700,3,192,4,Gold / Black
-f27c9653-77e7-4874-868b-6af4b8ee0565,LGA1700,1,64,2,Black / Silver
-075078d1-fc67-4db2-8003-0283dd21b0ce,LGA1200,1,128,4,Silver / Black
-12ee629f-b99d-40c2-99e8-dd4c76652a56,AM4,0,64,4,Black / Silver
-41ca0155-6af0-4cd5-9358-05062fee635e,LGA1700,1,64,2,Black / Gray
-ff5868ea-b5c3-4e94-a043-7599d1bda87b,AM5,0,192,4,Black
-4cf33392-bbd2-4600-af98-adfdf8bac1d6,LGA1700,1,192,4,Black / Silver
-43bb180f-916b-4f80-a5d5-95717b8c912e,LGA1700,0,128,4,Black
-4c4d06e3-6252-485b-889f-995408c7bfac,AM5,3,192,4,Black
-829c894a-e723-4d09-adb1-3e7d1d12c638,LGA1700,0,128,4,Black / Silver
-43e28aef-0d79-406e-96d7-50dff8b4e3fa,AM5,1,192,4,Brown / Gray
-20604474-c96c-48d9-89ac-dd16f55a66f3,LGA1700,0,192,4,Silver / Black
-baeb0c14-3af6-4f01-83f3-24863fbc7bd4,LGA1700,1,192,4,Black / Blue
-dc40948b-8a85-4aa6-9f4b-4539a52fca0d,LGA1700,0,192,4,Black / Silver
-c5ed1661-b181-437f-835d-a6b3900c845b,LGA1700,0,192,4,Black / Orange
-43fd74d5-3ecf-47d7-b969-9daf7d1c18b3,LGA1700,0,128,4,Black / White
-2dc6883d-7d17-4cab-a94b-010a519a64c8,AM4,0,128,4,Black
-ed0e95f8-5cd7-4149-bd6c-8c3c5cb7c21f,AM5,0,192,4,Silver / Black
-33157005-0801-46a2-8917-a7bffef57fa3,LGA1700,2,64,2,Silver / Black
-0cc63119-194f-41ab-94ca-200dc8ce9f69,LGA1700,0,128,4,Yellow / Black
-4e18cb42-f601-427f-8f9c-c8cbfd924917,LGA1700,0,128,4,Black / Silver
-b6a94308-325c-4765-9159-42dade23dd46,AM5,3,192,4,Black / White
-3063d006-eb9a-4bf6-8b81-2395bcc29f6d,LGA1700,0,128,4,Black
-3e58ecaf-b20a-4b60-a9ed-37ac98fb9222,AM5,3,192,4,Black
-24e1fcce-5555-40a5-bc37-2cff5331ae86,LGA1151,0,128,4,Black / Silver
-be71af27-a891-4e01-94ce-7aabb6da0180,LGA1700,0,128,4,Silver / Black
-c96503b8-f970-473d-883f-489938a06ab6,AM4,2,64,2,Black / Silver
-adc0f11a-3157-476e-82c8-ebaa703fadb9,LGA1200,0,128,4,Black
-90efb513-1653-482c-ad02-30702b23b20b,AM4,0,128,4,Black
-e447caf4-2650-40eb-8776-439657673feb,LGA1700,1,64,2,Silver / Black
-8dc7169d-5088-4faa-8e07-e9b634f30d3b,LGA1700,0,192,4,Black / White
-952ed02c-9040-4849-8f81-113d7bcbd3f8,AM5,0,192,4,Black / Silver
-fcdf27fc-a45c-467a-92f2-f81558c16ffc,AM4,0,128,4,Black
-328dd833-262d-4c49-a45d-624d08231fae,AM4,1,64,2,Black
-dde808cc-9e51-4348-bb20-aca0968ad753,LGA1700,1,192,4,Black
-dce55e44-a041-4d6e-b22e-896b8b0fbde5,LGA1700,0,128,4,Black / Silver
-721bd4f7-f678-4b63-be85-18174261a61e,AM4,0,64,4,Black / Silver
-740dba5d-6afc-4b1c-a577-e36a0502dcb9,LGA1700,0,128,4,Black / Silver
-8200708f-2203-4f14-8ed6-f4ecef463f10,AM5,1,192,4,Black / Orange
-fc8aa5dd-b43a-4979-abaf-43dcbaab996a,LGA1700,2,96,2,Black / Silver
-4112d124-ec28-43cc-b4b1-521e0c2653b8,AM4,1,128,4,Black / White
-6cf0885d-9d7b-4c99-8e28-da3e9ff8e6b4,AM4,0,128,4,Black
-12987786-ff3f-4f44-bd07-b07f437373a3,LGA1700,0,128,4,Silver / Black
-cd828ecd-5ea5-4dc2-8cf0-1684f5b5ab50,LGA1700,0,192,4,Silver / Black
-3c2d6caf-7c29-45c9-b871-1063cc47549b,AM4,2,64,2,Black
-5201d2f6-b278-47ad-8e3b-f9a1b18d8f70,LGA1700,0,128,4,Silver / Black
-2341ff88-43ee-49db-acaf-207b3650ecbf,LGA1700,2,64,2,Silver / Black
-269bb0d9-e1c0-4bed-a320-b2463f5b0d00,AM4,1,128,4,Black
-b4ad98d1-ab61-4576-a868-cbd39923d7cd,AM4,1,128,4,Black / Silver
-f555be3b-5ca7-4622-aa38-8e2c6894f2ff,LGA1700,0,192,4,Black
-9ab4e572-9029-41cc-8a04-66011be33b0d,AM5,0,192,4,Silver / Black
-b21bec5d-80a5-4bbc-825f-1050a9f394f3,LGA1151,0,64,4,Black / White
-c5a57bc9-fc69-4c37-9a1c-65a60f97bdc9,AM4,1,64,2,Black
-c36b1543-391c-46a5-971d-51a6d9a721a4,LGA1700,1,128,4,Silver / Black
-c94236b8-d400-4a0c-8f97-cd88436a32c5,AM4,1,128,4,Black
-adc4d931-25f2-4d5b-b744-875bf1447f58,LGA1200,1,64,2,Black
-c7c2a420-0398-448a-88f9-f8aa20cc37f4,AM5,1,96,2,Gray / Black
-3fbd0c2d-aac6-4c83-9a03-1e128e85f3be,AM4,0,64,4,Black / Silver
-d8f1ce8b-382f-4f4a-8a8a-d87de7838c58,AM4,0,128,4,Black / Silver
-7891b188-f8c5-4891-b169-ad98a121adfe,LGA1700,1,192,4,Silver / Black
-b7ed51ac-d36e-4b2a-9bb2-86c1e922799a,LGA1700,2,64,2,Silver / Black
-8c28fc37-c4f3-47e9-b08d-f1c32132e784,AM4,1,64,4,Black
-696e98bc-1718-4920-8286-0bd96229269e,AM4,0,128,4,Black / White
-2a0f9bc0-2cc6-4560-b0f3-0a0ae0eda229,LGA1700,1,192,4,Black / Orange
-7bca84fb-6f11-4ab0-aa36-f6de394e4c93,AM4,0,128,4,Black / Silver
-cd48935b-deb9-46b2-8312-51ac1e7b3ead,AM4,0,128,4,Black / Silver
-57677f75-b27f-4d16-9058-a3741bb647cf,LGA1700,1,128,4,Black / Silver
-5da3164a-b090-4eac-9dcf-c263a27de3d5,AM4,1,128,4,Black
-40d45acd-337c-442f-b1cc-4144791e77d1,LGA1700,1,128,4,Black
-66ec97a1-8790-469d-8ba5-63711abce3d4,AM4,0,128,4,Black / Orange
-97bbb6c8-3b23-42cc-b5a3-96aa74325546,LGA1700,0,128,4,Black / Silver
-78e0034d-c975-410e-888f-804eb10d09e3,LGA1700,2,64,2,Black
-2a3a9c1c-4782-4908-b0ad-1c0786805ff8,LGA1151,2,32,2,Black / Silver
-59c12dee-e0d1-40c3-adcc-ee6b8b1c313e,LGA1700,0,128,4,Black / Silver
-822800bd-cc8e-473a-a443-764120b5ab68,LGA1200,1,64,2,Silver / Black
-b46fb9af-ccd5-46cd-a45a-17088be5c510,AM5,0,192,4,Black
-52f96dc3-672e-44e1-ad23-323a43cd7515,LGA1700,0,192,4,Silver / Black
-c498795c-477f-4f63-a861-7508edc760fe,AM4,1,128,4,Black
-d999b50e-9ba7-493f-b4ab-e669b6259dc9,AM4,0,128,4,Black / Silver
-d61fad35-2e37-41c7-8ac0-ae25e7bcbe84,LGA1200,0,128,4,Black / Silver
-15ebfd1e-2625-4176-9b1c-13d4e5a3c324,LGA1700,0,128,4,Black / Gray
-633d06ae-e966-4a34-bf7e-652aff2c3760,AM4,0,128,4,Black
-fd13e4ed-d042-426a-b7d1-678c62b45657,LGA1200,0,128,4,Black / White
-e8431b4c-38d2-4778-92b7-f9af85682d13,LGA1700,1,64,2,Gray / Black
-4fe5eb38-edfa-4758-9d97-3f08afc667b6,LGA1700,2,64,2,Black / Gray
-bb613702-a466-42e5-838f-e7d2e6f7befe,LGA1151,0,64,4,Black / White
-37f6bacf-b481-4e54-94ff-7d94c832bbff,LGA1700,0,192,4,Silver / Black
-df3e9e0d-733f-49cb-b651-b10aef94cd7a,LGA1700,1,192,4,Blue / Silver
-655d4869-05c9-4b4e-80fa-3b40d4cc1071,LGA1700,0,192,4,Black / Silver
-fc29c285-757a-4b57-974a-49fbbaaa49d6,LGA1700,0,128,4,Black / Silver
-1a5a5a8c-0612-4dfa-82cc-ae1ff67079c1,LGA1700,0,192,4,Black / Silver
-78d7967a-9383-4156-97cd-bac8e911e412,LGA1700,0,192,4,Silver / Black
-abe13941-1d0e-4e7f-9d5f-f5f16a2bdef3,AM4,1,64,2,Black / Silver
-0dba5040-64c5-4641-b011-c2e317c21d46,LGA1700,1,128,4,Silver / Black
-2e49750f-026b-4321-8c09-15a1339cffd0,AM4,0,128,4,Black
-825f0b9c-0005-4da5-ac09-8fc9011db62e,LGA1151,1,32,2,Black / Gold
-59cdc597-3ece-4f8e-9998-b04722379cdb,AM5,0,192,4,Black / Silver
-3324b917-c20d-4f28-b1ff-d75db6518419,AM5,1,96,2,Black / Silver
-cdc181c3-e447-4d12-ac80-d5000d097388,LGA1151,0,128,4,Black / Silver
-2152c903-1124-4388-b6b8-606a5a2e431b,LGA1151,0,64,4,Brown / Black
-1ab50fbc-0387-4682-9578-e69da4542be2,LGA1700,1,128,4,Black / Silver
-d82863ef-20ed-48a4-9b7a-691a860bb11b,LGA1200,0,128,4,Silver / Black
-97c66072-11dd-40db-bc98-f3c2587f49d9,LGA1700,0,128,4,Black
-4f68305a-ae7b-45c3-9eed-1c24332741cf,LGA1700,0,128,4,Black
-e0512f5c-06fd-4152-8d94-a93c6daecfd0,AM4,0,128,4,Black / Silver
-4e6f731b-24e9-4f14-be3e-a9f48e6bda3f,AM5,1,96,2,Gray / Black
-41e34737-5e60-4092-a2b4-b15fc4942649,AM4,2,64,2,Black / Silver
-1691e489-f52b-4a5c-831f-66d3b2b3b3c1,LGA1700,1,192,4,Brown / Gray
-e5acf0e4-e281-4b75-9cd7-59abc8b9d641,AM5,0,128,4,Black / Silver
-00b4ebb1-3b92-44c0-8094-8b96a2b0b951,LGA1700,0,192,4,Silver / Black
-c53562c0-be1b-41ed-a24a-dcd98939381e,LGA1700,0,128,4,Black / Silver
-d78bddeb-d4bc-403a-b135-7869c19553ae,AM4,0,64,4,Black
-e90c60b3-3d0f-4620-b2f2-db7086d8c4fb,LGA1700,2,96,2,Black
-d8d950ca-9075-4ce8-8307-a7f4d18b3669,LGA1700,1,128,4,Black / Orange
-82d8e298-89b5-4a47-a87e-aadd62211ea4,LGA1700,1,128,4,Black / Silver
-c669b5c4-46e8-4afb-b314-d0e203442572,LGA1700,0,128,4,Silver / Black
-7755ca64-d1ec-4b2d-b6ab-fd90e13d1f51,LGA2066,0,256,8,Silver / Black
-d4984ee1-05a7-4a79-a974-040638d8d79b,AM4,0,64,4,Brown / Black
-257cbcd3-2d70-4a18-8bf8-8fedcbb32275,AM4,0,128,4,Silver / Black
-e9888df1-e17b-4b4d-b4ce-18bfdd017c55,LGA1200,0,128,4,Black
-d5a9809c-ccc0-4043-addc-d32aa8cae67a,AM4,0,128,4,Black
-3d64bedb-6e0d-4bf9-b57f-76d836d80876,LGA1700,1,128,4,Silver / Black
-49813546-35f4-418f-a0a6-1289c9e0a934,LGA1700,3,192,4,
-9164ae13-7474-46d9-b24f-a03a3833c99f,LGA1700,0,192,4,Silver / Black
-f1389861-5d48-4027-809a-097af73f35f6,AM4,0,128,4,Black
-3ace21d1-4ad6-4634-98e7-f0194a0d58e7,LGA1700,0,96,2,Black / Silver
-24918fee-a05f-4b58-8af3-04b4c9aaecb5,AM5,0,192,4,Black / Orange
-629e645c-8b6c-43ca-af8d-5508ebaf22db,LGA1700,0,128,4,Black
-bfbba9b6-cf4b-40f3-b633-ca655e6c406f,LGA1200,0,128,4,Silver / Black
-aa26df91-4632-4f82-81a8-313387f5fba1,LGA1700,0,192,4,Black
-27fc48d3-7b64-475e-be66-b7cf1e90fee0,LGA1700,0,192,4,Black / Silver
-7f67327c-d773-4bcf-a308-03486202c62a,AM4,0,128,4,White / Black
-9ce772d1-f590-44a2-adf2-921c02f3cea5,LGA1700,3,192,4,White / Black
-5d847e0c-eec6-4329-82d0-e492a91334a8,AM4,0,128,4,Black / Gold
-a258a09f-7daa-4846-97f9-f215c912d3c2,AM3+/AM3,1,64,4,Black
-1ecbd1a3-78e2-48ed-9227-e5692ec02ff3,LGA1700,0,128,4,Gray / Black
-d497d00c-b0c2-41cf-a63f-c2760336f368,LGA1700,0,128,4,Black / Silver
-a16d44d1-37c1-4f26-9ea2-95754511f314,LGA1700,2,96,2,Silver / Black
-7e4c0a81-a3d5-4782-a558-9bcb4e46f35f,AM5,0,192,4,Orange / Black
-8a6d380a-54cb-4158-a902-dababd8bfeea,LGA1200,0,128,4,Black
-b099b376-66a7-4319-8ba4-245f5b1f97e6,sTR4,3,128,8,Black
-960c4199-bcaf-4eb1-9fc0-1db6966f06a3,LGA1700,0,128,4,Black
-514d95ee-e4c4-49e2-af57-02ccdb36d4e2,LGA1151,2,64,2,Green
-98a71a04-ac7c-4475-a3c2-6c8cc41aed38,AM4,1,128,4,Black / Yellow
-8e62021b-7d85-4a46-9a2e-f24ff6af9ea9,AM5,0,128,4,Black / Copper
-2644dba9-1a0d-4a42-ac5e-5c48d3ff8b65,AM5,0,192,4,Black
-d0df694c-4832-4ac0-85cc-65822a4eb9ef,LGA1700,1,64,2,Black / Silver
-a53db6e4-5b23-4c24-8b89-50c6f0dd3ba4,LGA1700,1,64,2,Black / Silver
-e9a10861-940e-408f-94b8-062b1efd2b0e,LGA1700,1,64,2,Silver / Black
-e3648045-86a0-44ee-a050-94da7c9de1f1,LGA1151,1,64,4,Black
-84aa9274-929e-4677-86a3-6bd516461aea,LGA1700,1,96,2,White / Black
-87565e0e-ee86-4d6a-b7e6-72787d643597,LGA1700,0,128,4,Black
-a33fef79-8ba4-4957-9446-b6a621a69f63,LGA1700,0,192,4,Black / Silver
-bf515611-f1dc-4f28-a975-04e13e8d78dc,LGA1151,0,128,4,Black / Silver
-4710a1d5-27d1-4cdd-b186-dae96ecbb5be,LGA1200,0,128,4,Black
-b5ed1287-324b-4066-a3b1-369320caec3f,LGA1151,1,32,2,Black
-46bb1147-4757-485a-a1b9-7b2fef694935,AM4,1,64,2,Black
-e3b39a95-2990-4796-b272-fae753f19f95,LGA1700,2,96,2,Black / Silver
-f411de7b-ff36-4f97-ae9d-2b08c2760fda,LGA1700,3,192,4,Black
-f98eb050-85e6-4929-94a1-8417eedee698,LGA1200,1,64,2,Black
-4a066ba3-df82-4937-9cde-eb68daf02767,AM4,0,128,4,Black
-c6f97e38-9b3e-43fa-bbfb-611c68595de7,LGA1700,0,128,4,Silver / Black
-f9941441-4f95-4b9e-bbfe-274020ebd01d,LGA1200,0,128,4,Silver / Black
-27b0fa81-2cb5-4283-a76b-5b46b0f83ea9,AM4,0,128,4,Black / Orange
-01b398c4-e50e-4c1e-ba48-b7debd042e3e,AM4,0,64,4,Black / Silver
-ec4a43ef-ea42-4dd0-9691-6e1f7ab0b9dd,LGA1700,1,128,4,Silver / Black
-07593e9e-2f46-4213-93fe-92636d6e8607,LGA1700,0,128,4,Black
-64c8acbd-00e8-4660-8b9c-84905e5833c7,LGA1700,1,64,2,Silver / Black
-021680ca-7d35-413c-bd80-5de33039d22a,LGA1700,0,192,4,Black / Blue
-ce63472c-4077-4025-84ee-6de37607a4c9,AM5,1,192,4,Black / Silver
-dc98f1aa-7c63-4219-bd06-0c1756fd06e1,AM4,0,128,4,Silver / Black
-09983d80-a423-47f7-80ee-d1f905ac6a68,LGA1700,1,128,4,Black / Silver
-14ba0724-9fd7-4e25-882a-953d5bd4ce8e,LGA1200,0,128,4,Black
-b137c7be-07c3-44c2-a8bb-145e12e35859,AM4,3,128,4,Black
-53ba7000-0053-4487-aa7d-a628f610ec69,LGA1700,0,192,4,
-01418fc2-364c-481b-87e9-e035b5fff9e1,LGA1200,1,128,4,Black / Gold
-6dffb8f4-472d-431b-813a-f2002264ddb2,LGA1700,1,128,4,Silver / Black
-40bfc48a-2017-415a-bfb1-16bb06967b41,LGA1700,0,128,4,Silver / Black
-66360eea-a575-443c-b13e-bed01a275ee6,AM4,0,128,4,Black
-84546e2a-21ee-43d5-aabe-5926c9d221a8,LGA1700,0,128,4,Black
-68d193ba-d924-4de5-832f-586681715234,AM5,1,192,4,Silver / Black
-ba128ed8-4227-40ba-9f15-d0cef6bcb256,AM4,0,128,4,Black
-e88c90fb-c092-4a5d-b254-75ef321926f2,LGA1700,0,192,4,Black / Silver
-40454d8e-b8c8-46f3-b823-3246eb85384f,AM5,1,96,2,Gray / Black
-24261e28-9214-4b86-9a1c-5d6c8b28d849,LGA1151,0,64,4,Brown / Black
-a48c1c09-d96a-4fb4-881d-a6cadbc70db8,AM5,3,192,4,Black
-2257b603-9965-4b66-9a00-9c726c77d98b,AM4,2,64,2,Black / Silver
-02465488-64e0-4399-9208-19d331f3d76d,LGA1700,3,128,4,Black
-2e2c299c-3a87-4682-8cc3-0bf26508715b,LGA1700,0,128,4,Black
-9122e556-4998-413a-8f0d-05b129f5d490,AM4,0,128,4,Black / Silver
-5dd42711-0973-4f96-87af-e9806f9835b2,LGA1151,0,128,4,Black / Gold
-06e7bfb1-eee0-4f20-ace2-31d9b1ccc1cf,AM5,1,128,4,Black / Silver
-c10c4992-28c0-48f4-b360-fdf3a3af6e88,LGA1700,1,96,2,Silver / Black
-0cdefd96-a748-49e1-8162-08d8bb1a5cb5,LGA1700,0,192,4,Black
-0f4d64b2-b478-4b98-a004-754febec32f3,LGA1200,1,64,2,Black / Silver
-c560cf15-7bd1-42b6-a8c3-32431d196280,LGA1200,0,128,4,Silver / Black
-0144e799-407d-4da8-a97d-8221d97f826a,LGA1200,2,64,2,Black
-3d327ada-0308-4b39-b0c0-da7f42c58bbe,AM4,0,128,4,Black / Silver
-ef79e9d2-3e82-4532-b5eb-4adda055ddf9,AM4,1,32,2,Black / Yellow
-ae5d0dae-ff6d-48c1-b7a3-bf737078d566,AM4,0,128,4,Black / Silver
-f9f1df86-fce8-4433-a1e2-24a95e9089ee,AM4,1,32,2,Black
-5610ac82-1cbf-48fc-8416-61b31b04d0bf,LGA1200,0,128,4,Black / Silver
-e8ffc51a-a8bb-4bff-af4f-b399abc22342,AM4,0,128,4,Blue / Black
-d779259f-5634-4959-9763-b5b465e91c5d,LGA1700,0,128,4,Black / Silver
-8a82cc63-d8a6-4a4f-b1fd-9e867825f216,LGA1700,1,64,2,Gray / Black
-bfe19f3d-f80a-4800-b9f7-4ca8fab64cbf,LGA1700,0,128,4,Silver / Black
-7f9f816d-3a20-4b0e-93f6-b6c3d4169f48,LGA1700,0,128,4,Black / Silver
-72edaae4-7d79-40ae-85fb-ee009be4f204,AM5,1,192,4,Gray / Black
-d9133503-f1fb-4189-89b6-00bbf766637d,AM4,0,128,4,Black / Silver
-8bf3255d-0e74-455b-829e-7e04f3245b11,LGA1700,3,192,4,Black / Gray
-2fb17f12-e848-441e-906b-e56018fdde36,LGA1700,0,128,4,Silver / Black
-904651c0-8e69-434c-81d9-fb6b2b0e73c7,LGA1200,0,128,4,Black
-19b5e9d1-0f7b-4ae6-bc8f-acf8b9e0afc0,AM4,0,128,4,Black / Silver
-16320a57-dc10-4ae0-b697-a8a78ed31a09,AM4,1,64,2,Black
-4a8435bf-0542-49ca-9993-bfeb84caae3a,AM4,0,128,4,Blue / Black
-1fadf166-9763-4142-aa97-0a3862dad4c1,LGA1700,1,64,2,Gray / Black
-575d27f5-4ce3-4e74-b795-dd858fe2a1ef,LGA1700,3,192,4,Black / Gold
-0ba3a3cd-7e09-4653-94c2-04698d8e3185,AM4,1,128,4,Black / Silver
-5587b854-0cc2-4293-9fb2-cc909c655984,LGA1155,1,32,4,Black / Blue
-7a41f1f8-530e-49b2-b66c-218cce1b4a8d,AM4,1,128,4,Black / White
-bccab1fd-0e7e-480f-bc57-d6cb5d8e74ec,AM4,0,64,4,Black / Gold
-2a524c65-49ce-4bbc-bdd8-4b29c0cd14c8,LGA1700,1,64,2,Black / Gray
-0ea38814-321e-49a1-a5f1-8fb8558a056d,LGA1700,0,128,4,Black
-aea160b9-79a2-413e-b1e4-b30ddc565ba9,LGA1700,1,64,2,Silver / Black
-18590414-6ce7-4be2-a7d9-88786302e37a,2 x LGA2011-3 Narrow,3,1024,16,Black / Green
-ef18a3c5-65d9-4c33-aa0d-0f791ebc26ed,LGA1700,1,128,4,Silver / Black
-981daaec-f7e6-4dca-b09e-c985ec3c4230,LGA1151,1,32,2,Black
-c7ac037a-c223-4131-85c8-e4788a49efd7,LGA1200,0,128,4,Black
-93c6b97a-48ae-4268-aef0-534fd2470718,AM4,0,128,4,Black
-8adc4f6e-7919-4dbf-84e2-9dc5bf73b3ea,LGA1700,0,192,4,Black
-cb4cdcc9-54d3-4113-9972-f8230eaa3dcf,AM5,1,192,4,Brown / Black
-f3f5d4fa-01f2-4679-82b8-433e8dab454b,LGA1700,0,128,4,Black
-b32b068c-fb0c-431d-9b01-09c490451cbf,LGA1700,0,192,4,Black
-ac363796-5f2e-4ad3-a3b3-3cd4dbf0faa4,AM4,0,128,4,Black / Silver
-2e527b78-92c5-4a3f-9786-d25bd6e3cb7a,LGA1200,0,128,4,Black
-807f2841-fb93-47d2-baa1-6a54fd4b93a2,AM4,0,64,4,Black / White
-b8799046-8b47-411e-88e6-5eb7c9d0dbf2,LGA1700,0,192,4,Black / Silver
-e06c6e81-124e-445e-b66e-376b31ae3037,AM4,0,128,4,Gold / Black
-7407cba2-abd9-4f1c-9742-4d0986feb517,LGA1700,3,192,4,Black / Gold
-5e20532c-72e2-4fa0-9f73-6123e4b426ba,AM4,1,32,2,Black / Yellow
-0381f2b1-4e4d-4d1f-b2fd-f9fb6271a693,LGA1200,0,128,4,Black / Silver
-6cc497d4-4f48-40e3-80b2-34b2e940cb8a,LGA1700,1,64,2,Black / Silver
-23f62d05-f1b7-4fe7-9c60-21643c9ec8cf,LGA1200,0,128,4,Silver / Black
-d72318c7-7f90-4be4-b874-e79eaea5215f,LGA1700,1,64,2,Silver / Black
-ae05e828-b3ab-4c33-ac76-84af6148dfab,AM4,0,128,4,Black
-d78b7157-f390-4310-8487-dd0858aa2d79,LGA1700,0,128,4,Silver / Black
-71850008-350e-4b28-a9f9-cbc6ea574111,LGA1151,1,64,4,Black
-bba2327f-40b8-4447-86e9-dabc1bf00c9b,LGA1700,0,128,4,Black
-b5c74638-f660-4a85-80d8-f440277114f0,LGA1700,0,192,4,Silver / Black
-0232c7b4-2105-43c7-8c21-f4b169818786,LGA1700,0,128,4,Black / Blue
-823688fc-9cfa-4494-a6a7-c28289c6fe13,AM4,1,64,4,Black / Gold
-07dbbba3-1b42-4ffc-a954-6f18faa3ab8b,AM4,1,128,4,Black
-2bc2890e-0e68-45d7-8af3-ae356b4db700,LGA1200,0,128,4,Black
-a002a4c8-2199-48ce-84da-1123d065aad9,AM4,1,128,4,Black
-c9892832-d95c-4608-9163-f8f2b36b9ae6,AM4,0,128,4,Black
-77e2c0e7-4cca-45b2-bcf4-da097a44de22,LGA1700,2,64,2,Black
-e738e4a5-58a8-4bb5-b3d0-2136aeea3509,LGA1200,0,128,4,Black / Silver
-3afb3700-ffc7-4199-820f-9067302f1e02,AM4,0,128,4,Black / Silver
-4aa244a8-429c-4acf-bc0f-4479da9560f3,LGA1700,2,96,2,Black / Red
-0463266e-88c4-4c9b-932a-d8c9e2baa912,LGA1200,0,128,4,Black / White
-a4a0dc9c-c854-4e19-9964-c6d22c7f6be5,LGA1200,1,64,2,Black
-b64183ba-4f01-4d4c-b962-e0de3535966f,LGA1700,0,192,4,Purple / Black
-82abbf19-7796-4ed5-842e-10131de35254,AM4,1,128,4,Black
-5362c187-3c4c-4720-997b-af1fc4f3aa41,LGA1200,1,128,4,Silver / Black
-230b95be-e49b-49bb-b619-5824d6491a48,LGA1700,1,128,4,Silver / Black
-b1c28a8b-977b-48e2-a2bc-0aa505dd1d02,LGA1700,0,128,4,Black / Silver
-072adf3c-0147-465b-b11a-c61144dc97da,LGA1700,0,128,4,Purple / Green
-06a45649-57ef-4942-ace0-0ba708fcdda7,LGA1700,0,128,4,Black / Copper
-bbe4fb58-2b57-4536-ade6-b89595f904d5,LGA1700,1,192,4,Yellow / Black
-c79ca27e-8f67-40e5-8497-7e635b0a7108,LGA1151,1,64,4,Black / Silver
-08d0e51b-6291-42cc-967d-4b9d89995416,AM4,0,128,4,Black / Silver
-c2b4a32a-92a4-45c4-b115-add6b500f38d,AM4,0,128,4,Black
-995eac75-211a-41c6-b959-be5fe27a0a03,AM4,0,64,4,Black / Red
-d5feecaa-7bb1-41ea-acb2-fe5c76050259,LGA1700,0,192,4,Black / Silver
-23eeb50a-526a-4503-ba8b-4c196bdf1f6d,LGA1151,0,64,4,Green / Blue
-dbce2c48-4f2a-4aa8-ac7e-0242fc7a59fa,LGA2066,0,256,8,Black
-e50600ed-b528-4cb6-8cb3-69fa637ac26a,AM4,1,32,2,Black / Silver
-fc495cc9-b003-4211-becd-5e608043db4d,AM4,1,64,2,Green / Black
-c03f06c0-162d-49ac-863a-4826e4fdef84,LGA1700,0,128,4,Black / Silver
-cbb00859-51b1-420d-b871-1c19332c1426,AM5,1,192,4,Silver / Black
-9eceb84b-4269-4abe-854d-c4279787aca1,AM4,0,128,4,Black
-3cc789b4-fa8f-4c18-9272-5d7e3613b79f,LGA1700,3,192,4,Black
-5fc874ee-ee6f-4efc-ba00-79740b97ff38,AM4,1,64,4,Black / Silver
-b0522bc0-bbe8-40b4-ab21-ab14757338c0,LGA1200,0,128,4,Black
-e45e0723-5fc0-44af-85ec-8cf37318ed6f,LGA1200,2,64,2,Black
-475bf5d5-26ab-4b2e-b147-6a3add31eda0,LGA1151,2,32,2,Black / White
-ce56d9e9-ef23-45a2-8152-c122cf0e147a,LGA775,1,8,2,Black / Blue
-f3662f89-869d-4c87-8f0f-34cb084f3ace,LGA1200,0,128,4,Black
-21806db9-78f0-40c8-992f-02830786f9f7,LGA1151,1,32,2,Black
-f464ef75-3ce8-4db4-a79f-096188cd2db2,LGA1151,1,32,2,Silver / Brown
-eb4f81a2-2b21-4fe1-817e-4cb5ed2cb629,LGA1200,0,128,4,Black / Silver
-2c8d351e-dd52-430e-9247-db6a8f0a8b45,LGA1700,1,128,4,Silver / Black
-52570db9-be22-474e-838e-ea0e0b1a6a01,LGA1700,0,192,4,Black / Copper
-4aefcc4c-b9c1-44e3-88ba-c5c3d44ca25d,AM4,1,128,4,Black / White
-2552be60-94ab-4424-be18-bdc31df69864,LGA1151,0,64,4,Black / Silver
-a77910c1-3cc0-4fd0-97d7-4a35ca74ee9d,AM4,0,128,4,Black
-35f6217e-657b-49a7-b6df-1cc6157e7663,LGA1700,1,128,4,Silver / Black
-11b49513-3fb4-40dc-8f9c-9111ddf39918,LGA1200,2,64,2,Black / Silver
-961d064f-3502-4538-8ea5-a11773c7222b,AM4,1,32,2,Black
-79ff53dc-d845-402e-a22c-000aeaee8ca9,LGA1700,1,128,4,Black / Orange
-ab9eea1e-e2f3-427d-a891-da1379b04685,AM4,0,64,4,Black / White
-5e873f91-da3d-47af-a8b3-f24d79f87ff1,LGA1200,0,128,4,Black / Silver
-f52a571c-2e24-4769-98fa-4ed1d7f6da32,LGA1151,0,64,4,Black / Silver
-0996804f-baff-48b0-a0aa-2a13d6766041,LGA1200,0,128,4,Black
-39dae32c-5fba-45e8-9882-e2a109403134,LGA1700,1,128,4,Black
-e9f53df4-762d-44da-b6c5-03893be0c0d6,sTR4,0,128,8,Black / Silver
-c1bf9807-f808-43bb-ade2-ae0773f09be3,LGA1200,0,128,4,Black
-0bc17d5c-d45e-4e94-9aba-92fcf699a473,LGA1700,0,128,4,Black
-24e19f8a-4f5a-4f5a-aed5-0142ac3ca50f,AM4,0,64,4,Red / Black
-3bc52de0-b8c4-45dc-8337-d632a5e651ab,LGA1700,1,64,2,Silver / Black
-8d839d57-8a67-4b30-a9ee-ec11bddfa03f,LGA1700,1,128,4,Green / Black
-f1965e52-bbde-4f81-9d9d-ad70f68d17c7,LGA1700,3,192,4,Black / Silver
-c80ceaee-6c0e-486f-8e24-55cda0a5d20d,LGA1200,1,64,2,Black / Silver
-58c04e48-8141-47aa-b070-4fd2318ae612,LGA1200,1,128,4,Silver / Black
-8cf5ce68-a54d-4f1f-9a09-604d0c41c972,LGA1200,1,128,4,Brown / Black
-50cbb900-2242-4f26-981f-b39478e8caa1,LGA1700,1,128,4,Orange / Black
-1dd978cf-0f28-4536-ab37-c0b598cfb6a5,AM4,1,128,4,Green
-f02909ea-2552-45a1-8b54-77b37e345759,AM4,1,64,4,Black / Gray
-97ece51e-64bd-4394-9cdf-479b7e15d506,LGA1700,1,192,4,Silver / Black
-d068121f-81b9-41f5-ab10-f2731932fd6b,AM5,1,128,4,Silver / Black
-d6783777-fef4-4853-829d-d196d339a8c9,LGA1700,0,192,4,Black
-056192fc-fb76-4bd4-9b1a-44e37dad1474,LGA1700,0,128,4,Silver / Black
-79761c3c-1881-4617-bc3c-73dddb309825,LGA1200,1,128,4,Black / Silver
-c521af6a-8e30-430d-96ad-021dc1098adb,LGA1700,0,192,4,Black
-a51d8e93-1315-43dd-ad86-524e815c20cf,LGA1700,1,128,4,Silver / Black
-fd568751-6ff1-4ed9-9185-cf54420f2cba,LGA1700,0,192,4,Silver / Black
-41886600-aafd-4080-a8a7-59a5ceee14ca,LGA1200,0,128,4,Black
-c5c5e410-e5e2-4df9-9bf8-b1c570cecd90,AM4,1,64,2,Black
-c747c006-ecda-42a5-9cb6-01c3691af2bb,LGA1700,0,128,4,Black
-14f80bf6-c693-4a71-bf3a-bb1991360c05,LGA1700,1,128,4,Black
-13386dd2-6b1d-40cb-9d3d-b7fd5ec809ff,LGA1700,0,192,4,Black / Gray
-32dbb060-d73e-4022-a5a6-ad0cc23255df,LGA1151,3,128,4,Black
-9b25db11-7855-4d93-a1ec-3e589d00ed37,AM3+,1,32,4,Black / Blue
-aa1846d0-3113-44d2-b232-69cad64707e2,LGA775,1,4,2,Multicolor
-90d21099-0df3-44ba-b7ce-feb447677fec,LGA1200,0,128,4,Black
-5024ea1c-97df-459b-aea4-ea50daea3c0a,AM4,0,64,4,Black
-1fe86634-1835-4765-a338-4c42a911cf18,LGA1150,1,16,2,Black
-650b76c5-1f7a-4d4f-9d3e-5c8732ada310,AM5,1,192,4,Green / Black
-15fdb74b-0a94-4ef7-a2c9-13f0cd30c7fb,AM5,1,192,4,Brown / Gray
-11fab429-489e-4732-ab0a-cc210957714c,LGA1700,0,192,4,Black / Copper
-b716b51b-1c2f-40af-9de0-d80a5f872bfa,AM4,1,64,4,Red / Black
-32ec812c-e9fc-4e03-96cc-d29dd2499af5,LGA1700,2,96,2,Black / Silver
-df9c21bf-6a66-45e7-96d7-dced18336241,AM4,0,128,4,Black / Silver
-3667d679-bf04-4c42-817f-10776f1a9bc1,LGA1200,0,128,4,Black
-c8390593-a29c-404f-8112-3bbf9293ee6d,AM4,0,128,4,Black / Silver
-e0cba6a8-136f-40eb-9fa4-5cb5454e5295,LGA1151,0,64,4,Black / Silver
-ecc27113-d188-412a-ae5e-6057a127a98b,LGA1700,0,128,4,Black
-d07c75ec-b00c-4a0b-b15f-9786c8e722c6,LGA1700,1,192,4,Green / Black
-5a361287-6a7c-4011-acdb-6eaff6d46347,LGA1151,0,64,4,Black
-f5e2accf-43d7-4c07-9e93-3ecd3d1ce003,LGA1700,1,192,4,Black / Silver
-1641f0fb-684a-4b64-850b-5e0a74473041,AM4,0,128,4,Black / Silver
-ce0c02fd-7e8f-4bbd-b78f-b3416675e5b0,LGA1700,1,64,2,Black / Silver
-3b621763-397f-482f-ad71-8717774fc68b,AM4,1,128,4,Black / Red
-8437e832-df11-4cc2-a48c-981a51ec9d70,LGA1700,0,128,4,Silver / Black
-eb029fee-c650-469c-b726-7b8f4d923ec4,LGA1200,1,128,4,Black / Silver
-793ccf9f-ccd3-46e4-9c54-5d1f7d7ad3dd,LGA1151,1,64,4,Black / Silver
-72d024f0-1ff2-403b-af98-e0d7187a60cc,LGA1700,0,128,4,Black
-4ad114ff-c3ca-41f6-99e6-a52b2b93d2ee,LGA2066,0,128,8,Black
-1a36aad3-6ef4-40a9-9358-2cd40b5bfcc7,LGA1200,0,128,4,Black
-8739c9f2-41ae-497d-a36a-11930d26d62d,LGA1200,1,128,4,Black
-e70857f0-e417-4304-b32b-21fcdd40b071,LGA1200,0,128,4,Black
-15595492-8d7d-4126-82c0-6e2833aab2b0,LGA1700,1,128,4,Green / Black
-9eebeece-a4fb-42ea-95b2-3ec94c39ac5e,LGA1700,0,96,2,Black / Silver
-4d8fc6cd-b1d8-4d6b-9a71-9e429ae52d3b,LGA1200,1,128,4,Silver / Black
-4d17764c-0fce-4ee1-8eba-8d0ee66db5d4,AM4,0,128,4,Black / Silver
-acc64a6c-ac85-4992-922a-6adb8d8683ab,LGA1151,0,64,4,Black / Red
-fa52e527-0bef-46fa-8940-0e1635c72cbd,LGA2011,3,128,8,Black / Red
-0adc4b15-89ad-459d-933d-9574e421fde9,LGA1151,0,64,4,Black / Yellow
-e5bbaa14-ed94-4f8c-b802-b11440a0f071,AM5,1,192,4,Silver / Black
-83406d4b-ab45-4c79-8a28-54f9def630f1,LGA1700,0,128,4,Silver / Gray
-10f32ff2-bcd4-4c2f-abc7-79c7b3d40d32,LGA1200,0,128,4,Black / Silver
-3f187560-cad7-4431-b5f6-172f17edec86,LGA1200,2,64,2,Black
-3931f833-87d8-40df-a03e-97bd2babfbd6,LGA1151,1,128,4,Green
-371022e7-5a3e-4c47-85ee-71fa62b5d96e,LGA2011,0,64,8,Green
-75702cca-8bca-46dc-b273-560ac7856cdd,LGA1200,0,128,4,Black
-5e65c8db-57c6-4302-a318-30a28c67ed84,LGA1200,0,128,4,Black
-bd71c767-c7ab-4f03-a9da-11cf41eff989,LGA1155,1,8,2,Green / Blue
-dd0f5d5f-0310-4455-9fcb-29866cd98691,LGA1200,0,128,4,Black / Blue
-adb0d0de-9940-4865-b469-b69fbe6a761b,AM4,0,128,4,Black
-25200d70-1049-4959-b207-3ba509653f4a,LGA1200,0,128,4,Black / Silver
-b543236d-7bb9-47cb-8ccc-3b90002627dd,LGA1151,1,64,4,Black / Green
-c4be799a-0142-4770-b796-61c179bee341,LGA1200,1,128,4,Green
-d84d66be-9ac5-4895-9ea2-791a11dea449,AM4,2,32,2,Black / Silver
-20d893b2-f3b0-4999-a4e9-81aaaaffb2f7,LGA1200,0,128,4,Silver / Black
-c464cc0e-def4-4aa4-a144-ff7639c2b9c6,LGA1700,1,64,2,Black / Silver
-d73cd314-2d4d-4441-a56e-03741870d8e7,AM4,1,128,4,Green / Silver
-8371ed09-056b-48a4-94d5-909df2e47ef0,LGA1151,0,128,4,Black / Silver
-ac1e9cd3-5826-41cc-9867-e595fac056f5,LGA1200,1,64,2,Black
-be50d92e-c94a-450c-bfc9-03db63ae723b,LGA1150,1,32,4,Black / Green
-3ee36eb9-ec1e-45df-943d-1f918ff89e3b,LGA1151,0,64,4,Black / White
-a9191e19-de0a-4529-9824-39d23b4a54a8,LGA1700,1,128,4,Gray / Black
-e9fb1b5f-8387-4258-800d-0455aec0c77b,LGA1700,1,64,2,Silver / Black
-0354cef1-eb16-4170-9f97-afed455f4a4e,LGA1200,1,64,2,Silver / Black
-365b5495-b014-47a0-9434-02c6221a51d7,LGA1200,0,128,4,Black
-d94672e6-25f3-4813-9829-d206a4275358,LGA1151,0,64,4,Black / Silver
-f52f0f3e-eb07-49e1-91bf-201155ce1877,LGA1200,2,64,2,Black / Red
-bdda433e-ad8b-4a0a-bc62-5e4b1c33d8ea,LGA1700,0,192,4,Black
-3f2cfce7-f1fb-4345-a51a-07a7e1d7668c,LGA1151,1,32,2,Black
-1ac59080-d6d4-4817-9bc8-ea7e02f9606d,LGA1700,1,128,4,Silver / Black
-2eb39f4f-92fb-47d8-bb7a-5e76023bd5a4,AM4,1,64,2,Black / Silver
-52210c93-f1bc-4386-b7d1-7a8e896a5307,LGA1200,0,128,4,Black
-1f2aa72c-21a7-4bef-8031-80ed7fe79550,LGA1700,1,64,2,Green / Black
-17422543-e72a-48fd-8c08-8993cc716737,AM4,1,64,4,Green
-00e4abf2-043b-4b99-b600-139a8696bca2,AM4,1,128,4,Black / Orange
-792d33c3-f03c-4c7e-b20d-c1b126b48123,LGA2066,1,128,4,Black
-2b9e5fa0-511a-434a-8da6-84ccf1a5038d,LGA1151,1,64,4,Green / Blue
-ba286eb0-e7d9-45f1-8e89-2b11b13b3139,LGA1150,1,32,4,Black / Green
-d5c26633-f974-401e-a5df-416231a3cdb9,LGA1200,1,128,4,Black / Silver
-df4d44b6-9bd1-4177-8a52-17606c03065a,LGA2066,2,64,4,Black / Silver
-edaaf0a3-56bb-4beb-ad75-efe6b1ec4b60,LGA1200,0,128,4,Black / Silver
-be7ae8e7-f76d-4a0a-a1fb-2eb61fbeab17,LGA1200,0,128,4,Black / Blue
-b5a34c41-caf3-4458-83dd-5a84095a0a2e,LGA1151,0,64,4,Black / Red
-07e0a16e-bcc4-491c-b4e1-423d89519230,LGA1200,0,128,4,Silver / Black
-09ff5796-3eb1-4b3c-b77e-85212aacac39,LGA1151,0,64,4,Black / Red
-f0a439a5-9138-4db1-a0e8-6db6998f5d6d,AM3+,0,32,4,Black
-4695f73c-5292-4896-929d-a602bbee8579,LGA1200,1,64,2,Black
-9d1ef78c-f7d0-49e7-9174-0aa4c7579d82,AM4,0,64,4,Black / Red
-2d28c6c8-7607-4967-b54d-a6eb49c4767e,LGA1200,0,128,4,Black
-2e46a542-0d51-4765-9c3a-366dd3ffdddf,LGA1200,0,128,4,Black
-4db3d205-85e7-44e1-b844-61a96d488949,AM4,1,128,4,Green
-59ca5c54-1626-44df-8345-259f14e46ff8,LGA1700,2,64,2,Silver / Black
-961d7573-849e-46f8-ad6b-29215e39d2b0,LGA1200,0,128,4,Black / Gold
-4bebd2a8-d1f3-4938-9889-6580da894a4c,LGA1200,3,128,4,Silver / Black
-ddf6fe6f-eed1-4f1b-a3e6-fa0ed8198492,LGA2066,3,64,4,Black / Silver
-18fb790a-d6b1-463a-9df5-93499c46270a,LGA1200,3,128,4,Black
-ff252757-d8b1-482a-8dfe-16681b689525,LGA1200,3,128,4,Black / Silver
-389dad2d-3a9c-466e-9be4-1173e31be198,LGA1200,0,128,4,Black / Silver
-b4fc1fa1-0afb-49d3-8557-b21c4b7112ed,LGA1200,1,64,2,Black
-cf755811-7047-47a2-814e-12fa74c15098,LGA1200,3,128,4,Black / Silver
-bb05c555-de43-4814-beb5-8baf79842b61,AM3+,1,16,2,Black / Blue
-5c5b91c2-c794-40b2-8877-5d2cc9a6cec3,LGA1200,3,64,2,Green / Black
-10b11b7d-4bc7-4def-ad65-e75b3bd43e9a,LGA1200,0,128,4,Black / Silver
-3e7eed5b-1752-4cf2-a412-d7f3c6e4f01c,LGA2066,0,256,8,Silver / Black
-3eb99f71-3618-493a-8a09-10adafd48abb,LGA1200,3,128,4,Black
-f2aa5eac-8920-41b1-8343-0c0ffa2e502d,LGA1151,1,64,4,Green
-e75c20da-0496-44b8-a388-13cbe9e0c2b8,LGA1200,0,64,2,Black
-8f4bd478-de8b-4406-9c92-78eced8b6794,LGA1200,0,128,4,Black
-c5cb1871-f647-48f1-ab79-5851dbd3e61f,LGA1700,0,192,4,Black / Silver
-c9740f4e-bb7c-4cd6-acd9-d3df976f4148,LGA2066,0,128,8,Black / Silver
-04d8d9a8-2809-486d-b4c1-2ac117665c87,LGA1700,1,128,4,Brown / Gray
-5daeb762-7c08-4f10-ad89-11acb652cfc8,LGA2066,0,256,8,Black
-6338ad56-3007-4b55-b3df-57a244cad5f7,LGA1200,0,128,4,Black / Silver
-bdb8768e-dbc3-49fb-b3fc-fb44ea084f8a,LGA1200,0,128,4,Black / Gray
-acd6d0f6-c472-4b9c-b28d-7643599da214,LGA1200,0,128,4,Black
-6934778c-e88c-4de3-9f9a-2e3eaf7fbd1b,FM2+,1,32,2,Brown / Black
-059ad400-d4d6-4a6d-949a-fd6363ab100c,LGA1151,1,128,4,Black
-03ae52aa-152f-497a-8aa2-f406e07cb2d4,LGA1200,1,128,4,Black / Silver
-91a9cb6b-ce92-4a21-b31b-7a862544bf4d,LGA1151,0,64,4,Black / Green
-25fed6f5-8392-459e-be44-2e6242788e79,LGA1151,2,64,2,Green / Black
-bbbacd29-c536-497b-9ed0-2b479d595265,LGA1151,0,64,4,Black / Silver
-e41a971d-4041-4626-9cc7-0a2d56bd85ea,LGA1700,1,128,4,Green / Black
-e65b926a-1d89-41a7-bbf6-29a5f7315304,LGA1700,0,192,4,Black / Gray
-7b39ef44-9c70-42f9-aab6-d373467f2821,LGA1200,2,64,2,Black / Silver
-e463ce2c-bd5a-46e3-937f-a90630493f61,LGA1366,0,24,6,Blue / White
-79144f70-6687-4360-ba9b-448baf5676e4,LGA1200,1,64,2,Black / Silver
-d55fc4fd-9ca1-4614-a242-a4d0a4161700,LGA1200,1,64,2,Black / Silver
-2560d965-2898-4bc4-ab98-554ee821bbb8,AM4,1,64,4,Green
-047054fd-3688-439c-98d3-6763d301a16a,AM4,0,64,4,Black / White
-8cfd6b6a-b7a4-41ce-bf97-5cb7f5d9f78c,LGA1200,1,64,2,Black
-9de81e64-8225-4c40-ba87-106bec6d1999,LGA2011-3,0,128,8,Black / Blue
-30cdbe02-1bb7-43be-813e-f2e51c5bf82c,AM4,0,64,4,Black
-9df35af5-6f69-4a0e-b438-181d1c131080,LGA1151,0,64,4,Black / White
-3e40d81b-ea5e-416d-a683-11c37fa2193f,LGA1151,0,64,4,Black / Red
-0a09f3b0-0a3b-4825-85ae-5b33c17debdd,LGA1700,1,64,2,Gray / Black
-874fc041-0a24-4480-b202-5d440e2d43e3,LGA1151,0,64,4,Black / Silver
-ca6e47a5-0a83-4c79-beec-d6abc246d670,AM4,0,64,4,Silver / Black
-6bceb64f-e049-4fe4-a8df-d8d9a6ee2060,AM4,0,64,4,Black / Red
-67a21ee2-0cfd-4233-9161-871fef7cb7f5,LGA1200,0,128,4,Black / Silver
-de545196-0269-4661-adf9-5720f8030662,LGA1151,1,128,4,Black
-237a4b54-45b0-414e-aa64-cb5937cf7000,LGA1700,1,64,2,Gray / Black
-fd5083de-7b07-4f0d-a604-18ec2b8413dd,LGA1200,3,128,4,Black / Silver
-17141f4e-c5fe-4d88-8790-40b696ce6f76,AM3/AM2+/AM2,1,8,2,Multicolor
-9e903b19-e0c9-4960-9f10-e23a6475d68c,LGA1700,0,128,4,Black / Gray
-612edc74-341f-406c-ad89-ad6423658222,LGA1200,1,128,4,Green / Black
-7818611b-27e3-4a44-b281-bb7e0c3b7e04,LGA1200,3,64,2,Black
-8a0c340b-ef0a-4b7f-a181-4fb15fc913ca,LGA1151,0,64,4,Black / Silver
-8e4d3c1c-a730-4605-93e7-4b65a6dc8c41,Integrated Atom D525,2,4,2,Green / Black
-8c389bb5-61ca-4f45-9474-5e2dd2fcc297,LGA2011,0,64,8,Black / Green
-16230a85-a73a-4054-b492-c06c178caf96,LGA1200,0,128,4,Blue / Black
-1d8b4b7a-4155-438f-b5ad-d2b902d9ce6e,LGA2011,0,64,8,Green / Blue
-e127d9f2-55df-45a9-bd36-11f9e24dfb0e,LGA1200,3,64,2,Black
-800af847-0df5-4317-9976-52783b139ade,LGA1151,1,64,4,Green / Black
-0f63daf9-0ae0-4e11-8f00-9434000bbe10,LGA1200,0,128,4,Black / Silver
-3fb65308-e28f-4a67-afb6-5a29e1203067,LGA1200,3,64,2,Black / Yellow
-6f353389-5f91-4159-8fae-baf9fd1fde03,Integrated Atom C2358,2,16,2,Black / Green
-6c083ac8-6c02-4f80-8b9c-48b825f3ed66,LGA1200,0,128,4,Black
-205ec208-ea49-4e5d-b1c3-8605dee38459,AM3,3,16,4,Black / Red
-aa2cc52d-3a66-498b-897c-f540ef93b7db,AM3,1,8,2,Black / Red
-005f38a4-c034-435d-8737-f3ea04a12b7b,LGA1200,0,128,4,Silver / Black
-bc9d741f-3fa6-4a2b-9098-c527b0103131,LGA1150,1,32,4,Black / Green
-aa35f104-7433-4e1f-a57e-82409750af73,Integrated Pentium N3700,2,8,2,Green
-8be9f196-2f8d-469d-9e64-0091a9941503,LGA1200,1,64,2,Green
+1d9f10a1-ebb3-4e4e-8d05-97e60075f22c,AM4,0,128,4,Black / Silver
+7e134b91-125e-4394-a3a5-66f9b64a4047,AM5,0,192,4,Black / Silver
+0b21b802-5c16-4907-bac5-10ada8cc8a48,AM4,0,128,4,Black / Silver
+07d87cd2-c6d5-4d49-85cc-18a66f7333b9,AM4,0,128,4,Black
+4eb76baf-01e6-4d8b-8b24-da0205726f69,LGA1700,0,192,4,Black
+eb23008f-f6b7-400b-ad42-6a82fe38250f,AM4,1,128,4,Black
+73a4ebaf-6272-4040-b814-6c2d1c7267cd,AM5,0,192,4,Black
+0e2e499f-210a-47e6-9b8f-a0ad6185bbbf,LGA1700,0,192,4,Black
+8ee2a458-c207-4a72-9f50-c89337bf2857,AM4,1,128,4,
+738bb78a-f726-41c7-97ed-a13447694c14,AM4,0,128,4,Black / Red
+8664acaa-196f-4e11-b50d-a03990f277c9,AM5,0,192,4,Black / Gray
+b83581bc-b371-43c7-9ceb-80faba85982b,LGA1700,0,128,4,Black / Silver
+f93b92f1-cac6-4c2a-afc5-d9684e0a6a85,LGA1700,1,128,4,Gray / Black
+881ea3e8-3f7c-467e-a054-a1e42b63429f,AM4,0,128,4,Black / White
+bfbdd935-1420-44bf-88f3-c688562a7af1,LGA1700,0,128,4,Black
+75ecb9b0-a1b1-48b3-bcdc-4f1102b7ffb4,AM5,1,192,4,Black
+a5235543-7aaa-406a-878f-3bbd73553d9d,AM4,1,64,4,Black / Silver
+2439e18c-6509-4d60-a8ed-07dc08f5fc62,AM4,0,128,4,Black / Gold
+ba226151-ebb1-471b-a70b-83c7264a9c34,AM4,0,128,4,Black / Gray
+a04aeeaa-898b-4a0b-8c9e-27347ec5c537,AM5,0,192,4,Black
+92e47768-3a2b-4a91-9bec-5ff5fffbc0e3,AM5,1,192,4,Black / Silver
+98716cff-efab-4bcd-aa89-c7341a966ef3,LGA1700,0,192,4,Black / Silver
+0dc356c6-5a38-4572-83b3-823bd926aacd,LGA1700,0,192,4,Black
+64687d15-a734-476d-8bfc-4614d2b01459,AM4,1,128,4,Black / Gold
+3086f891-8b11-4034-82de-4a6499cc6026,AM5,0,192,4,Black
+70812167-7cc7-45dc-8e69-02bd1ec54693,AM5,0,192,4,Black / Silver
+edc171de-3aa8-4d60-aee0-97490ac229df,AM4,1,128,4,Black
+311c6105-608e-4820-8b4e-3efc4e6c2327,AM4,1,128,4,Silver / Black
+25287eb7-8a71-4a90-a392-0e3133f2fd36,LGA1700,2,96,2,Black
+6ffc6b37-e7bc-4459-b53c-45ed81bd3c12,AM4,0,128,4,Silver / Black
+b48a32e6-0643-4ec0-b30f-ff8bd93d4131,AM5,2,96,2,Black / Silver
+a95f961a-ff26-4de9-8212-af7ac16fb33d,LGA1700,0,192,4,Black / Gray
+854bce8b-5394-456c-a6ae-10fbd1a6ae41,AM4,0,128,4,Black
+3dff2f49-9177-4633-8701-342fb9a88430,AM4,1,64,2,Black / Silver
+f473f45e-a68c-44a2-b5e4-f651114900c5,AM4,0,128,4,Black
+acdd7ec2-99da-40ea-9ae9-bf44b46fdac2,AM5,0,192,4,Black
+8bb8d042-a7bf-4ad3-8be2-30451a4dcfd8,AM4,1,64,4,Brown / Black
+96f3a0ad-b9bd-43e8-be43-7bec6bbf58e4,AM5,0,192,4,Black
+79bd3972-fd02-46e9-831a-5bc2a36ebbfe,LGA1700,0,192,4,Black
+015c3679-68f4-481b-b8c7-8336fe665937,LGA1700,1,64,2,Black / Silver
+ac6d237c-1dbc-426b-ae37-3bb499257708,AM4,2,64,2,Black / Silver
+a78219eb-1e3e-4fa9-9b48-426d6f94a619,AM4,1,32,2,Black
+8eee9d44-674b-4414-8f6a-04e242390aa2,AM4,0,128,4,Black / Silver
+bb4fc3a8-2a73-469f-a9ad-0eab509bbbe1,LGA1700,0,192,4,Black / Silver
+3192e113-86fb-4481-b244-bcb9ba5de12b,AM4,1,128,4,Blue / Silver
+79f4b0e0-8303-43e1-8739-cdccf4d5ebfa,sTRX4,3,256,8,Black / Silver
+093bd0ac-558c-45cd-b9c1-7e624a017cd1,AM4,2,64,2,Black
+b75c424b-5215-448b-8043-a1922d9ab22c,AM5,1,96,2,Silver / Black
+f7c94ef5-7899-481b-854a-35fad3c28d2e,LGA1700,0,192,4,Black / Silver
+750db2c1-1e93-49bb-979f-9033323a475e,LGA1700,1,128,4,Black / Silver
+6068be56-612e-4b08-a1f6-bafeaa67f75e,AM5,0,192,4,Black / Silver
+93a0a595-161d-469c-ac1b-294c7b213f84,AM5,0,128,4,Black
+335b9679-7fde-4544-ba21-68101d3849a2,AM4,1,128,4,Brown / Silver
+824701e8-a638-43bb-bb28-4535fd9486e0,AM4,1,128,4,Black / Orange
+2458439b-b941-4300-bc4d-90112c6c164c,LGA1700,0,128,4,Black / Silver
+088526cf-50d7-4f9e-bcce-1a91dfd38b43,LGA1700,1,128,4,Black
+c8f542d6-921f-459d-8a41-e40287c27133,LGA1700,0,192,4,Black / Gray
+47276ffb-8a80-446b-ace0-a80770a10327,AM5,0,192,4,Black / White
+3e4fb9f3-0e99-4aaf-9f8a-1bfbbd52c1b1,LGA1700,0,192,4,Silver / Black
+c9339713-096b-4a79-99e3-bfdbb74113ba,AM4,2,64,2,Silver / Black
+2ea01f8b-045d-4f9a-956a-fe2e39ed1289,LGA1700,0,192,4,Black / Gray
+5e016e16-53c8-43ed-8c37-070efbd04b0b,AM4,1,64,2,Black
+b8185170-5be4-468d-8a7c-d226c25eb375,AM5,2,96,2,Black
+afed3eea-a97a-4f2c-94a9-513685c30465,AM4,0,128,4,Black
+862370a7-cf52-4569-9353-ea543f94bbfe,AM5,1,192,4,Black
+5ee215ee-d6f2-4c4e-8615-b91032a4aa72,AM5,0,192,4,Black
+ba189eff-a326-44a4-9130-d0e12f824642,LGA1700,0,192,4,Black / Silver
+3771c777-e752-4963-8b99-8eee51f997e2,LGA1700,0,192,4,Black / Silver
+325fc21a-3abb-44ee-82e5-2adbf9896621,AM4,1,128,4,Black / Orange
+4556ba7a-da0e-478b-b8f0-af88e2e6fafc,AM5,2,96,2,Black / Silver
+89911e27-aa3f-4659-a83a-90f72016b2bf,LGA1700,0,128,4,Silver / Black
+fec9f8d8-d072-46ec-b604-f598789cd7d5,LGA1200,0,128,4,Black / Silver
+70e0cb54-4463-406e-8244-59ce0eb3b927,AM5,0,128,4,White
+35d15ee4-6232-46f3-b5fd-145e2d7ea33f,LGA1700,0,192,4,Black
+dff3d686-3b73-4c2e-a01c-8eb86e24dcd4,AM4,1,64,2,Black
+a4717f7a-7926-4669-8370-5fa17a3421ee,AM5,1,192,4,Brown / Black
+a882feb5-1d49-4be7-a2af-fc04191ec061,LGA1700,0,128,4,Silver / Black
+97d75b05-28e9-4f1d-be26-fa20307d015a,AM5,1,192,4,Black / Silver
+eb50787c-de1f-41ce-b41a-f0d78a24b422,AM4,0,128,4,White / Black
+a330e016-b8c2-4b08-9f89-21bfcb705fae,AM4,1,128,4,Black
+1359d51e-1cad-4936-a4ef-9e0218a095b0,LGA1700,0,192,4,Black
+1cbcd21d-e1d3-490b-92f8-c42866f423b5,AM4,0,128,4,Black / White
+c7936b0e-7316-4e80-9fba-b3c1016bb949,LGA1700,2,64,2,Silver / Black
+4d9d2324-6db4-414d-bfab-6316dc64d1af,LGA1700,0,128,4,White / Black
+b976c6fe-5952-4a42-8143-a80ed73da8e6,LGA1700,0,128,4,Black / Silver
+a29f1242-ed71-41de-8786-79ae2b73405b,LGA1700,0,192,4,Black
+55312897-d84f-4dbc-a8ae-ca8f755a91f0,AM5,0,192,4,Black / Orange
+a1a0f675-bfd4-4d48-b87b-6e9ce3766a17,AM5,0,192,4,Black / White
+4261317f-280b-43d6-820c-66e0e6692184,LGA1700,1,192,4,Black
+23acf209-d8be-4ab8-8644-5c23fa3f2326,AM5,1,192,4,Brown / Silver
+c525f2a4-241f-48fe-9380-80f182890498,LGA1700,0,128,4,Silver / Black
+4e61ec8b-a666-4790-ae1b-d3a49a93ac27,LGA1700,0,192,4,Black
+ca8288ad-85a8-4b3b-bad4-f5ebbabeacad,LGA1200,1,64,2,Gray / Black
+327f617f-6ef1-45dd-add2-a97077f64e03,AM4,1,32,2,Black / White
+c4d3920b-ae41-4607-89f4-2700304ddab2,AM5,0,192,4,Black / Silver
+f3e5b41d-3942-43bd-a211-b461c5622e96,AM4,1,128,4,Black
+36fbefc5-e658-468a-b950-b7fe1658d8ab,AM5,0,192,4,Black / Silver
+e1c279dc-127f-4e89-87d4-ffcfd8ea4835,LGA1700,0,192,4,Black / Silver
+e238ddeb-f510-4a39-84c6-45917c30bdb1,LGA1700,3,192,4,Black
+450e1a73-46a2-4846-a842-ae547a69bb82,AM5,1,192,4,Silver / Black
+2cf718d7-9a22-45df-9ae4-5ed474dc303d,AM4,0,128,4,Brown / Black
+efe7cf3f-b693-4019-b4f6-c33e678a38b2,AM4,1,64,2,Black
+3f20fe16-a793-4ab1-bf23-156a23cc0874,AM4,0,128,4,Black / Silver
+e09a392a-a11d-455e-8744-87c760b71221,LGA1700,0,192,4,Silver / Black
+b3124a79-7dfc-49c2-9a45-af6d563838b0,AM5,0,192,4,Silver / Black
+69fbde30-8a23-41fa-b358-8b2a77caf25b,LGA1700,1,192,4,Silver / Black
+21e8dfa1-771b-4298-9b84-0f3a680c4c40,AM4,2,64,2,Black / Silver
+4d5856cd-3de2-4c46-be3c-cad30571bccd,AM4,1,128,4,Silver / Black
+6635ce2b-1dfa-4595-a804-e8affe2b65f8,LGA1700,0,192,4,Black
+a6658ce3-71ec-4177-b75b-5cf25fc469da,LGA1700,0,128,4,Black
+6482a19b-d654-43c8-b2b7-ea61334734fa,LGA1200,0,128,4,Black / Silver
+162bac16-7f8a-462e-9661-51c45ed9f0a7,AM4,0,128,4,Silver / Black
+071add40-cbbb-498c-9b2d-2705465d716e,AM5,0,192,4,Black
+b282db93-c0b6-468d-a627-e9109a9f3ac4,LGA1700,0,192,4,Black
+fb6b7d90-865d-4456-bc92-2384343bcfe6,LGA1700,0,128,4,Black
+9af5b9ec-452c-4300-ad86-00c180fde084,LGA1700,1,64,2,Gray / Black
+99d838c2-fcfc-463a-8d4f-6b5b7b7bf1a2,LGA1700,1,128,4,Black
+7eaa5e4f-4546-4316-b295-8df8d0788884,AM4,1,128,4,Silver / Black
+2c559152-098b-4a5d-9af8-cb942c4b8080,AM5,1,192,4,Black / Silver
+44e63bca-34d5-420b-a002-7775ea74fd9e,LGA1200,1,64,2,Black / Silver
+b461e368-32c0-4695-884f-fe0ab5ad455c,AM4,1,128,4,Black / Gray
+c6d86752-2f83-4d2d-914e-ddf7d842de60,AM5,0,192,4,Silver / Black
+04cfcdcd-e0c3-4d6c-a543-68d3fc358e22,LGA1700,1,192,4,Black / Silver
+312bd88f-17b8-419b-bb03-a7308ee56deb,AM4,0,128,4,Black
+16811300-92de-43dc-a140-7b2957febab2,AM4,1,128,4,Black / Silver
+31541e1f-8e43-40b0-8e5d-160b4f33a414,AM5,1,96,2,Black
+a404f3d0-40d4-41c3-ad97-ad9026494a57,LGA1700,0,128,4,Black
+ba1592ef-2b8d-4527-a91a-b518dafd90ab,AM5,2,96,2,Black / Silver
+8ae07be0-a63a-4764-92a4-ac4768665bdc,LGA1151,0,128,4,Brown / Black
+5f5ffa4d-fe3b-4b7f-8bd7-b1288eddbedc,AM4,1,128,4,
+77492cdb-5736-4ff5-8066-fc0e415d0bac,LGA1700,0,192,4,Black
+088937d8-16a2-40f1-a303-e87be44a6ac7,LGA775,2,4,2,Green / Blue
+e062d7c6-398e-4465-b9b9-7e80df38a98c,AM5,1,192,4,Black
+e7b7f7ab-6fd5-4ce8-adb0-2a8e0242e6ec,LGA1700,1,192,4,Silver / Black
+b9f0f718-ecbe-4c3d-a5f3-ae5dc288a5d9,AM5,0,192,4,Black
+fbb49479-bfb7-48d8-9544-a29da91d37d4,AM4,1,64,4,Black / White
+d7be8c01-0cff-4e32-9a2d-99825c4192a8,LGA1700,1,128,4,Black
+3bedcf67-a1c9-430c-993a-ec0b9df26a00,AM4,2,64,2,Black / Silver
+4c70b8ca-2602-45c1-a192-459545c72384,AM5,0,192,4,Black / Copper
+91198040-c7cf-459b-a979-6e55feb9bf9d,AM5,0,192,4,Black
+1820c8e7-0ff9-427c-9ec4-0a6e352399b7,AM4,1,128,4,Gray / Black
+5d1917dd-8b0c-49e6-a8a7-3fd868c62bf6,LGA1151,0,128,4,Silver / Black
+1a76c823-e04c-42d6-9e66-791dc9ccbc84,LGA1700,2,96,2,Silver / Black
+60623ebe-cf0c-49f6-b533-13e90169dea1,AM4,0,128,4,Black / Silver
+169abae6-1b59-4f76-9b7e-958801f12d2a,AM5,1,192,4,Black
+df145889-005b-44ca-a424-fd0baf815446,AM4,0,128,4,Black / Silver
+e3d4ff5e-3108-42b6-8cc2-c04d2010d4bd,AM4,1,64,2,Black
+64b220a6-4ef2-4860-92ba-eb3eb7751f9b,AM5,2,96,2,Black / Gray
+6e107126-5831-4617-a646-b022109f0bae,LGA1200,0,128,4,Black / Silver
+816c56a2-be03-41d3-b463-cd8524ac28a2,AM4,1,64,4,Black
+c518cb75-f0a8-4140-bb58-6ae9e32403e2,LGA1700,1,64,2,Brown / Silver
+1e216635-5c60-4985-a14d-a2b719b84c1c,LGA1700,1,128,4,Silver / Black
+d3af4e6e-5be7-40df-bca5-454e18f2cd2d,LGA1700,0,192,4,Black / Copper
+132a7cc1-68bd-403c-9ac5-9d9c85f4ea33,LGA1700,2,96,2,Silver / Black
+772fd14b-004c-4e97-b016-c631688e3113,LGA1700,0,192,4,
+943c0ef4-d855-47b8-b2b2-7cc44cf53a6f,LGA1700,0,128,4,Silver / Black
+068b402d-8bfe-41b0-b2d1-8967d3001c17,AM4,0,128,4,Silver / Black
+49d95a95-9dad-4629-96b4-3179f009eddb,LGA1700,0,192,4,Silver / Black
+7e40fa1b-92cf-4d4e-bcb4-46609c90b9fa,LGA1700,2,64,2,Silver / Black
+99c81e56-4ae4-47a1-aaeb-ceec297049f1,AM5,0,192,4,Black / Silver
+7e801270-8546-487c-b035-799764382f0b,LGA1151,1,32,2,Black
+c57ffecf-01f4-444d-9605-49aa05571e3b,AM4,2,64,2,Silver / Black
+59c9272f-10a0-4a3e-9161-4558a5a103fd,LGA1700,1,128,4,Silver / Black
+c04af697-44b3-49ca-bc7d-70029c5e8933,LGA1700,3,192,4,Black / Silver
+e890e001-812e-488a-89a3-9dca799c51ea,LGA1700,0,192,4,Black / Silver
+0e938d31-5d67-468f-99be-f4b87d93f999,AM4,1,128,4,Black
+be7c8860-59b9-46de-a47e-9b1bb573caa7,LGA1700,0,128,4,Black
+f08bf677-45b0-4234-b3ca-3990d09df8e5,AM4,0,128,4,Black
+10d0655d-6731-47f9-b39d-5f31587d8414,AM5,0,128,4,Black
+4dafb449-9234-4254-a65f-b602731f104f,AM5,3,192,4,Black
+585b5d22-c41a-4f5d-b509-414e869e7f05,AM4,0,128,4,Silver / Black
+d65f2d04-a9ba-431a-910d-95bb47ae804a,AM4,1,128,4,Black / Silver
+537e8972-3d9a-4ff7-af74-d30ea78588d0,AM5,0,192,4,Black / Silver
+ad9e5081-3f01-4c1c-8b71-179232fc90e8,LGA1700,1,128,4,Black
+0bb0effe-de4b-4c52-9eb4-08eb3ed1c905,AM5,0,192,4,Black / Blue
+38818311-8f78-47ce-8eba-abc643870a97,LGA1700,0,128,4,Black / Silver
+6e9e3c0d-9b9a-4f1f-9de8-899ffdbddb00,AM5,0,192,4,Black / Silver
+dd505b6b-1139-44c1-8c60-7fd706114cf1,LGA1700,0,192,4,Black
+438da35b-5dd6-4478-8ecb-743022c9f5c9,LGA1700,1,128,4,Black
+c8a9b1e7-0c16-44cf-a582-2273d667ba7d,LGA1700,0,128,4,Black / Gray
+e7f792d4-f50b-41ec-b361-ef52a578906d,LGA1700,1,128,4,Black / Orange
+8432d1f7-c666-4459-9d17-6429bfa576db,LGA1700,2,96,2,Black
+7e483b52-bae1-46df-aa12-fc2a492da08b,AM5,0,192,4,Silver / Black
+c76fd9ff-91bb-4aa3-898e-6a4cb7cf76c0,AM4,0,128,4,Black / Silver
+42bd77b6-2960-43b8-b23e-4f5878b56fa2,AM5,3,192,4,Black / Silver
+370db8d4-e441-4708-998c-7473991b2745,LGA1151,0,128,4,Silver / Black
+3afc6362-ca59-4bb0-831a-937eab695393,LGA1700,0,128,4,Black / Silver
+0d354230-7713-44c9-8195-ddd4273b784b,AM4,0,128,4,Red / Black
+896c4d10-c8d1-47e9-97aa-b6a252904726,LGA1700,0,192,4,Silver / Black
+fb6f8711-39fb-4053-af2f-05b29b24b5fe,LGA1200,0,128,4,Silver / Black
+f99b1b6b-a882-4bf7-8303-6c9e70fbc685,LGA1700,0,192,4,Silver / Black
+c354dd75-889e-422f-a1d9-dee2d5043052,LGA1700,2,96,2,Black / Silver
+19cdd421-89b6-4fc0-856c-9b5f22ac2135,AM4,1,32,2,Black / White
+fdbe5995-f366-4e32-8165-aa9f5d3ec86e,LGA1700,0,192,4,Black
+ef50c2b1-e181-4503-b60e-246b250c8f6e,AM4,1,64,2,Brown / Silver
+51a85a4b-7bfd-4644-abcd-d35e6ee0b322,AM4,0,128,4,Black
+92b0bedd-5315-41c9-a54b-1c4267651161,LGA1700,0,128,4,Black / Silver
+664b9e85-0f39-4aef-9c6e-370bafd2393d,LGA1151,0,128,4,Black
+ceec4256-93cf-4a27-ae21-f235b9d5236d,AM4,1,128,4,Black / White
+46e57775-6031-44e8-a73e-868dfeb99aed,LGA1700,0,192,4,Black
+b226fd27-c91f-4c9a-b4fc-76c899bed20c,LGA1700,2,96,2,Black / Silver
+97dd0f3c-f872-434c-802b-86f68af54092,LGA1700,0,128,4,Silver / Black
+1c53cf5d-e499-4be7-bed5-0d960a650dcd,AM5,3,192,4,Black / Gold
+994784d2-83e5-4b45-ae8a-46106044dc3b,AM5,0,192,4,Black
+018f7805-dba7-4870-b9be-85624682e546,LGA1700,0,128,4,White / Black
+a3a15768-350d-42ff-ac48-c7d97dea7b87,AM5,1,192,4,Black
+8d441894-c5fd-42b0-9a90-ba3db6117ba8,LGA1700,1,128,4,Black
+c3dc22e0-1043-4d2b-af33-0ac04df53dab,LGA1700,2,96,2,Black
+52c63b54-aa62-4cc3-93d4-f145e7aa4082,AM5,2,96,2,Black / Red
+1f1ea031-1e88-480c-a37e-57e25aa57d0d,LGA1700,2,64,2,Black / Gray
+fb923ce4-0c4e-45ee-876e-76ffdbbbf214,AM4,1,64,2,Black / Silver
+c1b70602-d409-47c0-a12a-f716ae425eef,AM5,1,192,4,Black
+d9687565-7bde-4ee4-97ff-c0a779669db3,LGA1700,0,192,4,Black
+ff811e26-8fdf-4873-ae7e-efba74d78507,LGA1700,1,64,2,Silver / Black
+8e347296-e997-4df6-be7a-12f5ab920235,LGA1700,3,192,4,Gold / Black
+377fd0a3-f190-4c26-aa06-245badd723ef,LGA1700,1,64,2,Black / Silver
+ee0b20f0-3ad2-4641-bcce-5c0fc586f9ac,LGA1200,1,128,4,Silver / Black
+a7906445-53da-4fcf-97b5-768e6773a75b,AM4,0,64,4,Black / Silver
+16672003-238e-44e1-b96b-9d24670085f7,LGA1700,1,64,2,Black / Gray
+4b8cbb09-940c-43c0-b5bf-ee1f1cb8cf0a,AM5,0,192,4,Black
+a6d2992e-d4a2-44e3-a1fd-e1f4f944b497,LGA1700,1,192,4,Black / Silver
+3cac2321-680a-44aa-a97a-a4e3f537ef20,LGA1700,0,128,4,Black
+be7bbf17-598a-45f2-842f-c67757473d5a,AM5,3,192,4,Black
+cdfd8820-0c35-43d7-be90-45120ffde860,LGA1700,0,128,4,Black / Silver
+910ebd2e-f956-4c7d-889f-b38026e45f34,AM5,1,192,4,Brown / Gray
+fb84ca16-536d-4278-a72c-689e696edca2,LGA1700,0,192,4,Silver / Black
+7689ed88-3f9f-45c8-a37a-3196e9907352,LGA1700,1,192,4,Black / Blue
+75ae61dd-7238-4019-b215-79ff44db0660,LGA1700,0,192,4,Black / Silver
+dc39b4af-79e2-4d36-adf0-889f914794ac,LGA1700,0,192,4,Black / Orange
+3ec98bf2-42ff-4bc2-b2d3-fa7313d1e5f3,LGA1700,0,128,4,Black / White
+26658117-371f-4b2f-92fe-f72ce9b50973,AM4,0,128,4,Black
+b0b0813c-d98c-4ddd-985a-bde79f8d6f5b,AM5,0,192,4,Silver / Black
+b13c8418-1f64-4e14-9476-4ab1b3b37626,LGA1700,2,64,2,Silver / Black
+d489b94a-4e54-4c22-8b4f-36f7a0fa7b70,LGA1700,0,128,4,Yellow / Black
+872ac16c-54f7-4583-b215-b1dca6862a00,LGA1700,0,128,4,Black / Silver
+1a124c79-6d13-441d-9ea9-57e94a96fb56,AM5,3,192,4,Black / White
+b5b15724-5172-4a07-ba11-261982638464,LGA1700,0,128,4,Black
+accf7233-c312-4f80-813d-b0bae0e43d1d,AM5,3,192,4,Black
+4d083592-1ee4-4179-a885-8fa21e44d661,LGA1151,0,128,4,Black / Silver
+6f5db34d-7abf-4989-9be6-f6551e425f83,LGA1700,0,128,4,Silver / Black
+9c91263a-e91c-41c4-8d24-4b1d92689e89,AM4,2,64,2,Black / Silver
+10c9a801-dddf-4e86-b803-9c5a952d4966,LGA1200,0,128,4,Black
+4e51b8b1-a2a5-405e-bbe2-8336609199c2,AM4,0,128,4,Black
+8535f3cc-d449-4474-ab98-3cf9763f4d94,LGA1700,1,64,2,Silver / Black
+db60042a-921b-46df-9f88-b837d4e0c2b6,LGA1700,0,192,4,Black / White
+c7b4078f-7f2e-4af0-b5fb-2fd21abf82ce,AM5,0,192,4,Black / Silver
+0dea7a5f-a747-460a-b576-4de3201674be,AM4,0,128,4,Black
+e4a3abc0-5403-42bf-bd67-db18fa7f72b8,AM4,1,64,2,Black
+7bddee06-97be-49bd-9f21-76609c8349f2,LGA1700,1,192,4,Black
+82a5fd54-3c35-4ab6-8dbd-a5df6db0b9bf,LGA1700,0,128,4,Black / Silver
+06ba002a-6cd9-4cf2-9b16-5ea3ecccd109,AM4,0,64,4,Black / Silver
+0af86b65-877d-445c-b21c-6350fd133a43,LGA1700,0,128,4,Black / Silver
+9d68bfaf-4184-43ad-812d-343064122525,AM5,1,192,4,Black / Orange
+f2c52257-2e44-45fc-805a-66bd7eceb1e7,LGA1700,2,96,2,Black / Silver
+027a8e48-8b54-4cf0-bcea-98e6effb89b1,AM4,1,128,4,Black / White
+49e128e0-ab96-4cad-81bf-ac7f14f5da60,AM4,0,128,4,Black
+a86518f4-8b05-4d54-b054-b6feac5f9ae2,LGA1700,0,128,4,Silver / Black
+c79387e0-cf0e-458c-ae61-a91744e07ce3,LGA1700,0,192,4,Silver / Black
+16df290d-42c0-4936-82c2-9838c52ae57b,AM4,2,64,2,Black
+b2120c13-91ba-41a9-8017-01f410093a96,LGA1700,0,128,4,Silver / Black
+d821e122-b352-4851-8702-2ea27fee066c,LGA1700,2,64,2,Silver / Black
+6d99a323-88c3-4c6c-9948-97f361e09a3b,AM4,1,128,4,Black
+18602633-41c3-4dfc-be36-de496760961c,AM4,1,128,4,Black / Silver
+bb800a97-80d0-4a55-9075-c0bdd08267d2,LGA1700,0,192,4,Black
+20a5b9dc-c3c4-4fbf-84fc-d20a15c30b20,AM5,0,192,4,Silver / Black
+01009814-6710-4d92-8e5d-2a2dfccf3ea7,LGA1151,0,64,4,Black / White
+c05f45b8-42e1-42c4-b1cf-799714dae4e3,AM4,1,64,2,Black
+7dadd1bf-8ca1-4b58-a97e-058e8dbe3ab0,LGA1700,1,128,4,Silver / Black
+54faa1f4-2189-437b-8363-5e817946e125,AM4,1,128,4,Black
+ddce43f8-ae73-4238-bb34-17a27fd4bd50,LGA1200,1,64,2,Black
+0e493b86-9833-4847-a91e-54d528646373,AM5,1,96,2,Gray / Black
+3433d08f-2a75-4282-a3f8-a2f522ed6f2e,AM4,0,64,4,Black / Silver
+17398c7c-cd03-4085-a4b4-259f8622d283,AM4,0,128,4,Black / Silver
+c789dcc0-1dca-4913-ba5b-406ccb9c1d02,LGA1700,1,192,4,Silver / Black
+1776c27f-12e1-440a-835d-97b9aef0d6d2,LGA1700,2,64,2,Silver / Black
+ee608e65-7f4e-4680-99ee-b5b2dde2d68a,AM4,1,64,4,Black
+e2e20022-5350-409d-9e47-bb0c22e8cd5b,AM4,0,128,4,Black / White
+b9f4dadf-8071-4343-84fa-077b91276416,LGA1700,1,192,4,Black / Orange
+7c4e4e21-7cb9-4862-82b3-ee1121df70ac,AM4,0,128,4,Black / Silver
+1aaf870d-fe97-447e-a694-e37f54f85ce4,AM4,0,128,4,Black / Silver
+c7d664b2-029c-4078-b072-4c1d2124b1c2,LGA1700,1,128,4,Black / Silver
+54cc3dee-9837-4062-9eec-31ef2106ed5b,AM4,1,128,4,Black
+c189c1d4-7800-490d-8a60-0bc6cf109389,LGA1700,1,128,4,Black
+70ba78e4-a7b4-4b1e-9568-6b440ea57cd5,AM4,0,128,4,Black / Orange
+d3b99868-c933-4b71-9f2c-12066c8d8b56,LGA1700,0,128,4,Black / Silver
+79005c21-250c-4939-a1f1-05f73243d6c2,LGA1700,2,64,2,Black
+7c672177-0845-440a-9681-23c268e48f9a,LGA1151,2,32,2,Black / Silver
+799e1ebf-9d57-4a88-aaf5-f2880e90b24c,LGA1700,0,128,4,Black / Silver
+9340300e-5216-4bf8-aa32-e3bc8ce60d47,LGA1200,1,64,2,Silver / Black
+0b79aad8-6d6d-45fb-8118-fcb9699bbfce,AM5,0,192,4,Black
+c8d78ac7-ed55-4718-9517-6bac3b1d73bb,LGA1700,0,192,4,Silver / Black
+23c28f83-9dd5-4aac-8083-8661386b7490,AM4,1,128,4,Black
+a7756156-2fce-4ccc-81fb-3f9337efe74a,AM4,0,128,4,Black / Silver
+feb5feaa-ec38-400f-9f96-f1e7748a1eb6,LGA1200,0,128,4,Black / Silver
+c6c0525e-b7fd-40ca-81b3-aab376da08c9,LGA1700,0,128,4,Black / Gray
+f674554e-c714-44af-9aaa-273a3bf3dc85,AM4,0,128,4,Black
+cb492800-d4be-45cb-9a97-69ca18445085,LGA1200,0,128,4,Black / White
+68c25a0a-368f-4105-a9d8-24584eddfb20,LGA1700,1,64,2,Gray / Black
+826f7941-1a7b-4273-862f-17029be3a723,LGA1700,2,64,2,Black / Gray
+d7d6be39-4776-41c2-8356-dfd1ba8bfc32,LGA1151,0,64,4,Black / White
+06cb1dd0-eaf7-4a9a-84ef-4e3aa04d5c50,LGA1700,0,192,4,Silver / Black
+3d2dd191-e4a4-4786-a1d1-e4996c7d5cf6,LGA1700,1,192,4,Blue / Silver
+f0e6bf5e-b0c4-4f59-b70c-0300356be544,LGA1700,0,192,4,Black / Silver
+0de5960b-841d-42a2-b2db-ae3d2d1f8d0c,LGA1700,0,128,4,Black / Silver
+f17f94c0-20b0-4525-85ae-05bf0dcb3d20,LGA1700,0,192,4,Black / Silver
+c445576d-e4c1-4343-8765-1615cb1a5ad5,LGA1700,0,192,4,Silver / Black
+1cb9e69a-9c5e-4620-a0c4-334068e5fb73,AM4,1,64,2,Black / Silver
+480fa67e-6e8e-4bf6-b8b8-d8c03ee2c82d,LGA1700,1,128,4,Silver / Black
+5fa92e54-907c-4bb4-be79-13cce83eb748,AM4,0,128,4,Black
+c859260b-89b1-4aef-b0fe-5b5c585772e1,LGA1151,1,32,2,Black / Gold
+c0909ff5-d1db-450d-9c7d-f53edefc998e,AM5,0,192,4,Black / Silver
+ace61adc-b6c0-4d1f-ad70-565e2165bd66,AM5,1,96,2,Black / Silver
+00459c2f-d840-444b-b700-b90d9e6d4a2d,LGA1151,0,128,4,Black / Silver
+8d72deba-f696-42a0-91bf-adcf17db774a,LGA1151,0,64,4,Brown / Black
+56a9bf1f-3909-41a5-be64-005b0e3f2710,LGA1700,1,128,4,Black / Silver
+2cab42e7-22d1-40e0-aa73-dc6353e48c3e,LGA1200,0,128,4,Silver / Black
+d1f70157-87c2-4630-ae37-be7033049ebd,LGA1700,0,128,4,Black
+649592ed-80fc-4dd4-b9a2-ec937a09944a,LGA1700,0,128,4,Black
+2ad034ea-df15-4e36-a0ad-343da19f90dc,AM4,0,128,4,Black / Silver
+03492886-a757-4d40-b6d4-bd958a4bc5a5,AM5,1,96,2,Gray / Black
+ea9646d3-f384-41fb-988f-e17e81cf284a,AM4,2,64,2,Black / Silver
+bbd1f533-7381-4a94-8f3d-f9defd2e7b3f,LGA1700,1,192,4,Brown / Gray
+105e51ad-117a-4a2e-8c95-d4fe6d044f7f,AM5,0,128,4,Black / Silver
+1493cc58-1f0c-42a9-a380-a512283f466b,LGA1700,0,192,4,Silver / Black
+d7700ff0-4d1e-4cad-a483-5a0b71b54725,LGA1700,0,128,4,Black / Silver
+6483aa42-9a88-43ba-aa51-2eb1c378504c,AM4,0,64,4,Black
+084ba304-6d3b-4ea5-bc5d-ba2620caf94f,LGA1700,2,96,2,Black
+5868aa86-10b3-4b5f-962f-31aa30808cb9,LGA1700,1,128,4,Black / Orange
+1949fb80-e688-4360-9964-9b57cad0f55b,LGA1700,1,128,4,Black / Silver
+858a6e83-0426-45d1-bd8a-0c970b748d09,LGA1700,0,128,4,Silver / Black
+3ce5530f-1693-4ca3-93df-40d74378a717,LGA2066,0,256,8,Silver / Black
+97e7363f-8a9e-41fa-961d-fe1ddd982617,AM4,0,64,4,Brown / Black
+cd8b1e2c-6732-4602-887d-f18fa63d155f,AM4,0,128,4,Silver / Black
+809731f5-1e7b-42b3-8b29-a758a12d0225,LGA1200,0,128,4,Black
+8ae2ea67-c5a9-4f5e-888e-7df7c871dcce,AM4,0,128,4,Black
+c9b1a884-f3f0-4a02-858a-08ea3e794839,LGA1700,1,128,4,Silver / Black
+7f2fe779-098e-4d3b-adcf-8d833994a5d2,LGA1700,3,192,4,
+68ea1b61-8540-4f66-9005-9a86c145205f,LGA1700,0,192,4,Silver / Black
+06715a0c-3934-4fe3-acc2-b6365d83134d,AM4,0,128,4,Black
+56cc9581-4aee-4598-aa52-4a454c871b88,LGA1700,0,96,2,Black / Silver
+fc9408e1-8187-4a78-9d69-f9694b488ee2,AM5,0,192,4,Black / Orange
+d5633809-5821-4fce-ad62-2b39cfe53481,LGA1700,0,128,4,Black
+5fa3aefe-701b-4ce9-aa34-1be5ab6c0103,LGA1200,0,128,4,Silver / Black
+1f076120-7fbb-447b-ae3a-6100828214e6,LGA1700,0,192,4,Black
+d60429fd-f3c1-4d24-bfa2-1d38859d898f,LGA1700,0,192,4,Black / Silver
+da366476-cf4e-4d6c-92c9-4082f8ea8b04,AM4,0,128,4,White / Black
+0d0de288-ffbe-4d87-bd85-f6ac706183a9,LGA1700,3,192,4,White / Black
+06259eee-05ea-448b-962f-708012d389b2,AM4,0,128,4,Black / Gold
+6fc71838-7002-467d-9acd-0acc24c7da9f,AM3+/AM3,1,64,4,Black
+e6d9adc0-945a-4ebb-92e6-06eb040119ad,LGA1700,0,128,4,Gray / Black
+559562c3-90f9-4f93-b225-3fe812699f07,LGA1700,0,128,4,Black / Silver
+7979218c-b5b5-4c92-8d0e-968c7ee4604f,LGA1700,2,96,2,Silver / Black
+df1f198c-541d-4d59-974f-bdfe77aa257f,AM5,0,192,4,Orange / Black
+7746c63b-a178-4607-8de8-1a470ec5358f,LGA1200,0,128,4,Black
+9e82e056-a298-4cce-b630-b43dcbb6f7b5,sTR4,3,128,8,Black
+37163574-fa28-4720-8e1c-31bd91c837ff,LGA1700,0,128,4,Black
+1ed8e2f7-7a32-47f6-95d4-f39fccfbc4d5,LGA1151,2,64,2,Green
+aafdd124-097e-4e07-ab2c-9ef2aaccb37f,AM4,1,128,4,Black / Yellow
+73ed87c1-57eb-4ddb-b40b-f24adf003889,AM5,0,128,4,Black / Copper
+862230cb-7125-4e6a-96b7-a11234067995,AM5,0,192,4,Black
+9473b001-dd7a-4bcf-97fc-df800a6c82da,LGA1700,1,64,2,Black / Silver
+e8d5b436-6c9f-48b3-86c2-56a0d918f701,LGA1700,1,64,2,Black / Silver
+ce0398cf-c111-44df-a889-7cd3f385f3df,LGA1700,1,64,2,Silver / Black
+ab425496-a8d7-4776-98c4-52679c9f9211,LGA1151,1,64,4,Black
+45422121-e67f-4571-87ae-44f23545c754,LGA1700,1,96,2,White / Black
+e50507c6-11c7-4464-80d9-b6ce06a5b25b,LGA1700,0,128,4,Black
+18f544b1-9345-4d0a-8d2c-7bdb8796dcf4,LGA1700,0,192,4,Black / Silver
+73f88048-f6d1-48b7-8ec6-4ebb7446cd1c,LGA1151,0,128,4,Black / Silver
+1440ba69-d5d7-4082-ae85-d10ab96e729a,LGA1200,0,128,4,Black
+1b442a0a-d872-4542-a949-5d1d5137c048,LGA1151,1,32,2,Black
+1e739151-e78f-4467-b6ee-b4250127e8b7,AM4,1,64,2,Black
+d6f220ea-86c7-4fd3-87fe-6f23b3e61d66,LGA1700,2,96,2,Black / Silver
+d6f058c9-2200-4816-84e4-c110e09acc0c,LGA1700,3,192,4,Black
+1c8f496d-651d-4428-928b-5afc98b84d27,LGA1200,1,64,2,Black
+b44ebde0-4c42-47c4-87ad-41cfa298d50d,AM4,0,128,4,Black
+4481c4f4-bb96-452a-bdde-938f0b521b3b,LGA1700,0,128,4,Silver / Black
+49d910db-706f-45c0-b14b-2f3da05b8ddd,LGA1200,0,128,4,Silver / Black
+0f4c3807-f1c3-49ab-9db4-8f03eaef5e48,AM4,0,128,4,Black / Orange
+89ef6bfb-e683-41a1-be78-29546a339dd5,AM4,0,64,4,Black / Silver
+13720aec-c8eb-4448-8d38-a0bdfb5433c9,LGA1700,1,128,4,Silver / Black
+e09f5bb3-e07b-40d3-b2d8-b1bc79a91339,LGA1700,0,128,4,Black
+9f552aa4-5f46-4bba-98a5-561b93c8f78e,LGA1700,1,64,2,Silver / Black
+8c61b178-1011-4e21-8bb5-9cf15e839a41,LGA1700,0,192,4,Black / Blue
+1730fd74-337b-485d-b789-f8449e2b8a81,AM5,1,192,4,Black / Silver
+288e8b40-b040-461a-ac1e-8af23f25b708,AM4,0,128,4,Silver / Black
+402328bc-8246-4459-85c3-62f07e28b142,LGA1700,1,128,4,Black / Silver
+2fdf1bcb-9d5b-4ca7-b854-1831fe00ce5c,LGA1200,0,128,4,Black
+c5adcc20-ccd3-42c0-975a-f5502b50bf7b,AM4,3,128,4,Black
+8a40ef79-30d1-4aaa-9a69-f2c491524c75,LGA1700,0,192,4,
+7638791c-ea10-4bbc-a166-412f13a07d19,LGA1200,1,128,4,Black / Gold
+635eb40e-cf28-46d7-b9f3-277e7da69b94,LGA1700,1,128,4,Silver / Black
+2dd6aeda-d50d-482f-8621-55b7bd170ff9,LGA1700,0,128,4,Silver / Black
+0044743f-63b6-4580-be38-045ba88cb31e,AM4,0,128,4,Black
+25ae37de-936b-4f8a-8c5a-b7cd8d246659,LGA1700,0,128,4,Black
+8cc8de07-c422-4671-8d16-a0c8191ad1d8,AM5,1,192,4,Silver / Black
+7f3114c3-7618-4704-8ed7-d2a072aeb886,AM4,0,128,4,Black
+5777fe1e-1667-4a39-a912-d7e782715cc6,LGA1700,0,192,4,Black / Silver
+64e431f9-1e64-43cc-9134-68284c0d199f,AM5,1,96,2,Gray / Black
+6f4e627e-cf8d-4a0a-82ab-4810cc94d487,LGA1151,0,64,4,Brown / Black
+15b473d8-3581-45a7-b5ed-952d5fefdfe8,AM5,3,192,4,Black
+8254fd70-e6cc-4519-a1c5-3ae775f9ae1a,AM4,2,64,2,Black / Silver
+4368d298-ab38-4a53-b7a2-0f587e391423,LGA1700,3,128,4,Black
+0c16c446-7fd2-4081-b1bc-dd1a07161caa,LGA1700,0,128,4,Black
+a86e0dad-8424-4f2d-bdac-b93ee9e23943,AM4,0,128,4,Black / Silver
+95462815-35cc-48a1-8dc6-478c849d94c4,LGA1151,0,128,4,Black / Gold
+7db207f6-3c96-4bcb-83c1-6b8f47aa2a85,AM5,1,128,4,Black / Silver
+e4c53c80-85c4-46a8-8b19-3653355c7780,LGA1700,1,96,2,Silver / Black
+b5022351-cd9d-4bce-b259-59e734b36c14,LGA1700,0,192,4,Black
+ee5115ec-434d-429b-96b2-303266d29905,LGA1200,1,64,2,Black / Silver
+b4ec2428-a979-4b0a-bad3-92bca9047bbb,LGA1200,0,128,4,Silver / Black
+663f88db-fc53-424c-b258-b011a8c6887d,LGA1200,2,64,2,Black
+0d8ae1b4-ed6e-4ec0-9709-165dd3a8d801,AM4,0,128,4,Black / Silver
+e769240f-bf37-498e-85cc-6e7cc70b2eb6,AM4,1,32,2,Black / Yellow
+6f5f7e22-cb7e-4b0a-8c6a-de388846d44f,AM4,0,128,4,Black / Silver
+630fde1f-2015-4290-a23a-89a12bc0c05e,AM4,1,32,2,Black
+c565ab23-2c8d-4273-8c4c-8ca11942d53a,LGA1200,0,128,4,Black / Silver
+250f88ec-fb72-4eb6-a066-b2403b5186d6,AM4,0,128,4,Blue / Black
+cb772259-bed6-471a-8f94-8b12963a81cb,LGA1700,0,128,4,Black / Silver
+c25826ca-a28a-44a5-a110-ad8a6bca3d42,LGA1700,1,64,2,Gray / Black
+45b65b7e-06a6-46e7-9274-8b7a6c30a973,LGA1700,0,128,4,Silver / Black
+0630b72b-a629-4f05-9423-881640b30130,LGA1700,0,128,4,Black / Silver
+4e426f0b-70dd-4e33-82ee-ba8744c27943,AM5,1,192,4,Gray / Black
+0b2508b8-0edd-4282-bb7a-2202bc06705f,AM4,0,128,4,Black / Silver
+3aa098ca-b493-4e7b-9b9f-8b1f2ce7c981,LGA1700,3,192,4,Black / Gray
+231285fd-2a0b-46fb-904b-39829e3a4ee3,LGA1700,0,128,4,Silver / Black
+49b4e395-0079-47e4-b411-2941f49e90c8,LGA1200,0,128,4,Black
+a45e1bfb-26a0-4bbe-88b5-96b98a667bea,AM4,0,128,4,Black / Silver
+eac7bdb5-1814-438b-9b5d-54d2988c984a,AM4,1,64,2,Black
+33944efc-3c7b-476e-a7b2-84694999cea9,AM4,0,128,4,Blue / Black
+bfd28049-bf51-4042-8bc8-866306de05a7,LGA1700,1,64,2,Gray / Black
+872f5d43-bcc0-4c92-bb36-1de6a69eb73c,LGA1700,3,192,4,Black / Gold
+67617e26-51ac-4fe0-ad6d-92bcb3b68ee4,AM4,1,128,4,Black / Silver
+ac01a2d1-da50-4cba-8313-f713f47fd4f6,LGA1155,1,32,4,Black / Blue
+6076b90e-0955-4414-ae15-7f5ece9abcc4,AM4,1,128,4,Black / White
+5b21a22b-b467-40b4-a773-5ecb9e0dee32,AM4,0,64,4,Black / Gold
+72f663d2-b2aa-41da-b85d-480a6f3152f0,LGA1700,1,64,2,Black / Gray
+700b9e2f-af50-4a80-a928-eb7b7aecd182,LGA1700,0,128,4,Black
+952f1a3d-e29c-44fe-87e2-c6a1a11a3a8e,LGA1700,1,64,2,Silver / Black
+92d04abc-3687-44f7-872e-548eebfc388e,2 x LGA2011-3 Narrow,3,1024,16,Black / Green
+1c505c9f-c291-4bde-a5ec-b6df74fb040c,LGA1700,1,128,4,Silver / Black
+f08fa3a0-bbcb-4401-8850-21a9d92ab155,LGA1151,1,32,2,Black
+97dcf93d-fe5e-44c1-ab7a-d472ae745aa7,LGA1200,0,128,4,Black
+5bdfe7f0-3327-4f40-9e25-200dbbfcf9c5,AM4,0,128,4,Black
+d097ab66-08ef-49cf-8aa8-fc73dfa0114e,LGA1700,0,192,4,Black
+9cea4cdb-a9ed-45c5-8e84-9f50b682fb0e,AM5,1,192,4,Brown / Black
+d0789e62-6956-4486-aeec-6b11dfcc9dfd,LGA1700,0,128,4,Black
+e90a4b3c-eec4-4fdb-bb0a-49c16e276fc0,LGA1700,0,192,4,Black
+9d3eeff0-2585-4eeb-91bd-74c3a672990f,AM4,0,128,4,Black / Silver
+b300c84e-bda2-4efa-a0c3-1c210897bdae,LGA1200,0,128,4,Black
+b7a228d3-10c8-4ad1-a331-60063aa068a2,AM4,0,64,4,Black / White
+2a125f7b-8986-431d-b859-799b939603c6,LGA1700,0,192,4,Black / Silver
+a41473c0-bd96-4863-839b-3236d2ec1b45,AM4,0,128,4,Gold / Black
+c3b37063-2ad4-47ab-8e7b-72977d074f28,LGA1700,3,192,4,Black / Gold
+21dfe8f7-7fb7-41fd-a652-1141a01a23fc,AM4,1,32,2,Black / Yellow
+8cfb9be2-25a9-476e-a3cb-ad630de7815c,LGA1200,0,128,4,Black / Silver
+2b234f62-fc4d-43dd-b5fd-c00c74a72f9b,LGA1700,1,64,2,Black / Silver
+a1c5a8e7-778d-427f-be98-1938b25c4b6e,LGA1200,0,128,4,Silver / Black
+24bfc89e-a5f7-4567-acc0-3b30e3c9dcef,LGA1700,1,64,2,Silver / Black
+1d446761-9c23-49de-a807-15b0ac0e24fd,AM4,0,128,4,Black
+0a4b2b38-85a1-45c3-8742-6f946fb36f6f,LGA1700,0,128,4,Silver / Black
+c31491d4-76c6-4a34-a748-9ed4ee0eb1f9,LGA1151,1,64,4,Black
+3ae1355e-b690-46ca-abe3-0b4246f0cb64,LGA1700,0,128,4,Black
+8e701b4d-79e0-4483-9eab-cde651192de3,LGA1700,0,192,4,Silver / Black
+bdccb668-5348-4428-bdd4-712ef779848d,LGA1700,0,128,4,Black / Blue
+0ff4b031-4c71-4d7d-9f6c-ff5c40b8567f,AM4,1,64,4,Black / Gold
+c37823cb-cd75-4b72-b5c3-06176e0ca006,AM4,1,128,4,Black
+78620d5d-fdcf-4319-ba66-3ace9292ca0e,LGA1200,0,128,4,Black
+df203130-93e9-49d0-a7df-e601d324be2a,AM4,1,128,4,Black
+46001138-ae97-4f51-94eb-74a1c9277d16,AM4,0,128,4,Black
+317a5875-307b-42ab-8109-0262d71a2ad7,LGA1700,2,64,2,Black
+d2404a04-e353-4ec4-9b7f-da6f047a9849,LGA1200,0,128,4,Black / Silver
+68341a6c-cd1e-4856-b855-5658eee53fd0,AM4,0,128,4,Black / Silver
+dd8b8977-3a21-4f31-b88d-717ced7f4d1b,LGA1700,2,96,2,Black / Red
+6cec8a92-9872-40f2-9b67-3ad60e910703,LGA1200,0,128,4,Black / White
+c088fbea-ff2c-4ed2-8a0e-0e9a929eaa9a,LGA1200,1,64,2,Black
+a6eeffe3-a745-4578-aaae-3ee29cc35ddb,LGA1700,0,192,4,Purple / Black
+caa17a2d-3eb4-4657-90fb-3781bda695ba,AM4,1,128,4,Black
+84d231f2-80d2-462c-94a2-7efbea67a1db,LGA1200,1,128,4,Silver / Black
+a7907ea5-52a2-43be-9efe-0145a69fb9b4,LGA1700,1,128,4,Silver / Black
+0e13192c-63db-4a37-a048-08cbe0acc145,LGA1700,0,128,4,Black / Silver
+30c09f14-df87-4ca9-b5a6-6eec11e50fab,LGA1700,0,128,4,Purple / Green
+03e3d499-5ff4-4c06-a7fb-17ec29fc2c55,LGA1700,0,128,4,Black / Copper
+e1f88131-3e20-4a84-84f8-a4e4a44b5274,LGA1700,1,192,4,Yellow / Black
+fd5c7de8-1c6d-432b-8337-e33b513ce667,LGA1151,1,64,4,Black / Silver
+515a1001-dbc0-4215-865a-e5b392590a80,AM4,0,128,4,Black / Silver
+e420d805-a904-42e0-9530-553dc763a208,AM4,0,128,4,Black
+f8cb8548-352d-46c9-8a31-4eb73f06897c,AM4,0,64,4,Black / Red
+e53a7076-31ba-421c-b907-0d3d7a1d388f,LGA1700,0,192,4,Black / Silver
+85da5e44-684e-40d4-84b2-f6e02c8ee0b6,LGA1151,0,64,4,Green / Blue
+baac4241-1c7b-42f1-bde8-c3a15a5c86ee,LGA2066,0,256,8,Black
+3cad5c30-6850-4922-b730-1fb5fe68e588,AM4,1,32,2,Black / Silver
+6e93d114-49f1-427e-a136-408fd0cac88a,AM4,1,64,2,Green / Black
+07b44841-81ef-455a-8cfd-c5ca0eeb362f,LGA1700,0,128,4,Black / Silver
+fa606215-6f15-4b9f-aba3-b4e2c1902e00,AM5,1,192,4,Silver / Black
+9ae88cd9-5f6a-4780-b861-e13cc9d80ce4,AM4,0,128,4,Black
+8f4c052c-deed-4000-8bc8-37c7edc48e3f,LGA1700,3,192,4,Black
+079c8ebd-bf75-4c94-928c-c7837b045801,AM4,1,64,4,Black / Silver
+34f6f47e-7882-418c-9684-e0346e87e3bd,LGA1200,0,128,4,Black
+f9296702-b1bf-43c3-acf8-8ec6f67e5001,LGA1200,2,64,2,Black
+49050d38-216b-4657-87fc-2518dd8a211a,LGA1151,2,32,2,Black / White
+2cdcc2a0-67e6-47d8-a74d-83bd0e419099,LGA775,1,8,2,Black / Blue
+dce8e924-26a7-499e-afdb-e949359a1138,LGA1200,0,128,4,Black
+5a8e8297-c5d2-4f11-99b8-cc1652370372,LGA1151,1,32,2,Black
+ed505c9e-92f6-4fe5-a46f-ebc1f67980bc,LGA1151,1,32,2,Silver / Brown
+f2e3dca2-8f7a-4101-8f6e-ac45d74eb1d3,LGA1200,0,128,4,Black / Silver
+0fd081c7-7b9a-441e-ae8a-f570635dc4e9,LGA1700,1,128,4,Silver / Black
+8cce1c4c-e4a4-4db6-bfc4-bb738add17a0,LGA1700,0,192,4,Black / Copper
+6dbba182-3ae5-4971-97e1-e3be75db1fa4,AM4,1,128,4,Black / White
+36a013ff-1656-480a-b0cc-5e6bf40426dc,LGA1151,0,64,4,Black / Silver
+2a07dca6-1527-4db5-a5b7-083a535deb46,AM4,0,128,4,Black
+2a3c1d74-80b1-40cd-ba7b-2171b72c69c7,LGA1700,1,128,4,Silver / Black
+f9da2833-17cf-423f-8bb2-b5bfe014554b,LGA1200,2,64,2,Black / Silver
+1703c5c1-c2e0-4585-b74e-e724dde452ee,AM4,1,32,2,Black
+07020fae-6ade-408b-a900-a9c55e100f82,LGA1700,1,128,4,Black / Orange
+ccb2dee8-ddf2-4342-9ffb-f97da488cbc8,AM4,0,64,4,Black / White
+518b8070-7526-4eb9-bc86-5d7ecbb768e9,LGA1200,0,128,4,Black / Silver
+576e7511-e2b0-47f9-89be-f4295135068d,LGA1151,0,64,4,Black / Silver
+cb63cc1c-b66d-4d0e-80ff-57f54b24c061,LGA1200,0,128,4,Black
+7ebc9de3-21e4-486a-984c-8581c59f29dd,LGA1700,1,128,4,Black
+271e25df-d08b-451b-b04f-c46591a5577e,sTR4,0,128,8,Black / Silver
+8166383d-73ec-4c74-8ffc-230afd64bca7,LGA1200,0,128,4,Black
+43e185a8-1be5-41c9-8f06-0fd579ee330d,LGA1700,0,128,4,Black
+40b83ad2-e328-4cfb-ae80-f64ad4c4853c,AM4,0,64,4,Red / Black
+68a226ce-83cd-41ba-ae4e-89f9dda28ca2,LGA1700,1,64,2,Silver / Black
+fbd17cfe-6819-4f8e-a534-886fede90e34,LGA1700,1,128,4,Green / Black
+bc7962d2-2d33-4d86-ac57-d0005ac70150,LGA1700,3,192,4,Black / Silver
+4287cefb-0185-4d98-8f20-6d42f9ec58dd,LGA1200,1,64,2,Black / Silver
+1822d4b0-8b2a-49a8-af81-95f631b024e9,LGA1200,1,128,4,Silver / Black
+9874ae1b-ff16-4bc6-8b67-8b328193f2a6,LGA1200,1,128,4,Brown / Black
+49caf1c1-4799-4496-927f-7e86828125e5,LGA1700,1,128,4,Orange / Black
+a8457e0e-e263-4785-89d4-48f07197bb62,AM4,1,128,4,Green
+6729a34f-2e9d-4cb2-b8d3-538c8b58148e,AM4,1,64,4,Black / Gray
+6a3ddfe5-908b-4905-908e-3c1031e9a707,LGA1700,1,192,4,Silver / Black
+a3c3ecad-d16d-443a-b2b5-873da31b220d,AM5,1,128,4,Silver / Black
+da595aed-1cdf-4d5a-9f0b-99a76f4840c3,LGA1700,0,192,4,Black
+e71f273b-9e26-4731-9406-0e1ff58b676e,LGA1700,0,128,4,Silver / Black
+e750b370-138d-41aa-8ca6-82e3f8a1bb0a,LGA1200,1,128,4,Black / Silver
+40816c5c-335b-48cd-b7fc-db534405fac6,LGA1700,0,192,4,Black
+e2cbfecb-a642-4783-be81-e9023a48027c,LGA1700,1,128,4,Silver / Black
+20383f94-f256-4840-8627-43c63b5bc7cf,LGA1700,0,192,4,Silver / Black
+5ac1777b-dee7-42d9-b02a-11b5629dc378,LGA1200,0,128,4,Black
+fd36ed6f-4eae-47d5-9a8d-1a3959bc7fd5,AM4,1,64,2,Black
+2a3da2ae-86fc-46f0-ab43-bf90a47ab805,LGA1700,0,128,4,Black
+a43c75ec-70c3-4129-a18b-62ebeb0ad735,LGA1700,1,128,4,Black
+ef6d4dd5-16fa-4a61-8eea-86c9daf2e82d,LGA1700,0,192,4,Black / Gray
+70f949d4-aad8-41e9-a10e-7364525d834d,LGA1151,3,128,4,Black
+831d04e0-ba25-4c5b-a7ac-abc4826e3f3a,AM3+,1,32,4,Black / Blue
+482b526b-a3f6-4673-b33e-9645367792f0,LGA775,1,4,2,Multicolor
+f4fd949a-9ed8-4205-a28e-6dbae7521b39,LGA1200,0,128,4,Black
+55419bd9-a5d7-4bec-8af1-cd1bbeb41aef,AM4,0,64,4,Black
+2b8dcf7e-aa64-452c-b320-ad908a93ebaa,LGA1150,1,16,2,Black
+def35752-408d-4101-af37-124946a81e03,AM5,1,192,4,Green / Black
+24d51c73-4f7f-49c8-8741-9bb8cb7f12f4,AM5,1,192,4,Brown / Gray
+aa814325-1637-48a0-8514-d26be43c4d89,LGA1700,0,192,4,Black / Copper
+902d48e6-75d4-4587-aaa3-72f881d4474e,AM4,1,64,4,Red / Black
+2414cbdd-41de-46c4-89a7-59a6efe857d3,LGA1700,2,96,2,Black / Silver
+63365c19-253b-4495-b26d-bb88724b125f,AM4,0,128,4,Black / Silver
+18c33434-de05-4044-8871-5fba12bad2ac,LGA1200,0,128,4,Black
+fff8a9c9-2bf6-4470-8c94-479fbd1b55a1,AM4,0,128,4,Black / Silver
+0e0d7b70-845a-4a3c-909c-0ddcec2ef1c9,LGA1151,0,64,4,Black / Silver
+04d4154a-b4d4-45b9-a942-ee2000770701,LGA1700,0,128,4,Black
+7c29c824-ce4d-4905-9c32-622e17902df1,LGA1700,1,192,4,Green / Black
+0bc2222e-f7be-4612-8b48-80cc2ba4b40a,LGA1151,0,64,4,Black
+7efb7b61-540e-49b0-b2b3-84f3dd342257,LGA1700,1,192,4,Black / Silver
+b5f0a72d-f622-4c9b-ba97-1c9a918c0b27,AM4,0,128,4,Black / Silver
+dfd703bd-7c64-481f-91ca-ce771780fb55,LGA1700,1,64,2,Black / Silver
+1dd56edb-784f-4272-bc27-f765eb70397e,AM4,1,128,4,Black / Red
+2d0560fb-b4be-4748-a104-7dc0e4332c54,LGA1700,0,128,4,Silver / Black
+d2ad9876-0a67-4518-914b-9ec4fdc3d65c,LGA1200,1,128,4,Black / Silver
+b1343229-4965-4713-bdb7-9b55c9291453,LGA1151,1,64,4,Black / Silver
+0f0f6193-1200-4a21-bc2e-29c8cfa16102,LGA1700,0,128,4,Black
+acec5a7f-e0d5-4c8f-b503-b612b803a3ad,LGA2066,0,128,8,Black
+ec6cdfe1-255e-4b11-9ddf-4d907d5956d5,LGA1200,0,128,4,Black
+630522d7-6512-495a-b6e6-0f92c5fbc808,LGA1200,1,128,4,Black
+97758436-8375-4cd1-91a6-fecd79336cd5,LGA1200,0,128,4,Black
+7ef9ad51-7c85-40ed-af47-c68a241b6b84,LGA1700,1,128,4,Green / Black
+6ec481e5-6dc7-4644-bf88-fb2e64b8441c,LGA1700,0,96,2,Black / Silver
+b4397aed-4130-4784-ab5f-11f51cc2fcfb,LGA1200,1,128,4,Silver / Black
+1de63532-67ae-4c02-86c7-6e1b40cd3083,AM4,0,128,4,Black / Silver
+544e59c6-8147-44db-8657-64dc561aa3cb,LGA1151,0,64,4,Black / Red
+286106dc-fad0-46d6-86f5-0b5c580a4fe6,LGA2011,3,128,8,Black / Red
+687ef82d-87c8-4119-a026-2e1a21a95bf1,LGA1151,0,64,4,Black / Yellow
+d9850e7a-d4ad-4566-b6c5-901efdcb3227,AM5,1,192,4,Silver / Black
+54bfe3fc-1bda-4dfd-9c33-0b26e5ee17d4,LGA1700,0,128,4,Silver / Gray
+a1ed211b-f101-441a-9125-fd093306789e,LGA1200,0,128,4,Black / Silver
+15a6809d-e556-4f49-999a-db4c537b7f75,LGA1200,2,64,2,Black
+97003aac-1cc5-43f0-8a1e-ccc7cd8279a0,LGA1151,1,128,4,Green
+3a172aad-ce16-4c68-b914-c5244f2e7ee7,LGA2011,0,64,8,Green
+cefa953d-9ba1-431b-96db-0828da285bb5,LGA1200,0,128,4,Black
+aac25621-619e-4fcd-a4ac-baa88473d02a,LGA1200,0,128,4,Black
+a3599e23-7502-481f-8632-f6d92cde4a51,LGA1155,1,8,2,Green / Blue
+21677bf9-66db-4cad-935a-b60b8c60d086,LGA1200,0,128,4,Black / Blue
+1afed16e-8b84-446f-b99a-d6e67220c60c,AM4,0,128,4,Black
+9273301b-19c9-4cd6-8de2-b1ddde72c928,LGA1200,0,128,4,Black / Silver
+b75702f4-5fc2-4178-b892-3602c6d230bb,LGA1151,1,64,4,Black / Green
+1cb1557c-7f9a-4265-8285-f9e6ead3c06e,LGA1200,1,128,4,Green
+ccbeaf00-2dd1-4674-8258-3c1fd66ab919,AM4,2,32,2,Black / Silver
+6e073799-3fcb-40ef-be47-64d974cf5502,LGA1200,0,128,4,Silver / Black
+76ba3acc-2911-4bb2-a15c-bb0ff65107f9,LGA1700,1,64,2,Black / Silver
+8818ecf7-c0ae-483b-be80-b71b40897e3e,AM4,1,128,4,Green / Silver
+dbc9936d-e83c-4056-8cea-f1decc898947,LGA1151,0,128,4,Black / Silver
+ca900a3f-e5dc-42db-9781-068af733c090,LGA1200,1,64,2,Black
+4e188958-ff94-4002-9d4e-1b073ccda4b5,LGA1150,1,32,4,Black / Green
+7ea9a68e-e02d-40fe-855a-f0015fd6965a,LGA1151,0,64,4,Black / White
+c3adcb34-069c-4bdd-b890-d68872fc0310,LGA1700,1,128,4,Gray / Black
+5d326d23-7680-46b4-9197-2b6332bd8a45,LGA1700,1,64,2,Silver / Black
+db26f3f3-dd20-4453-8309-f89691395591,LGA1200,1,64,2,Silver / Black
+1f80bf0b-a830-494c-9e5c-c96809277068,LGA1200,0,128,4,Black
+ed188872-c0d6-4ca9-9f78-4f013ce2d533,LGA1151,0,64,4,Black / Silver
+d6f2331b-a7bb-4465-bc1f-ec87553bf267,LGA1200,2,64,2,Black / Red
+f36d9091-3316-49ad-a461-7c16134bf804,LGA1700,0,192,4,Black
+600ea0d5-fc3b-49ac-9354-991dc13a38c7,LGA1151,1,32,2,Black
+cb5d8b67-ab5d-4e16-893a-ecd2fa47bca0,LGA1700,1,128,4,Silver / Black
+3609b3cb-aa1c-4544-b874-ce01a0c1318f,AM4,1,64,2,Black / Silver
+76ff6f2d-72f4-4791-83cb-75c8c7d1b987,LGA1200,0,128,4,Black
+2df3f91c-af9a-437c-903e-7e7b9f02e8d3,LGA1700,1,64,2,Green / Black
+58d7be4f-ed57-4196-8d43-bcc114963c20,AM4,1,64,4,Green
+ec8a09d4-a285-4d76-b89f-a864d48f6266,AM4,1,128,4,Black / Orange
+88e53cae-6069-4c98-a069-8917d9071577,LGA2066,1,128,4,Black
+99ffd3ee-fdf8-43c8-9a71-48e34096dc2d,LGA1151,1,64,4,Green / Blue
+c84ce341-6a5a-4123-bdfd-8fa0a34238df,LGA1150,1,32,4,Black / Green
+8e9a36a2-9349-4247-bb7f-214c32aec92d,LGA1200,1,128,4,Black / Silver
+0bd2f721-6d89-4ac3-b888-bba3f82c8fac,LGA2066,2,64,4,Black / Silver
+f797ea59-b0eb-4b7c-bf99-c87b1fcc6b29,LGA1200,0,128,4,Black / Silver
+4c10b634-0231-4908-b086-0593bafe668b,LGA1200,0,128,4,Black / Blue
+79788830-01d6-4359-811e-96ee62f07125,LGA1151,0,64,4,Black / Red
+7df6ebad-d948-496b-b232-b1746cbac944,LGA1200,0,128,4,Silver / Black
+b8a05a86-fe1b-43b1-aef5-c9297dc65edf,LGA1151,0,64,4,Black / Red
+d13f1cb9-fe1f-457c-be54-c82d70179b9a,AM3+,0,32,4,Black
+b3db76ce-5c65-4376-a77c-cd21c91aac9c,LGA1200,1,64,2,Black
+09f7ca5b-9e20-429a-b356-e03e4b286838,AM4,0,64,4,Black / Red
+0da725e5-8ed0-4975-a151-e2edf497548e,LGA1200,0,128,4,Black
+0e2a338d-85f9-4735-8016-9f00499dc005,LGA1200,0,128,4,Black
+e4099e7f-f728-42bd-8a25-065a49901987,AM4,1,128,4,Green
+c672fa5f-eb30-4955-a406-62c95a5c58a9,LGA1700,2,64,2,Silver / Black
+2dea05d5-e5ee-41a5-83c6-6963fe05e66c,LGA1200,0,128,4,Black / Gold
+d5781725-6e89-4ddb-8551-54563e35d4cf,LGA1200,3,128,4,Silver / Black
+da401196-81ff-4f07-a4c6-d45382ec30fe,LGA2066,3,64,4,Black / Silver
+682a90cc-709e-4d4c-8970-46321c6f7726,LGA1200,3,128,4,Black
+f5d366b8-3953-4f58-a7df-24f10473bbe5,LGA1200,3,128,4,Black / Silver
+05c7b2a4-3d76-4419-ac4a-34d6c8306b2f,LGA1200,0,128,4,Black / Silver
+dfee6474-660e-4f0c-b8d4-23c6ad56479e,LGA1200,1,64,2,Black
+8b782a50-9dbd-474e-a420-e51dc7b2f961,LGA1200,3,128,4,Black / Silver
+9c667ad6-510e-4c39-9f2c-fdf98db92e5a,AM3+,1,16,2,Black / Blue
+cb7a778d-8058-46da-ad71-9cc5bc8e32e6,LGA1200,3,64,2,Green / Black
+758c164e-1de4-4e49-9fa8-2ae3bf4227af,LGA1200,0,128,4,Black / Silver
+d39b2f25-bf9e-4b8b-a140-e583899f58b8,LGA2066,0,256,8,Silver / Black
+b3581c65-bb00-4a53-86e1-d6f1099c679b,LGA1200,3,128,4,Black
+86361e5d-b26d-481f-b7e2-e374580eef21,LGA1151,1,64,4,Green
+ae208265-6daf-4f88-bea8-1aaaee8f54c7,LGA1200,0,64,2,Black
+3a2f6a1b-d893-481a-8e62-0622ef9f4f79,LGA1200,0,128,4,Black
+8b246d40-ca4a-4467-9f70-5bbf5034f4a1,LGA1700,0,192,4,Black / Silver
+227e5236-0fb4-4347-b0fe-3b8ce561fedb,LGA2066,0,128,8,Black / Silver
+c5138d57-101c-4f74-b47a-391682d87123,LGA1700,1,128,4,Brown / Gray
+f9f1803c-dad1-4e10-9e3e-f66421d7cbf7,LGA2066,0,256,8,Black
+bef775b8-3472-4e84-9400-9d4cb44b7c2c,LGA1200,0,128,4,Black / Silver
+6562732b-fb80-4fd8-baed-feb451346519,LGA1200,0,128,4,Black / Gray
+ed523021-fcfc-4b9c-aca9-93930b64ad32,LGA1200,0,128,4,Black
+d2a3aaac-a433-4712-968e-e8a10b328af7,FM2+,1,32,2,Brown / Black
+e9f6d975-6d24-4113-bae7-7f60a9bc6443,LGA1151,1,128,4,Black
+53cfde03-255b-4498-acbe-905a1193ddc3,LGA1200,1,128,4,Black / Silver
+a081fc5c-df8b-4319-8b37-23212fcc8fd6,LGA1151,0,64,4,Black / Green
+cda0d1c2-17b3-4c53-9786-e6eed7480730,LGA1151,2,64,2,Green / Black
+5072bc4d-1a57-4b73-a53f-a0cf5072289e,LGA1151,0,64,4,Black / Silver
+4cbeb6a7-a8d5-4f73-950f-07edde4eba5d,LGA1700,1,128,4,Green / Black
+8d2edf7a-048b-444a-b960-beab284ee0a8,LGA1700,0,192,4,Black / Gray
+af859d5c-8294-47f9-ae6f-d640e31f3bf3,LGA1200,2,64,2,Black / Silver
+03ec5cfd-e965-41f6-b186-72f4ed98d8fd,LGA1366,0,24,6,Blue / White
+bc8591bb-b1d0-46ec-9c29-00135e20bd3f,LGA1200,1,64,2,Black / Silver
+2dcc93fc-ab63-43ba-976e-527a41990abe,LGA1200,1,64,2,Black / Silver
+4d440c25-7896-497c-97d8-4fd1c524f1cd,AM4,1,64,4,Green
+017b6e75-4184-42c4-940a-fb3f075b6ee2,AM4,0,64,4,Black / White
+d9612bae-9194-4017-af3a-dbc744d05cb1,LGA1200,1,64,2,Black
+b0565324-b6d4-4cd6-90b3-292fe7ccfb69,LGA2011-3,0,128,8,Black / Blue
+4281954f-f1f7-4185-b36e-3f117f7c41e8,AM4,0,64,4,Black
+3eba0e02-1dbc-4d9b-8cce-bafbeea6d750,LGA1151,0,64,4,Black / White
+24c8e875-f3f6-411e-bcf9-b85a4d6581f8,LGA1151,0,64,4,Black / Red
+b817cf26-5082-45d5-8b69-0ccc6f171762,LGA1700,1,64,2,Gray / Black
+59cee307-aa6a-41b5-853d-e48899eef666,LGA1151,0,64,4,Black / Silver
+1bd36853-3741-402a-9c39-ac58a50fbf5a,AM4,0,64,4,Silver / Black
+9e2a5872-e1be-434b-8429-124cbc1f0bd2,AM4,0,64,4,Black / Red
+6caa6803-d163-4f14-bf2f-80ad8cdec971,LGA1200,0,128,4,Black / Silver
+bf933211-05a1-4d47-850e-56265cb4c43d,LGA1151,1,128,4,Black
+3551dd95-d14a-4135-af63-132b3d0f690d,LGA1700,1,64,2,Gray / Black
+edd632d5-b693-469c-864b-0ed3b2ce30b3,LGA1200,3,128,4,Black / Silver
+96bbbc6d-0384-4ff0-a0d5-18f0a0a0ab01,AM3/AM2+/AM2,1,8,2,Multicolor
+35fc7dbd-48bf-48ad-a591-941b52589a95,LGA1700,0,128,4,Black / Gray
+c75c25e2-8381-4039-a9f2-ede3f6f0ee78,LGA1200,1,128,4,Green / Black
+36de6888-aa39-49f1-9407-dcd7cd169eb7,LGA1200,3,64,2,Black
+11425719-0cfb-441c-8900-0552b03cdd45,LGA1151,0,64,4,Black / Silver
+071dbd2b-ee73-467d-8964-ece02561c8ec,Integrated Atom D525,2,4,2,Green / Black
+906fb274-0de0-41a2-a937-988a86cd80b4,LGA2011,0,64,8,Black / Green
+1c941f10-0df8-41b1-81fb-686cf74baafc,LGA1200,0,128,4,Blue / Black
+665c7490-2ff3-4d91-b283-2b1c51007929,LGA2011,0,64,8,Green / Blue
+225e14ba-3b07-463c-8b1c-8e1d0341b3c6,LGA1200,3,64,2,Black
+60d666c8-74a4-4320-afbb-24fe95dd4d0c,LGA1151,1,64,4,Green / Black
+e1d00129-6b60-4f70-a3f8-0cf7755bb1d2,LGA1200,0,128,4,Black / Silver
+a11b1f96-bc3d-45f3-80c8-050f9ce1d127,LGA1200,3,64,2,Black / Yellow
+f1f15ffd-61af-4d51-bfd7-b3b28dca852b,Integrated Atom C2358,2,16,2,Black / Green
+e1442e69-4def-4279-9aad-82b7aafdc590,LGA1200,0,128,4,Black
+0a1b76a8-ecb4-4542-a75a-9828eb422a8d,AM3,3,16,4,Black / Red
+87324531-d883-4883-b9f5-3746b48911bc,AM3,1,8,2,Black / Red
+faa5534e-fdca-42b4-bc21-c5ef0617bfbf,LGA1200,0,128,4,Silver / Black
+3d95494d-063e-4872-83d9-197b57a54b59,LGA1150,1,32,4,Black / Green
+efb2b550-2c93-48c8-ba3d-e24cde301752,Integrated Pentium N3700,2,8,2,Green
+362f0759-9ec3-4183-9e60-2cc15d9f81e3,LGA1200,1,64,2,Green

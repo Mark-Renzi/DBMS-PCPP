@@ -195,8 +195,8 @@ efficiency_df.to_csv('data/processed-data/efficiency_codes.csv', index=False)
 # export all dataframes to csvs
 part.to_csv('data/processed-data/ComputerPart.csv', index=False)
 
-cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP']].to_csv('data/processed-data/CPU.csv', index=False)
-gpu[['PartID', 'CoreClock', 'BoostClock', 'Memory', 'Chipset', 'Length', 'Color']].to_csv('data/processed-data/GPU.csv', index=False)
+cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP', 'ChipsetID']].to_csv('data/processed-data/CPU.csv', index=False)
+gpu[['PartID', 'CoreClock', 'BoostClock', 'Memory', 'Chipset', 'Length', 'Color', 'ChipsetID']].to_csv('data/processed-data/GPU.csv', index=False)
 motherboard[['PartID', 'Socket', 'FormFactor', 'MaxMemory', 'MemorySlots', 'Color']].to_csv('data/processed-data/Motherboard.csv', index=False)
 memory[['PartID', 'Color', 'FirstWord', 'CAS', 'PricePerGB', 'TotalCapacity', 'DDR', 'MHz', 'Count', 'Capacity']].to_csv('data/processed-data/RAM.csv', index=False)
 storage[['PartID', 'PricePerGB', 'Capacity', 'FormFactor', 'Interface', 'Cache', 'Type']].to_csv('data/processed-data/Storage.csv', index=False)
@@ -329,7 +329,17 @@ for index, row in amdcpus.iterrows():
         chipset_id = matching_chipset['ChipsetID'].values[0]
         cpu.loc[cpu['ChipsetID'] == chipset_id, 'Socket'] = row['socket']
 
+# one-hot encoding for benchmark types
+benchmark_types = benchmarks['Type'].unique()
+
+benchmark_type_dict = {benchmark_type: idx for idx, benchmark_type in enumerate(benchmark_types)}
+
+benchmarks['Type'] = benchmarks['Type'].map(benchmark_type_dict)
+
+benchmark_type_df = pd.DataFrame(list(benchmark_type_dict.items()), columns=['Type', 'Code'])
+benchmark_type_df.to_csv('data/processed-data/benchmark_type_codes.csv', index=False)
+
 # re-export gpu and cpu tables
-cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP', 'Socket']].to_csv('data/processed-data/CPU.csv', index=False)
-gpu[['PartID', 'CoreClock', 'BoostClock', 'Memory', 'Chipset', 'Length', 'Color', 'TDP']].to_csv('data/processed-data/GPU.csv', index=False)
+cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP', 'Socket', 'ChipsetID']].to_csv('data/processed-data/CPU.csv', index=False)
+gpu[['PartID', 'CoreClock', 'BoostClock', 'Memory', 'Chipset', 'Length', 'Color', 'TDP', 'ChipsetID']].to_csv('data/processed-data/GPU.csv', index=False)
 
