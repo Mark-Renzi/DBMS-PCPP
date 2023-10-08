@@ -58,6 +58,10 @@ motherboard['manufacturer'] = splitname.str[0]
 motherboard['model'] = splitname.str[1]
 motherboard = motherboard.dropna(subset=['price'])
 
+motherboard = motherboard[motherboard.form_factor != 'Thin Mini ITX']
+motherboard = motherboard[motherboard.form_factor != 'Mini DTX']
+motherboard = motherboard[motherboard.form_factor != 'SSI CEB']
+
 print(motherboard)
 
 part = part._append(motherboard[['id', 'price', 'manufacturer', 'model']])
