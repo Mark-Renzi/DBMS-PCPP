@@ -1,0 +1,1113 @@
+cpuName,PassMark
+1,AMD A6-9220C,1053
+2,Intel Core2 Duo T9500 @ 2.60GHz,1052
+3,Intel Celeron N2940 @ 1.83GHz,1050
+4,Mediatek MT6761V/CAB,1050
+5,JLQ JR510,1048
+6,AMD A6-1450 APU,1045
+7,AMD GX-222GC SOC,1044
+8,Intel Core2 Duo P9600 @ 2.53GHz,1040
+9,Rockchip RK3568 EVB1 DDR4 V10 Board,1039
+10,MT8783,1039
+11,AMD Opteron 2218,1036
+12,Intel Pentium E6300 @ 2.80GHz,1036
+13,AMD Opteron 1220,1036
+14,Intel Pentium 3558U @ 1.70GHz,1035
+15,AMD Turion II Ultra Dual-Core Mobile M640,1034
+16,MediaTek MT6750,1034
+17,MT8168B,1033
+18,AMD Athlon II X2 220,1032
+19,Intel Pentium 2127U @ 1.90GHz,1030
+20,MediaTek MT8168,1029
+21,Intel Atom C3338 @ 1.50GHz,1028
+22,Intel Celeron U1900 @ 1.99GHz,1028
+23,Intel Pentium 2117U @ 1.80GHz,1028
+24,Intel Xeon 3070 @ 2.66GHz,1025
+25,ARM Cortex-A57 8 Core 1500 MHz,1022
+26,Snapdragon 435,1022
+27,AMD Athlon II X2 240,1021
+28,Qualcomm MSM8937,1020
+29,Intel Celeron G1820TE @ 2.20GHz,1020
+30,tn8,1020
+31,Intel Core2 Duo P9500 @ 2.53GHz,1019
+32,Intel Core i3-330M @ 2.13GHz,1019
+33,Intel Pentium J2850 @ 2.41GHz,1016
+34,Intel Pentium E5500 @ 2.80GHz,1015
+35,Intel Celeron B840 @ 1.90GHz,1015
+36,AMD Athlon X2 240e,1015
+37,Intel Core i5-560UM @ 1.33GHz,1015
+38,AMD Phenom II N620 Dual-Core,1014
+39,AMD Turion II Ultra Dual-Core Mobile M660,1011
+40,Intel Core2 Duo E7400 @ 2.80GHz,1011
+41,AMD Phenom X2 Dual-Core GE-7060,1010
+42,AMD A6-7000 ,1010
+43,Intel Core i7-620UM @ 1.07GHz,1010
+44,Intel Core2 Duo E6750 @ 2.66GHz,1009
+45,AMD A6 PRO-7050B APU,1009
+46,Intel Atom x5-E8000 @ 1.04GHz,1008
+47,ARM Cortex-A57 4 Core 1912 MHz,1007
+48,AMD Phenom II P920 Quad-Core,1006
+49,Intel Celeron N2930 @ 1.83GHz,1005
+50,AMD A6-4400M APU,1004
+51,Samsung Exynos 7870,1004
+52,AMD A4 Micro-6400T APU,1004
+53,Intel Core i3-3229Y @ 1.40GHz,1004
+54,Rockchip RK3566 EVB3 DDR3 V10 Board,1003
+55,AMD Athlon II X2 240e,1002
+56,Intel Core i5-540UM @ 1.20GHz,1002
+57,AMD A6-9220e,1000
+58,AMD A4-4300M APU,1000
+59,Rockchip RK3566 RK817 TABLET LP4X Board,998
+60,AMD Athlon 64 X2 Dual Core 6400+,998
+61,Intel Core2 Duo E8300 @ 2.83GHz,997
+62,AMD Athlon X2 215,996
+63,Intel Pentium B950 @ 2.10GHz,996
+64,Intel Core2 Duo E8235 @ 2.80GHz,993
+65,Intel Celeron 2981U @ 1.60GHz,991
+66,AMD E2-9010,991
+67,Rockchip RK3566,991
+68,AMD Athlon II X2 4300e,990
+69,Intel Core2 Duo E6700 @ 2.66GHz,990
+70,MediaTek MT6753,990
+71,Intel Pentium Extreme Edition 965 @ 3.73GHz,987
+72,Intel Core2 Duo T9400 @ 2.53GHz,985
+73,Intel Core2 Duo E7200 @ 2.53GHz,984
+74,ARM ARMv7 rev 3 (v7l) 4 Core 2065 MHz,984
+75,AMD E2-9030,983
+76,Intel Xeon 3060 @ 2.40GHz,983
+77,Qualcomm Technologies Inc SDM429,982
+78,AMD Opteron 1218 HE,979
+79,AMD Athlon II X2 4400e,978
+80,AMD Athlon Dual Core 5400B,977
+81,Intel Core i3-2340UE @ 1.30GHz,976
+82,Intel Core2 Duo T7800 @ 2.60GHz,976
+83,Intel Core2 Duo E8135 @ 2.40GHz,973
+84,Intel Core2 Duo T9300 @ 2.50GHz,973
+85,Intel Core2 Duo P8700 @ 2.53GHz,973
+86,AMD Athlon 64 FX-74,972
+87,ARM Cortex-A72 4 Core 2300 MHz,968
+88,MT6795M,968
+89,AMD Athlon 7750 Dual-Core,968
+90,Intel Core2 Duo E7300 @ 2.66GHz,967
+91,AMD A4-3300 APU,967
+92,AMD Phenom II N640 Dual-Core,965
+93,Intel Core2 Duo T9550 @ 2.66GHz,964
+94,Intel Xeon 5160 @ 3.00GHz,963
+95,MediaTek MT8166B,962
+96,AMD Athlon II X2 215,962
+97,Intel Atom C2538 @ 2.40GHz,960
+98,Intel Pentium E5400 @ 2.70GHz,960
+99,AMD Turion II P540 Dual-Core,960
+100,Qualcomm Technologies Inc MSM8939,959
+101,Rockchip RK3566 EVB2 LP4X V10 Board,958
+102,ARM Cortex-A57 4 Core 1479 MHz,957
+103,AMD E2-9000,957
+104,Intel Pentium B960 @ 2.20GHz,956
+105,AMD Opteron 285,956
+106,MT6750V/CS,955
+107,AMD Turion II Ultra Dual-Core Mobile M600,955
+108,Intel Celeron 1037U @ 1.80GHz,954
+109,AMD R-260H APU,954
+110,AMD E2-3200 APU,953
+111,AMD Opteron 290,952
+112,Intel Core2 Duo P9300 @ 2.26GHz,952
+113,AMD Turion II P560 Dual-Core,948
+114,Intel Celeron N2920 @ 1.86GHz,948
+115,Intel Celeron 3205U @ 1.50GHz,946
+116,Intel Core2 Duo T7700 @ 2.40GHz,945
+117,Intel Core2 Duo P8800 @ 2.66GHz,943
+118,AMD Athlon 64 FX-62 Dual Core,943
+119,Intel Celeron J1850 @ 1.99GHz,942
+120,AMD Athlon 64 X2 Dual Core 6000+,940
+121,AMD Athlon X2 255,938
+122,MT8165,937
+123,Intel Core2 Duo E6600 @ 2.40GHz,937
+124,Intel Celeron E3500 @ 2.70GHz,935
+125,MT8766A,935
+126,AMD Phenom II P650 Dual-Core,933
+127,Qualcomm Technologies Inc MSM8994,932
+128,Pentium Dual-Core T4500 @ 2.30GHz,932
+129,AMD Sempron X2 198 Dual-Core,930
+130,Intel Atom x5-E3930 @ 1.30GHz,928
+131,Intel Xeon L3406 @ 2.27GHz,928
+132,Intel Pentium E5300 @ 2.60GHz,925
+133,Samsung J7 Max LTE SWA board based on MT6757V/WL,925
+134,Intel Xeon 5150 @ 2.66GHz,924
+135,ARM Cortex-A15 4 Core 2000 MHz,923
+136,AMD Athlon X2 240,921
+137,AMD Athlon 64 X2 Dual Core 5600+,921
+138,Intel Xeon 5148 @ 2.33GHz,912
+139,AMD Turion II Dual-Core Mobile M540,912
+140,AMD Opteron 1218,910
+141,MT6761V/CBB,910
+142,AMD Opteron 2220 SE,909
+143,Intel Core i5-520UM @ 1.07GHz,908
+144,AMD Athlon 64 X2 Dual Core 5400+,907
+145,Qualcomm Technologies Inc MSM8952,905
+146,VIA Eden X4 C4250 @ 1.2+GHz,904
+147,Intel Xeon 3.73GHz,901
+148,AMD Athlon 7550 Dual-Core,900
+149,Intel Core i3-2375M @ 1.50GHz,900
+150,AMD Athlon II N370 Dual-Core,899
+151,MT6750V/WS,897
+152,Intel Pentium G620T @ 2.20GHz,896
+153,Intel Pentium P6200 @ 2.13GHz,896
+154,Intel Atom x5-Z8350 @ 1.44GHz,896
+155,Rockchip RK3568 EVB2 LP4X V10 Board,895
+156,Intel Celeron 1017U @ 1.60GHz,895
+157,Intel Celeron 2955U @ 1.40GHz,895
+158,UGOOS UT8 Board,894
+159,Intel Pentium E5200 @ 2.50GHz,892
+160,AMD RX-225FB,892
+161,MT8365,889
+162,Rockchip RK3528 DEMO4 DDR4 V10 Board,888
+163,Unisoc ums312,887
+164,AMD E2-9000e,887
+165,Intel Xeon 5133 @ 2.20GHz,887
+166,Intel Core2 Duo E6550 @ 2.33GHz,885
+167,AMD Phenom X2 Dual-Core GP-7730,884
+168,ARM FT-2000/4 4 Core 2200 MHz,881
+169,Intel Core2 Duo T8300 @ 2.40GHz,879
+170,AMD Sempron X2 190,879
+171,Intel Pentium N3510 @ 1.99GHz,878
+172,Samsung Exynos 7580,878
+173,AMD Turion II N550 Dual-Core,877
+174,Athlon 64 Dual Core 5600+,875
+175,Intel Pentium P6100 @ 2.00GHz,874
+176,AMD Athlon 5000 Dual-Core,872
+177,rockchiprk3368,870
+178,Intel Celeron P4600 @ 2.00GHz,870
+179,AMD Athlon 5200 Dual-Core,869
+180,Intel Core2 Duo E4600 @ 2.40GHz,867
+181,Intel Xeon 3065 @ 2.33GHz,867
+182,AMD Athlon II X2 4450e,867
+183,Intel Core2 Duo SP9400 @ 2.40GHz,866
+184,AMD Turion 64 X2 Mobile TL-68,866
+185,Intel Core2 Duo P7550 @ 2.26GHz,866
+186,SAMSUNG Exynos7580,863
+187,Intel Core2 Duo E4700 @ 2.60GHz,862
+188,Synaptics VS640,862
+189,Intel Celeron 2957U @ 1.40GHz,857
+190,MT8161AA,857
+191,Intel Xeon 5140 @ 2.33GHz,857
+192,AMD Athlon Dual Core 5000B,856
+193,Intel Pentium B940 @ 2.00GHz,856
+194,AMD Turion II N530 Dual-Core,855
+195,AMD Athlon X2 250,855
+196,BCM2711,852
+197,Intel Core2 Duo P8600 @ 2.40GHz,851
+198,Athlon 64 Dual Core 5000+,850
+199,Intel Pentium 3560Y @ 1.20GHz,849
+200,MT9950,845
+201,MT6750V/W,845
+202,AMD Turion II Neo N54L Dual-Core,844
+203,Intel Celeron E3400 @ 2.60GHz,844
+204,AMD Turion II Dual-Core Mobile M520,843
+205,MTK8257,842
+206,Intel Core2 Duo P8400 @ 2.26GHz,842
+207,AMD Athlon 64 X2 Dual Core 5200+,841
+208,AMD TurionX2 Ultra DualCore Mobile ZM-85,841
+209,Intel Xeon 3050 @ 2.13GHz,841
+210,Intel Celeron E1600 @ 2.40GHz,840
+211,AMD Opteron 275,839
+212,Intel Celeron E3200 @ 2.40GHz,839
+213,Thor,839
+214,Intel Xeon E5205 @ 1.86GHz,838
+215,Intel Xeon E5502 @ 1.87GHz,837
+216,AMD A4-9120e,835
+217,Intel Core i3-2377M @ 1.50GHz,834
+218,Intel Pentium P6300 @ 2.27GHz,834
+219,Intel Celeron B830 @ 1.80GHz,833
+220,Intel Core i3-2367M @ 1.40GHz,832
+221,Intel Celeron 1007U @ 1.50GHz,832
+222,Intel Core2 Duo T7500 @ 2.20GHz,828
+223,Rockchip RK3368,827
+224,Qualcomm Technologies Inc MSM8992,826
+225,Intel Pentium E2220 @ 2.40GHz,826
+226,AMD Sempron X2 180,826
+227,Intel Core i3-2365M @ 1.40GHz,825
+228,AMD A4-9120C,825
+229,Intel Celeron E3300 @ 2.50GHz,824
+230,AMD Athlon Dual Core 5200B,823
+231,Intel Core2 Extreme X6800 @ 2.93GHz,823
+232,MT8168M,823
+233,Intel Pentium T4500 @ 2.30GHz,821
+234,DO-Regular,819
+235,MT8766B,818
+236,MT6761V/WAB,816
+237,MT6761V/CAB,815
+238,AMD Turion II Ultra Dual-Core Mobile M620,814
+239,Intel Atom x5-Z8330 @ 1.44GHz,812
+240,Intel Pentium 997 @ 1.60GHz,809
+241,AMD Athlon Dual Core 5050e,809
+242,Intel Core2 Duo E6540 @ 2.33GHz,808
+243,AMD Athlon II Dual-Core M340,807
+244,Intel Celeron B820 @ 1.70GHz,807
+245,Intel Atom x5-Z8300 @ 1.44GHz,806
+246,AMD A4-4355M APU,806
+247,AMD Opteron 1214 HE,806
+248,ARM Cortex-A72 4 Core 1900 MHz,805
+249,Intel Xeon E5503 @ 2.00GHz,804
+250,Intel Core2 Duo P7570 @ 2.26GHz,804
+251,MT8173,804
+252,nxp IMX8MQ,803
+253,AMD Athlon64 X2 Dual Core 4600+,803
+254,Intel Atom Z3580 @ 1.33GHz,802
+255,AMD Turion X2 Ultra Dual-Core Mobile ZM-84,802
+256,AMD Turion II P520 Dual-Core,801
+257,Intel Core2 Duo T7600 @ 2.33GHz,801
+258,MT8161A,800
+259,ARM Cortex-A72 4 Core 2200 MHz,800
+260,AMD Turion X2 Ultra Dual-Core Mobile ZM-85,799
+261,Intel Celeron P4500 @ 1.87GHz,799
+262,AMD Athlon 64 X2 Dual Core 5800+,797
+263,hi6210sft,796
+264,Rockchip RK3566 RK817 ZIDOO TABLET LP4X Board,795
+265,Intel Xeon 5130 @ 2.00GHz,795
+266,Intel Atom Z3775D @ 1.49GHz,794
+267,Intel Core2 Duo T6670 @ 2.20GHz,794
+268,Intel Xeon 3040 @ 1.86GHz,790
+269,Intel Core2 Duo P7370 @ 2.00GHz,790
+270,AMD Athlon 7450 Dual-Core,789
+271,Intel Core i3-2357M @ 1.30GHz,788
+272,Intel Core2 Duo P7450 @ 2.13GHz,788
+273,Intel Core2 Duo L9600 @ 2.13GHz,788
+274,Intel Pentium P6000 @ 1.87GHz,787
+275,AMD A6-4455M APU,785
+276,MT6761V/CD,784
+277,AMD Athlon Dual Core 4850e,783
+278,AMD A4-3310MX APU,782
+279,AMD GX-217GA SOC,781
+280,AMD Opteron 1216,781
+281,Intel Core i5-470UM @ 1.33GHz,778
+282,Intel Core2 Duo T6600 @ 2.20GHz,778
+283,Pentium Dual-Core T4200 @ 2.00GHz,775
+284,Intel Celeron B810 @ 1.60GHz,775
+285,Intel Pentium T4300 @ 2.10GHz,774
+286,AMD Athlon 64 X2 Dual Core 5000+,774
+287,VIA QuadCore L4700 @ 1.2+ GHz,773
+288,Intel Celeron N2910 @ 1.60GHz,773
+289,Intel Atom Z3735G @ 1.33GHz,772
+290,AMD Opteron 1212 HE,771
+291,Athlon Dual Core 4850e,769
+292,AMD Athlon II N350 Dual-Core,767
+293,AMD Opteron 280,765
+294,AMD A4-5150M APU,765
+295,Celeron Dual-Core T3500 @ 2.10GHz,764
+296,Intel Core2 Duo SL9400 @ 1.86GHz,763
+297,Intel Xeon 5120 @ 1.86GHz,763
+298,Intel Core2 Duo P7350 @ 2.00GHz,762
+299,rockchiprk3328,761
+300,Intel Atom Z3735D @ 1.33GHz,761
+301,Intel Core2 Duo E6420 @ 2.13GHz,760
+302,Intel Pentium T4400 @ 2.20GHz,759
+303,Qualcomm Technologies Inc SCUBAIIOT,759
+304,MT6797D,758
+305,M7221,758
+306,AMD Turion 64 X2 Mobile TL-62,756
+307,Intel Celeron 887 @ 1.50GHz,754
+308,AMD GX-218GL SOC,754
+309,Qualcomm MSM8994,754
+310,AMD A4-3330MX APU,752
+311,Intel Core2 Duo T6570 @ 2.10GHz,751
+312,Rockchip RK3566 EVB1 DDR4 V10 Board,751
+313,Intel Atom Z3560 @ 1.00GHz,749
+314,Intel Celeron 1047UE @ 1.40GHz,748
+315,ARM Cortex-A72 4 Core 1800 MHz,748
+316,Spreadtrum SC9853I-IA,748
+317,Dual-Core AMD Opteron 1220 SE,748
+318,AMD Opteron 180,746
+319,Intel Core2 Duo T8100 @ 2.10GHz,746
+320,Intel Pentium Dual T2390 @ 1.86GHz,745
+321,Allwinner A133,743
+322,Intel Pentium D 960 @ 3.60GHz,743
+323,Intel Core2 Duo E6400 @ 2.13GHz,742
+324,ARM Cortex-A55 4 Core 2124 MHz,742
+325,Intel Core2 Duo T7200 @ 2.00GHz,739
+326,Intel Core2 Duo E4500 @ 2.20GHz,739
+327,MT8696,738
+328,AMD Athlon Dual Core 5600B,737
+329,Intel Core2 Duo T6500 @ 2.10GHz,736
+330,Intel Pentium D 3.40GHz,736
+331,Athlon 64 Dual Core 3800+,736
+332,Intel Atom Z3770 @ 1.46GHz,736
+333,MediaTek MT6761V/WE,736
+334,AMD Opteron 270,736
+335,AMD Turion II Dual-Core Mobile M500,735
+336,AMD Athlon II P360 Dual-Core,734
+337,Intel Core i3-380UM @ 1.33GHz,734
+338,ARM Cortex-A17 4 Core 1800 MHz,732
+339,MT8735A,731
+340,Qualcomm Technologies Inc APQ8096pro,730
+341,Intel Pentium T4200 @ 2.00GHz,729
+342,AMD A4-3305M APU,729
+343,AC8257V/WAB,728
+344,MediaTek MT6761V/WBB,728
+345,Intel Celeron B815 @ 1.60GHz,728
+346,AMD Athlon Dual Core 4850B,727
+347,AMD Opteron 1216 HE,727
+348,AMD Athlon II Dual-Core M320,726
+349,AMD E2-3000 APU,726
+350,MT3561S,723
+351,AMD Athlon Dual Core 4450B,719
+352,Intel Core2 Duo E6320 @ 1.86GHz,717
+353,ARM Cortex-A72 4 Core 2000 MHz,716
+354,Qualcomm Technologies Inc SDA429W,715
+355,Intel Core2 Duo T6400 @ 2.00GHz,713
+356,AMD Athlon II X2 260u,713
+357,Intel Pentium E2200 @ 2.20GHz,712
+358,ARM Cortex-A72 6 Core 1008 MHz,712
+359,AMD A4-3300M APU,711
+360,AMD Athlon 64 X2 Dual Core 4600+,710
+361,Intel Celeron E1400 @ 2.00GHz,709
+362,AMD Athlon 64 FX-60 Dual Core,709
+363,AMD Turion X2 Dual-Core Mobile RM-75,708
+364,Rockchip RK3288,708
+365,AMD Turion X2 Ultra Dual-Core Mobile ZM-82,707
+366,AMD Athlon Dual Core 4450e,705
+367,Qualcomm MSM8974,705
+368,MT8735T,704
+369,ARM Cortex-A55 4 Core 1992 MHz,704
+370,Intel Atom E3840 @ 1.91GHz,704
+371,Intel Atom Z3775 @ 1.46GHz,703
+372,Intel Core2 Duo T7400 @ 2.16GHz,703
+373,Intel Core2 Duo T7250 @ 2.00GHz,702
+374,Intel Pentium E2210 @ 2.20GHz,702
+375,MT5893,702
+376,AMD Opteron 1214,696
+377,AMD Turion 64 X2 Mobile TL-66,696
+378,AMD Opteron 185,695
+379,AMD Turion X2 Ultra Dual-Core Mobile ZM-86,695
+380,AMD Athlon II P320 Dual-Core,694
+381,ARM Cortex-A55 4 Core 2100 MHz,694
+382,ARM Cortex-A72 4 Core 2100 MHz,692
+383,MT6738,692
+384,AMD Turion X2 Dual Core Mobile RM-76,691
+385,AMD Athlon II P340 Dual-Core,691
+386,Intel Atom Z3560 @ 1.83GHz,690
+387,Intel Core2 Duo L9300 @ 1.60GHz,690
+388,Intel Celeron P4505 @ 1.87GHz,689
+389,AMD Turion X2 Ultra Dual-Core Mobile ZM-87,689
+390,Intel Core2 Duo T5870 @ 2.00GHz,689
+391,AMD Athlon 64 X2 Dual Core 4200+,689
+392,Intel Core2 Duo T5850 @ 2.16GHz,687
+393,Celeron Dual-Core T3000 @ 1.80GHz,687
+394,Qualcomm MSM8974PRO-AB,686
+395,Rockchip RK3566 RK817 TABLET RKG11 LP4 Board,686
+396,Intel Celeron 2961Y @ 1.10GHz,684
+397,AMD Turion II Neo K685 Dual-Core,684
+398,AMD Opteron 175,682
+399,Intel Core2 Duo T5750 @ 2.00GHz,681
+400,Athlon Dual Core 4450e,681
+401,Intel Core2 Duo L7800 @ 2.00GHz,680
+402,AMD E2-7015 APU,679
+403,AMD Athlon 64 X2 Dual Core 4800+,679
+404,Intel Pentium D 950 @ 3.40GHz,677
+405,Intel Core2 Duo T7300 @ 2.00GHz,676
+406,Intel Pentium E2180 @ 2.00GHz,676
+407,AMD Athlon II X2 270u,675
+408,AMD Turion 64 X2 Mobile TL-64,675
+409,Intel Celeron 877 @ 1.40GHz,675
+410,AMD Athlon Dual Core 4050e,674
+411,Intel Celeron B800 @ 1.50GHz,674
+412,AMD Athlon X2 Dual Core BE-2400,674
+413,AMD E2-3000M APU,674
+414,AMD Athlon 64 X2 Dual Core 4400+,673
+415,Broadcom STB (Flattened Device Tree),672
+416,Qualcomm MSM8974PRO-AA,672
+417,Athlon Dual Core 4050e,670
+418,AMD Athlon II Dual-Core M300,670
+419,MediaTek MT8168A,670
+420,AMD A4-3320M APU,668
+421,ARM Cortex-A72 4 Core 1600 MHz,667
+422,Samsung EXYNOS5420,667
+423,VIA QuadCore U4650 @ 1.0+ GHz,666
+424,AMD Athlon II N330 Dual-Core,665
+425,MediaTek MT6737T,664
+426,AMD Athlon 64 X2 Dual Core 4000+,662
+427,AMD Turion Dual-Core RM-75,659
+428,Intel Celeron J3060 @ 1.60GHz,659
+429,Intel Celeron N3060 @ 1.60GHz,657
+430,AMD Turion X2 Dual-Core Mobile RM-74,655
+431,Intel Pentium 987 @ 1.50GHz,655
+432,ARM Cortex-A72 4 Core 1500 MHz,654
+433,AMD Turion X2 Dual-Core Mobile RM-72,653
+434,Intel Core2 Duo T5900 @ 2.20GHz,652
+435,Qualcomm MSM8917,651
+436,Intel Core2 Duo T5600 @ 1.83GHz,650
+437,AMD Turion Dual-Core RM-72,649
+438,AMD Opteron 170,648
+439,ARM Cortex-A53 8 Core 1512 MHz,648
+440,Intel Core2 Duo E4400 @ 2.00GHz,646
+441,Intel Pentium T3400 @ 2.16GHz,644
+442,Intel Pentium 967 @ 1.30GHz,643
+443,Intel Core2 Duo L7500 @ 1.60GHz,641
+444,AMD Athlon 64 X2 QL-66,641
+445,Intel Pentium E2160 @ 1.80GHz,641
+446,AMD Turion 64 X2 Mobile TL-60,639
+447,ARM Cortex-A53 4 Core 1908 MHz,638
+448,AMD GX-412TC SOC,638
+449,Rockchip (Device Tree),637
+450,AMD Athlon 64 X2 Dual Core 3800+,636
+451,AMD Turion X2 Dual-Core Mobile RM-77,635
+452,Intel Atom Z3740 @ 1.33GHz,634
+453,Intel Core2 Duo T5550 @ 1.83GHz,634
+454,Qualcomm MSM8974PRO-AC,631
+455,Allwinner H618,631
+456,Intel Core2 Duo T5800 @ 2.00GHz,629
+457,Intel Core i5-430UM @ 1.20GHz,627
+458,Intel Celeron E1500 @ 2.20GHz,626
+459,Intel Core2 Duo E6300 @ 1.86GHz,625
+460,AMD Turion X2 Dual-Core Mobile RM-70,624
+461,Intel Pentium U5600 @ 1.33GHz,624
+462,Intel Pentium T3200 @ 2.00GHz,623
+463,Intel Pentium 957 @ 1.20GHz,622
+464,AMD Athlon 64 X2 QL-65,622
+465,Intel Atom Z3745 @ 1.33GHz,621
+466,AMD Athlon 64 X2 Dual-Core TK-57,620
+467,Celeron Dual-Core T3300 @ 2.00GHz,620
+468,MT6795MM,618
+469,AMD Athlon 64 X2 QL-64,617
+470,Intel Celeron N3000 @ 1.04GHz,616
+471,Intel Atom Z3740D @ 1.33GHz,614
+472,Intel Celeron N3010 @ 1.04GHz,612
+473,MediaTek MT6762V/CN,611
+474,AMD Athlon 64 X2 Dual Core 3600+,610
+475,ARM Cortex-A55 4 Core 1800 MHz,607
+476,Intel Core2 Duo L7700 @ 1.80GHz,607
+477,AMD Turion X2 Dual Core L510,603
+478,MediaTek MT8163,602
+479,AMD Turion II Neo N40L Dual-Core,602
+480,AMD E1 Micro-6200T APU,600
+481,Intel Xeon 5110 @ 1.60GHz,600
+482,Generic DT based system,600
+483,AMD TurionX2 Ultra DualCore Mobile ZM-87,599
+484,Samsung GrandPrimePlus LTE LTN DTV rev04 board bas,599
+485,Intel Celeron G470 @ 2.00GHz,599
+486,Intel Atom Z3745D @ 1.33GHz,599
+487,AMD GX-212JC SOC ,598
+488,Intel Core2 Duo T7100 @ 1.80GHz,598
+489,AMD E1-2500 APU,598
+490,AMD Sempron 150,597
+491,Intel Celeron J1750 @ 2.41GHz,595
+492,Qualcomm APQ8084,595
+493,rk3566,595
+494,AMD Athlon 64 X2 Dual Core BE-2300,594
+495,Intel Core2 Duo E4300 @ 1.80GHz,593
+496,AMD Opteron 1212,593
+497,Intel Celeron J1800 @ 2.41GHz,592
+498,AMD Athlon II X2 250u,592
+499,AMD Athlon X2 Dual Core BE-2350,591
+500,Intel Celeron N3050 @ 1.60GHz,590
+501,Intel Core2 Duo T5470 @ 1.60GHz,590
+502,AMD E1-7010 APU,590
+503,Intel Celeron N2840 @ 2.16GHz,589
+504,Amlogic,588
+505,AMD Turion Dual-Core RM-74,588
+506,Intel Pentium 2129Y @ 1.10GHz,587
+507,Qualcomm APQ 8084 (Flattened Device Tree),586
+508,Celeron Dual-Core T3100 @ 1.90GHz,584
+509,Intel Celeron 847E @ 1.10GHz,584
+510,Intel Atom C2338 @ 1.74GHz,584
+511,AMD Athlon 64 X2 QL-67,582
+512,AMD E1-6015 APU,582
+513,Intel Xeon MV 3.20GHz,582
+514,MT6761V/WD,580
+515,Intel Celeron U3600 @ 1.20GHz,579
+516,Intel Core2 Duo U9600 @ 1.60GHz,578
+517,Intel Atom C2358 @ 1.74GHz,578
+518,Intel Core2 Duo T5670 @ 1.80GHz,577
+519,AMD Athlon 64 X2 Dual-Core TK-42,577
+520,Intel Celeron 1019Y @ 1.00GHz,576
+521,ARM Cortex-A72 4 Core 1700 MHz,574
+522,AMD Athlon 64 X2 Dual Core BE-2350,573
+523,Intel Celeron @ 1.30GHz,572
+524,AMD E2-7015,572
+525,AMD Athlon X2 Dual Core BE-2300,570
+526,Intel Pentium T2390 @ 1.86GHz,570
+527,Intel Core2 Duo T5300 @ 1.73GHz,569
+528,Intel Celeron 857 @ 1.20GHz,569
+529,Intel Pentium D 830 @ 3.00GHz,568
+530,Qualcomm MSM 8974 HAMMERHEAD (Flattened Device Tre,566
+531,AMD Athlon 64 X2 3800+,566
+532,Intel Atom Z3530 @ 1.33GHz,565
+533,AMD Turion II Neo K625 Dual-Core,565
+534,Intel Pentium T2410 @ 2.00GHz,565
+535,AMD Athlon X2 Dual Core 6850e,564
+536,AMD Sempron Dual Core 2200,563
+537,Intel Celeron T1600 @ 1.66GHz,562
+538,Intel Celeron 867 @ 1.30GHz,562
+539,AMD Turion Dual-Core RM-70,561
+540,Intel Pentium E2140 @ 1.60GHz,561
+541,AMD Sempron 2650 APU,561
+542,Qualcomm Technologies Inc MSM8929,560
+543,AMD Athlon 64 X2 Dual-Core TK-53,558
+544,Intel Core2 Duo T5450 @ 1.66GHz,558
+545,Intel Atom Z3735E @ 1.33GHz,557
+546,AMD Athlon Neo X2 Dual Core L325,556
+547,AMD Sempron Dual Core 2300,555
+548,MT8765WA,555
+549,ARM Cortex-A53 4 Core 1704 MHz,552
+550,Intel Celeron E1200 @ 1.60GHz,551
+551,MT6737H,550
+552,Intel Celeron N2830 @ 2.16GHz,550
+553,Intel T1400 @ 1.73GHz,548
+554,MT8735P,548
+555,Intel T1500 @ 1.86GHz,548
+556,Intel Celeron G465 @ 1.90GHz,547
+557,AMD Athlon 64 X2 QL-60,547
+558,Intel Core2 Duo T5250 @ 1.50GHz,545
+559,MediaTek MT6735,544
+560,Intel Pentium T2370 @ 1.73GHz,543
+561,Intel Atom Z3735F @ 1.33GHz,542
+562,mt6762m,538
+563,Intel Pentium U5400 @ 1.20GHz,538
+564,Intel Pentium T2330 @ 1.60GHz,538
+565,AMD E1-6010 APU,536
+566,Intel Pentium T2310 @ 1.46GHz,536
+567,AMD TurionX2 Dual Core Mobile RM-70,536
+568,AMD Turion 64 X2 Mobile TL-52,534
+569,AMD Sempron Dual Core 2100,533
+570,MT6739CH,533
+571,AMD Athlon 64 X2 Dual Core 3400+,531
+572,AMD Opteron 165,531
+573,Qualcomm Technologies Inc APQ8017,530
+574,AMD Athlon Neo X2 Dual Core L335,529
+575,AMD Athlon II Neo K345 Dual-Core,527
+576,Intel Atom S1260 @ 2.00GHz,526
+577,AMD Athlon 64 X2 QL-62,525
+578,Intel Core2 Duo SU9400 @ 1.40GHz,523
+579,MT6592,521
+580,Intel Atom C2350 @ 1.74GHz,520
+581,AMD Athlon 64 X2 Dual-Core TK-55,518
+582,MT8167D,517
+583,AMD Athlon 64 FX-57,517
+584,SAMSUNG JF,516
+585,Intel T2050 @ 2.00GHz,516
+586,Intel Celeron U3400 @ 1.07GHz,516
+587,Intel Core2 Duo T5500 @ 1.66GHz,516
+588,Intel Core2 Duo L7400 @ 1.50GHz,516
+589,Intel Core i3-330UM @ 1.20GHz,515
+590,Intel Core2 Duo L7300 @ 1.40GHz,513
+591,Qualcomm Technologies Inc MSM8917,512
+592,Intel Atom D2701 @ 2.13GHz,511
+593,sun50iw6,511
+594,Intel Celeron N2808 @ 1.58GHz,510
+595,MT8161P,508
+596,Intel Core2 Duo U7300 @ 1.30GHz,508
+597,Rockchip RK3288 (Flattened Device Tree),508
+598,QCT APQ8064 FLO,507
+599,AMD Turion X2 Ultra Dual-Core Mobile ZM-80,506
+600,AMD Sempron 145,506
+601,Intel Atom Z3736F @ 1.33GHz,503
+602,AMD Sempron 130,501
+603,Intel Celeron N2820 @ 2.13GHz,500
+604,Intel Celeron N2815 @ 1.86GHz,499
+605,Intel Core Duo T2700 @ 2.33GHz,498
+606,Intel Pentium D 940 @ 3.20GHz,498
+607,Intel Celeron N2807 @ 1.58GHz,497
+608,ARM Cortex-A53 4 Core 1800 MHz,497
+609,AMD Turion X2 Dual Core Mobile RM-70,497
+610,Unisoc SC9832e,496
+611,MT8735,495
+612,AMD E2-2000 APU,492
+613,Rockchip RK3328 box liantong avb,491
+614,Intel Atom Z3770D @ 1.49GHz,488
+615,AMD G-T56N,487
+616,AMD Sempron 140,486
+617,Intel Celeron 847 @ 1.10GHz,486
+618,AMD E-350D APU,486
+619,Intel Celeron N2806 @ 1.60GHz,485
+620,Intel Pentium SU4100 @ 1.30GHz,485
+621,AMD Athlon 64 3100+,484
+622,Intel Xeon 3.20GHz,478
+623,MT8167A,478
+624,AMD Athlon II Neo N36L Dual-Core,478
+625,Intel Celeron 925 @ 2.30GHz,477
+626,AMD Turion 64 X2 Mobile TL-50,474
+627,AMD E1-2200 APU,474
+628,AMD TurionX2 Dual Core Mobile RM-72,471
+629,Qualcomm Technologies Inc MSM8920,471
+630,Intel Celeron G460 @ 1.80GHz,469
+631,Intel Pentium Extreme Edition 955 @ 3.46GHz,469
+632,Intel Core2 Duo T5270 @ 1.40GHz,468
+633,Intel Core2 Duo L7100 @ 1.20GHz,467
+634,AMD Athlon 64 FX-59,465
+635,Rockchip rk3326 evb board,463
+636,Intel Atom E3827 @ 1.74GHz,463
+637,Intel Atom D2700 @ 2.13GHz,461
+638,MediaTek MT6737,461
+639,Intel Celeron SU2300 @ 1.20GHz,460
+640,Intel Core2 Duo T5200 @ 1.60GHz,459
+641,ARM Cortex-A53 4 Core 1512 MHz,459
+642,AMD Opteron 154,457
+643,ARM Cortex-A53 4 Core 1500 MHz,457
+644,AMD Athlon Neo X2 Dual Core 6850e,456
+645,Qualcomm Technologies Inc QM215,454
+646,QCT APQ8064 DEB,453
+647,Spreadtrum SC9832E,453
+648,AMD Turion 64 X2 Mobile TL-56,451
+649,AMD Opteron 254,451
+650,Intel Core Duo T2600 @ 2.16GHz,450
+651,AMD Turion 64 X2 Mobile TL-58,447
+652,Samsung Exynos 7570,445
+653,Intel Atom N2800 @ 1.86GHz,444
+654,Intel Pentium D 915 @ 2.80GHz,443
+655,AMD G-T56E,442
+656,AMD E2-1800 APU,441
+657,Intel Core2 Duo U9300 @ 1.20GHz,440
+658,Intel Atom D2550 @ 1.86GHz,434
+659,Intel Atom D2560 @ 2.00GHz,433
+660,MediaTek MT6739WW,432
+661,AMD Turion Neo X2 Dual Core L625,432
+662,AMD E-450 APU,431
+663,AMD Athlon LE-1640,430
+664,Intel Core2 Duo U7700 @ 1.33GHz,429
+665,MT8127,429
+666,AMD Opteron 152,428
+667,Sony Mobile fusion3,428
+668,AMD G-T48E,428
+669,ARM Cortex-A53 4 Core 1296 MHz,426
+670,Intel Celeron G440 @ 1.60GHz,425
+671,Intel Xeon 3.00GHz,425
+672,Qualcomm MSM8916,424
+673,ARM Cortex-A53 4 Core 1600 MHz,424
+674,AMD E-350 APU,423
+675,AMD Athlon LE-1620,421
+676,Intel Celeron N2810 @ 2.00GHz,420
+677,MT8765WB,419
+678,ARM Cortex-A53 4 Core 1392 MHz,417
+679,AMD Sempron LE-1300,417
+680,AMD Athlon II Neo K325 Dual-Core,417
+681,AMD Athlon LE-1660,416
+682,AMD E-350,416
+683,Samsung GrandPrimePlus LTE LTN OPEN rev04 board ba,415
+684,Intel Celeron 450 @ 2.20GHz,415
+685,AMD Athlon LE-1600,412
+686,AMD Athlon 1640B,412
+687,AMD A4-1250 APU,411
+688,Intel Core Duo T2450 @ 2.00GHz,411
+689,ARM Cortex-A53 4 Core 1199 MHz,410
+690,Qualcomm Technologies Inc QCM2150,409
+691,Intel Core Duo T2500 @ 2.00GHz,408
+692,MediaTek MT6739WA,407
+693,AMD E1-2100 APU,407
+694,Intel Atom E3805 @ 1.33GHz,406
+695,Intel Atom D510 @ 1.66GHz,406
+696,AMD Athlon 64 FX-55,404
+697,Intel Core Duo L2500 @ 1.83GHz,404
+698,Intel Xeon 3.60GHz,403
+699,AMD E1-1500 APU,402
+700,Intel Core i7-2630UM @ 1.60GHz,400
+701,AMD Turion 64 Mobile ML-42,400
+702,AMD Geode NX 2400+,400
+703,Rockchip rk3326 863 rkisp1 board,399
+704,QCT APQ8064 MAKO,399
+705,ARM ARMv7 rev 4 (v7l) 4 Core 1400 MHz,399
+706,AMD V140,397
+707,Intel Celeron 900 @ 2.20GHz,397
+708,AMD Athlon 64 3500+,396
+709,ARM ARMv7 rev 4 (v7l) 4 Core 1200 MHz,396
+710,AMD Athlon 64 3700+,394
+711,VIA Nano X2 U4025 @ 1.2 GHz,393
+712,Intel Atom D525 @ 1.80GHz,393
+713,AMD Opteron 150,393
+714,Intel Xeon 3.80GHz,393
+715,AMD Opteron 148,392
+716,Intel Core2 Duo U7500 @ 1.06GHz,392
+717,Intel Celeron 807 @ 1.50GHz,392
+718,Qualcomm Technologies Inc MSM8916,391
+719,QCT APQ8064 MTP,389
+720,Intel Core Duo L2300 @ 1.50GHz,387
+721,Qualcomm Technologies Inc APQ8016,386
+722,Intel Core Duo T2350 @ 1.86GHz,385
+723,Intel Pentium 4 3.73GHz,385
+724,Rockchip RK3326,384
+725,AMD Turion 64 Mobile ML-44,384
+726,Intel Pentium T2130 @ 1.86GHz,382
+727,QCT APQ8064 AWIFI,382
+728,AMD E1-1200 APU,378
+729,Intel Atom E3825 @ 1.33GHz,378
+730,AMD Athlon 64 3300+,375
+731,Intel Xeon 3.40GHz,375
+732,Intel Pentium D 805 @ 2.66GHz,374
+733,Intel Celeron D 360 @ 3.46GHz,372
+734,MediaTek MT8735B,371
+735,Intel Celeron 827E @ 1.40GHz,371
+736,AMD A4-1200 APU,369
+737,Intel Celeron 440 @ 2.00GHz,368
+738,MediaTek MT8167B,366
+739,AMD Sempron 3600+,364
+740,Intel Atom 330 @ 1.60GHz,363
+741,AMD Turion 64 Mobile MK-38,362
+742,Intel Core Duo T2400 @ 1.83GHz,361
+743,AMD Sempron 3800+,360
+744,Intel Pentium 4 3.80GHz,358
+745,MT8735M,358
+746,AMD Athlon II 160u,358
+747,AMD Athlon X2 Dual Core 3250e,357
+748,Mobile AMD Athlon 64 3700+,356
+749,Manta,356
+750,MediaTek MT6737M,355
+751,ARM Cortex-A7 4 Core 1368 MHz,353
+752,AMD V120,352
+753,Intel Core Duo T2250 @ 1.73GHz,350
+754,AMD Sempron LE-1200,349
+755,Intel Core Duo L2400 @ 1.66GHz,348
+756,Intel Core2 Duo U7600 @ 1.20GHz,347
+757,AMD Opteron 146,346
+758,Mobile Intel Pentium 4 3.33GHz,344
+759,Intel Celeron 570 @ 2.26GHz,344
+760,ARM Cortex-A53 4 Core 1152 MHz,343
+761,Intel 2.80GHz,341
+762,ARM Cortex-A7 4 Core 1300 MHz,341
+763,Intel Atom N570 @ 1.66GHz,341
+764,AMD Athlon 64 4000+,340
+765,AMD Athlon II 170u,340
+766,Intel Pentium T2080 @ 1.73GHz,339
+767,AMD E-300 APU,339
+768,Intel Celeron 560 @ 2.13GHz,339
+769,AMD Athlon TF-36,338
+770,AMD Sempron M100,338
+771,AMD V160,337
+772,Unisoc SC7731e,337
+773,Qualcomm MSM8928,337
+774,AMD Turion 64 Mobile ML-40,336
+775,Mobile AMD Sempron 3800+,335
+776,ARM Cortex-A72 4 Core 1750 MHz,335
+777,Intel Celeron N2805 @ 1.46GHz,335
+778,AMD Turion 64 Mobile ML-37,334
+779,ARM Cortex-A35 4 Core 1296 MHz,334
+780,AMD Turion 64 Mobile MK-36,334
+781,AMD Athlon 64 3000+,334
+782,Mobile AMD Athlon 64 3400+,333
+783,AMD Athlon 2850e,333
+784,Qualcomm MSM8228,332
+785,Intel Pentium 4 3.20GHz,331
+786,Qualcomm Technologies Inc APQ8009,331
+787,Intel Pentium T2060 @ 1.60GHz,330
+788,ARM Cortex-A35 4 Core 1200 MHz,329
+789,VIA Eden X2 U4200 @ 1.0+ GHz,327
+790,Intel Core Duo T2300 @ 1.66GHz,326
+791,Mobile AMD Athlon 64 3200+,326
+792,MT6735P,326
+793,AMD Athlon X2 Dual Core L310,324
+794,Intel Atom N2600 @ 1.60GHz,323
+795,Qualcomm APQ8026,322
+796,ARM Cortex-A53 4 Core 1368 MHz,322
+797,Qualcomm MSM8226,322
+798,Intel Core Duo T2050 @ 1.60GHz,320
+799,Rockchip RK3328,319
+800,Intel Celeron 550 @ 2.00GHz,319
+801,ARM Cortex-A57 2 Core 1479 MHz,318
+802,AMD Athlon 64 3400+,317
+803,AMD Opteron 144,316
+804,AMD Sempron LE-1100,315
+805,AMD Turion 64 Mobile MT-37,315
+806,Intel Pentium 4 3.60GHz,315
+807,AMD C-70 APU,315
+808,AMD Sempron 3300+,315
+809,Intel Celeron D 420 @ 1.60GHz,313
+810,Mobile AMD Athlon 64 4000+,313
+811,Samsung GrandPrimePlus LTE CIS rev04 board based o,312
+812,AMD C-60 APU,311
+813,MT6739WM,310
+814,Intel Pentium 4 3.00GHz,310
+815,MT6735M,308
+816,Intel Celeron 3.06GHz,307
+817,ARM Cortex-A53 4 Core 1008 MHz,306
+818,msm8960dt,306
+819,Intel Celeron 540 @ 1.86GHz,305
+820,ARM Cortex-A53 4 Core 1400 MHz,305
+821,AMD Z-01,305
+822,Intel Atom E3826 @ 1.46GHz,304
+823,Mobile AMD Sempron 3600+,302
+824,AMD Athlon II Neo K125,302
+825,UNIVERSAL3475,301
+826,AMD Sempron LE-1250,301
+827,Qualcomm MSM8926,300
+828,AMD G-T40N,299
+829,Intel Atom Z2760 @ 1.80GHz,298
+830,AMD Sempron 3100+,298
+831,AMD Athlon II Neo K145,298
+832,Intel Pentium 4 3.46GHz,295
+833,AMD Athlon 64 2800+,295
+834,Intel Pentium 4 3.40GHz,295
+835,Spreadtrum SC7731e,294
+836,Qualcomm MSM8626,294
+837,Mobile AMD Sempron 3300+,294
+838,AMD Athlon 64 3200+,293
+839,AMD Athlon 64 3800+,292
+840,AMD Sempron 3400+,292
+841,Qualcomm Technologies Inc MSM8216,292
+842,Intel Pentium M 2.10GHz,292
+843,AMD Athlon 2800+,291
+844,Intel Celeron M 530 @ 1.73GHz,291
+845,AMD C-60,290
+846,AMD G-T40E,289
+847,AMD Sempron SI-40,288
+848,ARM Cortex-A53 4 Core 1200 MHz,288
+849,AMD Turion 64 Mobile MT-32,286
+850,AMD Sempron 3000+,286
+851,AMD Turion 64 Mobile ML-32,285
+852,Intel Atom N550 @ 1.50GHz,283
+853,AMD Athlon XP 3100+,282
+854,AMD Athlon XP 3200+,281
+855,Intel Pentium M 1.80GHz,280
+856,Qualcomm Technologies Inc MSM8909,280
+857,Intel Celeron 430 @ 1.80GHz,280
+858,ARM Cortex-A72 4 Core 800 MHz,279
+859,AMD Turion 64 Mobile MT-34,279
+860,VIA Nano L2100@1800MHz,279
+861,Mobile AMD Sempron 3100+,277
+862,AMD Turion 64 Mobile ML-30,277
+863,AMD Turion 64 Mobile ML-34,277
+864,AMD Athlon XP 2900+,276
+865,AMD Athlon 2650e,274
+866,Intel Celeron D 352 @ 3.20GHz,274
+867,Intel Pentium M 2.13GHz,271
+868,ARM Cortex-A7 4 Core 1200 MHz,270
+869,Intel Pentium M 2.00GHz,270
+870,AMD Athlon Neo MV-40,270
+871,Mobile AMD Sempron 3400+,269
+872,ARM Cortex-A7 4 Core 1008 MHz,269
+873,Mobile AMD Sempron 3000+,269
+874,Intel Celeron 530 @ 1.73GHz,268
+875,Intel Celeron 743 @ 1.30GHz,268
+876,AMD Sempron 210U,267
+877,Intel Celeron 3.20GHz,267
+878,Intel Celeron M 723 @ 1.20GHz,267
+879,AMD C-50,265
+880,AMD Athlon TF-20,265
+881,Intel Celeron 3.33GHz,263
+882,VIA Eden C1050@1.06GHz,263
+883,AMD Z-60 APU,262
+884,AMD Athlon XP 3000+,262
+885,AMD Sempron SI-42,261
+886,AMD Athlon XP 2800+,260
+887,Intel Xeon 2.80GHz,260
+888,Mobile AMD Sempron 2600+,256
+889,AMD Athlon XP 2700+,256
+890,Intel Core Duo U2400 @ 1.06GHz,255
+891,AMD Turion 64 Mobile ML-28,254
+892,Intel Core Solo T1400 @ 1.83GHz,253
+893,AMD Sempron 2600+,253
+894,Rockchip RK3229,253
+895,Intel Celeron M 1.70GHz,252
+896,Intel Core2 Solo U3500 @ 1.40GHz,252
+897,AMD Sempron LE-1150,251
+898,Intel Celeron D 356 @ 3.33GHz,251
+899,AMD Sempron 3200+,251
+900,Intel Pentium 4 3.06GHz,249
+901,ARM Cortex-A53 4 Core 1000 MHz,248
+902,AMD GX-210JA SOC,248
+903,AMD Sempron M120,247
+904,AMD Turion 64 Mobile MT-30,246
+905,Mobile AMD Sempron 3200+,245
+906,AMD Athlon XP2400+,243
+907,AMD Athlon 64 2600+,243
+908,AMD Sempron 2800+,243
+909,AMD Athlon XP 2600+,242
+910,Mobile AMD Athlon XP-M 2600+,241
+911,Mobile AMD Athlon 2500+,241
+912,Intel Celeron 807UE @ 1.00GHz,241
+913,Intel Pentium M 1.50GHz,240
+914,Intel Pentium M 1.70GHz,239
+915,ARM Cortex-A7 4 Core 900 MHz,239
+916,Intel Pentium SU2700 @ 1.30GHz,239
+917,SAMSUNG SERRANO,239
+918,Mobile AMD Athlon XP-M 3000+,238
+919,VIA Nano L2007@1600MHz,238
+920,Mobile AMD Athlon XP-M 2800+,238
+921,Intel Pentium M 1700MHz,237
+922,Mobile AMD Sempron 3500+,237
+923,Mobile AMD Athlon XP-M 2200+,237
+924,Mobile AMD Sempron 2800+,237
+925,Intel Pentium 4 2.80GHz,237
+926,Intel Celeron 420 @ 1.60GHz,235
+927,AMD Athlon XP 2400+,234
+928,Intel Core2 Solo U2100 @ 1.06GHz,233
+929,Mobile AMD Athlon 4 2400+,233
+930,Intel Atom D2500 @ 1.86GHz,233
+931,Intel Celeron D 347 @ 3.06GHz,232
+932,Mobile Intel Pentium 4 3.20GHz,232
+933,AMD Sempron 3500+,232
+934,AMD Athlon XP 2500+,231
+935,Intel Celeron 2.93GHz,230
+936,Intel Celeron M 450 @ 2.00GHz,230
+937,Intel Pentium M 2.26GHz,227
+938,Mobile AMD Athlon XP-M 2500+,226
+939,Mobile AMD Athlon XP-M 2400+,225
+940,Intel Pentium M 1.40GHz,225
+941,Intel Atom N470 @ 1.83GHz,224
+942,Intel Celeron 2.53GHz,222
+943,Intel Pentium M 1.86GHz,222
+944,Intel Celeron M 360 1.40GHz,221
+945,Intel Core Duo U2500 @ 1.20GHz,220
+946,ARM Cortex-A53 4 Core 600 MHz,220
+947,Mobile Intel Pentium 4 3.06GHz,220
+948,Intel Celeron M 1500MHz,217
+949,Intel Celeron M 1.50GHz,216
+950,Intel Celeron M 520 @ 1.60GHz,215
+951,Intel Pentium 4 2.60GHz,215
+952,AMD Athlon XP 2200+,214
+953,Intel Celeron 723 @ 1.20GHz,213
+954,AMD Athlon XP 2100+,210
+955,Intel Core Solo T1300 @ 1.66GHz,210
+956,Intel Celeron 220 @ 1.20GHz,209
+957,Intel Pentium M 1400MHz,208
+958,ARM Cortex-A53 4 Core 1536 MHz,208
+959,ARM Cortex-A53 4 Core 1333 MHz,207
+960,AMD Sempron 2500+,207
+961,AMD Sempron 2300+,207
+962,Intel Celeron M 1.30GHz,205
+963,Mobile Intel Pentium 4 2.80GHz,205
+964,Intel Pentium M 1.73GHz,205
+965,AMD Sempron 2400+,205
+966,AMD Athlon XP 1900+,203
+967,Intel Atom N450 @ 1.66GHz,203
+968,Intel Atom 230 @ 1.60GHz,203
+969,Intel Pentium M 1.20GHz,199
+970,ARM Cortex-A72 4 Core 1850 MHz,199
+971,VIA Nano U2500@1200MHz,199
+972,Intel Atom D425 @ 1.80GHz,199
+973,RK30board,198
+974,Intel Pentium M 1300MHz,197
+975,Intel Celeron M 1300MHz,197
+976,AMD Athlon L110,197
+977,Intel Pentium M 1.30GHz,196
+978,Mobile AMD Athlon XP-M 2000+,196
+979,AMD E-240,195
+980,AMD Athlon XP 1800+,195
+981,AMD Athlon XP 2000+,195
+982,Intel Pentium III 1400S @ 1400MHz,194
+983,Intel Pentium M 1.60GHz,194
+984,Intel Core Solo T1350 @ 1.86GHz,194
+985,Mobile AMD Athlon XP-M 1800+,193
+986,Intel Pentium III 1400 @ 1400MHz,193
+987,Intel Pentium M 1600MHz,193
+988,Mobile AMD Athlon MP-M 2400+,192
+989,AMD Athlon 1500+,191
+990,Intel Celeron M 1.60GHz,190
+991,Intel Celeron 2.80GHz,190
+992,Intel Atom N455 @ 1.66GHz,188
+993,Intel Atom N2100 @ 1.60GHz,188
+994,Intel Pentium M 1500MHz,188
+995,VIA Nano U2250 (1.6GHz Capable),187
+996,Google R11 BtWifi Evt1.1,187
+997,Intel Atom E3815 @ 1.46GHz,184
+998,VIA Nano U3500@1000MHz,184
+999,Intel Pentium M 1.10GHz,184
+1000,AMD V105,184
+1001,AMD Sempron 2200+,184
+1002,AMD Athlon XP1600+,183
+1003,Intel Atom Z530 @ 1.60GHz,183
+1004,Mobile Intel Celeron 1333MHz,183
+1005,Mobile Intel Pentium 4 2.66GHz,182
+1006,Intel Celeron 2.26GHz,182
+1007,Intel Xeon 2.40GHz,180
+1008,Intel Atom N475 @ 1.83GHz,179
+1009,VIA Nano U2250@1300+MHz,179
+1010,AMD C-30,178
+1011,AMD G-T52R,177
+1012,Intel Atom D410 @ 1.66GHz,177
+1013,AMD Athlon XP 1700+,176
+1014,Intel Atom N270 @ 1.60GHz,175
+1015,Intel Atom N280 @ 1.66GHz,175
+1016,AMD Athlon XP 1600+,174
+1017,ARM Cortex-A72 4 Core 1200 MHz,174
+1018,Intel Celeron 215 @ 1.33GHz,174
+1019,Mobile AMD Athlon MP-M 1800+,173
+1020,Intel Celeron M 440 @ 1.86GHz,169
+1021,Intel Celeron M 430 @ 1.73GHz,169
+1022,Mobile AMD Athlon XP-M 1600+,169
+1023,AMD Athlon XP 1500+,167
+1024,Intel Celeron 2.13GHz,166
+1025,VIA Nano L2207@1600MHz,165
+1026,Intel XEON 2.20GHz,164
+1027,Intel Celeron 2.50GHz,164
+1028,Mobile AMD Sempron 2100+,164
+1029,Intel Core Solo U1500 @ 1.33GHz,164
+1030,Intel Pentium III Mobile 1133MHz,164
+1031,Intel Pentium 4 2.53GHz,162
+1032,Intel Pentium III Mobile 1066MHz,160
+1033,Intel Pentium 4 2.50GHz,160
+1034,Intel Celeron 2.70GHz,159
+1035,Intel Celeron 1200MHz,159
+1036,Intel Atom Z670 @ 1.50GHz,158
+1037,Intel Pentium 4 2.66GHz,157
+1038,Intel Pentium 4 2.20GHz,157
+1039,Intel Pentium III Mobile 1200MHz,156
+1040,Intel Pentium M 1000MHz,156
+1041,Intel Pentium M 1200MHz,155
+1042,Intel Pentium 4 3.83GHz,154
+1043,AMD Athlon 64 2000+,154
+1044,Intel Celeron 2.66GHz,154
+1045,Mobile Intel Celeron 2.40GHz,154
+1046,Intel Atom N435 @ 1.33GHz,153
+1047,Intel Xeon 2.00GHz,152
+1048,Intel Pentium 4 2.26GHz,151
+1049,Intel Pentium 4 2.93GHz,150
+1050,VIA C7-D 1800MHz,150
+1051,Intel Celeron M 1.00GHz,149
+1052,Intel Celeron 2.30GHz,148
+1053,Mobile Intel Celeron 2.20GHz,147
+1054,Mobile Intel Pentium III - M 1200MHz,146
+1055,VIA C7-M 6300MHz,145
+1056,Mobile Intel Pentium 4 - M 2.20GHz,143
+1057,Intel Celeron 2.60GHz,143
+1058,Intel Celeron 2.40GHz,143
+1059,ARM Cortex-A7 2 Core 1080 MHz,142
+1060,Intel Pentium M 900MHz,141
+1061,Mobile Intel Pentium 4 - M 2.40GHz,139
+1062,Intel Celeron 1000MHz,139
+1063,Intel Celeron M 420 @ 1.60GHz,139
+1064,Intel Celeron 2.20GHz,139
+1065,Mobile Intel Pentium 4 - M 2.00GHz,138
+1066,Intel Pentium 4 Mobile 1.90GHz,136
+1067,VIA Esther 1500MHz,135
+1068,ARM Cortex-A7 2 Core 996 MHz,133
+1069,Intel Pentium 4 2.00GHz,133
+1070,Mobile Intel Celeron 2.00GHz,133
+1071,Intel Pentium 4 Mobile 2.00GHz,132
+1072,Intel Pentium 4 2.40GHz,131
+1073,Intel Core Solo U1400 @ 1.20GHz,130
+1074,Mobile Intel Pentium III - M 933MHz,130
+1075,AMD G-T44R,130
+1076,Intel Core Solo U1300 @ 1.06GHz,127
+1077,Intel Celeron M 443 @ 1.20GHz,125
+1078,Intel Celeron 2.00GHz,125
+1079,AMD Sempron 200U,125
+1080,Intel Celeron M 410 @ 1.46GHz,123
+1081,Intel Celeron M 900MHz,123
+1082,Intel Atom Z520 @ 1.33GHz,122
+1083,Mobile Intel Pentium 4 - M 1.70GHz,121
+1084,Mobile Intel Celeron 1.80GHz,121
+1085,AMD G-T40R,120
+1086,Mobile Intel Pentium 4 - M 1.80GHz,119
+1087,Intel Pentium III Mobile 800MHz,119
+1088,Mobile Intel Celeron 1.70GHz,118
+1089,Intel Pentium 4 Mobile 1.60GHz,116
+1090,VIA C7-M 1600MHz,116
+1091,Intel Pentium 4 1.80GHz,115
+1092,Intel Pentium 4 Mobile 1.80GHz,114
+1093,Intel Pentium 4 1800MHz,114
+1094,Intel Celeron 1100MHz,113
+1095,VIA C7-M 1200MHz,112
+1096,Intel Celeron B710 @ 1.60GHz,106
+1097,Intel Pentium 4 1.90GHz,104
+1098,ARM Cortex-A7 2 Core 960 MHz,102
+1099,VIA Nehemiah,101
+1100,Intel Celeron 1.70GHz,101
+1101,Intel Pentium 4 1700MHz,100
+1102,Intel Pentium III Mobile 866MHz,99
+1103,Intel Celeron 1.80GHz,96
+1104,VIA Esther 1000MHz,95
+1105,VIA Eden 1200MHz,93
+1106,Intel Pentium 4 1.70GHz,86
+1107,Intel Pentium 4 1.50GHz,86
+1108,Intel Pentium 4 1.60GHz,84
+1109,Intel Pentium 4 1400MHz,83
+1110,Intel Pentium 4 1500MHz,81
+1111,VIA Eden 1000MHz,80
+1112,Intel Pentium 4 1300MHz,77

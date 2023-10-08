@@ -1,0 +1,20 @@
+FormFactor,Code
+ATX,0
+Micro ATX,1
+Mini ITX,2
+EATX,3
+ATX Mid Tower,4
+MicroATX Mini Tower,5
+ATX Full Tower,6
+MicroATX Mid Tower,7
+Mini ITX Desktop,8
+Mini ITX Tower,9
+HTPC,10
+ATX Mini Tower,11
+ATX Desktop,12
+MicroATX Slim,13
+MicroATX Desktop,14
+ATX Test Bench,15
+SFX,16
+TFX,17
+Flex ATX,18
