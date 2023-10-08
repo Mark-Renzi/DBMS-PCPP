@@ -339,7 +339,12 @@ benchmarks['Type'] = benchmarks['Type'].map(benchmark_type_dict)
 benchmark_type_df = pd.DataFrame(list(benchmark_type_dict.items()), columns=['Type', 'Code'])
 benchmark_type_df.to_csv('data/processed-data/benchmark_type_codes.csv', index=False)
 
+benchmarks = benchmarks.dropna(subset=['Score'])
+benchmarks['Score'] = benchmarks['Score'].astype(int)
+
 # re-export gpu and cpu tables
 cpu[['PartID', 'Cores', 'BoostClock', 'CoreClock', 'Graphics', 'SMT', 'TDP', 'Socket', 'ChipsetID']].to_csv('data/processed-data/CPU.csv', index=False)
 gpu[['PartID', 'CoreClock', 'BoostClock', 'Memory', 'Chipset', 'Length', 'Color', 'TDP', 'ChipsetID']].to_csv('data/processed-data/GPU.csv', index=False)
 
+# re-export benchmark table
+benchmarks.to_csv('data/processed-data/Benchmark.csv', index=False)

@@ -1,0 +1,13 @@
+Type,Code
+G3Dmark,0
+G2Dmark,1
+CUDA,2
+Metal,3
+OpenCL,4
+Vulkan,5
+PassMarkGPU,6
+CPUMark,7
+ThreadMark,8
+R23SingleScore,9
+R23MultiScore,10
+PassMarkCPU,11
