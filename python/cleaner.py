@@ -155,6 +155,8 @@ print(part)
 part = part.rename(columns={'id': 'PartID', 'price': 'Price', 'manufacturer': 'Manufacturer', 'model': 'Model'})
 
 # One-hot encoding
+
+# motherboard form factor
 form_factors = pd.concat([
     motherboard['FormFactor'], 
     case['FormFactor'], 
@@ -169,6 +171,26 @@ psu['FormFactor'] = psu['FormFactor'].map(form_factor_dict)
 
 form_factor_df = pd.DataFrame(list(form_factor_dict.items()), columns=['FormFactor', 'Code'])
 form_factor_df.to_csv('data/processed-data/form_factor_codes.csv', index=False)
+
+# psu 'modular' column
+modular_dict = psu['Modular'].unique()
+
+modular_dict = {modular: idx for idx, modular in enumerate(modular_dict)}
+
+psu['Modular'] = psu['Modular'].map(modular_dict)
+
+modular_df = pd.DataFrame(list(modular_dict.items()), columns=['Modular', 'Code'])
+modular_df.to_csv('data/processed-data/modular_codes.csv', index=False)
+
+# psu 'efficiency' column
+efficiency_dict = psu['Efficiency'].unique()
+
+efficiency_dict = {efficiency: idx for idx, efficiency in enumerate(efficiency_dict)}
+
+psu['Efficiency'] = psu['Efficiency'].map(efficiency_dict)
+
+efficiency_df = pd.DataFrame(list(efficiency_dict.items()), columns=['Efficiency', 'Code'])
+efficiency_df.to_csv('data/processed-data/efficiency_codes.csv', index=False)
 
 # export all dataframes to csvs
 part.to_csv('data/processed-data/ComputerPart.csv', index=False)
