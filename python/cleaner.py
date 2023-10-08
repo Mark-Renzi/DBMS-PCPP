@@ -3,7 +3,6 @@ import json
 import os
 import sys
 import re
-import numpy as np
 import uuid
 
 # create an empty dataframe to hold generic part info,
@@ -12,27 +11,27 @@ part = pd.DataFrame(columns=['id', 'price', 'manufacturer', 'model'])
 
 cpu = pd.read_json('data/pcpartpicker/cpu.json')
 cpu['id'] = [uuid.uuid4() for _ in range(len(cpu.index))]
-splitname = cpu['name'].str.split(' ', 1)
+splitname = cpu['name'].str.split(' ', n=1)
 cpu['manufacturer'] = splitname.str[0]
 cpu['model'] = splitname.str[1]
 cpu = cpu.dropna(subset=['price'])
 
 print(cpu)
 
-part = part.append(cpu[['id', 'price', 'manufacturer', 'model']])
+part = part._append(cpu[['id', 'price', 'manufacturer', 'model']])
 
 cpu = cpu.rename(columns={'id': 'PartID', 'core_count': 'Cores', 'boost_clock': 'BoostClock', 'core_clock': 'CoreClock', 'graphics': 'Graphics', 'smt': 'SMT', 'tdp': 'TDP'})
 
 gpu = pd.read_json('data/pcpartpicker/video-card.json')
 gpu['id'] = [uuid.uuid4() for _ in range(len(gpu.index))]
-splitname = gpu['name'].str.split(' ', 1)
+splitname = gpu['name'].str.split(' ', n=1)
 gpu['manufacturer'] = splitname.str[0]
 gpu['model'] = splitname.str[1]
 gpu = gpu.dropna(subset=['price'])
 
 print(gpu)
 
-part = part.append(gpu[['id', 'price', 'manufacturer', 'model']])
+part = part._append(gpu[['id', 'price', 'manufacturer', 'model']])
 
 # make a new table called chipset that holds an integer value (chipsetID) for each chipset, and a string value (name) for each chipset like a dictionary
 chipset = pd.DataFrame(columns=['chipsetID', 'name'])
@@ -46,7 +45,7 @@ gpu = gpu.rename(columns={'id': 'PartID', 'core_clock': 'CoreClock', 'boost_cloc
 
 # add unique cpu models to the chipset table
 unique_cpu_models = pd.DataFrame({'name': cpu['model'].unique()})
-chipset = chipset.append(unique_cpu_models, ignore_index=True)
+chipset = chipset._append(unique_cpu_models, ignore_index=True)
 chipset['chipsetID'] = range(1, len(chipset.index) + 1)
 
 # merge the chipset table with the cpu table to get the chipsetID for each cpu
@@ -58,20 +57,20 @@ chipset = chipset.rename(columns={'chipsetID': 'ChipsetID', 'name': 'Name'})
 
 motherboard = pd.read_json('data/pcpartpicker/motherboard.json')
 motherboard['id'] = [uuid.uuid4() for _ in range(len(motherboard.index))]
-splitname = motherboard['name'].str.split(' ', 1)
+splitname = motherboard['name'].str.split(' ', n=1)
 motherboard['manufacturer'] = splitname.str[0]
 motherboard['model'] = splitname.str[1]
 motherboard = motherboard.dropna(subset=['price'])
 
 print(motherboard)
 
-part = part.append(motherboard[['id', 'price', 'manufacturer', 'model']])
+part = part._append(motherboard[['id', 'price', 'manufacturer', 'model']])
 
 motherboard = motherboard.rename(columns={'id': 'PartID', 'socket': 'Socket', 'form_factor': 'FormFactor', 'max_memory': 'MaxMemory', 'memory_slots': 'MemorySlots', 'color': 'Color'})
 
 memory = pd.read_json('data/pcpartpicker/memory.json')
 memory['id'] = [uuid.uuid4() for _ in range(len(memory.index))]
-splitname = memory['name'].str.split(' ', 1)
+splitname = memory['name'].str.split(' ', n=1)
 memory['manufacturer'] = splitname.str[0]
 memory['model'] = splitname.str[1]
 memory = memory.assign(DDR=memory['speed'].str[0])
@@ -87,52 +86,54 @@ memory = memory.dropna(subset=['price'])
 
 print(memory)
 
-part = part.append(memory[['id', 'price', 'manufacturer', 'model']])
+part = part._append(memory[['id', 'price', 'manufacturer', 'model']])
 
 memory = memory.rename(columns={'id': 'PartID', 'color': 'Color', 'first_word_latency': 'FirstWord', 'cas_latency': 'CAS', 'price_per_gb': 'PricePerGB', 'TotalCapacity': 'TotalCapacity', 'DDR': 'DDR', 'MHz': 'MHz', 'Count': 'Count', 'Size': 'Capacity'})
 
 storage = pd.read_json('data/pcpartpicker/internal-hard-drive.json')
 storage['id'] = [uuid.uuid4() for _ in range(len(storage.index))]
-splitname = storage['name'].str.split(' ', 1)
+splitname = storage['name'].str.split(' ', n=1)
 storage['manufacturer'] = splitname.str[0]
 storage['model'] = splitname.str[1]
 storage = storage.dropna(subset=['price'])
 
+storage.loc[storage['type'] == 'SSD', 'type'] = 0
+
 print(storage)
 
-part = part.append(storage[['id', 'price', 'manufacturer', 'model']])
+part = part._append(storage[['id', 'price', 'manufacturer', 'model']])
 
 storage = storage.rename(columns={'id': 'PartID', 'price_per_gb': 'PricePerGB', 'capacity': 'Capacity', 'form_factor': 'FormFactor', 'interface': 'Interface', 'cache': 'Cache', 'type': 'Type'})
 
 psu = pd.read_json('data/pcpartpicker/power-supply.json')
 psu['id'] = [uuid.uuid4() for _ in range(len(psu.index))]
-splitname = psu['name'].str.split(' ', 1)
+splitname = psu['name'].str.split(' ', n=1)
 psu['manufacturer'] = splitname.str[0]
 psu['model'] = splitname.str[1]
 psu = psu.dropna(subset=['price'])
 
 print(psu)
 
-part = part.append(psu[['id', 'price', 'manufacturer', 'model']])
+part = part._append(psu[['id', 'price', 'manufacturer', 'model']])
 
 psu = psu.rename(columns={'id': 'PartID', 'type': 'FormFactor', 'efficiency': 'Efficiency', 'wattage': 'Wattage', 'modular': 'Modular', 'color': 'Color'})
 
 case = pd.read_json('data/pcpartpicker/case.json')
 case['id'] = [uuid.uuid4() for _ in range(len(case.index))]
-splitname = case['name'].str.split(' ', 1)
+splitname = case['name'].str.split(' ', n=1)
 case['manufacturer'] = splitname.str[0]
 case['model'] = splitname.str[1]
 case = case.dropna(subset=['price'])
 
 print(case)
 
-part = part.append(case[['id', 'price', 'manufacturer', 'model']])
+part = part._append(case[['id', 'price', 'manufacturer', 'model']])
 
 case = case.rename(columns={'id': 'PartID', 'type': 'FormFactor', 'internal_35_bays': 'StorageBays', 'color': 'Color', 'side_panel': 'SidePanel', 'external_volume': 'Size', 'psu': 'PSU'})
 
 cpucooler = pd.read_json('data/pcpartpicker/cpu-cooler.json')
 cpucooler['id'] = [uuid.uuid4() for _ in range(len(cpucooler.index))]
-splitname = cpucooler['name'].str.split(' ', 1)
+splitname = cpucooler['name'].str.split(' ', n=1)
 cpucooler['manufacturer'] = splitname.str[0]
 cpucooler['model'] = splitname.str[1]
 cpucooler = cpucooler.dropna(subset=['price'])
@@ -145,7 +146,7 @@ cpucooler['NoiseLevel_Max'] = cpucooler['noise_level'].apply(lambda x: x[1] if i
 
 print(cpucooler)
 
-part = part.append(cpucooler[['id', 'price', 'manufacturer', 'model']])
+part = part._append(cpucooler[['id', 'price', 'manufacturer', 'model']])
 
 cpucooler = cpucooler.rename(columns={'id': 'PartID', 'size': 'Size', 'color': 'Color', 'RPM_Min': 'RPM_Min', 'RPM_Max': 'RPM_Max', 'NoiseLevel_Min': 'NoiseLevel_Min', 'NoiseLevel_Max': 'NoiseLevel_Max'})
 
@@ -180,8 +181,8 @@ gpuPassMarkLowMid = pd.read_csv('data/benchmarks/LowMid-2023-10-5-gpu.csv')
 gpuPassMarkMidHigh = pd.read_csv('data/benchmarks/MidHigh-2023-10-5-gpu.csv')
 gpuPassMarkHighEnd = pd.read_csv('data/benchmarks/HighEnd-2023-10-5-gpu.csv')
 
-# make a benchmarks table that holds a unique benchmarkID (uuid), a chipsetID, a type (CPUMark, ThreadMark, etc.), and a score
-benchmarks = pd.DataFrame(columns=['BenchmarkID', 'ChipsetID', 'Type', 'Score'])
+# make a benchmarks table that holds a unique a chipsetID, a type (CPUMark, ThreadMark, etc.), and a score
+benchmarks = pd.DataFrame(columns=['ChipsetID', 'Type', 'Score'])
 
 # import each benchmark from each of the benchmark dataframes into the benchmarks table
 # For gpuBench
@@ -189,14 +190,12 @@ for index, row in gpuBench.iterrows():
     matching_chipset = chipset[chipset['Name'] == row['gpuName']]
     if not matching_chipset.empty:
         chipset_id = matching_chipset['ChipsetID'].values[0]
-        benchmarks = benchmarks.append({
-            'BenchmarkID': uuid.uuid4(),
+        benchmarks = benchmarks._append({
             'ChipsetID': chipset_id,
             'Type': 'G3Dmark',
             'Score': row['G3Dmark']
         }, ignore_index=True)
-        benchmarks = benchmarks.append({
-            'BenchmarkID': uuid.uuid4(),
+        benchmarks = benchmarks._append({
             'ChipsetID': chipset_id,
             'Type': 'G2Dmark',
             'Score': row['G2Dmark']
@@ -208,8 +207,7 @@ for index, row in gpuGraphicsAPI.iterrows():
     if not matching_chipset.empty:
         chipset_id = matching_chipset['ChipsetID'].values[0]
         for api_type in ['CUDA', 'Metal', 'OpenCL', 'Vulkan']:
-            benchmarks = benchmarks.append({
-                'BenchmarkID': uuid.uuid4(),
+            benchmarks = benchmarks._append({
                 'ChipsetID': chipset_id,
                 'Type': api_type,
                 'Score': row[api_type]
@@ -222,8 +220,7 @@ for file in passmark_files:
         matching_chipset = chipset[chipset['Name'] == row[1]]
         if not matching_chipset.empty:
             chipset_id = matching_chipset['ChipsetID'].values[0]
-            benchmarks = benchmarks.append({
-                'BenchmarkID': uuid.uuid4(),
+            benchmarks = benchmarks._append({
                 'ChipsetID': chipset_id,
                 'Type': 'PassMark',
                 'Score': row[2]
@@ -235,8 +232,7 @@ cpuBenchmarks = pd.read_csv('data/benchmarks/CPUBenchmarks.csv')
 
 # add the CPU benchmarks to the benchmarks table
 for index, row in cpuBenchmarks.iterrows():
-    benchmarks = benchmarks.append({
-        'BenchmarkID': uuid.uuid4(),
+    benchmarks = benchmarks._append({
         'ChipsetID': row['ChipsetID'],
         'Type': row['Type'],
         'Score': row['Score']
