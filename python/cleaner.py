@@ -1,8 +1,4 @@
 import pandas as pd
-import json
-import os
-import sys
-import re
 import uuid
 
 # create an empty dataframe to hold generic part info,

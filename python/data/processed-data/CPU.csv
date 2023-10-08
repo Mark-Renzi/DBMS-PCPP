@@ -1,595 +1,595 @@
 PartID,Cores,BoostClock,CoreClock,Graphics,SMT,TDP,Socket
-73bc11b3-50a2-47a7-8880-252f0b3baa1f,6,4.6,3.7,,True,65,AM4
-99a4db00-8c86-422a-8a93-1f7db92322c1,8,5.0,4.2,Radeon,True,120,
-3b2371b0-5a47-4b14-8415-07c423318922,16,5.4,3.4,Intel UHD Graphics 770,True,125,
-ba9e524b-bb33-4718-8ed9-ed172c60e59d,8,4.7,3.8,,True,105,AM4
-f05b74b1-18d3-4b59-9af6-cde9d6694e2c,6,5.3,4.7,Radeon,True,105,
-2f018be2-eb2d-489c-b5ee-26a2362c7fe5,24,5.8,3.0,Intel UHD Graphics 770,True,125,
-06f6547d-3b23-493e-ac62-0377c9c8eac4,6,4.4,3.5,,True,65,AM4
-4faef88e-ae49-4937-82f0-4882431581bb,6,4.4,2.5,,True,65,FCLGA1700
-da81958f-2056-4443-a5b7-91b3e12c730b,10,4.9,3.7,Intel UHD Graphics 770,True,125,FCLGA1700
-5bd7b263-8f39-441c-9960-cc3bbe36331e,8,5.4,4.5,Radeon,True,105,
-92e42f5b-f840-4189-9c06-564114554516,6,5.1,3.8,Radeon,True,65,
-9d1b9d5c-db09-4ac0-9ede-689ab439ef96,6,4.2,3.6,,True,65,AM4
-390dd60b-12ae-4f1d-86d4-84a906c7a034,14,5.1,3.5,Intel UHD Graphics 770,True,125,
-7d5e352d-a45e-45de-931d-5a4b5abab3f4,6,4.2,3.6,,True,65,AM4
-28b1192a-aece-46c4-8bd7-2e18203d7ce7,8,4.5,3.4,,True,105,AM4
-9665d04e-77d5-49c1-bf54-9024082c3e8a,12,5.0,3.6,Intel UHD Graphics 770,True,125,FCLGA1700
-9742210e-279d-4f3d-94c0-53a71228f8dc,8,4.6,3.4,,True,65,AM4
-eee0cc4b-0bfe-4b61-9e68-5daf275d3170,6,4.4,3.9,Radeon Vega 7,True,65,AM4
-6c1f1570-13d8-4028-8f89-1ac9357cdfda,16,5.7,4.2,Radeon,True,120,
-3ab72a69-eabc-49fa-a2a2-640582a294c5,14,5.1,3.5,,True,125,
-cbec7739-5084-455b-b1ec-5e447afa12c9,4,4.3,3.3,,True,58,FCLGA1700
-4dd3e323-4533-485f-9586-7a1a95199674,12,5.6,4.7,Radeon,True,170,
-c95c91b2-ed7e-4bf1-b0f7-6e2ecf08dbb6,10,4.6,2.5,,True,65,
-7e812d33-3541-4b51-b770-929298bfb676,12,4.8,3.7,,True,105,AM4
-6a1f48da-0498-4d9f-88f9-a989a42e8193,16,5.2,3.2,Intel UHD Graphics 770,True,125,FCLGA1700
-72cd90d6-ccaf-4726-b0cf-72d50f0965b0,24,6.0,3.0,Intel UHD Graphics 770,True,150,
-6a25aad6-1b06-4abb-b0a9-17e0a0728cdf,8,4.6,3.8,Radeon Vega 8,True,65,AM4
-dbaa7ed6-6801-495f-ac6c-fe8854380253,16,5.7,4.5,Radeon,True,170,
-ac362061-f42a-41fa-bdf3-0a1b76a7991f,16,5.4,3.4,,True,125,
-dda3d5ad-d5cd-4e7c-af9e-f1e1ed24a607,6,4.1,3.6,,True,65,AM4
-461ed8ee-4513-4ce2-bf51-6ce5bf64164c,8,4.4,3.6,,True,65,AM4
-93441258-03e5-4672-a459-a9a6f4859d66,8,5.3,3.6,Radeon,True,65,
-4501bd18-146e-4471-9ee8-65f2e7e5fc34,12,5.0,3.6,,True,125,FCLGA1700
-41b359fd-f1f9-439d-84c2-74144c027038,10,4.9,3.7,,True,125,FCLGA1700
-ceec309f-3c43-4034-a6ab-8ff750517b79,14,4.8,2.5,Intel UHD Graphics 770,True,65,
-919e2b10-00ea-4142-b63b-fa9619c856f6,24,5.8,3.0,,True,125,
-b94e7f7a-e7b7-4f16-a9cf-11153388171c,6,4.3,2.9,,True,65,FCLGA1200
-ce254094-035d-4c6e-8f5b-5d3bd83762c9,16,4.9,3.4,,True,105,AM4
-bd28ffdb-e837-4aff-a2b6-f88525e36909,4,4.5,3.4,,True,58,
-cf53c911-5b54-462d-b18e-84102455a56b,6,4.2,3.7,Radeon Vega 7,True,65,AM4
-44262550-9761-4365-b044-d828cdf0ffdf,12,5.6,4.4,Radeon,True,120,
-cac1132d-cb28-4b27-a632-97e67324d152,4,4.0,3.8,,True,65,
-374bd0a3-bc53-48e5-9d7a-bf3da64a19ae,4,4.3,3.6,,True,65,FCLGA1200
-567615e0-604e-441d-adfa-a8e1d72bb954,8,4.9,3.6,Intel UHD Graphics 630,False,95,FCLGA1151
-ab81e8f5-d0bf-497f-8a29-20d944e93534,10,4.6,2.5,Intel UHD Graphics 730,True,65,
-633a5c8e-463f-4114-b566-a6ff1aed29dc,6,4.4,2.5,Intel UHD Graphics 730,True,65,LGA 1700
-9ecb1a7b-7351-42f9-b8ad-cc4e4a6af21d,6,3.9,3.4,,True,65,AM4
-d82b28ae-561a-4e92-bbeb-3ef38af99b70,6,4.7,3.7,Intel UHD Graphics 630,True,95,FCLGA1151
-72b52b5b-001d-4c59-b2b2-f1c2ed2cdb72,6,4.4,2.6,,True,65,FCLGA1200
-2a1d5441-2ff5-4a15-a439-ccba5eb20bb9,16,5.2,2.1,,True,65,
-f831601f-1d0a-48e1-b9b3-aa7c4cec3ab7,12,5.4,3.6,Radeon,True,65,
-b5e2822f-3ef3-4c15-b2cd-56f2c55b0960,6,4.4,3.8,,True,95,AM4
-0b73046f-c6c9-4e0c-9a60-70bc278ca8b7,12,4.6,3.8,,True,105,AM4
-6ea253be-9d0c-449b-b271-788834f3a30f,8,5.0,3.6,Intel UHD Graphics 630,True,95,FCLGA1151
-579712d6-297b-40fa-bff7-4697ce994e3b,8,5.1,3.8,Intel UHD Graphics 630,True,125,FCLGA1200
-f50a1289-3862-46bd-9718-acee4308c2f4,8,4.3,3.7,,True,105,AM4
-abbcc5ec-17d9-4102-b3cd-62a12d902a9c,4,4.5,4.2,Intel HD Graphics 630,True,91,FCLGA1151
-b016eb95-f966-45c2-99ca-ab2a710c7a02,4,4.0,3.6,Radeon Vega 8,False,65,AM4
-9ec67278-40d2-43cb-a302-7577357ad36a,4,4.3,3.3,Intel UHD Graphics 730,True,60,LGA 1700
-f41e9d86-c937-48eb-a80c-76a1d1a587db,6,4.1,2.9,,False,65,FCLGA1151
-7e3286b1-136d-4410-910b-b8ecd4a7f3af,8,5.0,3.6,Intel UHD Graphics 750,True,125,FCLGA1200
-a8b69510-3d37-42cf-90e1-2c9fa3e49463,8,4.5,3.9,,True,105,AM4
-8da8a156-9fe4-4d86-ba2d-aac86efe4623,4,4.2,4.0,Intel HD Graphics 530,True,91,FCLGA1151
-a0fea9f2-1fb2-4144-8ae5-17f8a490732a,12,4.9,2.1,,True,65,FCLGA1700
-7e80e61a-f971-4688-aaae-76d802a90f32,16,5.2,3.2,,True,125,FCLGA1700
-51207cae-f271-41ca-9943-bce7d9292b73,8,5.3,3.5,Intel UHD Graphics 750,True,125,FCLGA1200
-f097eda5-02df-4c3b-8b3a-c8e4cafff323,6,4.9,3.9,Intel UHD Graphics 750,True,125,FCLGA1200
-9893d5ea-a075-4baf-898b-a64f750fc55c,16,5.2,2.1,Intel UHD Graphics 770,True,65,
-c1fb9e23-05a8-4035-8022-b01ea8590b3d,10,5.3,3.7,Intel UHD Graphics 630,True,125,FCLGA1200
-232e996f-78b7-41d0-b65f-766f5efbacc5,2,,2.0,,False,65,
-53b17998-3580-47af-88de-525bce94b55a,4,4.5,3.4,Intel UHD Graphics 730,True,60,
-b4169188-8deb-4939-a6f5-e72c27421543,6,4.6,3.7,Intel UHD Graphics 630,False,95,FCLGA1151
-2f925dd4-8f43-4ea5-919e-052addfcdcb0,6,4.2,3.6,,True,95,AM4
-8f8949c6-968b-427b-ad67-53937e85e8fe,6,4.8,4.1,Intel UHD Graphics 630,True,125,FCLGA1200
-8205ed1b-9372-4775-8eac-c68baeb8e0a4,4,3.9,3.6,,True,65,AM4
-58429d4e-89c2-4574-9def-98a3944768ea,8,4.8,2.9,,True,65,FCLGA1200
-80fcd4f9-492b-463b-80d1-71adc18b07ac,6,4.3,2.9,Intel UHD Graphics 630,True,65,FCLGA1200
-0d29a5b0-923c-448c-90e5-54b9e7e67a73,16,5.5,3.4,Intel UHD Graphics 770,True,150,LGA 1700
-6aa78688-dcfa-46c5-b8e9-cf4dd1352c66,32,4.5,3.7,,True,280,sTRX4
-68c94af2-d1d1-4a8b-b8eb-543374e2b2f4,4,4.2,3.7,Radeon Vega 11,True,65,AM4
-e16cec79-8cb0-4cee-96c9-9ae0facab3a0,10,5.2,3.6,Intel UHD Graphics 630,True,125,FCLGA1200
-39ec34b9-00a6-442b-92a2-7738dc6ba0f9,6,4.0,2.8,Intel UHD Graphics 630,False,65,FCLGA1151
-fe76ca1e-c995-4511-8400-1dc395475461,6,4.6,3.2,Intel UHD Graphics 630,True,65,FCLGA1151
-81ec22c1-01b1-40cf-96bb-ef1b5d25c27a,4,4.4,3.7,,True,65,FCLGA1200
-d9fed462-370a-4785-8782-d47bd4524fd6,12,4.9,2.1,Intel UHD Graphics 770,True,65,FCLGA1700
-8d393ae6-59a7-4057-8dc6-81b4646a776f,8,4.9,2.5,Intel UHD Graphics 750,True,65,FCLGA1200
-a5177784-e7b4-41af-959b-f4cd0a613530,24,5.6,2.0,Intel UHD Graphics 770,True,65,
-43c02e46-1ee7-46f6-9a83-06e014e14f97,16,4.7,3.5,,True,105,AM4
-f0690629-72dd-4491-9cff-15b01b1fd360,6,3.6,3.2,,True,65,
-eab4a161-9915-4d23-9638-cdc0c356102d,6,4.4,2.6,Intel UHD Graphics 730,True,65,FCLGA1200
-84e0d03a-cdc9-4de1-ac2f-0386b1222141,4,3.6,3.2,Intel HD Graphics 530,False,65,FCLGA1151
-ff981c22-a4fa-43bc-adb1-dacf2d12a38c,4,3.9,3.5,Intel HD Graphics 530,False,91,FCLGA1151
-d272019d-5266-4897-b841-93bf5c2fa73c,4,4.2,3.6,Intel HD Graphics 630,True,65,FCLGA1151
-0d86a446-c742-4509-a252-919d297fce41,8,4.9,2.5,,True,65,FCLGA1200
-cb353c19-66a2-4480-938d-a1969fbe8ce6,4,4.0,3.4,Intel HD Graphics 530,True,65,FCLGA1151
-10767469-288b-41bf-bc5f-56c1f14722df,12,3.5,3.0,,True,160,
-f4dea699-9389-48cf-a686-7e41d32bf0c0,4,4.3,3.6,Intel UHD Graphics 630,True,65,FCLGA1200
-b438e163-ca6d-4da7-8dfb-fe794182a0fa,8,4.1,3.2,,True,65,AM4
-e388d827-6fcb-4e73-b0f0-e1edb5fe084c,4,3.5,3.0,Intel HD Graphics 630,False,65,FCLGA1151
-94913669-99e4-4fd0-a463-78c680120477,8,5.0,3.6,,True,95,FCLGA1151
-8dd9b79e-69c1-4641-be82-f00d7cffca06,4,3.9,3.5,Intel HD Graphics 4600,False,88,FCLGA1150
-15542e3d-f273-4db0-9496-57e22213ea70,4,,3.4,Intel HD Graphics 4000,True,77,
-46e7849d-6bc6-45f8-a0a9-95e45cda9c56,4,3.9,3.4,Intel HD Graphics 4600,True,84,FCLGA1150
-ba3204e8-514d-408b-98d7-7ef7769e4fcd,8,4.8,2.9,Intel UHD Graphics 630,True,65,FCLGA1200
-dc4336f6-cd96-4909-882b-be2bb657ccc4,24,4.5,3.8,,True,280,sTRX4
-f6ed9dbb-541e-4443-a02b-c18d5bcfbf1c,8,5.0,3.6,,True,125,FCLGA1200
-39b18ea9-9596-4d67-8c2d-6263ef2d25d6,6,3.6,3.2,,True,65,
-22013532-ad2d-4c80-a2df-1ea34636472e,8,5.1,3.8,,True,125,FCLGA1200
-7685f170-1105-4ab6-bc1f-595d6ae18b15,4,4.2,3.6,,False,65,FCLGA1151
-4a9f8d2a-6603-4d1e-bbe3-3d5fbeb6d59d,24,5.6,2.0,,True,65,
-14ce486a-4dc1-4727-be63-8ccf1445c89a,4,3.7,3.5,Radeon Vega 8,False,65,AM4
-d591ae37-092f-4429-815b-ea039fa5aa13,8,4.7,3.0,Intel HD Graphics 630,False,65,FCLGA1151
-e4084aeb-bc02-448e-8c93-432df9042992,6,4.2,3.6,,True,65,AM4
-4553ad76-e1d7-444e-a5eb-995e44a7d48e,4,4.2,3.8,Intel HD Graphics 630,False,91,FCLGA1151
-0436bb2b-d6c6-489c-8901-c284605d9176,8,4.7,3.0,,False,65,FCLGA1151
-fc6b30e9-edaf-43f5-9ced-271ef9ba7e73,6,4.6,3.0,Intel UHD Graphics 770,True,65,LGA 1700
-e45b2048-08c8-4e5e-a7a5-b6937faddfed,4,3.8,3.4,Intel HD Graphics 630,False,65,FCLGA1151
-3763148f-fa79-4c98-aa97-a1c10349cd96,4,,3.5,Intel HD Graphics 4000,True,77,
-d2312ed3-4ca6-41fe-ac65-01c435315215,4,3.9,3.6,Radeon Vega 11,True,65,AM4
-37209c46-a1d6-453b-a20e-c0bbb4d5c426,8,3.7,3.0,,True,65,AM4
-307dd777-5c63-44e1-b609-ebfee7523393,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
-5baa6587-770c-48de-bcd6-9b8baed7daab,22,3.6,2.2,,True,145,
-4bbf0e58-4ffd-4efb-a8d8-2258b3b756a6,10,5.3,3.7,,True,125,FCLGA1200
-66d89ac0-cde8-42b1-aa91-4f5fb7612c30,8,5.3,3.5,,True,125,FCLGA1200
-dbcfc6d2-ca73-4ae3-9304-8ded8479e028,12,4.7,3.8,,True,105,
-9d776e43-e755-4cdc-a523-b9deaa944dc4,4,3.4,3.2,Intel HD Graphics 4600,False,84,FCLGA1150
-160ab0e3-84f2-4b80-9688-3b5258901a8a,4,4.0,3.6,Intel HD Graphics 4600,True,84,FCLGA1150
-978aab68-543d-4867-b1e0-cacb48e629f5,2,,3.4,Intel UHD Graphics 710,False,46,"LGA1700,BGA1700"
-26b1b431-0ce4-4965-a9c2-4eb0f3af1335,6,4.0,3.6,,True,95,AM4
-3ec646fb-4989-4692-8371-b6fa24986602,6,4.8,4.1,,True,125,FCLGA1200
-dcad244c-7eff-4a86-8a12-d92366b7460f,4,,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
-cc3f6214-185a-4d61-bf0a-940340d92bc1,6,4.5,3.8,,True,95,AM4
-d47fe38b-f221-4d1c-8838-35efcb3407c2,8,3.0,2.2,,True,95,
-886807ed-0e1f-4ca4-b409-dc2fa6c96b2d,4,,3.2,Intel HD Graphics 2500,False,77,
-707a3287-d811-4798-9083-2a92a67f40bd,8,3.8,3.4,,True,95,AM4
-bc664035-0083-475b-b807-5615c2b9f8a4,18,4.8,3.0,,True,165,FCLGA2066
-b30723c5-126b-4057-9182-21b6159c791a,4,4.3,3.8,,True,65,AM4
-b0dde1c5-3d83-43ca-89e6-210060e3ddc1,32,4.2,3.0,,True,250,sTR4
-5d5d9bfa-2620-4112-b29a-2fc640b08160,6,4.9,3.9,,True,125,FCLGA1200
-a5054f53-d0ed-4dd9-8b04-082ad8d3c28c,2,,3.1,Intel UHD Graphics 610,False,65,FCLGA1151
-39f1adff-c94b-4cde-8e1f-fa052676217d,8,4.7,3.9,,True,105,AM4
-b13e2a1f-bea6-470f-8288-96290e4cfe6a,2,,3.4,Intel UHD Graphics 610,False,58,FCLGA1200
-785424a6-02aa-4b4a-82fe-aa3197b882ad,6,4.1,2.9,Intel UHD Graphics 630,False,65,FCLGA1151
-65866ab8-73ec-413c-ab3b-88aade37a249,4,,3.4,Intel HD Graphics 2000,True,95,
-df342428-e27f-409f-bab0-2d1c68bfd4cb,6,4.6,3.7,,False,95,FCLGA1151
-e9798591-52db-46f1-85a8-634570264daa,6,4.1,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
-27c57faa-d88a-449b-babc-9263edcfb58e,4,3.3,2.7,Intel HD Graphics 530,False,65,FCLGA1151
-4bd9836f-aa84-4e37-87d3-e68f583c111d,2,,3.7,Intel UHD Graphics 710,True,46,"LGA1700,BGA1700"
-4d76fdbf-920c-4180-8bd6-b2218e3dda54,4,,3.4,Intel HD Graphics 4000,False,77,
-fbdc4f07-9d91-4da0-95f6-df0d7cd1c648,4,3.4,3.1,,False,65,
-8fcefa7a-add5-4474-a034-b31bd3acafa7,16,4.7,3.5,,True,105,AM4
-5965316d-ccb6-4d08-a389-90df9b11b70a,8,5.0,4.0,Intel UHD Graphics 630,True,127,FCLGA1151
-1754a4bd-9817-463c-84cc-38d8707ac47f,8,4.9,3.6,,False,95,FCLGA1151
-c911beb9-11e5-4b02-b9a4-b3ba05a69315,4,,3.2,Intel HD Graphics 4600,False,84,FCLGA1150
-f8f658ae-46e3-4d0a-a06c-0712e959a033,6,4.8,3.3,Intel UHD Graphics 770,True,65,LGA 1700
-de03e544-a1ea-4111-8cba-cb2561832734,4,3.4,3.2,,True,65,AM4
-601387ab-ed42-48a2-a73c-3429d7b1d849,2,,3.5,Radeon Vega 3,True,35,
-6b6f67aa-3e62-4b19-a10a-af11991669a1,2,,4.0,Intel UHD Graphics 610,True,58,FCLGA1200
-591e08c0-aad1-4ab1-81bf-9e4b51d4d65b,2,,3.5,Intel HD Graphics 4400,True,54,FCLGA1150
-fc8a05df-c767-4da9-a742-a94983ba3b34,12,4.0,3.5,,True,180,sTR4
-9714dffe-a0b5-4e61-aa3d-795301ba5c37,4,3.7,3.5,,True,65,AM4
-09d67670-a2c7-492a-92bb-d0fd3b47943e,2,,3.0,,False,65,
-68802133-bf19-48ba-96df-0cc353b4c98f,18,4.4,3.0,,True,165,FCLGA2066
-01b5779e-7894-48eb-a088-af38f5492fdb,2,,3.7,Intel HD Graphics 530,True,51,
-ff3e50c3-915f-4032-9f6f-af3ded595c4b,8,4.0,3.6,,True,95,AM4
-a04f46fc-b340-4612-bda4-ab3f0021472e,8,,3.5,,False,125,
-3f9a1f98-93f9-43b6-ac67-624a4d8e68ca,10,4.7,3.7,,True,165,FCLGA2066
-65aeb23a-7d36-4287-9cbb-d1ec764e667b,4,4.4,4.0,Intel HD Graphics 4600,True,88,FCLGA1150
-9d786451-6085-4037-9541-0dc40015cf32,16,5.1,2.4,,True,65,FCLGA1700
-efa1d91a-e227-4d3e-b7a5-fcdfb955d936,2,,4.2,Intel HD Graphics 630,True,60,FCLGA1151
-29e2c63b-c66c-45a3-9983-27f5f5ac9d60,6,4.7,3.7,Intel UHD Graphics 630,True,95,FCLGA1151
-2d8cf878-abfb-403f-91eb-86c9d1be5ae2,12,2.9,2.2,,True,105,
-372b6b1d-ed75-4910-b58c-1d74f9ae8a2d,4,3.9,3.5,Intel HD Graphics 4600,False,84,
-fba0f329-4e46-4c96-a686-33d2dec45c1c,8,3.7,3.2,,True,140,FCLGA2011-3
-f2906757-0ab3-4a33-9ac9-6cf47369c8ca,4,,3.4,Intel HD Graphics 4600,False,84,FCLGA1150
-34f390f3-869c-48b8-a173-b8d07d34b384,2,,2.6,,False,65,
-d7e1cf3c-2e13-40d8-a373-f54f56c9fb36,16,5.1,2.4,Intel UHD Graphics 770,True,65,FCLGA1700
-ac13525d-2542-4111-b6f1-fcae4c8d9494,8,5.2,2.5,,True,65,FCLGA1200
-e1e302bf-b513-4755-b700-09dfc868a7df,4,,3.4,Intel HD Graphics 3000,True,95,
-f4d659b5-cdb4-45cb-8f27-32f72abe85bc,6,4.5,3.1,Intel UHD Graphics 630,True,65,FCLGA1200
-c1e68a96-9917-4be1-b98b-c8ed515a27fa,2,,3.6,Intel UHD Graphics 610,False,58,FCLGA1200
-d3bc7325-eb65-41be-a6a9-63138a04b47f,4,4.4,3.7,Intel UHD Graphics 630,True,65,FCLGA1200
-d9fb9cd1-2c2e-4329-837f-74c02046bd27,2,,3.9,Intel HD Graphics 630,True,51,FCLGA1151
-7eff7905-1a55-4184-baf4-e0dbd11e819b,6,3.8,3.6,,True,140,FCLGA2011-3
-7cf10ba1-3f23-49eb-a48f-4414bed4adb1,16,4.0,3.4,,True,180,sTR4
-5af40a2d-fe12-4f57-8910-8fb75c558a33,4,4.4,3.7,Intel UHD Graphics 630,True,65,FCLGA1200
-051573fe-f1e3-45e5-9d5e-80bc450af531,4,4.2,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
-2afa7b07-86bf-4bb0-8dfa-0cf98b40e0dd,6,5.0,4.0,Intel UHD Graphics 630,True,95,
-e71359d6-f04f-48a4-9d06-828836a900cf,10,5.2,2.8,,True,65,FCLGA1200
-15055682-2ccc-4afe-af7e-14612f674e26,16,4.4,3.5,,True,180,sTR4
-b655fbbf-05cd-49ef-aca2-3dd07e6448b8,1,,1.6,Intel HD Graphics,False,35,
-becd9b52-0732-494f-8e74-3bc27e7f7d4b,2,,2.8,,False,65,AM3
-5feacd5b-69e9-4ee2-9aa7-077b6090e614,4,4.1,3.5,Intel HD Graphics 630,False,65,FCLGA1151
-0cca37a7-a65d-4713-8be3-59a358c254bd,8,3.4,2.6,,True,90,
-0fa22562-b4d8-4f83-930b-c0676cd7da92,10,4.5,3.3,,True,140,FCLGA2066
-7c1e77d2-4722-4caf-8817-285e28338ae8,8,5.0,3.6,Intel UHD Graphics 630,True,95,
-3bcd0125-325d-4b88-9c4f-6c3906450b0f,10,5.2,2.8,Intel UHD Graphics 630,True,65,FCLGA1200
-0574fc12-91aa-4949-aff3-3be5e7f5ec1a,8,5.0,3.6,Intel UHD Graphics 630,True,95,FCLGA1151
-1b4b5cd4-01f5-4f65-a2ea-6fdf3f0ca4bd,4,,3.5,Intel HD Graphics 3000,True,95,
-f79a1e41-501e-4053-a3dc-930baee60663,6,4.6,3.2,Intel UHD Graphics 630,True,65,FCLGA1151
-c6ee8440-4d76-4181-aa4b-335b9a570777,4,3.3,3.1,Intel HD Graphics 4600,False,84,FCLGA1150
-b27f4caa-8f04-4473-881e-f626ee7ca7e1,6,4.6,2.7,Intel UHD Graphics 750,True,65,FCLGA1200
-67b2cb66-92f0-43bb-af72-44e5c7feac89,2,,3.1,Intel HD Graphics 2000,True,65,
-456ea49c-0d76-4fb6-8135-24139c0860e0,6,4.4,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
-6505d0d2-ba8e-485e-a123-777980fc1982,6,4.0,2.8,Intel UHD Graphics 630,False,65,FCLGA1151
-5d51e0e3-6528-40ca-8fe8-7c497806a193,8,5.0,3.1,Intel UHD Graphics 630,True,65,FCLGA1151
-5a12b3ec-4a42-41f4-804f-9fbc01d3f752,8,5.2,2.5,Intel UHD Graphics 750,True,65,FCLGA1200
-ac1df018-428d-40dc-a2c5-afafea73ebac,4,3.3,2.8,Intel HD Graphics 4600,False,65,FCLGA1150
-3852f54d-29e3-4e67-a0a0-7338575f0929,8,4.5,3.6,,True,140,FCLGA2066
-cd67cca3-7e19-4d9e-9778-223cdc99c9bf,8,4.0,3.8,,True,180,sTR4
-719c09e6-69b3-4be1-b37d-24ef3ac5231c,2,,3.2,Intel UHD Graphics 610,False,54,FCLGA1151
-e531ea0b-59ce-4ffb-9722-9f86d359cee6,2,,3.4,Intel HD Graphics 4400,True,54,FCLGA1150
-e2f83be3-2743-403b-aba1-96729a8c4590,2,,3.2,Radeon Vega 3,True,35,AM4
-4a36a760-3069-48c2-88cc-8da8886e107f,8,5.0,4.7,,False,220,
-d85481bb-0420-4042-94ac-390d9efd7e7f,6,4.0,3.5,,True,140,FCLGA2066
-fea36f78-1484-45e5-bc2a-e63f01671970,6,4.3,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
-f5ca2be3-3c94-4c20-8228-ba125c226dbe,8,4.3,4.0,,False,125,
-ad90a4da-b2d1-471f-8515-5ecd5721937e,14,3.3,2.4,,True,120,
-19e727c2-bffb-4f1b-bbc2-a47e427628be,6,3.9,3.4,,True,130,FCLGA2011
-2ecb9ca5-f557-46f9-b7ab-d182962ff0df,4,3.4,3.1,,False,65,
-9d68a007-94a1-4ce1-a67c-4e982886b1eb,4,4.2,3.6,Intel HD Graphics 630,True,65,FCLGA1151
-2bf5c272-eb97-465d-bfd7-c72a26b012fd,6,4.8,3.3,Intel UHD Graphics 630,True,65,FCLGA1200
-08f735bb-b8cc-4dc8-97a0-cf5381f53704,2,,2.7,,False,65,
-9bfeab0f-b57e-43d9-acce-c4506cb2f714,2,,3.3,Intel HD Graphics 2000,True,65,
-8d735a77-9ba4-487c-ba63-1ba0920d3cc0,12,4.8,3.5,,True,165,FCLGA2066
-8a0c78b2-020d-49e5-990d-258a46a704c2,24,4.2,3.0,,True,250,sTR4
-6b4f3249-3705-41df-8501-aa43d3ed49f0,2,,3.3,Intel HD Graphics 510,False,54,
-e9d964d9-3368-43c4-84db-d7a55f28c593,4,4.5,4.3,,True,112,FCLGA2066
-5f3f53e2-bb81-4b93-811f-19ae5bee48cd,8,,3.3,,False,95,
-12f85439-2b36-48c3-83d2-d11dd22e7517,4,4.0,3.4,Intel HD Graphics 530,True,65,FCLGA1151
-5c8d2fd4-5f90-4004-b7f7-4e71587032c7,6,,3.9,,False,125,
-aaebcf04-b417-424e-977a-a8bd73ad92e0,14,3.2,2.0,,True,105,
-352dd4f7-c2ac-437b-98b2-f97ce17ad347,2,,2.4,,False,65,
-6b56723c-30b1-4f85-964d-d5abb42747fd,4,,3.4,Intel HD Graphics 4600,False,84,FCLGA1150
-f99966ce-88be-4703-b22d-39054d961e3f,2,,3.2,Intel HD Graphics,True,73,
-c8a29ef8-1215-42a8-bd75-0cefdd12ba9b,2,,3.7,Intel UHD Graphics 610,True,58,FCLGA1151
-ecc39cba-9caa-43d6-894e-465c9b2c33d1,6,4.6,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
-82f33d3d-f4f7-4bfb-a365-07199230b86c,4,,4.0,Intel UHD Graphics 630,False,91,FCLGA1151
-d7744396-43cc-466d-8470-b0fae7489ca7,10,3.5,3.0,,True,140,FCLGA2011-3
-42871a26-5ec2-4f86-ba00-7eab6f3fe0eb,14,3.5,2.6,,True,135,
-9e4e7250-b232-4d55-a7e2-b7f540d54bd6,2,,3.1,Intel UHD Graphics 610,False,65,FCLGA1151
-1826b2b2-f6d7-4694-a406-7561518f3845,4,3.9,3.7,,True,130,FCLGA2011
-09909b29-6f4f-45b8-95b0-aec61e28f470,2,,2.8,Intel HD Graphics,False,65,
-5fcca986-75ca-4018-b45f-0bd5e4961b72,4,,2.66,,True,130,
-5295e006-2fc6-4869-9163-c6d5127097e2,4,,2.83,,False,95,
-031e8999-0568-46f8-aad1-9fab6a93cfce,4,,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
-67ee57a6-ea6e-4ac6-8bfe-8176ad97e860,12,4.4,2.9,,True,140,FCLGA2066
-32bc986d-2352-4fef-aca9-2b08439ac4b3,4,3.8,2.9,Intel HD Graphics 630,True,35,FCLGA1151
-b1425302-f6ce-40b8-aca5-3742f96d8d5f,8,4.7,3.0,Intel HD Graphics 630,False,65,FCLGA1151
-46ab1a03-28c4-415b-a3a8-b8c92084273d,2,,3.5,Intel HD Graphics 4600,True,54,FCLGA1150
-b340f7b3-3352-419b-9ef5-c1ae3b71a9b3,6,,3.2,,True,130,FCLGA2011
-55db3480-aee0-4b92-866b-2fc95e408443,6,4.8,2.8,Intel UHD Graphics 750,True,65,FCLGA1200
-279604cf-557b-4672-a41d-e52f61242950,8,4.7,4.4,,False,220,
-b3355546-584e-49d6-9381-6ff73e71cbeb,6,,3.3,,False,95,
-2147359f-8e88-42bf-a93b-9cbcb5c6db4c,4,,2.05,Radeon HD 8400,False,25,
-390f96ea-11ad-4529-91f2-31125cef6e29,8,2.8,2.0,,True,95,
-b8a02cb2-acbc-4dc9-8e60-b02c82affcec,6,4.0,3.5,,True,140,FCLGA2066
-d2643543-d35f-44b0-9a1d-48827d100721,8,4.7,3.0,,False,65,FCLGA1151
-440115fb-c86e-4a4f-bd21-26885b44f6f1,16,4.4,2.8,,True,165,FCLGA2066
-cefa41cd-8798-43e4-9007-e47f5b102147,1,,1.6,,False,35,
-98c81607-66e9-4ff8-8908-38c5cb3978ff,4,4.6,3.8,Intel UHD Graphics 630,True,65,FCLGA1200
-5239311c-b379-4052-bf8c-5ec91b6cd0de,2,,3.0,,False,65,
-a132f0b3-a042-41bf-8bff-d7e0c0006b95,2,3.9,3.7,Radeon HD 8370D,False,65,
-42bae900-915a-497e-9a6c-4ce2ad5a4a5b,2,,3.4,Radeon Vega 3,True,35,AM4
-f6e96454-7e9b-44b7-a6e2-a9b3c18ff644,8,3.2,2.4,,True,85,
-af476ebf-102e-4a85-97da-3d9c8eb8443a,2,,1.8,Intel UHD Graphics 610,False,35,FCLGA1151
-8c647686-54c5-45ea-be9e-0b45c2686a19,4,,3.9,Radeon HD 8570D,False,100,
-798244ed-db60-4786-9b44-2f109cb9505b,4,,2.5,,False,95,
-8fe98dda-2c06-483a-808b-280dd1292595,18,4.4,2.6,,True,165,FCLGA2066
-76e6d8f1-44de-42cc-a08e-261c1be59839,6,4.0,3.6,,True,130,
-b183f8f5-cd83-4fa4-9868-b9ab417afd1a,2,,2.93,Intel HD Graphics,True,73,
-e547c7d7-a90a-4739-8a4b-1214ad908fb9,12,4.3,3.5,,True,180,sTR4
-08f7532c-0ade-42dc-9611-68e907f2a0c5,12,3.2,2.6,,False,115,unknown
-279afce6-a4a1-487d-9fce-9ace369baebd,6,,2.3,,True,95,
-c60b8f72-c99a-4967-b1ba-701c8ff3540d,8,4.5,3.8,,True,165,FCLGA2066
-d9bd072c-f76b-4e12-8c4c-928cf78f7ec4,16,3.0,2.1,,True,120,
-b170c255-396d-421f-9fb4-acb563f62208,2,,3.5,Radeon Vega 3,True,35,AM4
-6a3921b7-4b79-497c-9581-8fd2188710ba,6,4.1,3.5,,False,95,
-9f10bf9a-8c5a-4f54-8e97-e32d7c67eb14,4,3.4,2.8,Intel HD Graphics 510,False,65,FCLGA1151
-beb72f8b-bb4d-4a13-9150-21b7be4e4490,14,4.8,3.3,,True,165,FCLGA2066
-2047e7fc-cf5c-439e-aa57-601e9ffc87b8,4,,2.4,,False,100,
-1cabfa68-6015-49fa-ab88-3d377dcfbea5,4,,3.1,Intel HD Graphics 4600,True,65,FCLGA1150
-bb41e393-00f7-494e-8272-8bc5366fc530,2,,2.6,Intel HD Graphics 510,False,35,FCLGA1151
-f4e9cc2e-75b0-49d1-a283-beeb6fc1e09c,6,,3.5,,False,95,
-802f01f5-4fb7-4634-b01f-8828dac761e6,2,,2.8,Intel HD Graphics 510,False,51,FCLGA1151
-37eadff2-9052-4c29-8949-aea21ad862b5,4,4.2,4.0,,False,112,FCLGA2066
-45862418-fad8-489b-a955-db1ad60add22,4,,4.2,,False,125,
-0e7920d5-7068-4ddb-8b86-6ba58bce4793,6,3.8,3.5,,True,140,
-1c99a86c-dc81-44bd-8c0c-eec664454bca,8,,4.0,,False,125,
-2e0a6896-ce71-4124-8d3a-45747b0c1b46,2,,3.4,Intel HD Graphics 2500,True,55,
-d388768a-2f9d-4bff-9bbe-8c19286b5672,2,,3.2,Intel HD Graphics,False,53,
-bee2dace-d633-49bd-8506-718b3a270864,4,,3.1,Intel HD Graphics 4000,True,65,
-5e52795e-321b-4e15-a5c7-3d96074630b9,4,4.0,3.7,,True,140,
-2d1f5410-6f7d-4123-a3bb-8084840184e0,6,,3.33,,True,130,
-2898e636-5b66-4a1b-a4ac-351d6a5bc41a,2,,4.1,Intel UHD Graphics 610,True,58,FCLGA1200
-03450953-7ad4-41df-89e3-22ef55ebb9d2,4,4.2,3.8,Radeon R7 (on-die),False,65,AM4
-a51d2e27-a141-4076-8da5-fa06e92b9cc6,4,,3.0,,False,95,AM3
-078e873a-f7af-451c-8893-cacb67452921,6,,3.2,,False,125,
-88b2efcc-c6a7-433d-ac99-30539c0a29ed,4,,2.8,,True,95,
-4a7c6623-9ae1-4f83-ae91-5789457e71d4,8,3.5,2.7,,True,130,
-0ee9b7c7-41a9-4772-8029-46ad04b7e172,2,,4.2,Intel UHD Graphics 630,True,58,FCLGA1200
-0817bd45-7bd3-4701-90fd-c59172162f1f,8,3.5,3.0,,True,140,
-5abd1f1d-255b-46f1-bbb3-d23e23a0ae6e,4,,3.1,Intel HD Graphics 2500,False,77,
-2b2c9c66-84e4-4695-9960-f1ad6292f55a,8,5.1,3.8,Intel UHD Graphics 630,True,125,
-559bfd1e-abee-4aec-93a7-aadf92a508e0,4,4.3,3.7,Intel UHD Graphics 630,False,62,FCLGA1151
-ece5fd2a-b397-4e1b-a153-a993656d61de,4,,3.06,,True,130,
-abcbcb19-5ca2-4a4f-ad07-30379b19f57d,4,,2.93,,True,130,
-29526867-662b-480f-8abb-0f252df10892,4,3.8,3.5,Radeon R7 (on-die),False,65,AM4
-18dc33c1-b43d-4a74-9ef9-8d9083c17e9d,2,,2.9,Intel HD Graphics 610,False,51,FCLGA1151
-3a4615b1-3c1c-4b07-8803-038469ade127,2,,2.9,Intel HD Graphics,False,55,
-1bd78cf7-7f0b-479b-bd7d-df5faf7d9ed1,4,,3.3,Intel HD Graphics 2500,False,77,
-ee27a17b-b104-4da4-b564-c094d3697e4b,8,3.4,2.6,,True,95,
-4b2f5a44-b601-4a48-9289-e4ac4d80220b,2,3.8,3.5,Radeon R5 (on die),False,65,AM4
-9c6daa75-3b7d-4850-b254-65b1f642af20,2,,3.8,Intel UHD Graphics 610,True,54,FCLGA1151
-7d1955c9-374f-4e0f-9ece-05e10ea96999,4,3.5,3.0,Intel HD Graphics 630,False,65,FCLGA1151
-56829459-0683-4684-a008-ad2044b4a18e,4,4.0,3.7,Radeon R7 (on-die),False,95,
-439bc374-9979-4cd0-95c0-bfc9ae15b59d,4,,2.93,,False,100,
-b7adee1f-023b-4f66-8d19-a225e413d2af,18,4.4,2.6,,True,165,FCLGA2066
-e6a2005e-221f-4233-8bf8-b0b8339bac5f,10,3.5,3.0,,True,140,FCLGA2011-3
-f1d89bd8-a04c-4c76-a9f1-f2efd1f79929,4,3.6,3.5,,True,140,
-498bcf0b-185d-43e2-8780-e6e16e967a48,2,,3.7,Intel UHD Graphics 610,True,58,FCLGA1151
-2db9d8e1-5f92-449a-ac89-0aafe58ef498,8,3.6,3.2,,True,135,
-8cbeb45b-2567-4c7b-84f6-b9e512d422f9,4,,2.93,,True,95,
-ce63a197-22e7-4190-a0aa-581584d10e09,4,3.7,3.3,Iris Pro Graphics 6200,True,65,FCLGA1150
-713b52af-fdb2-462b-9edf-68cdebd355f5,6,4.0,2.4,Intel UHD Graphics 630,True,35,FCLGA1151
-11f6e55b-ad55-401a-abdd-8a13ea630f0f,18,4.4,3.0,,True,165,FCLGA2066
-12eaac67-b1ae-41e9-b0df-fc62960b929c,4,,2.66,,False,95,
-f3d9d658-8f70-4a3c-95c5-f2f27346b568,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
-c00dd2a1-f16f-411c-b8b5-91cbc609b1eb,4,3.0,2.4,Intel HD Graphics 630,False,35,FCLGA1151
-26b75d2b-bfd7-4277-b657-187509618ac9,4,,2.5,Intel HD Graphics 2000,False,65,
-5e23571d-27ab-46ec-93d0-8525f4da026b,6,3.2,2.4,,True,85,
-11ebc330-371c-43ff-8b8c-5c5a268c3303,6,4.6,3.7,,False,95,FCLGA1151
-d02cb80c-47bc-4450-b1e3-07c2cb9045f3,2,,2.93,,False,65,
-92b315e5-4724-49f7-8c5e-7181aca37ba9,8,3.0,2.1,,True,85,
-ef5fa1a5-93e4-4c33-b149-e0b3ecf2a0de,12,3.2,2.4,,True,115,
-9f29bf9c-db91-4c83-ab48-d62fb3857b51,6,,3.5,,True,150,
-86b9f0b0-f7b9-4baa-8bb1-282cc3b7a3c3,4,3.8,3.5,,False,65,FM2+
-61b428e6-19dd-47ea-9394-aa57084b5c93,4,4.5,3.8,Intel UHD Graphics 630,True,65,FCLGA1200
-a57e9cce-f558-4bf8-b53e-a290becec914,4,3.9,3.5,Intel HD Graphics 4600,False,88,FCLGA1150
-cb1fd6b3-35eb-46c8-94a8-fcfec79a95c8,4,3.7,3.3,,True,80,
-0a462031-7d59-423e-b123-7a1f72db21b9,2,,3.8,Intel HD Graphics 4600,True,54,FCLGA1150
-0ea564f5-8828-44be-a75c-19f41a92992a,2,,2.9,Intel HD Graphics 4600,True,35,FCLGA1150
-42d22009-ce5f-44a3-8468-4204694fe845,6,4.8,3.4,,True,80,FCLGA1151
-35a8f7f8-2532-4bed-a079-28e0f74d6142,6,4.5,3.3,,True,80,FCLGA1151
-e8e4f018-b363-47dd-8fbe-5731b54e8665,4,3.9,2.7,,True,45,FCLGA1150
-d6b99452-3c1e-4309-9756-edf511adea7c,4,,3.3,,True,69,
-c76d5969-b578-42f6-ad96-60d8f8476645,4,3.8,3.4,,True,80,
-3ff5253e-f0ab-435b-9866-5dbed9859467,10,3.4,2.4,,True,90,
-78d67b00-c463-45e1-aec5-55378dfbe9dc,2,,3.8,Intel HD Graphics 530,True,51,FCLGA1151
-d8c5b669-5632-44a9-9042-5ada97c3e2a5,4,,3.2,,True,130,
-f011d6a1-a846-4710-a9f2-8ca76da44335,8,2.6,2.2,,True,95,
-d8f48b0c-c0de-418a-b0ea-4c9333a81828,4,,3.0,,False,130,
-6e2ee7bb-52a4-45e8-a7f0-4edf1a88e0d8,4,,3.0,Intel HD Graphics 2000,False,95,
-3006a9a7-387c-4680-9d22-a100becfcb3e,4,,2.9,Intel HD Graphics 4600,False,65,FCLGA1150
-1ec7bb7b-ec3b-4c8d-b23d-d742d6dcd398,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
-25daf13a-562f-4224-afac-4095ff0d0fcb,4,4.5,4.3,,True,112,FCLGA2066
-86b4ccbd-4a3f-43e2-999d-5a9700b1301c,4,3.8,2.9,Intel HD Graphics 630,True,35,FCLGA1151
-0f835983-3aa7-40a4-867d-c1b07f611dea,2,,2.9,Intel HD Graphics 4400,True,35,FCLGA1150
-24238f2c-7d96-467e-a720-a44728fd780f,2,,3.9,Radeon HD 8470D,False,65,
-6e354bf6-79c3-4b70-8c30-a3db31f385ea,10,4.4,3.5,,True,165,FCLGA2066
-a49006e7-fe04-4fcb-bab2-7ee71d88d805,2,,3.2,Intel HD Graphics,True,73,
-bd06630e-1037-4ca3-bc27-14539e4cbf7d,4,3.3,2.7,Intel HD Graphics 630,False,35,FCLGA1151
-bf3fde2b-3fc8-4ec4-9729-3f78f3eb10f3,4,,2.8,,False,95,AM3
-dd416aef-1d8a-4b85-a486-4809c1b561b4,2,,3.5,Intel HD Graphics 530,False,51,
-d5ebf67b-0b2b-4a1e-9500-5620e5f3606a,16,3.0,2.1,,True,120,
-8130a135-428c-4359-bd79-eea7dd659d61,2,,3.06,Intel HD Graphics,True,73,
-b5c66662-e6d7-44b2-993b-7f7ca97aa1a1,2,,2.66,,False,65,
-9b7b007f-36b4-4c12-bcbe-bb2e1e7b5e46,6,4.1,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
-82e1ba6d-9f29-4f55-8d4f-9b41e0e898ea,2,,4.1,Intel HD Graphics 630,True,51,FCLGA1151
-185131da-b4d2-43a2-b919-a0f38fe7c691,10,4.5,3.3,,True,140,FCLGA2066
-b5af97c2-2b79-4fda-8fc5-64d4df35fdef,2,,3.06,,False,65,
-14dd7da6-2ef0-4ac0-93f6-a2c1767c5cac,2,3.9,3.5,Radeon R5 (on die),False,65,
-ab017a62-f14c-4a31-b65a-dd2eb83d3a9f,4,4.3,3.3,,False,71,FCLGA1151
-62f2ecb0-f56a-4fbe-a73e-f30f330f4eeb,4,3.8,3.4,Radeon R7 (on-die),False,95,
-40af0ebc-ff10-4d38-adb2-59941a3965cd,2,,2.6,Intel HD Graphics,False,55,FCLGA1155
-7bf8c2e7-1db2-4124-b3e8-194a48dc540f,4,,2.8,Intel HD Graphics 2000,True,65,
-7b1fb7bb-eec5-4d5e-ab55-76f9ce525c61,2,,3.5,Intel HD Graphics 2500,True,55,
-b3af5484-6d31-4331-8026-ad37f4b2e828,2,,4.3,Intel UHD Graphics 630,True,58,FCLGA1200
-6dd8e012-4dff-486a-8324-e05ca61e4092,4,3.9,3.5,,True,80,
-f36a7022-1dc6-4720-9f2e-d60048539628,16,4.4,3.1,,True,165,FCLGA2066
-c7b6d02b-652f-415a-b859-5be58e6dd1ba,4,,2.8,,False,95,
-534af82a-e3a1-4424-8543-be70c9d10017,2,,3.2,Intel UHD Graphics 610,False,65,FCLGA1151
-6d286365-e108-4a57-8222-50d2b79a15f5,4,,3.2,,False,150,
-9086fa37-aefa-44b2-a113-9b3d501ad650,6,4.0,3.7,,True,130,
-4e695817-e1da-44b3-8416-f8ac18c20bc3,4,,3.7,Radeon HD 8670D,False,65,
-cca3285a-6141-4823-9df7-9c26800177a4,2,,3.9,Intel HD Graphics 630,True,51,FCLGA1151
-cda91b7a-442a-4bce-9106-5e15df45a0a3,4,,2.8,Intel HD Graphics 2500,False,65,
-7a8713ea-0a5c-43ae-b004-7a9e4639f397,4,,2.8,,True,130,
-dcf64345-cbd2-4e42-87a6-1d99a49182a9,1,,1.8,,False,35,
-ef12e8a3-b568-411f-870a-c7d3edfcdbeb,2,,3.5,Intel UHD Graphics 610,False,58,FCLGA1200
-b1c0aeb9-7220-4aa2-9989-25f119bf2b4d,4,,3.2,Intel HD Graphics P630,False,65,FCLGA1151
-f5f63fa3-b905-435a-aed9-d41c4838d4d5,4,,3.5,Radeon HD 8570D,False,65,
-a2866bd4-bb01-423b-bdc3-c85b8182b85d,2,,3.7,Intel HD Graphics 530,True,51,
-0662b461-a745-4d15-b8e9-1ae7599423f3,4,3.7,2.8,Intel HD Graphics 630,False,35,FCLGA1151
-53cfb74e-1cdc-41d4-932d-aa670ead533d,4,3.9,3.5,,True,80,
-ad409e8b-df31-47d8-ba1b-fccb43d12d1a,4,3.3,3.1,Intel HD Graphics 2500,False,77,
-c3160cdb-149d-4d6e-9969-2fe6f467c6f5,4,3.5,3.1,,False,80,
-185f04be-4733-4603-8d49-d43b273e35ef,4,,2.4,,False,100,
-4a47288c-ac1d-42b5-a12b-cf6835b6aae9,6,3.9,3.5,,True,130,
-8b01818d-b907-445e-8dba-21d382b80fe3,2,,2.6,,False,65,
-08b76ae7-38e8-40f1-aae5-6f5015c99669,4,,2.83,,False,95,
-4caf7ada-5a98-465c-99dd-e98925a19946,6,3.7,3.4,,True,135,
-e450c87c-05d3-4911-9b2e-6186c4acc48a,6,,3.3,,True,130,
-e2e47953-8723-4996-a1bc-6ade9179dbbf,2,,3.6,Intel HD Graphics 510,True,54,FCLGA1151
-8b20a751-4455-48ab-ac57-9f86a5fa44a2,4,,3.0,,False,95,AM3
-ee95d6e4-ad94-46e1-be90-f81fffa7ef61,2,,2.5,Radeon HD 6410D,False,65,
-093433b9-28d7-4d5b-b593-c5d16e125966,1,,2.0,,False,35,
-f405c917-bbfe-4da0-ba9b-71d5d8db10f2,2,,4.1,Intel UHD Graphics 630,True,58,FCLGA1200
-a7539b0c-8297-4571-9b83-6d217d50cb47,2,,3.1,Intel UHD Graphics 610,True,35,FCLGA1151
-419edbf4-6d43-4ecf-97b7-af8f7a453efb,8,3.3,2.6,,True,115,
-241915ea-5bb4-4497-b992-8a89ea28d60d,4,,3.0,,False,130,
-74100935-d196-4418-917a-566b3a49cf2a,2,,3.2,Intel HD Graphics,False,53,
-640d8c80-5b05-47c1-bf4d-b34b8a1830f1,14,4.4,3.3,,True,165,FCLGA2066
-9baf7b40-f9f1-49b2-85c6-0779752de0f7,2,,3.2,Intel HD Graphics,False,54,
-0d011dac-793a-47f3-89a6-05cfb06667ce,8,,3.5,,False,125,
-d246acc7-40e1-489e-91f9-4eab6f786131,4,4.1,3.9,Radeon R7 (on-die),False,95,FM2+
-619476fc-f08e-48da-a4e0-14395a847c0e,4,,2.93,,True,95,
-9e927659-16aa-4d5b-a21f-b9e022ccbf1b,6,4.9,4.0,Intel HD Graphics P630,True,95,FCLGA1151
-4e8e46b0-0d7c-4040-9d01-061db7d35038,4,,3.2,,True,130,
-ef40be3c-2ae8-4841-b4c9-bdaf7bdb78f5,2,,2.6,Intel HD Graphics 2000,True,35,
-2f84014e-85d0-43f8-b8e6-454a1e561c7d,4,,3.2,,True,80,
-5b115137-efce-4096-9f5c-a1840c6b0448,4,3.8,3.5,,True,140,
-6bec827a-b88e-4cce-b156-8d1feb526ccc,2,,3.2,Intel HD Graphics 2500,True,55,
-b498b20a-85f5-457e-b680-f9b01669e936,4,3.8,3.1,Intel HD Graphics 4600,False,65,FCLGA1150
-8c2587ef-6d68-4fb2-9ab6-f0a63bf66495,4,3.7,3.3,Iris Pro Graphics 6200,True,65,FCLGA1150
-3a928a67-afa3-4dcc-8461-97a17112c8ab,6,,2.0,,True,95,
-8ebb9e4a-afa3-4acf-8ee3-4b8989a616ae,4,,3.4,Radeon HD 7660D,False,65,
-0d2ee47c-1e56-4e6b-af28-c600774d9902,4,,4.2,,False,125,
-0ffd7ce7-3de7-4467-9a6d-e8b3ed701a6c,2,,1.45,Radeon HD 8240,False,25,
-a346a00c-8e6b-48e1-b62d-4fee4043e77e,4,3.9,3.5,Intel HD Graphics 4600,False,84,
-7ffb1976-7560-47a5-be63-6f9eca006e5e,4,3.8,3.1,Radeon R7 (on-die),False,35,AM4
-9f3dc15d-67cd-49d1-901a-e43494a2e830,4,3.7,2.5,Intel HD Graphics,True,45,
-bb0ebca8-9717-4dfc-8384-8df043bb7e18,8,2.9,1.8,,True,55,
-622215ed-503b-409a-98d3-2e90717fda8f,6,,3.333,,True,130,
-174fd905-252f-4ec6-a02a-c1267d68dbef,4,3.5,3.0,Radeon R7 (on-die),False,35,AM4
-b131d9f3-b395-44e7-aef0-e893c25acc10,4,,2.8,,True,95,
-97ed686e-ac53-4f5a-a795-24d897700e6a,4,,2.66,,False,95,
-c336ea0a-c0e4-417d-a1ea-1f65b4b51b99,4,,2.9,,False,95,AM3
-738c1bc9-184d-4e10-b328-b7205a675489,6,3.6,3.4,,True,140,FCLGA2011-3
-7f469aed-55d5-48f6-9768-f7a9c577cdc0,4,,2.6,,False,95,AM3
-949198c5-e590-431a-9dcf-56a8377e53e5,2,4.0,3.7,Radeon R5 (on die),False,65,FM2+
-0b8a6a51-b380-40e9-9c48-c8594dc34db9,6,4.7,3.7,Intel HD Graphics P630,True,80,FCLGA1151
-6353d752-f532-43b7-8043-da3cb8ffd24a,2,,2.7,Intel HD Graphics,False,65,
-17a6271c-09d5-4fbf-be73-ad55211852b1,4,,3.1,,False,95,
-73ddab8f-c307-43e8-8822-8606a232d968,2,,3.333,Intel HD Graphics,True,73,
-3d364241-0e9c-4312-b82f-226f37aa194e,4,,2.8,,False,95,AM3
-bd9515cb-8efc-4af5-9ce3-98d42cd58372,2,,2.13,,False,65,
-d7fa7499-5cd2-4f85-8847-75d6bc859cb5,2,,2.5300000000000002,,False,65,
-6df1a131-339e-4938-9173-ff3bb3d1a254,14,3.3,2.3,,True,120,
-8c283d6a-1d8f-4e8c-9d3f-902f17e82f9c,8,3.7,3.2,,True,140,FCLGA2011-3
-d3df9312-64d1-40d5-80fb-335908cfce09,4,4.5,4.1,Intel HD Graphics 630,True,79,
-3affbaf0-a3f4-4ac3-8533-a64d5c40786e,2,,3.4,Intel HD Graphics 630,True,35,FCLGA1151
-bd3f7725-39a0-4818-8eaf-336be9cbd5a4,2,,2.33,,False,65,
-13385f54-64f1-4205-992a-83a583cf0a69,4,3.5,2.7,Intel HD Graphics 530,False,35,FCLGA1151
-dd1391f0-e812-4029-bea3-f1b143f32021,4,,3.4,Intel HD Graphics P4000,True,77,
-1ce84684-28b4-4648-92d1-29386320b17b,4,,3.7,Radeon HD 8670D,False,65,
-26e54a05-4cc6-42d0-adef-daf0beb10497,10,3.1,2.2,,True,85,
-72246361-1805-4a56-b285-fbd21ff4b7a1,4,4.1,3.7,Intel HD Graphics P630,True,73,
-f9c7c2bb-73ae-496a-8a1d-1871099a1892,2,4.0,3.8,Radeon HD 8470D,False,65,
-210a1e36-eead-4794-b32f-4a9716bce05c,2,,2.2,,False,65,
-f38282b4-dfe0-48b7-954a-aed19c5acec9,4,4.2,3.8,Intel HD Graphics P630,True,73,
-097c7b93-a07a-4f2e-b69c-e8cd8f873564,2,3.9,3.7,Radeon HD 8370D,False,65,
-91da0de9-b1e3-46f4-b587-57ae4d9e3047,8,2.3,1.8,,True,70,
-2f9510b9-a44b-430b-a87c-fca3e1afe498,2,,3.3,Intel HD Graphics 530,True,35,FCLGA1151
-4b7e55c1-9ca7-4d9b-848a-c4995bd13758,2,,2.66,,False,65,
-c185d66c-748a-4826-9f81-204a04cc0d89,2,,3.6,Intel HD Graphics 4600,True,54,FCLGA1150
-09d21e6d-d73c-40cf-a99b-057df5061f44,4,4.9,4.0,Intel HD Graphics P630,True,83,FCLGA1151
-2f4824b9-7fe5-4486-bd10-5aed1cc4cb18,2,,3.0,,False,65,
-d81cea70-ddeb-41bb-be0d-39a7740c0435,2,,2.9,Intel HD Graphics 2500,False,65,
-474c5b9b-1aee-423e-85f0-a7afb80fc87a,10,3.3,2.6,,True,105,
-fe9392fb-688a-4018-a57b-dfd23fc7f461,4,3.7,3.3,Intel HD Graphics P530,False,80,
-af7afac6-31d5-43c8-8883-88c6d9cf826f,8,4.5,3.6,,True,140,FCLGA2066
-649e5538-e3ad-42e2-b22a-c2dcc6b3a57b,2,,3.33,Intel HD Graphics,True,87,
-3f80cde8-5804-40f1-a070-92fb6d4ba6aa,2,,3.4,Intel HD Graphics 4000,True,55,
-740a5b49-a633-478b-a217-bf0096a9a745,4,,3.8,Radeon HD 7660D,False,100,
-8a0887b0-f75c-4dee-9f77-fe1115a49a2c,4,3.9,3.5,,True,80,
-fb8fc222-27d3-4c05-bf15-685017fc7372,10,3.2,2.4,,True,95,
-ba4036bf-1b3b-4cb1-a330-cd581a655389,4,4.1,3.7,,True,72,
-55816514-f52d-4884-8357-2c61de869f74,2,,1.6,,False,65,
-8f6f572b-dac5-47eb-abfa-bebbf83d7842,4,,2.4,,False,80,
-76644514-f87a-4efa-8fc0-2901da162dab,2,,3.2,Intel HD Graphics 530,True,35,FCLGA1151
-7bb8c306-4288-490b-8c81-100c2ce77eaa,8,3.8,3.2,,False,115,G34
-a3776030-77e9-432c-8731-ca8c6ed80089,4,4.7,3.8,Intel HD Graphics P630,True,71,FCLGA1151
-269f84df-f56b-4221-a15f-8357f6d76187,2,,3.3,Intel HD Graphics,False,54,
-3a4d9133-7a9f-4db7-8977-ac55fb732460,4,3.2,2.7,Intel HD Graphics 2500,False,65,
-c38ea3d6-3755-4456-989a-85a53400aa49,3,,2.9,,False,95,AM3
-6df104d5-3e90-43b1-af19-1169ac5ca73b,4,,3.3,Intel HD Graphics,True,95,
-d6d188a1-3b98-4880-b20f-3f4de33de14f,2,,1.8,,False,65,
-a4ca7964-533a-44db-bcb5-555672d92850,1,,2.0,,False,35,
-843197bb-dd36-4853-984e-b7e9f4ad829c,2,,2.8,Intel HD Graphics,False,73,
-1264fe32-5723-479f-926b-06c635b24bef,4,3.3,2.7,Intel HD Graphics 630,False,35,FCLGA1151
-81c5b6fb-6d47-4165-9e60-3ee7681c9f5c,4,,3.4,,True,69,
-3b63a0e5-b161-4f28-9894-f7e23dfdb6b2,4,3.7,2.8,Intel HD Graphics 630,False,35,FCLGA1151
-a4df0850-0dc0-48ef-9c2a-f9336953be02,4,,2.8,,False,95,AM2+/AM3
-85c6db97-f9de-4c67-8c42-3aaaeb962270,2,,2.5,Intel HD Graphics,False,65,
-dd96a66e-bbf0-475f-81e3-a44aca02053e,2,,3.0,Intel HD Graphics,False,65,
-bf49ee3f-a75f-4f11-a160-a5de0c88457a,2,,3.9,Intel HD Graphics 530,True,51,FCLGA1151
-e014c0a2-86fd-4b56-acc0-2188d8d61fe4,4,3.0,2.4,Intel HD Graphics 630,False,35,FCLGA1151
-ddbcf8fc-4f17-45e9-a52d-0656b13244fe,4,4.2,3.8,,True,72,
-88ddc8c9-8eda-416d-8d34-68e92a370acf,2,,4.2,Intel UHD Graphics 630,True,58,FCLGA1200
-8d79bfd1-af16-4ff0-af66-2286167b7822,6,4.7,3.7,Intel HD Graphics P630,True,80,FCLGA1151
-d07f64f9-2145-4f7b-9bba-92e865c5da3d,4,,2.5300000000000002,,True,82,
-08c62dd9-f99b-450c-b39a-2a6e36392c90,2,,3.0,,False,65,
-37ce1eeb-5e44-41ee-b752-bc4bd0cb3479,4,,2.93,,True,95,
-7aa8b357-3657-4fae-ac30-5cfe9ed1d6b4,2,,3.1,Intel HD Graphics 3000,True,65,
-3573fe9c-b739-49d0-af1d-69bd494728b5,4,3.7,3.5,,True,135,
-88bb1d6d-925b-44ff-a30c-a6eac367933e,8,3.4,2.6,,True,90,
-b69ee4bd-8fa5-4cc8-9018-b3a8efff423e,6,,1.7000000000000002,,False,85,
-4e851bf6-d4b0-4081-9cac-309639f825d7,2,,1.8,,False,65,
-5a942c26-6b6c-4d2a-b54a-ee9208447121,2,,2.8,Intel HD Graphics 2500,True,35,
-f8601d86-d639-47db-9389-ba6051f430f7,6,,1.6,,False,85,
-b650f045-ad63-4fe3-9aa1-3bb18fae1f0e,2,,3.33,Intel HD Graphics,True,73,
-8eb33972-93fe-4dcb-bf8a-9405a3155720,4,,2.83,,False,95,
-06aeca1a-1fe8-4545-9032-8ece17b40327,4,,2.66,,False,100,
-559f3848-2f50-4389-a371-a4cc166129bc,2,,2.4,Intel HD Graphics,False,35,
-688c163e-b69f-46b0-9460-7952ba673d65,2,,3.1,Intel HD Graphics,False,55,
-fbb35494-62be-4d5e-8ef3-ff5244c2dea8,6,,2.0,,True,95,
-c4f59cb5-7c24-446e-b86c-cb95cf5441f8,6,3.0,2.5,,True,95,
-a280d41f-3497-4746-ac57-b2ae55ec011a,6,3.2,2.4,,True,85,
-30d4fd6b-4799-42fa-aa76-c50e669d47ac,2,,3.6,Intel HD Graphics,False,53,
-3a35ba46-fc3c-40e5-a73a-d43b8bf02dd8,4,3.9,3.5,Intel HD Graphics P530,True,80,
-e7375aa6-7288-425a-a272-629fe21f74b3,6,4.5,3.5,Intel HD Graphics P630,True,80,FCLGA1151
-554a1e9f-1205-4fa4-9f60-db3c77d6b0f4,2,,1.8599999999999999,,False,65,
-ff13f31c-8514-4fad-beab-9a2a43c8ac1f,2,,2.4,Intel HD Graphics,False,65,
-36616242-e40b-4d2c-bc5d-aeeac6be9c6a,2,,2.9,Intel HD Graphics 610,True,35,
-ae788dc3-9287-48da-9607-d98d563ae593,2,,3.2,,False,65,
-ef35ba59-182c-40fb-84e1-219b739cb730,2,,3.7,Intel HD Graphics 630,True,51,
-f5ada0c2-8e9e-40d4-a540-14db71e7b576,4,4.2,4.0,,False,112,FCLGA2066
-a177f2d9-ea8c-40c3-aa6f-65e63638f779,6,4.3,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
-4ac70c11-1f1e-4895-bf99-0143d9c48f80,6,4.5,3.3,,True,80,FCLGA1151
-a07d61cf-c745-4646-82ae-ed2d699b4193,4,4.5,3.4,Intel HD Graphics P630,False,71,FCLGA1151
-b6359777-8401-4e3c-850a-6743b90f98bd,4,,3.6,,False,125,AM3
-0847da71-5d57-4193-b7b4-c74b460fbd3c,6,3.7,3.4,,True,135,
-1a7fb818-27af-4615-9202-a3468f1f2746,2,,3.3,Intel HD Graphics 3000,True,65,
-0cac2578-868a-4152-8e9a-b0fa30c3a9a5,2,,2.3,Intel HD Graphics,False,35,
-b3682c11-a89b-4cce-8e66-d96fe3ab3b9d,4,4.2,3.9,,True,72,
-7813156f-2586-4f7f-9bdb-21ad7024cc86,2,,3.46,Intel HD Graphics,True,73,
-f00067e6-5ae6-40b5-80f8-7e6841a63865,2,,2.7,Radeon HD 6410D,False,65,
-34f22c9f-fe68-4877-873d-69ff8968ff74,4,,3.2,Intel HD Graphics P4000,False,77,
-22eb3a3e-a20b-477b-901e-726c8cb11334,8,3.1,2.4,,True,115,
-bf6da888-939a-457d-ae4b-8d61895aa3e7,2,,3.5,Intel HD Graphics,False,53,
-9c7439de-1b6e-4e7e-8bcc-390afa90a50a,2,,3.5,Intel HD Graphics,False,53,
-d0d1906f-f2f8-4cb1-afb6-7ea462128834,2,,3.5,Intel HD Graphics 630,True,35,FCLGA1151
-fb9c3475-b5d4-4e05-b94d-c443504dc490,2,,2.4,,False,65,
-23e5767e-54ec-4ac5-a71a-72761b65ce3b,4,4.7,3.8,Intel HD Graphics P630,True,71,FCLGA1151
-e54c8337-ead3-4cc1-b031-be075cbce071,2,,2.93,,False,75,
-7e0b0dca-e604-4785-951e-58c2bf429bda,8,3.3,2.8,,False,115,
-30bb492e-25f5-4b16-a6c1-13e0a84bcf35,4,4.1,3.7,,True,72,
-efd3b287-0210-41e7-8c9b-c13b540bcb43,4,3.5,3.0,,False,72,
-9f67fb5c-b2d6-4b59-a879-6ba769c18f53,6,4.5,3.3,Intel HD Graphics P630,False,80,FCLGA1151
-64b434c8-2680-4ba2-8fa2-fe7b74df7788,2,,2.8,,False,65,AM3
-d8b8820b-c283-4077-af3e-e8822b6de4a1,2,,2.0,,False,65,
-23cc440f-bc87-4f58-a814-b67193b04b7a,2,,2.6,,False,65,
-56f28767-3645-4155-98f8-8ce4e28ce3da,2,,2.93,,False,65,
-40a7b740-c72e-49da-8060-81d23d39e2ab,2,,3.06,,False,65,
-58cf25db-bbcb-41b5-bd5f-54c98ad64c3f,2,,2.83,,False,65,
-2edc85a8-4fc0-4eec-b7ce-7c428d6df740,4,,3.1,,False,80,
-880a65b3-6769-4d37-b770-fc37da175dbc,2,,3.3,Intel HD Graphics,False,55,
-00b1a8a0-6a73-4cb2-a00a-d523c7c796f8,4,,1.8,,False,80,
-4670d0f5-3c83-4d72-b594-b5b7340131e0,4,3.5,3.0,,False,80,
-af36843c-9ae7-4da1-8ed5-bd8d41f22621,4,3.8,3.5,,True,140,
-ec209094-da84-4f00-8b95-0a6802dac64c,2,,2.9,Intel HD Graphics 610,False,51,FCLGA1151
-b786789f-e2dc-47c2-a2f0-a5e6d698db3b,4,3.7,3.3,Intel HD Graphics P630,False,73,
-675f77fc-daed-49f2-8ed7-34e1c4a0c3bf,6,4.8,3.4,,True,80,FCLGA1151
-36b20f5e-976c-417b-a8f0-1c3016989049,4,3.5,3.0,,False,72,
-2bd3d896-c7bf-45cf-9f04-a28a7c04b3ed,4,,2.5,,False,95,
-0669addc-0937-48c0-8225-74451c188e28,4,4.0,3.7,Radeon R7 (on-die),False,95,
-8b92cc58-68f8-4f34-bf97-79ea1751a91d,4,4.5,3.5,,True,71,FCLGA1151
-c52ec6c1-4a8c-4e74-8420-7556eeeb7984,2,,2.13,,False,65,
-d3947e24-3af5-4cb7-bf4d-16ef76a052d3,2,,3.1,Intel HD Graphics,False,65,
-dbf5b94e-701a-417b-bee0-d2760966c838,4,,3.4,Intel HD Graphics,True,95,
-3a18afca-ff9a-4272-ba03-36c562c1569b,6,3.8,3.5,,True,130,
-2194996f-c3bf-447c-8e59-34ec2b7572ec,4,3.5,3.0,,True,105,
-71426298-323c-40ff-94e5-48ab50ab2c51,4,,3.3,,True,69,
-540a100c-1e4a-4fa4-9c8f-cb4db1f1cb75,4,3.9,3.5,,True,72,
-ebe16610-d806-406c-abcb-8958e93c5b1d,2,,2.66,,False,65,
-28f9b875-4974-4ba5-90cb-f4e78c1560a3,8,,1.7000000000000002,,False,85,
-15a05681-08a7-4fdc-9a4a-e80eaccf73e2,4,3.7,3.3,Intel HD Graphics P630,False,73,
-74773ba4-04bc-42f3-b47f-254d76b50a4f,2,,2.5,,False,65,
-f4807844-38db-43a1-8c3d-4a6a666411c4,2,,2.6,,False,65,
-4b2a47fd-e1fa-4520-aa23-17312f9a77fe,4,,2.66,,False,95,
-0c243900-06f5-44e5-bcb1-0912e3cb7484,4,,3.2,Intel HD Graphics,True,95,
-f6303006-92a9-4bf9-972b-527e8213d9fb,4,,3.5,Intel HD Graphics P4000,True,77,
-bf8a470b-89d2-4603-bddc-4c3f6772342a,4,,1.8,,False,80,
-610dfed7-7a6e-4782-9aa4-0eeaf84b85c2,2,,3.6,Intel HD Graphics,False,53,
-d3731dcd-1238-489c-8aed-fe58eceb691c,8,3.8,3.2,,False,115,G34
-0ca4372f-7fc6-4a4a-b494-436cf03c3fc0,2,,3.6,Intel HD Graphics 630,True,51,
-f138ebd7-ca7e-4b7e-ac39-df41f79bdea4,2,,3.5,Intel HD Graphics 630,True,35,FCLGA1151
-a49a363c-5b3a-443c-bf5b-269711420455,4,4.1,3.7,Intel HD Graphics P630,True,73,
-a110b87a-6464-467f-974a-58d4a34d9d7d,2,,2.13,,False,65,
-ed7a98d4-737b-4944-b943-3da520ad951a,4,,2.4,,False,82,
-ab0db33f-39ca-4c29-af5f-91a94b9a726a,8,3.3,2.8,,False,115,
-c4498b09-57fa-4d7a-ab02-7bc50ad9b34a,6,,2.0,,True,95,
-1f695921-8e97-4b77-9601-376b76ec8eed,6,4.5,3.5,Intel HD Graphics P630,True,80,FCLGA1151
+1d6dd70c-de73-46dc-9f43-53f243900d22,6,4.6,3.7,,True,65,AM4
+3b79d77d-19a1-4ba0-a64f-566f74dfaaa5,8,5.0,4.2,Radeon,True,120,
+12100331-62b8-4f9e-b94e-73c749b6431c,16,5.4,3.4,Intel UHD Graphics 770,True,125,
+9d83b888-9f24-4743-b58e-7caea7a6a222,8,4.7,3.8,,True,105,AM4
+739064f4-0815-4cd4-8908-e6b519a88470,6,5.3,4.7,Radeon,True,105,
+e67e39b0-d0d3-4cb2-af33-ff2b2513d16b,24,5.8,3.0,Intel UHD Graphics 770,True,125,
+4f6a5ac8-0a7d-4bcb-99b6-919ca78aea36,6,4.4,3.5,,True,65,AM4
+bec746cb-fc58-4130-8412-d4aa486c1614,6,4.4,2.5,,True,65,FCLGA1700
+a29e543c-8b75-42e2-8956-d623346dfc76,10,4.9,3.7,Intel UHD Graphics 770,True,125,FCLGA1700
+629a0287-734a-4fc0-84cc-8b085c4df9c0,8,5.4,4.5,Radeon,True,105,
+f66dccf9-b3bf-4ce0-b82a-0d230ec1e67f,6,5.1,3.8,Radeon,True,65,
+53ba81f4-a356-448d-afd6-f46b554fcfd7,6,4.2,3.6,,True,65,AM4
+92b209a4-23e8-413e-a243-f53982856d20,14,5.1,3.5,Intel UHD Graphics 770,True,125,
+5b164100-f31f-4e05-9ed4-a68eb0e5c787,6,4.2,3.6,,True,65,AM4
+b0e7fa0f-876f-4ad7-880a-f17fa357fcb4,8,4.5,3.4,,True,105,AM4
+78234163-897f-4193-9c07-c825f057361f,12,5.0,3.6,Intel UHD Graphics 770,True,125,FCLGA1700
+67ffcfd2-160f-434e-8de3-9cc357251c37,8,4.6,3.4,,True,65,AM4
+e4616538-0063-4c51-b733-38cd25f84d75,6,4.4,3.9,Radeon Vega 7,True,65,AM4
+47ed7c89-608e-4748-9c09-cc5353b942ef,16,5.7,4.2,Radeon,True,120,
+66e2d366-e7bd-4284-8a3e-b3c9f7f567ad,14,5.1,3.5,,True,125,
+858fcf28-a2ac-4007-a78a-b3107c6c0a44,4,4.3,3.3,,True,58,FCLGA1700
+0d7b10aa-e2ef-4d65-b55d-6f435a3ebe3f,12,5.6,4.7,Radeon,True,170,
+750147e2-036e-4f11-8851-dc378789ec3d,10,4.6,2.5,,True,65,
+82b88597-4dda-4c5e-96c2-3001d9c71ee7,12,4.8,3.7,,True,105,AM4
+dacf5e9f-0e6c-416a-a786-9dec5880eeb6,16,5.2,3.2,Intel UHD Graphics 770,True,125,FCLGA1700
+581407f9-ded8-4a2f-91e7-949653a3931c,24,6.0,3.0,Intel UHD Graphics 770,True,150,
+86327698-e67f-4f3b-bf1f-f23ac58b72aa,8,4.6,3.8,Radeon Vega 8,True,65,AM4
+c5bc28b3-8bce-4b4c-97cb-0188e7e94900,16,5.7,4.5,Radeon,True,170,
+d9273d0b-fff6-4bd8-862a-8104ab0aecca,16,5.4,3.4,,True,125,
+969b942b-9ccc-42a5-926c-a803b2313207,6,4.1,3.6,,True,65,AM4
+f4296e3e-fb19-45bf-bf9b-bdfc2db2b628,8,4.4,3.6,,True,65,AM4
+2947aff1-991a-4e2b-a091-b93e73b12185,8,5.3,3.6,Radeon,True,65,
+11c0ade7-dda7-42c2-b2f0-bfe1f1bc911e,12,5.0,3.6,,True,125,FCLGA1700
+18f123b0-c67d-4759-b64f-c0459194522a,10,4.9,3.7,,True,125,FCLGA1700
+b368166e-58ec-4259-be96-8e80ef84cc12,14,4.8,2.5,Intel UHD Graphics 770,True,65,
+b8e830d2-7900-4fbe-83bc-3e85f5a17113,24,5.8,3.0,,True,125,
+5a03b3bf-dd7e-4f47-abef-9ae67e1d797f,6,4.3,2.9,,True,65,FCLGA1200
+a61cfd78-0da0-4038-b83a-48e5c4e6b04a,16,4.9,3.4,,True,105,AM4
+8c19806a-54f5-40db-849e-ea6b16f8d5e5,4,4.5,3.4,,True,58,
+5254f49e-f170-49d4-ac52-5fdbc4364d8a,6,4.2,3.7,Radeon Vega 7,True,65,AM4
+c0d1314c-aab4-4769-a191-4fb950ef05c4,12,5.6,4.4,Radeon,True,120,
+10c8036d-50ef-435e-a2e9-471b4dc2d1e3,4,4.0,3.8,,True,65,
+d3046e94-5f6a-4c9f-81f7-929924e7768e,4,4.3,3.6,,True,65,FCLGA1200
+862e4505-0eb6-48b9-9e7a-0f2d39dfa02a,8,4.9,3.6,Intel UHD Graphics 630,False,95,FCLGA1151
+2b79b120-febe-4239-bff6-9843e50e8d2b,10,4.6,2.5,Intel UHD Graphics 730,True,65,
+8662f109-064a-48c8-8f60-8b1a3b749b2c,6,4.4,2.5,Intel UHD Graphics 730,True,65,LGA 1700
+8ab3d66a-1113-4664-9cdd-d4a6aaf76dc7,6,3.9,3.4,,True,65,AM4
+4f0c1ea7-3eee-4284-a305-bca9d728efca,6,4.7,3.7,Intel UHD Graphics 630,True,95,FCLGA1151
+fb533dfd-b2ee-42a5-b930-24976b95f102,6,4.4,2.6,,True,65,FCLGA1200
+d775b5c7-8733-4860-af63-eadd568dc860,16,5.2,2.1,,True,65,
+b94e90b1-9ba3-4dde-a15c-ddcc481c0724,12,5.4,3.6,Radeon,True,65,
+94423b23-6595-4e11-93b6-df8e1009f055,6,4.4,3.8,,True,95,AM4
+3a561cf0-5bf7-4cce-91cd-a2174f96cbc1,12,4.6,3.8,,True,105,AM4
+c3ce307c-c5ee-4e4a-b1cc-40701be82620,8,5.0,3.6,Intel UHD Graphics 630,True,95,FCLGA1151
+a3ffe7c2-ec94-4b24-84c4-8653008691de,8,5.1,3.8,Intel UHD Graphics 630,True,125,FCLGA1200
+323bc607-2f52-4c12-b448-0a4939c71e32,8,4.3,3.7,,True,105,AM4
+5b82ddc7-9f29-4af9-969b-97bad325421f,4,4.5,4.2,Intel HD Graphics 630,True,91,FCLGA1151
+c296021e-6df4-4d37-829e-5cd0c0212389,4,4.0,3.6,Radeon Vega 8,False,65,AM4
+644fdf60-9caf-4f6a-93d4-aba8fa17fa18,4,4.3,3.3,Intel UHD Graphics 730,True,60,LGA 1700
+e4ad0443-35c6-4dd2-a34c-6250ec7dc8fd,6,4.1,2.9,,False,65,FCLGA1151
+89fb2a18-2e8d-43d2-939a-95204f02e38e,8,5.0,3.6,Intel UHD Graphics 750,True,125,FCLGA1200
+01642548-fa6a-4294-a259-39997d2683fd,8,4.5,3.9,,True,105,AM4
+d83a357c-4b05-484f-8336-f57dc940bffd,4,4.2,4.0,Intel HD Graphics 530,True,91,FCLGA1151
+4daf5d2c-49f4-4604-adee-711660e6a1dc,12,4.9,2.1,,True,65,FCLGA1700
+243adea9-7a03-49e0-b369-d514450cbffa,16,5.2,3.2,,True,125,FCLGA1700
+ef857e61-08d2-4adf-b12b-7fe7bbdf42a2,8,5.3,3.5,Intel UHD Graphics 750,True,125,FCLGA1200
+62d0dd24-b309-4832-962a-325217dc1263,6,4.9,3.9,Intel UHD Graphics 750,True,125,FCLGA1200
+6c41d54b-7ca6-40fc-af00-1453f57c7234,16,5.2,2.1,Intel UHD Graphics 770,True,65,
+1508f949-c2d3-4f09-9bc6-df6c4520469b,10,5.3,3.7,Intel UHD Graphics 630,True,125,FCLGA1200
+7b8f28fa-5907-4ce8-9618-553c73b54f7e,2,,2.0,,False,65,
+44fd54d1-5e61-43c6-bbad-29904d52f3ad,4,4.5,3.4,Intel UHD Graphics 730,True,60,
+d3caff0a-d00c-40c4-b207-32230be6d0cc,6,4.6,3.7,Intel UHD Graphics 630,False,95,FCLGA1151
+0ef8dded-ce72-428e-8f0b-6b9990a4c068,6,4.2,3.6,,True,95,AM4
+609c9ffc-2a3d-43b2-bde4-81bc16d9f6ea,6,4.8,4.1,Intel UHD Graphics 630,True,125,FCLGA1200
+f245ab23-2711-4a83-b3e8-237726eab6ad,4,3.9,3.6,,True,65,AM4
+ec7b9d7a-2aef-4d94-94f8-5d56cca7cb27,8,4.8,2.9,,True,65,FCLGA1200
+1e758d70-47e8-4af7-8eff-409928c0e494,6,4.3,2.9,Intel UHD Graphics 630,True,65,FCLGA1200
+c09795a2-2cc6-4f67-8fce-8e384dcb5432,16,5.5,3.4,Intel UHD Graphics 770,True,150,LGA 1700
+7e8a8daa-b97f-4405-9fad-99607b88606b,32,4.5,3.7,,True,280,sTRX4
+30efb904-240b-4784-adcc-cfaa00a4cd3c,4,4.2,3.7,Radeon Vega 11,True,65,AM4
+9e77a12a-70b5-4b7b-a1ba-f8b07f389652,10,5.2,3.6,Intel UHD Graphics 630,True,125,FCLGA1200
+02c74240-1741-41e8-b7ac-87a005bc1d81,6,4.0,2.8,Intel UHD Graphics 630,False,65,FCLGA1151
+1c44cf8d-7c03-4ab2-9004-2da2456fc5d9,6,4.6,3.2,Intel UHD Graphics 630,True,65,FCLGA1151
+8dd90f4f-d15e-4b39-b3ab-4241509224ba,4,4.4,3.7,,True,65,FCLGA1200
+3b3011a6-37df-4ebf-9a63-730174d1b686,12,4.9,2.1,Intel UHD Graphics 770,True,65,FCLGA1700
+61932e44-484d-4e72-9a47-b4d7eed1df49,8,4.9,2.5,Intel UHD Graphics 750,True,65,FCLGA1200
+2bd68223-25d9-4ee1-b809-aad20809066b,24,5.6,2.0,Intel UHD Graphics 770,True,65,
+0250fd30-bfb3-45cb-8dac-5e26d4b19863,16,4.7,3.5,,True,105,AM4
+3cf000ab-ccb9-4de1-8ae6-464bbd1c05b8,6,3.6,3.2,,True,65,
+cd34b89b-743a-4f0d-b757-20a1f5e3f495,6,4.4,2.6,Intel UHD Graphics 730,True,65,FCLGA1200
+bb1688c1-fbad-4e78-90fb-4913edbb42a6,4,3.6,3.2,Intel HD Graphics 530,False,65,FCLGA1151
+3ff667c8-7b09-41dc-a0a9-c50bc26e3f46,4,3.9,3.5,Intel HD Graphics 530,False,91,FCLGA1151
+8cbb5974-8c4a-4706-96e3-350355f27b7f,4,4.2,3.6,Intel HD Graphics 630,True,65,FCLGA1151
+654ccf71-4356-4bc4-bf56-b819821683a4,8,4.9,2.5,,True,65,FCLGA1200
+596c4dd5-ee6b-4224-b2f2-de11703d07c2,4,4.0,3.4,Intel HD Graphics 530,True,65,FCLGA1151
+b949ae34-8a5f-41e5-8af1-f42a713f5c1e,12,3.5,3.0,,True,160,
+980be90c-6e49-47ef-9cc1-a900aabaf983,4,4.3,3.6,Intel UHD Graphics 630,True,65,FCLGA1200
+97cabc5c-2da9-4056-8b43-12df72964c86,8,4.1,3.2,,True,65,AM4
+01cdf8e5-7036-4c68-987a-06ac643f2cc6,4,3.5,3.0,Intel HD Graphics 630,False,65,FCLGA1151
+fbeb60c9-d68c-4e21-82a2-06fa669739f3,8,5.0,3.6,,True,95,FCLGA1151
+43fc82d2-5e70-4ea9-8d95-529cd120f284,4,3.9,3.5,Intel HD Graphics 4600,False,88,FCLGA1150
+1f0af246-ac34-4222-8135-5eab5ab6852f,4,,3.4,Intel HD Graphics 4000,True,77,
+a6384265-d787-4279-8ac3-a1d965870a26,4,3.9,3.4,Intel HD Graphics 4600,True,84,FCLGA1150
+40416753-5c21-4eb5-b6b5-ea95ec1955e7,8,4.8,2.9,Intel UHD Graphics 630,True,65,FCLGA1200
+b0314bf7-240d-427d-9085-696e58e2b35b,24,4.5,3.8,,True,280,sTRX4
+bf416cea-248b-4d3e-9446-0bd276015136,8,5.0,3.6,,True,125,FCLGA1200
+601a37a8-99a0-4fdb-86fa-47b95fc8d1cf,6,3.6,3.2,,True,65,
+9123b5a6-609f-4c7b-bc13-3f72a4896d35,8,5.1,3.8,,True,125,FCLGA1200
+13e7538c-0538-4d69-a7fb-696e8eaf27b4,4,4.2,3.6,,False,65,FCLGA1151
+e1535147-867c-4d08-b398-bb98301cc906,24,5.6,2.0,,True,65,
+547b253e-751b-4fb0-8de4-268562b8be63,4,3.7,3.5,Radeon Vega 8,False,65,AM4
+7f7d40f4-f8d6-4d60-85de-1113c3348ce2,8,4.7,3.0,Intel HD Graphics 630,False,65,FCLGA1151
+6f0f9cb0-07e8-48d2-9471-a90a1ee47424,6,4.2,3.6,,True,65,AM4
+446fee9e-a798-4be8-af2f-c451013a1c62,4,4.2,3.8,Intel HD Graphics 630,False,91,FCLGA1151
+6713ffe1-0e7e-460f-a17b-37ad503b38c2,8,4.7,3.0,,False,65,FCLGA1151
+3b7eda65-a518-43ca-80d3-e2fdf7c46a96,6,4.6,3.0,Intel UHD Graphics 770,True,65,LGA 1700
+66abe757-37bb-4b0f-aad1-e0a84065335d,4,3.8,3.4,Intel HD Graphics 630,False,65,FCLGA1151
+d58a40d0-b865-4823-ad55-524265c018cb,4,,3.5,Intel HD Graphics 4000,True,77,
+11f5bbca-a06c-43a2-8fe1-67e6f7795fc8,4,3.9,3.6,Radeon Vega 11,True,65,AM4
+846c8596-c192-4cec-b3c4-149e3f5680c6,8,3.7,3.0,,True,65,AM4
+f628582e-abfb-4de0-b04d-1c1a871a3f89,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
+78c71134-24ca-4ad0-bb32-e83bfc4e2712,22,3.6,2.2,,True,145,
+dfd9fff8-da5b-45d3-818d-658c3c767ebe,10,5.3,3.7,,True,125,FCLGA1200
+6545ec45-b2db-4656-a2cb-97b486d3c0e6,8,5.3,3.5,,True,125,FCLGA1200
+27ba714a-626e-4f36-9680-b3341774b470,12,4.7,3.8,,True,105,
+fa4f653f-cc26-4ff8-8164-0e6d98d22490,4,3.4,3.2,Intel HD Graphics 4600,False,84,FCLGA1150
+a89aebec-29f3-459a-b7d0-4df01d98eb81,4,4.0,3.6,Intel HD Graphics 4600,True,84,FCLGA1150
+5bb02b41-008c-4705-8f9c-a3b596b81831,2,,3.4,Intel UHD Graphics 710,False,46,"LGA1700,BGA1700"
+bfe423be-d42c-4fc8-9de4-ef037edc4ff2,6,4.0,3.6,,True,95,AM4
+5c48988a-2649-4362-ab0b-d35d7bb18bcd,6,4.8,4.1,,True,125,FCLGA1200
+20ff7934-74c3-4bbe-b27a-0080abb2b712,4,,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
+4777e32d-e91e-4f5d-8577-813141f5ea5d,6,4.5,3.8,,True,95,AM4
+70874b95-3c4c-474f-bdec-d921fc0f9afc,8,3.0,2.2,,True,95,
+0af14300-be71-4081-9fec-80222db72687,4,,3.2,Intel HD Graphics 2500,False,77,
+b1b4d048-cf4d-4e0f-ab87-19e9cd6e8acd,8,3.8,3.4,,True,95,AM4
+af3c60d8-9981-49d3-91b7-78c628fb38cb,18,4.8,3.0,,True,165,FCLGA2066
+ed941ae9-ba84-47fb-b4a9-275d20e7c465,4,4.3,3.8,,True,65,AM4
+6e419e43-adaa-4425-a25d-c6b10dd4599e,32,4.2,3.0,,True,250,sTR4
+c5c4dfa9-b7cc-4896-adc0-23268a462148,6,4.9,3.9,,True,125,FCLGA1200
+870d9612-1f3c-4d03-9287-2de3b2495ba4,2,,3.1,Intel UHD Graphics 610,False,65,FCLGA1151
+1e5bd891-e966-4f4e-9ac9-4c3f3e9d341a,8,4.7,3.9,,True,105,AM4
+f29e80b3-0daa-4392-a568-30b191a47415,2,,3.4,Intel UHD Graphics 610,False,58,FCLGA1200
+efd4646b-5071-482c-a9a7-d4869837a326,6,4.1,2.9,Intel UHD Graphics 630,False,65,FCLGA1151
+612c72c0-27ce-40b9-8bcb-bacd361c9bb9,4,,3.4,Intel HD Graphics 2000,True,95,
+752c543f-b27b-4c88-9ec9-741510e806db,6,4.6,3.7,,False,95,FCLGA1151
+38d79db8-e752-4341-a1bd-ee7476dc8929,6,4.1,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
+da6ab854-20fa-46ed-b5cf-8c536607f63c,4,3.3,2.7,Intel HD Graphics 530,False,65,FCLGA1151
+3f000662-b9ce-46c1-a100-7dbaf366357a,2,,3.7,Intel UHD Graphics 710,True,46,"LGA1700,BGA1700"
+f83318d9-9844-4742-9a65-e60898e06f58,4,,3.4,Intel HD Graphics 4000,False,77,
+37cc0e33-b238-43eb-b3d2-951cf26f7f04,4,3.4,3.1,,False,65,
+79541652-2914-4391-a54b-db44fb61df34,16,4.7,3.5,,True,105,AM4
+e9e31a67-6816-4499-b270-68a55f1fc74a,8,5.0,4.0,Intel UHD Graphics 630,True,127,FCLGA1151
+0ad2ebbe-c9a2-4f17-9bae-48919f7babdd,8,4.9,3.6,,False,95,FCLGA1151
+1b3af300-9f8c-4580-b3b8-5e58fe56a1ea,4,,3.2,Intel HD Graphics 4600,False,84,FCLGA1150
+9c20d725-e1d0-4d73-9c2a-557d8a8b046c,6,4.8,3.3,Intel UHD Graphics 770,True,65,LGA 1700
+166c9ac5-0280-479e-91da-00bd38317eb9,4,3.4,3.2,,True,65,AM4
+aef74bfe-891d-47c3-844c-d5d55ae8bb52,2,,3.5,Radeon Vega 3,True,35,
+d55d63db-03c7-4335-9d69-c864d2e3dd3a,2,,4.0,Intel UHD Graphics 610,True,58,FCLGA1200
+070bd3f5-d9c7-4d2b-bfe5-40f64ae31708,2,,3.5,Intel HD Graphics 4400,True,54,FCLGA1150
+88678b82-1b74-44d6-b53f-a811ae2141af,12,4.0,3.5,,True,180,sTR4
+c226191f-57da-44c9-9ca9-01620c9aced9,4,3.7,3.5,,True,65,AM4
+869e3992-3f09-455f-bbf7-a6632534b9f8,2,,3.0,,False,65,
+0da1d9a0-22b3-4c17-9bf1-64c6e563a5ed,18,4.4,3.0,,True,165,FCLGA2066
+fd7574cd-366e-4958-b41c-fce51d47d980,2,,3.7,Intel HD Graphics 530,True,51,
+a1e78b4b-8d77-427a-9c0f-565970b97518,8,4.0,3.6,,True,95,AM4
+2f1dedfd-adc6-4bc0-9232-e14144f7c327,8,,3.5,,False,125,
+b2d51665-c77d-4ccc-a259-1190dd799fed,10,4.7,3.7,,True,165,FCLGA2066
+90b5f898-0cfc-40d9-ab17-2877953abfdd,4,4.4,4.0,Intel HD Graphics 4600,True,88,FCLGA1150
+71d0dc5f-2cdb-497d-beb8-2975d9bd3efa,16,5.1,2.4,,True,65,FCLGA1700
+14bba36f-3812-4cf5-adc5-5db9ec84264a,2,,4.2,Intel HD Graphics 630,True,60,FCLGA1151
+c99bc5d4-629a-4e9a-a13f-ac1729f7d5a2,6,4.7,3.7,Intel UHD Graphics 630,True,95,FCLGA1151
+d8339323-0015-409f-864c-31a417ee0b7e,12,2.9,2.2,,True,105,
+58f68fc2-1807-46b9-a93c-7dee8df6f25a,4,3.9,3.5,Intel HD Graphics 4600,False,84,
+2f99d84c-9b55-4deb-9efb-fe7bd231e53a,8,3.7,3.2,,True,140,FCLGA2011-3
+7be420dc-d7be-4ab1-9802-eafaa329eef2,4,,3.4,Intel HD Graphics 4600,False,84,FCLGA1150
+51d60643-31cf-4a31-a105-acf901497bf6,2,,2.6,,False,65,
+5b909fb8-cf6a-437b-8ee0-bf78f2b4f578,16,5.1,2.4,Intel UHD Graphics 770,True,65,FCLGA1700
+3f449e83-a02d-4bb6-9c78-880b07dc5f5f,8,5.2,2.5,,True,65,FCLGA1200
+2972a745-002b-4278-ba17-f1d686e74600,4,,3.4,Intel HD Graphics 3000,True,95,
+b40317d4-99df-4173-a6ce-e5f7941e07c4,6,4.5,3.1,Intel UHD Graphics 630,True,65,FCLGA1200
+6a01233b-4f41-44bf-af4a-05b917d643e0,2,,3.6,Intel UHD Graphics 610,False,58,FCLGA1200
+ae7121ff-08af-46bf-8407-7b0bb2b6b927,4,4.4,3.7,Intel UHD Graphics 630,True,65,FCLGA1200
+c2f670a9-1c40-4ed3-acbc-982699da9b30,2,,3.9,Intel HD Graphics 630,True,51,FCLGA1151
+fdb914b5-9bd4-4e94-80bf-e5202f736a91,6,3.8,3.6,,True,140,FCLGA2011-3
+ef515edd-41ea-4b3e-8ffd-9b5c0c6519fd,16,4.0,3.4,,True,180,sTR4
+e6694981-8ae5-4b66-85b3-741b2ba16f4a,4,4.4,3.7,Intel UHD Graphics 630,True,65,FCLGA1200
+21de911e-bba6-4462-af18-6c5d66fee04f,4,4.2,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
+f6948248-a539-4e77-afb7-b6ba35d65105,6,5.0,4.0,Intel UHD Graphics 630,True,95,
+4a52a008-a60f-4006-983b-2200e06d731a,10,5.2,2.8,,True,65,FCLGA1200
+d38d0837-0681-4c16-a61c-b1819d9265d7,16,4.4,3.5,,True,180,sTR4
+64d2ddc2-a626-4ab6-9f67-01c0232ff6c4,1,,1.6,Intel HD Graphics,False,35,
+62951364-4087-4871-8a13-ccfa0268e658,2,,2.8,,False,65,AM3
+8da1370c-6d92-4400-9f90-58f0ec11322e,4,4.1,3.5,Intel HD Graphics 630,False,65,FCLGA1151
+92c097f9-67db-4690-970c-439d8e608958,8,3.4,2.6,,True,90,
+9edef2fa-8e0c-4226-aa40-c6c5aea9ec02,10,4.5,3.3,,True,140,FCLGA2066
+6d1871c0-5639-47b6-94df-c9776ed4246d,8,5.0,3.6,Intel UHD Graphics 630,True,95,
+8478cee0-446a-4a81-9739-63c5c619fa6f,10,5.2,2.8,Intel UHD Graphics 630,True,65,FCLGA1200
+f20681f4-8077-4415-bed5-44af6dfb57d6,8,5.0,3.6,Intel UHD Graphics 630,True,95,FCLGA1151
+fd1d9144-ee3e-4c56-a782-f2856bdddcb9,4,,3.5,Intel HD Graphics 3000,True,95,
+4948c05d-5148-4102-a99a-e577f4d8ce09,6,4.6,3.2,Intel UHD Graphics 630,True,65,FCLGA1151
+7dd441a5-f211-44c9-b1f3-2057654d9921,4,3.3,3.1,Intel HD Graphics 4600,False,84,FCLGA1150
+ee69f273-9ea5-4472-9187-52a270452cee,6,4.6,2.7,Intel UHD Graphics 750,True,65,FCLGA1200
+6e2145e5-2b6e-4369-af36-20941b149ac9,2,,3.1,Intel HD Graphics 2000,True,65,
+492a1d18-c3ff-414b-a2ba-9e586234c791,6,4.4,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
+dbb92e43-7c89-4c70-823e-040f155d4a4f,6,4.0,2.8,Intel UHD Graphics 630,False,65,FCLGA1151
+1147100e-32d3-4141-adff-bd73efa8ba55,8,5.0,3.1,Intel UHD Graphics 630,True,65,FCLGA1151
+d85d9640-26e2-4d20-acdc-29f7e769d84f,8,5.2,2.5,Intel UHD Graphics 750,True,65,FCLGA1200
+6bc45e6c-42dc-481b-bbbc-f1b1e6ec2398,4,3.3,2.8,Intel HD Graphics 4600,False,65,FCLGA1150
+9ca9386c-9dd7-4e40-986e-d862a2c631d3,8,4.5,3.6,,True,140,FCLGA2066
+f854f7c0-861d-4fb6-84b9-73124e180e19,8,4.0,3.8,,True,180,sTR4
+4c4fbb2f-e92e-4f3a-8c69-463ecb16886e,2,,3.2,Intel UHD Graphics 610,False,54,FCLGA1151
+95d7169b-e591-4220-a965-78b3c3e20b08,2,,3.4,Intel HD Graphics 4400,True,54,FCLGA1150
+18c9736a-5225-421e-ba22-713ea1a2f360,2,,3.2,Radeon Vega 3,True,35,AM4
+d3085100-35a2-4442-816e-6d57818c0f74,8,5.0,4.7,,False,220,
+2d0899d7-f679-4d0b-999f-54ad208b2022,6,4.0,3.5,,True,140,FCLGA2066
+84d40b8b-92bd-42e9-a85f-58e7af78eb02,6,4.3,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
+c5c9f670-fd71-4dc2-802f-191beea28aaf,8,4.3,4.0,,False,125,
+9c4cc709-e860-489e-bfaa-7b951f548a36,14,3.3,2.4,,True,120,
+0fb84df4-4c7a-4ded-8689-39256d9a2728,6,3.9,3.4,,True,130,FCLGA2011
+75eb37bf-ebb4-4ef0-9479-8c379d8bf95c,4,3.4,3.1,,False,65,
+7a2a30f6-0b04-47fc-8ff9-f7ae3b3d7077,4,4.2,3.6,Intel HD Graphics 630,True,65,FCLGA1151
+210c82df-b07f-4949-8224-91b026892531,6,4.8,3.3,Intel UHD Graphics 630,True,65,FCLGA1200
+09c05ba4-080e-495e-ad47-06ff4d0cf487,2,,2.7,,False,65,
+efae5fb7-f7d4-4af2-ad3f-8db4b13fa9a9,2,,3.3,Intel HD Graphics 2000,True,65,
+d89e40e5-7c79-44da-a47e-667e2fe311a5,12,4.8,3.5,,True,165,FCLGA2066
+0f3c4c55-a98d-4bce-88a8-a16f31cbb7a2,24,4.2,3.0,,True,250,sTR4
+1038c9f7-64ed-478e-9d7a-e8c050d0c134,2,,3.3,Intel HD Graphics 510,False,54,
+e9e7330f-6c42-407a-a0f6-a0aeccd6965a,4,4.5,4.3,,True,112,FCLGA2066
+8bb73845-98e8-43ae-81f4-e453bc87fc18,8,,3.3,,False,95,
+d91ce5e2-7f79-4e26-915a-be24412f8f76,4,4.0,3.4,Intel HD Graphics 530,True,65,FCLGA1151
+aa083dce-b793-4ca6-be11-a67d1cdc640d,6,,3.9,,False,125,
+28e4b6b6-002a-4d9e-a844-54e5de21e55d,14,3.2,2.0,,True,105,
+97343064-1faf-4ca4-924d-9be6528194b1,2,,2.4,,False,65,
+8eb6ea29-6872-4400-ad93-43a49f681ea8,4,,3.4,Intel HD Graphics 4600,False,84,FCLGA1150
+8a514d91-a5d6-4931-beee-4148fa219c0f,2,,3.2,Intel HD Graphics,True,73,
+2bfa8a43-125c-4a3d-8956-81c1fb919f8c,2,,3.7,Intel UHD Graphics 610,True,58,FCLGA1151
+897c7fff-9803-4f28-aa36-a143293887af,6,4.6,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
+e9a5a137-b8f4-415b-8099-6549edd54bdd,4,,4.0,Intel UHD Graphics 630,False,91,FCLGA1151
+feeb8066-3ce1-4973-aa25-1918c75898c8,10,3.5,3.0,,True,140,FCLGA2011-3
+f30dc45e-7a09-41dd-b518-d2e69c0c8b46,14,3.5,2.6,,True,135,
+128f8977-3ec6-4f18-b827-0486abd5613f,2,,3.1,Intel UHD Graphics 610,False,65,FCLGA1151
+b56d35eb-78fb-445e-8413-9ac849f743c8,4,3.9,3.7,,True,130,FCLGA2011
+c650e87c-1131-4f23-8950-55accf0358db,2,,2.8,Intel HD Graphics,False,65,
+9fa785d4-af85-40ac-9320-1e8da84d124a,4,,2.66,,True,130,
+2b5bb2e4-a26b-4e4e-8f2a-e1e0693a5d13,4,,2.83,,False,95,
+4902be02-40fb-487d-80f7-012d87e64da1,4,,3.6,Intel UHD Graphics 630,False,65,FCLGA1151
+547aa86e-4763-4df1-8d82-0cb66e7f23ce,12,4.4,2.9,,True,140,FCLGA2066
+bce34fba-9c32-491c-bf76-dbd42f789021,4,3.8,2.9,Intel HD Graphics 630,True,35,FCLGA1151
+48728560-2a62-49af-921d-511198a3e702,8,4.7,3.0,Intel HD Graphics 630,False,65,FCLGA1151
+1b505854-4f66-4ee9-9a09-187e457b382d,2,,3.5,Intel HD Graphics 4600,True,54,FCLGA1150
+5a5b5c94-55bc-4822-96b2-853062c04bbc,6,,3.2,,True,130,FCLGA2011
+f7678351-ee4e-4aa5-8a6e-660da4b9983a,6,4.8,2.8,Intel UHD Graphics 750,True,65,FCLGA1200
+159a182c-c0d3-4616-af42-e2d4a9354d8c,8,4.7,4.4,,False,220,
+68d2d9c6-0dc4-4770-8829-326112c857f3,6,,3.3,,False,95,
+fbfeb027-c4f2-43e0-b984-055cff0a80bd,4,,2.05,Radeon HD 8400,False,25,
+5c08e4ca-2976-4e4a-abcd-ee74baff7a19,8,2.8,2.0,,True,95,
+c3e8218c-b49c-4628-841b-b0786b85f928,6,4.0,3.5,,True,140,FCLGA2066
+25dea861-cd9d-4cfb-a349-b0e06fd0a3be,8,4.7,3.0,,False,65,FCLGA1151
+f6faea9f-90d4-412e-9c62-e927b2a0e2b2,16,4.4,2.8,,True,165,FCLGA2066
+6d64e292-86ee-4a37-a679-a93a24b560a0,1,,1.6,,False,35,
+8b64ece6-9dc5-451d-8187-99f9eb4413f0,4,4.6,3.8,Intel UHD Graphics 630,True,65,FCLGA1200
+2d84bc2d-505f-44e6-a97b-ab5acdd7d21a,2,,3.0,,False,65,
+459e74e2-c7e8-4c43-9903-3c3ec3f60084,2,3.9,3.7,Radeon HD 8370D,False,65,
+3d090f6e-670e-4f01-8ec4-4edd54341390,2,,3.4,Radeon Vega 3,True,35,AM4
+5c070f61-6d04-4d06-b62a-00736457d611,8,3.2,2.4,,True,85,
+7e6e210d-b1b7-4835-a73f-1bb301547ce4,2,,1.8,Intel UHD Graphics 610,False,35,FCLGA1151
+d12a7a01-30d1-4060-9dcb-5b75a745058e,4,,3.9,Radeon HD 8570D,False,100,
+8a8ff4d9-3e79-41ca-82bb-0c2417ea6b8d,4,,2.5,,False,95,
+ecabf76c-70e5-4bf5-add0-f1a115f162bd,18,4.4,2.6,,True,165,FCLGA2066
+004f4802-9585-4d51-9916-231059067628,6,4.0,3.6,,True,130,
+e27ae2e5-09fd-4cd5-98c1-2902c8a1e742,2,,2.93,Intel HD Graphics,True,73,
+0f253874-0c07-408f-b780-9e7c63fe201a,12,4.3,3.5,,True,180,sTR4
+340c3752-fb6c-4fb0-959c-a9493bcb6d4e,12,3.2,2.6,,False,115,unknown
+4aeb8cbe-ccfe-48ce-8ad2-9e3b2abe7e5d,6,,2.3,,True,95,
+336dd748-09ed-49ee-b092-4dcbb9a4c3e7,8,4.5,3.8,,True,165,FCLGA2066
+0e60c041-2dd9-490f-9583-6052ebae24f3,16,3.0,2.1,,True,120,
+59c299da-a27a-4760-85da-03f773f65215,2,,3.5,Radeon Vega 3,True,35,AM4
+87662d6b-9a49-45ca-af2c-493575f8a9cd,6,4.1,3.5,,False,95,
+115bbe10-a239-4ae8-b966-3d9574a4b5bf,4,3.4,2.8,Intel HD Graphics 510,False,65,FCLGA1151
+5fa29c9e-cd46-40d1-b47d-6d08fe89c539,14,4.8,3.3,,True,165,FCLGA2066
+fec0bba0-252b-4772-8e6a-00a743498c33,4,,2.4,,False,100,
+c2ce4f4e-0fd8-49a1-8343-90c08e7d893d,4,,3.1,Intel HD Graphics 4600,True,65,FCLGA1150
+02b4df89-e046-4ded-b7a0-a039236f18a2,2,,2.6,Intel HD Graphics 510,False,35,FCLGA1151
+23aed234-8cd4-4c7d-be01-1a3bf9cd5d17,6,,3.5,,False,95,
+88deb99f-b253-440d-adf5-2f4bbb7d1436,2,,2.8,Intel HD Graphics 510,False,51,FCLGA1151
+8c9b3234-fa6d-48b7-8661-e3351d958bc2,4,4.2,4.0,,False,112,FCLGA2066
+7bd2108f-42cb-4205-b048-8213b4ced9ef,4,,4.2,,False,125,
+d255628f-b48d-4f3f-bcac-a23f35799979,6,3.8,3.5,,True,140,
+d0a56c54-24bd-4022-8858-4864ac9afe02,8,,4.0,,False,125,
+529a1f2a-8b5c-41a4-b86c-4ea245636ef6,2,,3.4,Intel HD Graphics 2500,True,55,
+9a048c77-bc18-4e51-9205-843875b47097,2,,3.2,Intel HD Graphics,False,53,
+5471ab79-a1f5-4a8e-8f93-c072634e754a,4,,3.1,Intel HD Graphics 4000,True,65,
+4f6f4cf2-b9f4-4ea4-abeb-750b16fe686a,4,4.0,3.7,,True,140,
+cc861439-2f58-4cac-a607-ff0e387f30d9,6,,3.33,,True,130,
+af0299cc-4ac4-4546-8dd7-413c85307c47,2,,4.1,Intel UHD Graphics 610,True,58,FCLGA1200
+01b11543-f412-403b-a4dc-0682ad8ed1eb,4,4.2,3.8,Radeon R7 (on-die),False,65,AM4
+2ec3bc2f-2a50-46a7-aaac-e3dcc44d8872,4,,3.0,,False,95,AM3
+2f0a9403-e825-4ece-adef-2fca78916faa,6,,3.2,,False,125,
+6595513e-a716-4699-aa08-b7f20bf97674,4,,2.8,,True,95,
+c5877e6f-b3e9-48c7-8241-193cdb0273e5,8,3.5,2.7,,True,130,
+5c32d18b-e08d-471a-98b9-62d935f3b1e3,2,,4.2,Intel UHD Graphics 630,True,58,FCLGA1200
+12a36054-ff89-4c0e-9da9-4ca03ee561d0,8,3.5,3.0,,True,140,
+04fe3605-747c-49fe-b39c-df71bc297af1,4,,3.1,Intel HD Graphics 2500,False,77,
+6107f4a3-96b9-449d-841b-9648cde41a19,8,5.1,3.8,Intel UHD Graphics 630,True,125,
+c8ced1d6-8d5b-4b46-9e27-b05cfdc4ab32,4,4.3,3.7,Intel UHD Graphics 630,False,62,FCLGA1151
+a951727b-4c97-4042-975c-62dd1fad3e1b,4,,3.06,,True,130,
+656dbdef-3a6a-423e-b0ef-bb76efcd5dd2,4,,2.93,,True,130,
+24563ebe-27b0-4f8e-a4f1-02cae7f4478e,4,3.8,3.5,Radeon R7 (on-die),False,65,AM4
+38de890a-ace4-410a-b6ee-9b812d2ff5f4,2,,2.9,Intel HD Graphics 610,False,51,FCLGA1151
+29e4c4be-0944-4725-b3c5-85e10f328098,2,,2.9,Intel HD Graphics,False,55,
+59d3ffca-f669-436e-b9a6-7cd680290fde,4,,3.3,Intel HD Graphics 2500,False,77,
+8739d588-1ed5-49d1-9d22-ade08b1c2f48,8,3.4,2.6,,True,95,
+6821e265-fa71-4e34-8f37-8f971a1d1ac2,2,3.8,3.5,Radeon R5 (on die),False,65,AM4
+c7b52b08-8838-4b1f-ab5e-7c316982a9c5,2,,3.8,Intel UHD Graphics 610,True,54,FCLGA1151
+c72d9076-ed49-4a2e-9789-0a0dd9db094a,4,3.5,3.0,Intel HD Graphics 630,False,65,FCLGA1151
+9ba6ddff-f045-4bc3-9e75-7a38ba7152b5,4,4.0,3.7,Radeon R7 (on-die),False,95,
+ec9152e7-9c1e-48c0-b64b-f2c6dc0c5128,4,,2.93,,False,100,
+efbe3c07-6664-401e-9098-36db57b59bcd,18,4.4,2.6,,True,165,FCLGA2066
+cc0ad626-4dd5-40f1-b08b-09ac9d86258c,10,3.5,3.0,,True,140,FCLGA2011-3
+e1c1d852-930a-4572-8e8c-3eec42433af6,4,3.6,3.5,,True,140,
+fb18e39f-e141-4d6a-b729-a8e1c0f85603,2,,3.7,Intel UHD Graphics 610,True,58,FCLGA1151
+c8b56c31-74fe-443a-872e-439732eb4ce3,8,3.6,3.2,,True,135,
+df4cca46-815f-465e-a165-61645f654a15,4,,2.93,,True,95,
+c86041fe-110c-47de-a6b3-0cfb8535884b,4,3.7,3.3,Iris Pro Graphics 6200,True,65,FCLGA1150
+9a157bf5-d032-41c3-9bb6-065cfae83228,6,4.0,2.4,Intel UHD Graphics 630,True,35,FCLGA1151
+f48d4cc6-059b-47cc-b025-9acc2db32e44,18,4.4,3.0,,True,165,FCLGA2066
+682934f9-c6b9-416e-b345-4168f683847f,4,,2.66,,False,95,
+47ce02f3-035c-41fb-9270-440d2f1fc042,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
+c2c97ced-d374-400e-8543-63a3df84bd8d,4,3.0,2.4,Intel HD Graphics 630,False,35,FCLGA1151
+e7a080b8-ddd1-4616-bb0c-dba4c052fb2c,4,,2.5,Intel HD Graphics 2000,False,65,
+b2e6d32c-735a-4d04-a7e0-ce9d9ba651be,6,3.2,2.4,,True,85,
+b48edc01-b360-4db2-abb4-65f55f79e046,6,4.6,3.7,,False,95,FCLGA1151
+f1d726c0-367e-4d48-935d-ff943ad27c4b,2,,2.93,,False,65,
+cdd04e81-65b5-490c-afb9-52074f1329a7,8,3.0,2.1,,True,85,
+9c7c07b4-3fbe-4016-9ee8-710bd07949fa,12,3.2,2.4,,True,115,
+6eb8aea7-2fe0-44a8-b76a-b91cbd4dbf91,6,,3.5,,True,150,
+11dc0da5-5693-4cdb-8667-18aa40c903fc,4,3.8,3.5,,False,65,FM2+
+ce0e7441-aecc-4987-846b-6c05a38858f4,4,4.5,3.8,Intel UHD Graphics 630,True,65,FCLGA1200
+2728def6-a901-4a9c-8d04-1d63d8846537,4,3.9,3.5,Intel HD Graphics 4600,False,88,FCLGA1150
+c3c71806-959d-413b-8f68-25cb93ef365a,4,3.7,3.3,,True,80,
+7f538dbd-a552-4ad1-814c-7437b8c7ff06,2,,3.8,Intel HD Graphics 4600,True,54,FCLGA1150
+a8e565a0-7627-405f-8b2f-e53048abf713,2,,2.9,Intel HD Graphics 4600,True,35,FCLGA1150
+e76133c0-c087-4fc7-8025-df51936aedf0,6,4.8,3.4,,True,80,FCLGA1151
+31395c4a-c6ac-413b-b15f-af339aa19d68,6,4.5,3.3,,True,80,FCLGA1151
+9c30b689-298e-401e-b4b8-ff544e309b52,4,3.9,2.7,,True,45,FCLGA1150
+4b88e317-f776-45c7-ac14-aa5c79f235e8,4,,3.3,,True,69,
+4c3d147f-8aae-409e-a0e0-b63577904c69,4,3.8,3.4,,True,80,
+b0d686ef-8336-4e92-a870-471e84722019,10,3.4,2.4,,True,90,
+61ce4488-0c57-4536-88ed-0c4a5869d6ab,2,,3.8,Intel HD Graphics 530,True,51,FCLGA1151
+51c7eb4a-f2a5-4087-a9a7-c12963efba4a,4,,3.2,,True,130,
+a0e7af80-c789-485b-96d5-7fe7c95f3b40,8,2.6,2.2,,True,95,
+bb65d7a2-faf8-4b0c-b57a-143630f9b779,4,,3.0,,False,130,
+1fb2361e-7134-4fb8-b2a0-fc856580a5e3,4,,3.0,Intel HD Graphics 2000,False,95,
+cef959cf-a39a-462b-bd81-a3ea1a323a23,4,,2.9,Intel HD Graphics 4600,False,65,FCLGA1150
+a3c594c1-84fc-47de-907e-0b3b6760bba8,4,3.9,3.5,Intel HD Graphics 4600,True,84,FCLGA1150
+ab5c9e30-b011-4013-aaa4-39ea73367725,4,4.5,4.3,,True,112,FCLGA2066
+35d14c03-8e8f-4900-a634-d0852e2188e3,4,3.8,2.9,Intel HD Graphics 630,True,35,FCLGA1151
+b809fc6f-894f-418b-8efd-519bdc151d6a,2,,2.9,Intel HD Graphics 4400,True,35,FCLGA1150
+0e59ad5b-308f-45b4-ba49-b92808b99351,2,,3.9,Radeon HD 8470D,False,65,
+2f78d1eb-4866-470c-99b5-2defb03586d3,10,4.4,3.5,,True,165,FCLGA2066
+c55d3872-e6d4-406c-977e-b4dd80334a01,2,,3.2,Intel HD Graphics,True,73,
+7cc6fa8e-b231-4241-8be8-02aca82bfa6f,4,3.3,2.7,Intel HD Graphics 630,False,35,FCLGA1151
+aa4eee03-82e6-4d2a-b0e8-f35384975ade,4,,2.8,,False,95,AM3
+acfdb7b9-8a3a-4103-87b0-2d66eda558f3,2,,3.5,Intel HD Graphics 530,False,51,
+0cb41c01-5834-464c-b38e-31bb7aaf6ad6,16,3.0,2.1,,True,120,
+bbf14b6b-ff3b-41ee-9cbc-9ecb458a05f6,2,,3.06,Intel HD Graphics,True,73,
+92d7a5c6-faff-4d40-9c77-bcd2c9119dfe,2,,2.66,,False,65,
+4882a005-d455-4d63-8b04-c8ee6188fc22,6,4.1,3.0,Intel UHD Graphics 630,False,65,FCLGA1151
+42740a97-c0f2-4fd5-a54a-05f658df9d0e,2,,4.1,Intel HD Graphics 630,True,51,FCLGA1151
+d438e593-d23a-49d3-8c8d-0557cba067ff,10,4.5,3.3,,True,140,FCLGA2066
+e7d457fc-af60-479e-b099-e319449ec1e7,2,,3.06,,False,65,
+5e3c55b3-0a15-4743-bb21-f9e607ee9f07,2,3.9,3.5,Radeon R5 (on die),False,65,
+40ac4d84-6a19-4b16-bbc2-06781cc5a73c,4,4.3,3.3,,False,71,FCLGA1151
+593c3a83-22f3-4017-a25c-51ae409bb89f,4,3.8,3.4,Radeon R7 (on-die),False,95,
+3c2c3fc0-58a3-4707-937a-e78a2e2b187b,2,,2.6,Intel HD Graphics,False,55,FCLGA1155
+9b3a2073-d498-4677-8335-e9f22baa32f5,4,,2.8,Intel HD Graphics 2000,True,65,
+761e7d22-3f56-478b-85dc-0b8065d185a4,2,,3.5,Intel HD Graphics 2500,True,55,
+fe9a233b-1e06-477a-8af9-ed06e4a3a84a,2,,4.3,Intel UHD Graphics 630,True,58,FCLGA1200
+19858703-f671-45d3-934d-9af3152095af,4,3.9,3.5,,True,80,
+5a9b827d-edc2-4b26-9ff4-ac894d0458a8,16,4.4,3.1,,True,165,FCLGA2066
+645db0f0-f8db-4c40-b30f-8a4d653e49c5,4,,2.8,,False,95,
+ca5b052a-15da-4889-8771-631e8a295c3a,2,,3.2,Intel UHD Graphics 610,False,65,FCLGA1151
+f7c7a745-46ec-4ba6-bde9-01a7f5d3c08e,4,,3.2,,False,150,
+4b3a0b32-8d34-444d-9cb9-bb04a3327140,6,4.0,3.7,,True,130,
+2ef193ba-ec3b-4a38-84a7-6624eedf45cd,4,,3.7,Radeon HD 8670D,False,65,
+3c3f6020-1510-4129-8c09-b8adfc5f08e4,2,,3.9,Intel HD Graphics 630,True,51,FCLGA1151
+31f20bb2-ba49-43d4-9a44-cbd7931bf40f,4,,2.8,Intel HD Graphics 2500,False,65,
+26a1e773-fc38-49e3-92a5-af8876a10e73,4,,2.8,,True,130,
+79d8711d-dc9f-4fcb-960e-047abb7dd18f,1,,1.8,,False,35,
+b1adf758-fc9f-40df-a355-d5360c7e1731,2,,3.5,Intel UHD Graphics 610,False,58,FCLGA1200
+10455a8e-ff89-4886-b3b5-28300e43eafe,4,,3.2,Intel HD Graphics P630,False,65,FCLGA1151
+135c4aac-7984-454e-8965-4ee24e026965,4,,3.5,Radeon HD 8570D,False,65,
+9dd9fb9d-007b-4dd3-afb9-0786ada71d41,2,,3.7,Intel HD Graphics 530,True,51,
+dbb4a695-91e2-4e41-8de8-ec9c661f2f55,4,3.7,2.8,Intel HD Graphics 630,False,35,FCLGA1151
+680e588f-1cf5-4f1a-bdfe-8df202e9ea08,4,3.9,3.5,,True,80,
+60f8cc3a-7892-44ec-9ddb-8bf9b06b0fe9,4,3.3,3.1,Intel HD Graphics 2500,False,77,
+b50be286-ee5c-48b5-a6c0-ea730f0761ca,4,3.5,3.1,,False,80,
+4900a126-d9b7-4a16-8bda-7c697207662e,4,,2.4,,False,100,
+3c7c6d72-5c9d-4665-9e23-98564748f92f,6,3.9,3.5,,True,130,
+16c6d2a5-3287-4dbf-9385-4519923e3006,2,,2.6,,False,65,
+df4fa977-56b8-4932-b889-301d37425595,4,,2.83,,False,95,
+5c7b35a8-7839-407b-86ac-7cc4fb12a373,6,3.7,3.4,,True,135,
+c27b8deb-05a6-4460-87c8-e9667a1a7646,6,,3.3,,True,130,
+a4cf32db-831d-401d-8396-3a06863e8b60,2,,3.6,Intel HD Graphics 510,True,54,FCLGA1151
+476d2a91-c931-4d34-8d80-1738606f1fd6,4,,3.0,,False,95,AM3
+64a63426-266f-4747-b120-9539863d203e,2,,2.5,Radeon HD 6410D,False,65,
+98e7b281-559a-49cb-9607-f5554e81dbc9,1,,2.0,,False,35,
+9ebc3be9-e4a2-45d3-b687-18e946f9fbfe,2,,4.1,Intel UHD Graphics 630,True,58,FCLGA1200
+7fe0d30c-13d6-46d7-98ee-a2e5d1e739a5,2,,3.1,Intel UHD Graphics 610,True,35,FCLGA1151
+e05d6091-a631-4b4c-a494-e9ee1e3f5b4f,8,3.3,2.6,,True,115,
+067d0813-e8a5-49ea-897b-bb26f666c7e8,4,,3.0,,False,130,
+2b1665f6-0093-4227-bc7b-59004f34b4f5,2,,3.2,Intel HD Graphics,False,53,
+194de790-6ed6-40f9-9f77-9285d8672df4,14,4.4,3.3,,True,165,FCLGA2066
+31a0cbb4-8606-4660-b18b-169cfe5264c0,2,,3.2,Intel HD Graphics,False,54,
+eba31226-f7e3-470b-8193-30b5a83bed0c,8,,3.5,,False,125,
+1bf4e29d-bd8a-4fdc-ae4e-c7acd245adb8,4,4.1,3.9,Radeon R7 (on-die),False,95,FM2+
+bf4e1c66-e259-4302-9084-f7741030c7ac,4,,2.93,,True,95,
+636ea45e-6b30-4505-97ba-b9807ea9488d,6,4.9,4.0,Intel HD Graphics P630,True,95,FCLGA1151
+896125c4-228d-4fb2-ae54-3eb1a85d6345,4,,3.2,,True,130,
+227aeb2c-27cd-49ab-9141-47e2096dd1c0,2,,2.6,Intel HD Graphics 2000,True,35,
+f64f981c-1718-4bcf-9117-b35ebaa856f5,4,,3.2,,True,80,
+c93dc66d-aeba-4876-9d30-4f13a72f2874,4,3.8,3.5,,True,140,
+3f82b474-e399-4809-8943-61209c8dcdd8,2,,3.2,Intel HD Graphics 2500,True,55,
+f321c2f3-0d24-43a5-9d83-a145dda11a41,4,3.8,3.1,Intel HD Graphics 4600,False,65,FCLGA1150
+3103375e-5840-4c37-b572-9319a2666b9b,4,3.7,3.3,Iris Pro Graphics 6200,True,65,FCLGA1150
+69789067-e44f-4d96-9fdf-bada136998cd,6,,2.0,,True,95,
+95c062c6-9d9b-4289-a9ca-f54d491ce9cb,4,,3.4,Radeon HD 7660D,False,65,
+811ec7b5-b12a-4331-ba14-8fbe574adc78,4,,4.2,,False,125,
+c9217672-660b-4a49-a744-91a4cc131fa0,2,,1.45,Radeon HD 8240,False,25,
+0249ef4d-a171-4e87-9ae5-50ca30efddf7,4,3.9,3.5,Intel HD Graphics 4600,False,84,
+d5028a05-4070-4f16-8df2-410578c7331c,4,3.8,3.1,Radeon R7 (on-die),False,35,AM4
+15b9795f-f0e8-4b6b-a77d-01c78a5290e9,4,3.7,2.5,Intel HD Graphics,True,45,
+67f1732a-2162-48f3-9788-95fc4d9024e4,8,2.9,1.8,,True,55,
+8d0276cb-4771-4c3c-812b-da2067ffe641,6,,3.333,,True,130,
+0584d4ba-754d-473f-9949-ef83e6ef321f,4,3.5,3.0,Radeon R7 (on-die),False,35,AM4
+ae7a4467-ac0f-4aa3-aa08-5120c6ef2bd6,4,,2.8,,True,95,
+60a6967c-f467-4fa6-a975-489f61b30da8,4,,2.66,,False,95,
+b798c734-6a61-4795-bbc2-94c337993b53,4,,2.9,,False,95,AM3
+650e9c37-eb5a-4da2-9922-7a2d17206d24,6,3.6,3.4,,True,140,FCLGA2011-3
+afb05cdf-2806-47ef-ae43-22f66f5c3aa6,4,,2.6,,False,95,AM3
+52a3485c-084a-4beb-a6ba-1cf41929b02b,2,4.0,3.7,Radeon R5 (on die),False,65,FM2+
+7043d251-93b6-47b4-861f-c51c6ac1ac68,6,4.7,3.7,Intel HD Graphics P630,True,80,FCLGA1151
+5d592a1d-1c2a-428e-a113-7649876133ea,2,,2.7,Intel HD Graphics,False,65,
+3535163d-18ef-4782-ad6c-0a00282074ba,4,,3.1,,False,95,
+4f4fd841-8bfb-4bc0-a658-0092452a88e1,2,,3.333,Intel HD Graphics,True,73,
+7c266cab-8ed1-41c2-a102-30c34887419e,4,,2.8,,False,95,AM3
+00e7c742-07a4-4c48-a65e-157dae9f4c94,2,,2.13,,False,65,
+9409936d-8a58-4ee1-9e8e-d072888943fb,2,,2.5300000000000002,,False,65,
+182f4afd-11ce-4d12-8483-ad2cec48d61c,14,3.3,2.3,,True,120,
+f643b39d-30c1-49eb-82eb-111e6d069879,8,3.7,3.2,,True,140,FCLGA2011-3
+674b4730-26f0-4ba8-90c6-469a395ace0f,4,4.5,4.1,Intel HD Graphics 630,True,79,
+183545a9-8f58-46b3-9698-af169d58b506,2,,3.4,Intel HD Graphics 630,True,35,FCLGA1151
+23ffde60-7cb3-4ea0-a62f-b5a7c6cf78e6,2,,2.33,,False,65,
+a72462f2-2213-4477-95d1-7dcc7a7d3ea1,4,3.5,2.7,Intel HD Graphics 530,False,35,FCLGA1151
+a597fd23-84fa-492d-af1e-297e7d8d2513,4,,3.4,Intel HD Graphics P4000,True,77,
+769de51b-9591-4886-bd6d-fbcc034f92f1,4,,3.7,Radeon HD 8670D,False,65,
+85e9a821-c2b3-4cd8-8dbe-158af733d05f,10,3.1,2.2,,True,85,
+8604c122-f4d9-4684-ae50-240ae92cca12,4,4.1,3.7,Intel HD Graphics P630,True,73,
+41f3b945-6466-4a24-a79b-664ec85fccb7,2,4.0,3.8,Radeon HD 8470D,False,65,
+400ce9bd-8e9b-4035-8c22-215d51767210,2,,2.2,,False,65,
+eaf1c568-00b8-4196-98b7-a169188d4b78,4,4.2,3.8,Intel HD Graphics P630,True,73,
+4be5da73-20d9-4502-b1f3-a730608f1ee3,2,3.9,3.7,Radeon HD 8370D,False,65,
+da2bf166-e1fe-4d4e-bbcf-c7e625d41661,8,2.3,1.8,,True,70,
+c03c7ce9-b497-4826-83fc-36c4cd8ab08a,2,,3.3,Intel HD Graphics 530,True,35,FCLGA1151
+93b7ba04-08e4-4943-92d7-09bff9550892,2,,2.66,,False,65,
+78fcd36a-debf-45ca-b2be-f26e6c52a5a4,2,,3.6,Intel HD Graphics 4600,True,54,FCLGA1150
+67f6e37e-0921-41a5-b0ee-c2c90856a672,4,4.9,4.0,Intel HD Graphics P630,True,83,FCLGA1151
+589b2e4a-3798-4e7b-b03d-daaf25188824,2,,3.0,,False,65,
+ca4b0f37-2da1-4042-8d51-68768ebac917,2,,2.9,Intel HD Graphics 2500,False,65,
+6314ac01-bd84-4373-a8ee-a25da2126fd5,10,3.3,2.6,,True,105,
+d63a67fb-5522-4dd0-aaf5-2a6cbb60ee1c,4,3.7,3.3,Intel HD Graphics P530,False,80,
+d7017b71-e711-46ad-a91d-43c1e33665dc,8,4.5,3.6,,True,140,FCLGA2066
+38171a27-2338-4d6a-98d7-147f7b1ba07e,2,,3.33,Intel HD Graphics,True,87,
+8b5857d1-2a7a-434d-96ca-540715c8619d,2,,3.4,Intel HD Graphics 4000,True,55,
+ad1bffa4-2c5a-491e-a9f7-7c4284088f24,4,,3.8,Radeon HD 7660D,False,100,
+7f1de919-2f8d-4b5f-bdc9-b9d6e4d89877,4,3.9,3.5,,True,80,
+232e1d1a-a335-4192-8350-944771c33079,10,3.2,2.4,,True,95,
+5495801f-e6c9-48d7-bda7-4b75aadb73f2,4,4.1,3.7,,True,72,
+6d353d85-0715-4811-b41a-14c18e814e5f,2,,1.6,,False,65,
+8bfb0406-4894-48fe-9dbf-d857c45bccfd,4,,2.4,,False,80,
+f71143ab-f373-4d5e-a7ec-40d2cb5959dd,2,,3.2,Intel HD Graphics 530,True,35,FCLGA1151
+49746a79-4f53-4584-8c0e-b52f4edfa649,8,3.8,3.2,,False,115,G34
+de5af6fa-09e2-44c6-adb7-5a10c14aaefd,4,4.7,3.8,Intel HD Graphics P630,True,71,FCLGA1151
+dbe128d9-62e5-41bf-9cff-50d739eb4ff2,2,,3.3,Intel HD Graphics,False,54,
+5bd569e7-47ca-4b25-a303-d61ae81f5382,4,3.2,2.7,Intel HD Graphics 2500,False,65,
+453c0a63-7588-40b5-a5ab-435e0327c29d,3,,2.9,,False,95,AM3
+72355a2c-d4e4-4cbc-8a95-c43a5598906e,4,,3.3,Intel HD Graphics,True,95,
+f44dacaa-b46b-435c-a0fe-c85fb9a5876a,2,,1.8,,False,65,
+7834a684-b1a9-4781-a62e-c228d1a3fed7,1,,2.0,,False,35,
+5042f8fc-4073-4832-b942-07061aa97b0a,2,,2.8,Intel HD Graphics,False,73,
+7bb63f4f-d424-40c0-bafd-91ab20bc783b,4,3.3,2.7,Intel HD Graphics 630,False,35,FCLGA1151
+9ec50bc1-4c1a-4f37-98e7-8b12dd663144,4,,3.4,,True,69,
+911efaf6-0d59-46e1-8182-fe6257bfeb45,4,3.7,2.8,Intel HD Graphics 630,False,35,FCLGA1151
+fd3c4c4f-7be7-4472-9ac9-729f881613bc,4,,2.8,,False,95,AM2+/AM3
+9ca7fcf5-8ad0-4ecd-8cc0-12c18b97a735,2,,2.5,Intel HD Graphics,False,65,
+a52c7b53-89d5-49fa-bb24-7a0d822567b2,2,,3.0,Intel HD Graphics,False,65,
+69df006c-77c4-4c2f-a3ba-e45aa9f643a1,2,,3.9,Intel HD Graphics 530,True,51,FCLGA1151
+5d033635-9eae-406b-9951-58cec7a408e5,4,3.0,2.4,Intel HD Graphics 630,False,35,FCLGA1151
+4c1bd969-eb75-4b77-92ae-7f4bd9cb9943,4,4.2,3.8,,True,72,
+f53176fb-a87d-43f7-8c8c-004f1ac477c4,2,,4.2,Intel UHD Graphics 630,True,58,FCLGA1200
+20cb0196-ebdd-4eae-ade5-2ca1bfb59c9f,6,4.7,3.7,Intel HD Graphics P630,True,80,FCLGA1151
+46db0f55-dfce-44d3-a8c4-3180a637ddb8,4,,2.5300000000000002,,True,82,
+c063abec-21a3-4ba8-9a1d-de6cf2f50622,2,,3.0,,False,65,
+574c2658-4409-4492-be06-de07097125a3,4,,2.93,,True,95,
+16ab10c0-ce18-4ddb-a9b8-9a4a2a3516e0,2,,3.1,Intel HD Graphics 3000,True,65,
+991edfce-ae0f-48a3-89f6-66b73303a683,4,3.7,3.5,,True,135,
+0ede0eb0-b415-4168-b04b-5bdfe4430329,8,3.4,2.6,,True,90,
+4b40785c-5394-4272-be52-42878db5359f,6,,1.7000000000000002,,False,85,
+42c2442b-4d62-4a6a-9c14-474dc1c99a00,2,,1.8,,False,65,
+e934336c-3184-4b43-982e-56d1b6841cab,2,,2.8,Intel HD Graphics 2500,True,35,
+6e02312e-4779-4bf1-a0d4-f19f29c35ea5,6,,1.6,,False,85,
+bec4fbe1-458f-4aca-8299-fa557d35946c,2,,3.33,Intel HD Graphics,True,73,
+6805500a-0fc4-4c48-92d2-8c7cc7dac2de,4,,2.83,,False,95,
+5ffb3477-4586-4ae6-959a-e120a3d25923,4,,2.66,,False,100,
+3ef4d152-64fd-4dc0-8eee-89ce67d704cb,2,,2.4,Intel HD Graphics,False,35,
+f6ddf1fe-f854-4faf-8a43-4fa6c3bd9fb5,2,,3.1,Intel HD Graphics,False,55,
+0c83bd10-a3bf-4ec2-91b4-6d5a2e834b9f,6,,2.0,,True,95,
+c7b798e9-29c4-421c-9308-ce4229c5b630,6,3.0,2.5,,True,95,
+1e82ab02-dab1-4029-aeef-60e94b2c5209,6,3.2,2.4,,True,85,
+a0fc86a2-7e82-4a89-a26a-d33343551fc8,2,,3.6,Intel HD Graphics,False,53,
+4d4508ed-e037-4942-a08b-995bb16f3024,4,3.9,3.5,Intel HD Graphics P530,True,80,
+2c451021-f592-4e67-a972-cf6ed2e05a51,6,4.5,3.5,Intel HD Graphics P630,True,80,FCLGA1151
+cb575a85-d2ad-4b91-9e9c-f018d86ddaf5,2,,1.8599999999999999,,False,65,
+31d4656b-6d70-4a03-8049-4e196c3f9dea,2,,2.4,Intel HD Graphics,False,65,
+0bc8df54-aee3-46c7-8f44-dd8586f02012,2,,2.9,Intel HD Graphics 610,True,35,
+f42cfca6-fdc8-4415-9345-d387c048bc00,2,,3.2,,False,65,
+1bbb6695-a017-4c53-8ec1-1c28f91c4e5c,2,,3.7,Intel HD Graphics 630,True,51,
+802bbcba-c142-4b46-9230-6f143278a382,4,4.2,4.0,,False,112,FCLGA2066
+7bfbeaa0-6869-4082-bbdb-914526671a17,6,4.3,3.1,Intel UHD Graphics 630,False,65,FCLGA1151
+bcd1a899-6b5c-480e-a17b-e6fb4623294c,6,4.5,3.3,,True,80,FCLGA1151
+ba2925b4-0dcb-470b-afd3-96b0ae9d72b0,4,4.5,3.4,Intel HD Graphics P630,False,71,FCLGA1151
+a824ef8d-5441-4235-9b14-3e3f4b122fd1,4,,3.6,,False,125,AM3
+151cc65c-4263-4bd7-8cd1-d70e0fe0eea5,6,3.7,3.4,,True,135,
+d8329eda-5e31-42ba-a7ca-210fe7097d4b,2,,3.3,Intel HD Graphics 3000,True,65,
+81c5549e-0ac3-4e71-8616-76d9e9ed438d,2,,2.3,Intel HD Graphics,False,35,
+71aeffdd-256c-41b4-bc5c-056eb084fdea,4,4.2,3.9,,True,72,
+bba578c7-fdd1-4009-822c-9f59f9c710d8,2,,3.46,Intel HD Graphics,True,73,
+ccd2cb29-7740-4938-a5fa-2399d4a4a5b9,2,,2.7,Radeon HD 6410D,False,65,
+f547135f-190d-4a87-b525-1b8ec3d2acde,4,,3.2,Intel HD Graphics P4000,False,77,
+b311b00e-5f84-40df-abd0-71488a94683b,8,3.1,2.4,,True,115,
+9c82aba8-205a-418f-9f39-47f9723c8be4,2,,3.5,Intel HD Graphics,False,53,
+2f0e0490-1341-45dc-b3b4-525562c5f504,2,,3.5,Intel HD Graphics,False,53,
+2b8065b3-3736-47bc-a463-a0ace6b4daeb,2,,3.5,Intel HD Graphics 630,True,35,FCLGA1151
+8183c057-c6d8-4240-8994-7bb89856fd1a,2,,2.4,,False,65,
+2ce4aadb-483e-4f38-8ab5-626eedf91c2e,4,4.7,3.8,Intel HD Graphics P630,True,71,FCLGA1151
+a5b79afa-8aef-4da8-a8b5-e6ac071c87ff,2,,2.93,,False,75,
+be2112ce-8957-4436-bae2-f7d8e3933c23,8,3.3,2.8,,False,115,
+729e63a7-39eb-415b-b582-433666674af1,4,4.1,3.7,,True,72,
+880b5327-1a07-479b-91ec-bb8548df180f,4,3.5,3.0,,False,72,
+03ad346f-4691-4e43-b41d-47432807a150,6,4.5,3.3,Intel HD Graphics P630,False,80,FCLGA1151
+f7114477-b9af-4aa8-9217-84f0886a3b4b,2,,2.8,,False,65,AM3
+f5e89654-7392-47cb-a0a3-d47110ee8ee2,2,,2.0,,False,65,
+e2f8f91c-76e4-4bcf-aaec-fa9bf5fef198,2,,2.6,,False,65,
+b64bb35b-32c7-4d85-b844-061d739bc368,2,,2.93,,False,65,
+c599889b-bb26-4d2a-8543-7121be44125d,2,,3.06,,False,65,
+9d587b2b-4d52-4485-85c5-4dd0bf26ca7f,2,,2.83,,False,65,
+aa850d1e-2f63-4ad6-92e8-fca52d4afe0b,4,,3.1,,False,80,
+ce278203-1fd4-4dc4-9ac8-c9a505bd4f80,2,,3.3,Intel HD Graphics,False,55,
+632dc9bc-a803-4422-95fa-83f6c0de2596,4,,1.8,,False,80,
+9c76a713-31f9-48bb-b6d6-5afaa2c25b7e,4,3.5,3.0,,False,80,
+ec7a96a7-66af-4678-aae1-e812484c0fb3,4,3.8,3.5,,True,140,
+29595011-1d2e-45d8-9f9b-421fe426b206,2,,2.9,Intel HD Graphics 610,False,51,FCLGA1151
+507eee08-1919-4d7d-ad6d-bf2522581789,4,3.7,3.3,Intel HD Graphics P630,False,73,
+55a84d00-3ad6-4da0-8d1a-4408943b8045,6,4.8,3.4,,True,80,FCLGA1151
+dbe8d77e-e722-44e3-9548-68a3449c839f,4,3.5,3.0,,False,72,
+7a8715ea-02d8-43d9-964d-16e564d96f00,4,,2.5,,False,95,
+b98185d0-a7d1-44c2-9e1f-0c9131ae3290,4,4.0,3.7,Radeon R7 (on-die),False,95,
+2db6616d-2015-4fcc-9274-45f0b80df806,4,4.5,3.5,,True,71,FCLGA1151
+78e128a1-0224-4b22-b2ad-a1964d8d8cf1,2,,2.13,,False,65,
+e94fa67d-9e35-491e-a91b-1876e2ba4e33,2,,3.1,Intel HD Graphics,False,65,
+a0c6766a-edbe-478f-9104-a850f6af422b,4,,3.4,Intel HD Graphics,True,95,
+65d5f927-cbdc-4378-a8f9-c818fa9d6a09,6,3.8,3.5,,True,130,
+9f9c8473-952c-45a9-9714-d70f66ec038b,4,3.5,3.0,,True,105,
+c87774b3-2cf2-4ece-8df7-fba25d1991f7,4,,3.3,,True,69,
+9e69899c-767f-4004-bd7a-241d21858d7d,4,3.9,3.5,,True,72,
+44863eb1-c5ba-4f92-b406-ed805c822f82,2,,2.66,,False,65,
+86c5b88c-6ca2-47b1-8f1a-72a678701e13,8,,1.7000000000000002,,False,85,
+c8694687-2580-4d73-8fc0-63e500c15ece,4,3.7,3.3,Intel HD Graphics P630,False,73,
+a2248f43-a5a7-49fd-86c2-e2c5aca34550,2,,2.5,,False,65,
+7f3ca0b0-61b0-435b-832c-cf04fa84ffe3,2,,2.6,,False,65,
+8784a0b6-c080-4562-a4a4-2b9f8b08927f,4,,2.66,,False,95,
+814beb75-e461-4fab-aca2-9e60bae7631b,4,,3.2,Intel HD Graphics,True,95,
+1caeefd0-83ad-4e8e-8e84-30cf60637d9c,4,,3.5,Intel HD Graphics P4000,True,77,
+87d2df4d-a8fd-4280-9d84-eeea13680a5a,4,,1.8,,False,80,
+ed867764-6415-45b6-948d-51c01c64c638,2,,3.6,Intel HD Graphics,False,53,
+e7ec5194-8883-42c5-8f02-ed1aae815e38,8,3.8,3.2,,False,115,G34
+4f4d48da-4d48-4297-b02f-c4dd4e7dabad,2,,3.6,Intel HD Graphics 630,True,51,
+bff1424c-5d66-48e8-8971-1c7578a96a66,2,,3.5,Intel HD Graphics 630,True,35,FCLGA1151
+4f5b504b-d269-4e5e-a994-3fecc5c7587d,4,4.1,3.7,Intel HD Graphics P630,True,73,
+b7d38135-8fb6-472f-aa8b-6f3495ee568a,2,,2.13,,False,65,
+c0977c5b-5f97-4eb0-a29f-90ce4b0d2bba,4,,2.4,,False,82,
+412b02bd-3f05-458c-9d6e-02ddce6abd95,8,3.3,2.8,,False,115,
+eee8c5e3-088b-49a9-b246-eb6ac06ff951,6,,2.0,,True,95,
+9a7257c4-1ab7-4d19-8001-2c8e90f96ad9,6,4.5,3.5,Intel HD Graphics P630,True,80,FCLGA1151
