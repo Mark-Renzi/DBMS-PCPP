@@ -154,6 +154,22 @@ print(part)
 
 part = part.rename(columns={'id': 'PartID', 'price': 'Price', 'manufacturer': 'Manufacturer', 'model': 'Model'})
 
+# One-hot encoding
+form_factors = pd.concat([
+    motherboard['FormFactor'], 
+    case['FormFactor'], 
+    psu['FormFactor']
+]).unique()
+
+form_factor_dict = {factor: idx for idx, factor in enumerate(form_factors)}
+
+motherboard['FormFactor'] = motherboard['FormFactor'].map(form_factor_dict)
+case['FormFactor'] = case['FormFactor'].map(form_factor_dict)
+psu['FormFactor'] = psu['FormFactor'].map(form_factor_dict)
+
+form_factor_df = pd.DataFrame(list(form_factor_dict.items()), columns=['FormFactor', 'Code'])
+form_factor_df.to_csv('data/processed-data/form_factor_codes.csv', index=False)
+
 # export all dataframes to csvs
 part.to_csv('data/processed-data/ComputerPart.csv', index=False)
 
