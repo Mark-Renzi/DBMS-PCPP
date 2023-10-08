@@ -103,6 +103,9 @@ print(storage)
 
 part = part._append(storage[['id', 'price', 'manufacturer', 'model']])
 
+storage['cache'] = storage['cache'].fillna(0)
+storage['cache'] = storage['cache'].astype(int)
+
 storage = storage.rename(columns={'id': 'PartID', 'price_per_gb': 'PricePerGB', 'capacity': 'Capacity', 'form_factor': 'FormFactor', 'interface': 'Interface', 'cache': 'Cache', 'type': 'Type'})
 
 psu = pd.read_json('data/pcpartpicker/power-supply.json')
