@@ -92,7 +92,7 @@ for index, row in cpuBenchP.iterrows():
     single_score_entry = {
         'BenchmarkID': str(uuid.uuid4()),
         'ChipsetID': chipset_id,
-        'Type': 'PassMark',
+        'Type': 'PassMarkCPU',
         'Score': row['PassMark']
     }
     
