@@ -222,7 +222,7 @@ for file in passmark_files:
             chipset_id = matching_chipset['ChipsetID'].values[0]
             benchmarks = benchmarks._append({
                 'ChipsetID': chipset_id,
-                'Type': 'PassMark',
+                'Type': 'PassMarkGPU',
                 'Score': row[2]
             }, ignore_index=True)
 
