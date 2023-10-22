@@ -1,0 +1,21 @@
+ul.navbar-nav a {
+  text-decoration: none;
+  margin: 0 10px 0 0;
+  color: #e0e0e0;
+}
+
+ul.navbar-nav a:hover {
+  color: lightblue;
+}
+
+.navbar {
+  background-color: rgb(79, 55, 47);
+}
+
+.navbar-brand {
+  color: #e0e0e0;
+}
+
+.navbar-brand:hover {
+  color: lightblue;
+}

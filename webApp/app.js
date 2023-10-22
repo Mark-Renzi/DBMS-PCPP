@@ -3,6 +3,8 @@
  * Module dependencies.
  */
 
+const benchmarksController = require('./controllers/benchmarksController');
+
 var express = require('express')
   , http = require('http')
   , path = require('path')
@@ -20,9 +22,22 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+const db = require ("./config/db");
+
 if (app.get('env') == 'development') {
   app.locals.pretty = true;
 }
+
+// Routes
+
+
+/**
+ * @BENCHMARKS
+ */
+app.post('/api/benchmarks', function(req, res) {
+  benchmarksController.benchmarkPricePerf(req, res, db);
+});
+
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
