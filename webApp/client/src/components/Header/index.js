@@ -9,7 +9,7 @@ class Header extends Component {
     <header>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">PCComponentes</Link>
+          <Link className="navbar-brand" to="/">Części Komputerowe</Link>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav me-auto mb-2 mb-md-0">
               <NavLink to="/">Home</NavLink>

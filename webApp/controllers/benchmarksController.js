@@ -1,8 +1,6 @@
 
-
-// basic response to a post requst
 const benchmarkPricePerf = async (req, res, db) => {
-    const { partType, benchType } = req.body;
+    const { partType, benchType, pageNumber, limitNumber } = req.body;
 
     try {
 
@@ -17,17 +15,21 @@ const benchmarkPricePerf = async (req, res, db) => {
                 break;
         }
 
-
         let benchmarks = await db.query(`
-            SELECT * FROM $1
-            WHERE benchmark.type = $2
-            SORT BY score desc
-            LIMIT 100;
-        `, [table, benchType]);
+            SELECT * FROM ${table}
+            WHERE benchmarktype = $1
+            ORDER BY score desc
+            OFFSET $2 LIMIT $3;
+        `, [benchType, pageNumber, limitNumber]);
 
         return res.status(200).json(benchmarks?.rows);
-    } catch {
+    } catch (e){
+        console.log(e);
         return res.status(404);
     }
 
+};
+
+module.exports = {
+    benchmarkPricePerf
 };

@@ -1,4 +1,5 @@
 const { Pool } = require('pg');
+const fs = require('fs');
 require('dotenv').config();
 
 let db = new Pool({
@@ -8,6 +9,10 @@ let db = new Pool({
     port: 5432,
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 2000,
+    ssl: {
+        rejectUnauthorized: false,
+        ca: [fs.readFileSync('./config/rds-ca-2019-root.pem')],
+    }
 });
 
 db.on('connect', client => {

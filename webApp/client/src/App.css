@@ -1,0 +1,12 @@
+main > .container {
+    margin: 0px;
+    margin-top: 6rem;
+    min-width: 100vw;
+    padding: 0px;
+}
+
+.page-container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1rem;
+}

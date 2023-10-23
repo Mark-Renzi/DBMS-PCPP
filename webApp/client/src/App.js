@@ -16,10 +16,12 @@ class App extends Component {
         <Header/>
         <main className="">
           <div className="container">
-            <Routes>
-              <Route exact path="/" element={<Home/>} />
-              <Route path="/leaderboard" element={<PricePerformanceLeaderboard/>} />
-            </Routes>
+            <div className="page-container">
+              <Routes>
+                <Route exact path="/" element={<Home/>} />
+                <Route path="/leaderboard" element={<PricePerformanceLeaderboard/>} />
+              </Routes>
+            </div>
           </div>
         </main>
 
