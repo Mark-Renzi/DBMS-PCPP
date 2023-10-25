@@ -172,7 +172,7 @@ const PricePerformanceLeaderboard = () => {
 								<tr>
 									<th>Manufacturer</th>
 									<th>Model</th>
-									<th>Name</th>
+									{ part !== "CPU" ? <th>Chipset</th> : <th></th> }
 									<th>Score</th>
 									<th>Price</th>
 									<th>Price/Performance Ratio</th>
@@ -191,14 +191,14 @@ const PricePerformanceLeaderboard = () => {
 									</tr>
 									:
 									<>
-										{partsList.map(part => (
-											<tr className='row-hover' key={part.partid}>
-												<td>{part.manufacturer}</td>
-												<td>{part.model}</td>
-												<td>{part.name}</td>
-												<td>{part.score}</td>
-												<td>{part.price}</td>
-												<td>{part.priceperformance}</td>
+										{partsList.map(partl => (
+											<tr className='row-hover' key={partl.partid}>
+												<td>{partl.manufacturer}</td>
+												<td>{partl.model}</td>
+												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
+												<td>{partl.score}</td>
+												<td>{partl.price}</td>
+												<td>{parseFloat(partl.priceperformance)}</td>
 											</tr>
 										))}
 									</>
