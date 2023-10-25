@@ -1,32 +1,32 @@
 ul.navbar-nav a {
-  text-decoration: none;
-  color: #e0e0e0;
-  padding: 1rem;
-  background-color:#00ffbf5e;
-  margin: 0.4rem;
-  border-radius: 0.4rem;
+	text-decoration: none;
+	color: #e0e0e0;
+	padding: 1rem;
+	background-color: #0023585e;
+	margin: 0.4rem;
+	border-radius: 0.4rem;
 }
 
 ul.navbar-nav a:hover {
-  color: lightblue;
+	color: lightblue;
 }
 
 .navbar {
-  background-color: rgb(79, 55, 47);
-  min-height: 6rem;
+	background-color: rgb(79, 55, 47);
+	min-height: 6rem;
 }
 
 .navbar-brand {
-  color: #e0e0e0;
+	color: #e0e0e0;
 }
 
 .container-fluid {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-content: center;
 }
 
 .navbar-brand:hover {
-  color: lightblue;
+	color: lightblue;
 }

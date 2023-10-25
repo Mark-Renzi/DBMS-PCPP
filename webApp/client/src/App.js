@@ -10,24 +10,24 @@ import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboar
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <Header/>
-        <main className="">
-          <div className="container">
-            <div className="page-container">
-              <Routes>
-                <Route exact path="/" element={<Home/>} />
-                <Route path="/leaderboard" element={<PricePerformanceLeaderboard/>} />
-              </Routes>
-            </div>
-          </div>
-        </main>
+	render() {
+		return (
+			<BrowserRouter>
+				<Header />
+				<main className="">
+					<div className="container">
+						<div className="page-container">
+							<Routes>
+								<Route exact path="/" element={<Home />} />
+								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
+							</Routes>
+						</div>
+					</div>
+				</main>
 
-      </BrowserRouter>
-    )
-  }
+			</BrowserRouter>
+		)
+	}
 }
 
 export default App;

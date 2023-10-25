@@ -17,3 +17,9 @@
 .selection-list {
     gap: 2rem;
 }
+
+.pagination-organize {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}

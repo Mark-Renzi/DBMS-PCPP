@@ -1,0 +1,41 @@
+.inline-group {
+    max-width: 9rem;
+    padding: .5rem;
+}
+
+.inline-group .form-control {
+    text-align: right;
+}
+
+.form-control[type="number"]::-webkit-inner-spin-button,
+.form-control[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.btn-outline-secondary {
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+.quantity, input-group-prepend, input-group-append {
+    display: inline-block;
+    position: relative;
+    height: 3rem;
+}
+
+.input-group .form-control.quantity {
+    flex: unset;
+    display: inline-block;
+    width: 8rem;
+    border-radius: 0;
+}
+
+.btn-minus {
+    border-radius: 2rem 0 0 2rem;
+}
+
+.btn-plus {
+    border-radius: 0 2rem 2rem 0;
+}
