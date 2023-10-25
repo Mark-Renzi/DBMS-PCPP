@@ -19,7 +19,7 @@ const PricePerformanceLeaderboard = () => {
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
 	
-	const pageSize = 100;
+	const pageSize = 20;
 
 
 	useEffect(() => {
@@ -66,7 +66,7 @@ const PricePerformanceLeaderboard = () => {
 	}
 
 	const onhandleNext = () => {
-        let nextPageNumber = Math.min(currentPage + 1, totalResultNum / pageSize);
+        let nextPageNumber = Math.min(currentPage + 1, Math.ceil(totalResultNum / pageSize));
         setCurrentPage(nextPageNumber);
     }
     const onhandlePrev = () => {
