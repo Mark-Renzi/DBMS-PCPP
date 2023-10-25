@@ -24,7 +24,6 @@ const benchmarkPricePerf = async (req, res, db) => {
         let benchmarks = await db.query(`
             SELECT * FROM ${table}
             WHERE benchmarktype = $1
-            ORDER BY priceperformance desc
             OFFSET $2 LIMIT $3;
         `, [benchType, pageNumber, limitNumber]);
 

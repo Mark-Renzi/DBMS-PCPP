@@ -113,7 +113,7 @@ const PricePerformanceLeaderboard = () => {
 
 			<div className="p-1">
 				<h1>
-					Price/Performance Leaderboard
+					Price-Performance Leaderboard
 				</h1>
 				<div>
 					<div className="horizontal-group selection-list">
@@ -176,7 +176,7 @@ const PricePerformanceLeaderboard = () => {
 									{ part !== "CPU" ? <th>Chipset</th> : <th></th> }
 									<th>Score</th>
 									<th>Price</th>
-									<th>Price/Perf Ratio</th>
+									<th>Perf/Price Ratio</th>
 								</tr>
 							</thead>
 							<tbody>
