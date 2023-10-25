@@ -1,10 +1,35 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import axios from 'axios';
 
 import './style.css';
 
 class Header extends Component {
+
+	componentDidMount() {
+		this.fetchUserData();
+	}
+
+	fetchUserData = async () => {
+		try {
+			const response = await axios.get('/api/user');
+			if (response.data.username) {
+				this.setState({ username: response?.data?.username });
+			}
+		} catch (error) {
+			console.error("Error fetching user data:", error);
+		}
+	}
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			username: null,
+		};
+	}
+
 	render() {
+		const { username } = this.state;
 		return (
 			<header>
 				<nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -17,7 +42,14 @@ class Header extends Component {
 							<ul className="navbar-nav me-auto mb-2 mb-md-0">
 								<NavLink to="/">Home</NavLink>
 								<NavLink to="/leaderboard">Leaderboard</NavLink>
+								{username && <NavLink to="/lists">Lists</NavLink>}
 							</ul>
+							{username ? (
+                				<a href="http://localhost:3001/logout" className="btn btn-danger">Log Out</a>
+							) : (
+								<a href="http://localhost:3001/auth/github" className="btn btn-primary">Log in with Github</a>
+							)}
+							{username && <span>Welcome, {username}!</span>}
 						</div>
 					</div>
 				</nav>

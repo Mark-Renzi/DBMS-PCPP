@@ -30,3 +30,8 @@ ul.navbar-nav a:hover {
 .navbar-brand:hover {
 	color: lightblue;
 }
+
+header span {
+	color: white;
+	padding: 1rem;
+}
