@@ -4,6 +4,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
 import NumberInput from '../NumberInput/NumberInput';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
@@ -180,8 +181,12 @@ const PricePerformanceLeaderboard = () => {
 							<tbody>
 								{listLoading ?
 									<tr className='row-hover'>
-										<td>
-											Loading...
+										<td className='table-spinner-container' colSpan='6'>
+											<div className='table-spinner'>
+												<Spinner animation="border" role="status">
+													<span className="visually-hidden">Loading...</span>
+												</Spinner>
+											</div>
 										</td>
 									</tr>
 									:
