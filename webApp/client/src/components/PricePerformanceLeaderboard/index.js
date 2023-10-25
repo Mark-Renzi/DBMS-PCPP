@@ -170,18 +170,19 @@ const PricePerformanceLeaderboard = () => {
 						<table>
 							<thead>
 								<tr>
+									<th>Rank</th>
 									<th>Manufacturer</th>
 									<th>Model</th>
 									{ part !== "CPU" ? <th>Chipset</th> : <th></th> }
 									<th>Score</th>
 									<th>Price</th>
-									<th>Price/Performance Ratio</th>
+									<th>Price/Perf Ratio</th>
 								</tr>
 							</thead>
 							<tbody>
 								{listLoading ?
 									<tr className='row-hover'>
-										<td className='table-spinner-container' colSpan='6'>
+										<td className='table-spinner-container' colSpan='7'>
 											<div className='table-spinner'>
 												<Spinner animation="border" role="status">
 													<span className="visually-hidden">Loading...</span>
@@ -191,14 +192,15 @@ const PricePerformanceLeaderboard = () => {
 									</tr>
 									:
 									<>
-										{partsList.map(partl => (
+										{partsList.map((partl, index) => (
 											<tr className='row-hover' key={partl.partid}>
+    											<td>{(currentPage - 1) * pageSize + index + 1}</td>
 												<td>{partl.manufacturer}</td>
 												<td>{partl.model}</td>
 												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
 												<td>{partl.score}</td>
 												<td>{partl.price}</td>
-												<td>{parseFloat(partl.priceperformance)}</td>
+												<td>{parseFloat(partl.priceperformance).toFixed(4)}</td>
 											</tr>
 										))}
 									</>
