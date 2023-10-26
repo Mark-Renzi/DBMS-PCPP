@@ -15,7 +15,7 @@ var app = express();
 
 // Controllers
 const accountsController = require("./controllers/accountsController");
-const benchmarkPricePerf = require("./controllers/benchmarksController");
+const benchmarksController = require("./controllers/benchmarksController");
 const listsController = require("./controllers/listsController");
 
 app.set('port', process.env.PORT || 3001);
@@ -84,7 +84,7 @@ function ensureAuthenticated(req, res, next) {
  * @BENCHMARKS
  */
 app.post('/api/benchmarks', function (req, res) {
-    benchmarkPricePerf.benchmarkPricePerf(req, res, db);
+    benchmarksController.benchmarkPricePerf(req, res, db);
 });
 
 /**

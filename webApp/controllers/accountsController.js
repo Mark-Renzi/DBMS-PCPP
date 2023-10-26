@@ -10,6 +10,7 @@ const loginUser = async (req, res, db) => {
     if (userExists?.rows?.length === 0) {
         const client = await db.connect();
         try {
+            await client.query('BEGIN');
             await client.query(`
                 INSERT INTO account (userid, username)
                 VALUES ($1, $2);
