@@ -17,7 +17,6 @@ var app = express();
 const accountsController = require("./controllers/accountsController");
 const benchmarksController = require("./controllers/benchmarksController");
 const listsController = require("./controllers/listsController");
-const configuratorController = require("./controllers/configuratorController");
 
 app.set('port', process.env.PORT || 3001);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
@@ -93,13 +92,6 @@ app.post('/api/benchmarks', function (req, res) {
  */
 app.get('/api/lists', ensureAuthenticated, function (req, res) {
     listsController.getLists(req, res, db);
-});
-
-/**
- * @CONFIGURATOR
- */
-app.get('/api/configurator', ensureAuthenticated, function (req, res) {
-    configuratorController.getParts(req, res, db);
 });
 
 /**
