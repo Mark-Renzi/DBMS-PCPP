@@ -8,20 +8,13 @@ import Button from 'react-bootstrap/Button';
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
-	const dummyData = [{_id: "1", name: "List 1", description: "List 1 Desc", price:"1000"}, 
-					   {_id: "2", name: "List 2", description: "List 2 Desc", price:"2000"}, 
-					   {_id: "3", name: "List 3", description: "List 3 Desc", price:"3000"}, 
-					   {_id: "4", name: "List 4", description: "List 4 Desc", price:"4000"},
-					   {_id: "5", name: "List 5", description: "List 5 Desc", price:"5000"}]
-
+	const [showListModal, setShowListModal] = useState(false);
+	const [newListName, setNewListName] = useState('');
+	const [newListDescription, setNewListDescription] = useState('');
 
     useEffect(() => {
         getLists();
     }, []);
-
-	const [showListModal, setShowListModal] = useState(false);
-	const [newListName, setNewListName] = useState('');
-	const [newListDescription, setNewListDescription] = useState('');
 
     const getLists = async () => {
         const url = "api/lists";
