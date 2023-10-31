@@ -4,7 +4,6 @@ import './style.css';
 import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
-import { StyleSheet, TextInput } from 'react-native';
 import Button from 'react-bootstrap/Button';
 
 const HomePage = () => {
@@ -15,16 +14,6 @@ const HomePage = () => {
 					   {_id: "4", name: "List 4", description: "List 4 Desc", price:"4000"},
 					   {_id: "5", name: "List 5", description: "List 5 Desc", price:"5000"}]
 
-	// using the style sheet wasn't working for me with the text input
-	const textInputStyles = StyleSheet.create({
-		input: {
-			borderColor: "black",
-			width: "100%",
-			borderWidth: 1,
-			borderRadius: 10,
-			padding: 10,
-		  },
-	});
 
     useEffect(() => {
         getLists();
@@ -101,12 +90,24 @@ const HomePage = () => {
 								</Modal.Header>
 								<Modal.Body>
 									<div>
-										<div>Name</div>
-										<TextInput style={textInputStyles.input} enteredValue={newListName} setEnteredValue={setNewListName}/>
+										<label>Name</label>
+										<input
+											id='name'
+											type='text'
+											onChange={(e) => setNewListName(e.target.value)}
+											value={newListName}
+											className="description-box"
+										/>
 									</div>
 									<div>
-										<div>Description</div>
-										<TextInput style={textInputStyles.input} enteredValue={newListDescription} setEnteredValue={setNewListDescription}/>
+										<label>Description</label>
+										<input
+											id='description'
+											type='text'
+											onChange={(e) => setNewListDescription(e.target.value)}
+											value={newListDescription}
+											className="description-box"
+										/>
 									</div>
 								</Modal.Body>
 								<Modal.Footer>
