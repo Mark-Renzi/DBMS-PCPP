@@ -63,13 +63,8 @@ const HomePage = () => {
 		createList();
 	}
 
-	async function getLoggedIn() {
-		const response = await axios.get('/api/user');
-		return !!response.data.username;
-	}
-
 	const handleNewListClick = async () => {
-		const loggedIn = await getLoggedIn();
+		const loggedIn = localStorage.getItem('username');
 		if (!loggedIn) {
 			window.location.href = 'http://localhost:3001/auth/github';
 		}
