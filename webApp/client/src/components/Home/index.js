@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
 import { Grid } from '@mui/material';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Modal from 'react-bootstrap/Modal';
+import { StyleSheet, TextInput } from 'react-native';
+import Button from 'react-bootstrap/Button';
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
@@ -12,9 +15,24 @@ const HomePage = () => {
 					   {_id: "4", name: "List 4", description: "List 4 Desc", price:"4000$"},
 					   {_id: "5", name: "List 5", description: "List 5 Desc", price:"5000$"}]
 
+	// using the style sheet wasn't working for me with the text input
+	const textInputStyles = StyleSheet.create({
+		input: {
+			borderColor: "black",
+			width: "100%",
+			borderWidth: 1,
+			borderRadius: 10,
+			padding: 10,
+		  },
+	});
+
     useEffect(() => {
         getLists();
     }, []);
+
+	const [showListModal, setShowListModal] = useState(false);
+	const [newListName, setNewListName] = useState('');
+	const [newListDescription, setNewListDescription] = useState('');
 
     const getLists = async () => {
         const url = "api/lists";
@@ -28,13 +46,57 @@ const HomePage = () => {
         }
     }
 
+	const handleModalClose = () => {
+        setShowListModal(false);
+    }
+
+	const handleListCreation = () => {
+		console.log(newListName);
+		console.log(newListDescription);
+		setShowListModal(false);
+	}
+
+	async function getLoggedIn() {
+		const response = await axios.get('/api/user');
+		return !!response.data.username;
+	}
+
+	const handleNewListClick = async () => {
+		const loggedIn = await getLoggedIn();
+		if (!loggedIn) {
+			window.location.href = 'http://localhost:3001/auth/github';
+		}
+		else {
+			setShowListModal(true);
+		}
+    }
+
 	return (
 		<div className="HomeContainer">
 			<div className="ListsContainer">
 				<Grid container spacing={2}>
 					<Grid item key={0} xs={6} sm={4} md={4} lg={3}>
 						<div className="card-c">
-							<p className="card-text card-new text-center">+</p>
+							<Modal show={showListModal} onHide={handleModalClose}>
+								<Modal.Header closeButton>
+									<Modal.Title>Create New List</Modal.Title>
+								</Modal.Header>
+								<Modal.Body>
+									<div>
+										<div>Name</div>
+										<TextInput style={textInputStyles.input} enteredValue={newListName} setEnteredValue={setNewListName}/>
+									</div>
+									<div>
+										<div>Description</div>
+										<TextInput style={textInputStyles.input} enteredValue={newListDescription} setEnteredValue={setNewListDescription}/>
+									</div>
+								</Modal.Body>
+								<Modal.Footer>
+									<Button variant="secondary" onClick={handleModalClose}>Cancel</Button>
+									<Button variant="primary" onClick={handleListCreation}>Make List</Button>
+								</Modal.Footer>
+							</Modal>
+							<p className="card-text card-new text-center" onClick={handleNewListClick}>+</p>
 						</div>
 					</Grid>
 					{ userLists.map((partlist, index) => (
@@ -54,11 +116,6 @@ const HomePage = () => {
 					  	</Grid>
 					))}
 				</Grid>
-			</div>
-			<div>
-				<Link to="/build">
-					<button className="create-button">Create New List</button>
-				</Link>
 			</div>
 		</div>
 	)
