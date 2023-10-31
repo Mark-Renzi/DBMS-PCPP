@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
@@ -21,7 +22,7 @@ const Browse = () => {
 	const [totalResultNum, setTotalResultNum] = useState(0);
 	
 	const pageSize = 20;
-
+	const { id } = useParams();
 
 	useEffect(() => {
 		onSubmit();
@@ -127,8 +128,14 @@ const Browse = () => {
 								</Dropdown.Toggle>
 
 								<Dropdown.Menu>
-									<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
 									<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('RAM')}>RAM</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('Storage')}>Storage</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('Tower')}>Tower</Dropdown.Item>
+									<Dropdown.Item onClick={() => onChangePartType('PSU')}>PSU</Dropdown.Item>
 								</Dropdown.Menu>
 							</Dropdown>
 						</div>

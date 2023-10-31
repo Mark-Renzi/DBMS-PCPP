@@ -25,8 +25,7 @@ class App extends Component {
 								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
 								{/* <Route path="/lists" element={<Lists />} /> */}
 								<Route path="/build" element={<Configurator />} />
-								<Route path="/browse/:id" element={<Browse />} />
-							</Routes>
+								<Route path="/browse/:id?" element={<Browse />} />						</Routes>
 						</div>
 					</div>
 				</main>
