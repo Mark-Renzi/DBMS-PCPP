@@ -108,7 +108,7 @@ const HomePage = () => {
 						<hr className='hr-line' />
 						<p className="card-text text-center card-desc">{partlist.description}</p>
 						<hr className='hr-line' />
-						<p className="card-text text-center card-price">${partlist.price}</p>
+						<p className="card-text text-center card-price">${partlist.totalprice}</p>
 					</button>
 				))}
 			</div>
