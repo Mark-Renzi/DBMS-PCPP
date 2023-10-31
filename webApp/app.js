@@ -95,6 +95,11 @@ app.get('/api/lists', ensureAuthenticated, function (req, res) {
     listsController.getLists(req, res, db);
 });
 
+app.post('/api/newlist', ensureAuthenticated, function (req, res) {
+    const { name, description } = req.body;
+    listsController.addList(name, description, req, res, db);
+});
+
 /**
  * @CONFIGURATOR
  */

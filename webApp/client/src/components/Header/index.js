@@ -14,6 +14,7 @@ class Header extends Component {
 		try {
 			const response = await axios.get('/api/user');
 			if (response.data.username) {
+				localStorage.setItem('username', response?.data?.username);
 				this.setState({ username: response?.data?.username });
 			}
 		} catch (error) {
@@ -42,10 +43,10 @@ class Header extends Component {
 							<ul className="navbar-nav me-auto mb-2 mb-md-0">
 								<NavLink to="/">Home</NavLink>
 								<NavLink to="/leaderboard">Leaderboard</NavLink>
-								{username && <NavLink to="/lists">Lists</NavLink>}
+								{/* {username && <NavLink to="/lists">Lists</NavLink>} */}
 							</ul>
 							{username ? (
-                				<a href="http://localhost:3001/logout" className="btn btn-danger">Log Out</a>
+                				<a href="http://localhost:3001/logout" className="btn btn-danger" onClick={() => localStorage.removeItem('username')}>Log Out</a>
 							) : (
 								<a href="http://localhost:3001/auth/github" className="btn btn-primary">Log in with Github</a>
 							)}

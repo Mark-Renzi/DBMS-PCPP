@@ -22,7 +22,7 @@ class App extends Component {
 							<Routes>
 								<Route exact path="/" element={<HomePage />} />
 								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
-								<Route path="/lists" element={<Lists />} />
+								{/* <Route path="/lists" element={<Lists />} /> */}
 								<Route path="/build" element={<Configurator />} />
 							</Routes>
 						</div>

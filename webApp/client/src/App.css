@@ -1,9 +1,17 @@
+:root {
+    --background-c: whitesmoke;
+}
+
+html, body {
+    background-color: var(--background-c);
+}
+
 main > .container {
     margin: 0px;
     margin-top: 6rem;
     min-width: 100%;
     padding: 0px;
-    background-color: #F4F9FC;
+    background-color: var(--background-c);
 }
 
 .page-container {
@@ -11,7 +19,7 @@ main > .container {
     margin: 0 auto;
     padding: 1rem;
     width: 100%;
-    background-color: #F4F9FC;
+    background-color: var(--background-c);
 }
 
 .row-hover {
