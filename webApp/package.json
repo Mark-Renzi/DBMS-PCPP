@@ -13,8 +13,7 @@
     "pg": "^8.11.3",
     "pug": "*",
     "serve-favicon": "*",
-    "stylus": "*",
-    "uuid": "^9.0.1"
+    "stylus": "*"
   },
   "engines": {
     "node": "*",
