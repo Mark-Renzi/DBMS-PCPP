@@ -11,8 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
 const Browse = () => {
-	const [part, setPart] = useState('GPU');
-	const [benchType, setBenchType] = useState(0);
+	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
+	const [benchType, setBenchType] = useState(7);
 	const [benchName, setBenchName] = useState('G3Dmark');
 	const [partsList, setPartsList] = useState([]);
 	const [listLoading, setListLoading] = useState(true);
@@ -53,6 +53,7 @@ const Browse = () => {
 	}
 
 	const onSubmit = async () => {
+		console.log(part, benchType, currentPage)
 		setListLoading(true);
 		const url = "/api/benchmarks";
 		const data = { partType: part, benchType: benchType, pageNumber: currentPage, limitNumber: pageSize };
@@ -118,27 +119,32 @@ const Browse = () => {
 				</h1>
 				<div>
 					<div className="horizontal-group selection-list">
-						<div className="vertical-group">
-							<p>
-								Computer part:
-							</p>
-							<Dropdown>
-								<Dropdown.Toggle variant="success" id="dropdown-basic">
-									{part}
-								</Dropdown.Toggle>
+						{id && id < 8 && id >= 0 ?
+							<></>
+							:
+							<div className="vertical-group">
+								<p>
+									Computer part:
+								</p>
+								<Dropdown>
+									<Dropdown.Toggle variant="success" id="dropdown-basic">
+										{part}
+									</Dropdown.Toggle>
 
-								<Dropdown.Menu>
-									<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('RAM')}>RAM</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('Storage')}>Storage</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('Tower')}>Tower</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangePartType('PSU')}>PSU</Dropdown.Item>
-								</Dropdown.Menu>
-							</Dropdown>
-						</div>
+									<Dropdown.Menu>
+										<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('RAM')}>RAM</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('Storage')}>Storage</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('Tower')}>Tower</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('PSU')}>PSU</Dropdown.Item>
+									</Dropdown.Menu>
+								</Dropdown>
+							</div>
+						}
+						
 						<div className="vertical-group">
 							<p>
 								Benchmark Type:
