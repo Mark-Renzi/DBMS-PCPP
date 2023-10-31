@@ -17,7 +17,7 @@ const HomePage = () => {
     }, []);
 
     const getLists = async () => {
-        const url = "api/lists";
+        const url = "/api/lists";
         let response;
         try {
             response = await axios.get(url);
@@ -28,7 +28,7 @@ const HomePage = () => {
     }
 
 	const createList = async () => {
-		const url = "api/newlist";
+		const url = "/api/newlist";
 		const data = {
 			name: newListName,
 			description: newListDescription

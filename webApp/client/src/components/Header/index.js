@@ -44,6 +44,7 @@ class Header extends Component {
 								<NavLink to="/">Home</NavLink>
 								<NavLink to="/leaderboard">Leaderboard</NavLink>
 								{/* {username && <NavLink to="/lists">Lists</NavLink>} */}
+								<NavLink to="/browse/0">Browse</NavLink>
 							</ul>
 							{username ? (
                 				<a href="http://localhost:3001/logout" className="btn btn-danger" onClick={() => localStorage.removeItem('username')}>Log Out</a>

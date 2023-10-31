@@ -11,7 +11,7 @@ const Lists = () => {
     }, []);
 
     const getLists = async () => {
-        const url = "api/lists";
+        const url = "/api/lists";
         let response;
         try {
             response = await axios.get(url);

@@ -9,7 +9,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 
-const PricePerformanceLeaderboard = () => {
+const Browse = () => {
 	const [part, setPart] = useState('GPU');
 	const [benchType, setBenchType] = useState(0);
 	const [benchName, setBenchName] = useState('G3Dmark');
@@ -227,4 +227,4 @@ const PricePerformanceLeaderboard = () => {
 	)
 }
 
-export default PricePerformanceLeaderboard;
+export default Browse;
