@@ -42,7 +42,7 @@ class Header extends Component {
 							<ul className="navbar-nav me-auto mb-2 mb-md-0">
 								<NavLink to="/">Home</NavLink>
 								<NavLink to="/leaderboard">Leaderboard</NavLink>
-								{username && <NavLink to="/lists">Lists</NavLink>}
+								{/* {username && <NavLink to="/lists">Lists</NavLink>} */}
 							</ul>
 							{username ? (
                 				<a href="http://localhost:3001/logout" className="btn btn-danger">Log Out</a>
