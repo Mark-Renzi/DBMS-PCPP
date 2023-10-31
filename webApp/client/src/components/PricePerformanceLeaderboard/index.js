@@ -167,7 +167,7 @@ const PricePerformanceLeaderboard = () => {
 					</div>
 
 					<div className='table-scroll'>
-						<table>
+						<table className="priceperformance-table">
 							<thead>
 								<tr>
 									<th>Rank</th>

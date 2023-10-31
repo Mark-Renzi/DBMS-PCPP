@@ -21,8 +21,6 @@ const HomePage = () => {
         let response;
         try {
             response = await axios.get(url);
-			console.log(response.data);
-			console.log("Hi");
 			setUserLists(response.data);
         } catch {
             console.error("Error fetching lists");
@@ -39,7 +37,6 @@ const HomePage = () => {
 		try {
 			const response = await axios.post(url, data);
 			console.log(response.data);
-			getLists();
 		} catch (error) {
 			console.error("Error posting list", error);
 		}
@@ -106,7 +103,7 @@ const HomePage = () => {
 					<p className="card-text card-new text-center">+</p>
 				</button>
 				{ userLists.map((partlist) => (
-					<button className='card-button'>
+					<button className='card-button' key={partlist.listid}>
 						<p className="card-text text-center card-tit">{partlist.name}</p>
 						<hr className='hr-line' />
 						<p className="card-text text-center card-desc">{partlist.description}</p>
