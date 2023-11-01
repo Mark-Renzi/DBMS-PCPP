@@ -105,7 +105,7 @@ const HomePage = () => {
 					<p className="card-text card-new text-center">+</p>
 				</button>
 				{ userLists.map((partlist) => (
-					<Link to={`/build/${partlist.listid}`} key={partlist.listid}>
+					<Link className='card-link' to={`/build/${partlist.listid}`} key={partlist.listid}>
 						<button className='card-button'>
 							<p className="card-text text-center card-tit">{partlist.name}</p>
 							<hr className='hr-line' />
