@@ -43,7 +43,7 @@
 }
 
 #part-table tr:nth-child(even) {
-    background: rgb(247, 247, 247);
+    background: rgb(236, 236, 236);
 }
 
 #part-table tr {
