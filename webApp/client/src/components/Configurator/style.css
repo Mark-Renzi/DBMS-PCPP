@@ -17,22 +17,22 @@ table {
 #component {
     text-align: left;
     width: 22.5rem;
-  }
+}
   
-  #selection {
+#selection {
     text-align: left;
     width: 22.5rem;
-  }
+}
   
-  #base {
+#base {
     width: 3.125rem;
-  }
+}
   
-  #price {
+#price {
     width: 3.125rem;
-  }
+}
   
-  table td button {
+table td button {
     background: rgb(44, 133, 197);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;

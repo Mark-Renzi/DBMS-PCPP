@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HomePage from './components/Home';
 import Header from './components/Header';
-import Lists from './components/Lists';
+// import Lists from './components/Lists';
 import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboard';
 import Configurator from './components/Configurator';
 import Browse from './components/Browse';
