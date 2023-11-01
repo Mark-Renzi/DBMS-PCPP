@@ -4,9 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import HomePage from './components/Home';
 import Header from './components/Header';
-import Lists from './components/Lists';
+// import Lists from './components/Lists';
 import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboard';
 import Configurator from './components/Configurator';
+import Browse from './components/Browse';
 
 
 import './App.css';
@@ -23,6 +24,8 @@ class App extends Component {
 								<Route exact path="/" element={<HomePage />} />
 								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
 								{/* <Route path="/lists" element={<Lists />} /> */}
+								<Route path="/build" element={<Configurator />} />
+								<Route path="/browse/:id?" element={<Browse />} />
 								<Route path="/build/:listid" element={<Configurator />} />
 							</Routes>
 						</div>

@@ -110,3 +110,7 @@
     word-break: break-all;
     overflow-wrap:break-word;
 }
+
+.card-link {
+    text-decoration: none;
+}

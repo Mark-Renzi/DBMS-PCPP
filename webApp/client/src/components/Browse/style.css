@@ -1,0 +1,52 @@
+.vertical-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.horizontal-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.selection-list {
+    gap: 2rem;
+}
+
+.pagination-organize {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border: 0.5px solid gainsboro;
+    border-top: 0;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 0.3rem;
+}
+
+.table-spinner-container {
+    height: 100%;
+    width: 100%;
+}
+
+.table-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.priceperformance-table {
+    margin-bottom: 0px;
+}
+
+.clickable {
+    cursor: pointer;
+}

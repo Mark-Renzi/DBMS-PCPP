@@ -32,10 +32,10 @@
     border-radius: 0;
 }
 
-.btn-minus {
+.input-group-prepend .btn-minus {
     border-radius: 2rem 0 0 2rem;
 }
 
-.btn-plus {
+.input-group-append .btn-plus {
     border-radius: 0 2rem 2rem 0;
 }

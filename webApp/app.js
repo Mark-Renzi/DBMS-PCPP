@@ -18,6 +18,7 @@ const accountsController = require("./controllers/accountsController");
 const benchmarksController = require("./controllers/benchmarksController");
 const listsController = require("./controllers/listsController");
 const configuratorController = require("./controllers/configuratorController");
+const partsController = require("./controllers/partsController");
 
 app.set('port', process.env.PORT || 3001);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
@@ -78,6 +79,31 @@ function ensureAuthenticated(req, res, next) {
     }
 }
 
+// ensure list ownership
+function ensureListOwner(req, res, next) {
+    const listid = req.params.listid;
+    const userid = req.user.id;
+    const query = `
+        SELECT * FROM partslist
+        WHERE listid = $1 AND userid = $2
+    `;
+    const values = [listid, userid];
+    db.query(query, values)
+        .then((result) => {
+            if (result.rows.length > 0) {
+                return next();
+            } else {
+                console.log("403 Forbidden")
+                // 403 Forbidden
+                res.status(403);
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500);
+        });
+}
+
 
 // Routes
 
@@ -103,10 +129,18 @@ app.post('/api/newlist', ensureAuthenticated, function (req, res) {
 /**
  * @CONFIGURATOR
  */
-app.get('/api/configurator/:listid', ensureAuthenticated, function (req, res) {
+app.get('/api/configurator/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
     const listid = req.params.listid;
     configuratorController.getParts(req, res, db, listid);
 });
+
+/**
+ * @BROWSE
+ */
+app.post('/api/browse', function (req, res) {
+    partsController.browse(req, res, db);
+});
+
 
 /**
  * @AUTH
