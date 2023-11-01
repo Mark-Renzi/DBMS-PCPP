@@ -8,21 +8,27 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import './style.css';
 
 const Browse = () => {
 	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
-	const [benchType, setBenchType] = useState(7);
-	const [benchName, setBenchName] = useState('G3Dmark');
 	const [partsList, setPartsList] = useState([]);
+	const [minPrice, setMinPrice] = useState(0);
+	const [maxPrice, setMaxPrice] = useState(100000);
+	const [orderBy, setOrderBy] = useState('price');
+	const [orderDir, setOrderDir] = useState('ASC');
 	const [listLoading, setListLoading] = useState(true);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [showEllipseModal, setShowEllipseModal] = useState(false);
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
-	
+
+	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price'];
 	const pageSize = 20;
 	const { id } = useParams();
+	let tableWidth = 3;
 
 	useEffect(() => {
 		onSubmit();
@@ -30,43 +36,90 @@ const Browse = () => {
 
 	useEffect(() => {
 		onSubmit();
-	}, [part, benchType, currentPage]);
+	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage]);
 
 
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
-		if (partType === 'GPU') {
-			setBenchType(0);
-			setBenchName('G3Dmark');
-		} else {
-			setBenchType(7);
-			setBenchName('CPUMark');
-		}
 		setCurrentPage(1);
 	}
 
-	const onChangeBenchType = (benchType, benchName) => {
-		setBenchType(benchType);
-		setBenchName(benchName);
+	const onChangeMinPrice = (minPrice) => {
+		setMinPrice(minPrice);
+		setCurrentPage(1);
+	}
+
+	const onChangeMaxPrice = (maxPrice) => {
+		setMaxPrice(maxPrice);
 		setCurrentPage(1);
 	}
 
 	const onSubmit = async () => {
-		console.log(part, benchType, currentPage)
 		setListLoading(true);
-		const url = "/api/benchmarks";
-		const data = { partType: part, benchType: benchType, pageNumber: currentPage, limitNumber: pageSize };
+		const url = "/api/browse";
+		const data = {
+			partType: part,
+			minPrice: minPrice,
+			maxPrice: maxPrice,
+			orderBy: orderBy,
+			orderDir: orderDir,
+			pageNumber: currentPage,
+			limitNumber: pageSize
+		};
 		let response;
 		try {
 			response = await axios.post(url, data);
-			setPartsList(response?.data?.benchmarks);
+			setPartsList(response?.data?.partslist);
 			setTotalResultNum(response?.data?.totalResultNum);
 			setListLoading(false);
 		} catch (e) {
 			console.log(e)
 		}
 	}
+
+	const handleHeaderClick = (column) => {
+		if (orderBy === column) {
+			setOrderDir(orderDir === 'ASC' ? 'DESC' : 'ASC');
+		} else {
+			setOrderBy(column);
+			setOrderDir('ASC');
+		}
+	};
+	
+	const renderSortArrow = (column) => {
+		if (orderBy === column) {
+			return <FontAwesomeIcon icon={orderDir === 'ASC' ? faCaretUp : faCaretDown} />;
+		}
+	};
+
+	const renderTableHeaders = () => {
+		if (partsList.length === 0) return null;
+	
+		const partKeys = Object.keys(partsList[0]);
+	
+		const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
+	
+		tableWidth = filteredKeys.length + 3;
+
+		return filteredKeys.map(key => (
+			<th key={key}>
+				{key.charAt(0).toUpperCase() + key.slice(1)}
+			</th>
+		));
+	};
+	
+	const renderRowCells = (part) => {
+		const partKeys = Object.keys(part);
+	
+		const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
+	
+		return filteredKeys.map(key => (
+			<td key={`${part.partid}-${key}`}>
+				{part[key]}
+			</td>
+		));
+	};
 
 	const onhandleNext = () => {
         let nextPageNumber = Math.min(currentPage + 1, Math.ceil(totalResultNum / pageSize));
@@ -115,7 +168,7 @@ const Browse = () => {
 
 			<div className="p-1">
 				<h1>
-					Price-Performance Leaderboard
+					Search for {part} parts
 				</h1>
 				<div>
 					<div className="horizontal-group selection-list">
@@ -132,6 +185,7 @@ const Browse = () => {
 									</Dropdown.Toggle>
 
 									<Dropdown.Menu>
+										<Dropdown.Item onClick={() => onChangePartType('ALL')}>ALL</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
@@ -144,38 +198,15 @@ const Browse = () => {
 								</Dropdown>
 							</div>
 						}
-						
 						<div className="vertical-group">
 							<p>
-								Benchmark Type:
+								Price Range:
 							</p>
-							<Dropdown>
-								<Dropdown.Toggle variant="success" id="dropdown-basic">
-									{benchName}
-								</Dropdown.Toggle>
-
-								<Dropdown.Menu>
-									{part === 'GPU' ?
-										<>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(0, e.target.innerHTML)}>G3Dmark</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(1, e.target.innerHTML)}>G2Dmark</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(2, e.target.innerHTML)}>CUDA</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(3, e.target.innerHTML)}>Metal</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(4, e.target.innerHTML)}>OpenCL</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(5, e.target.innerHTML)}>Vulkan</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(6, e.target.innerHTML)}>PassMark</Dropdown.Item>
-										</>
-										:
-										<>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(7, e.target.innerHTML)}>CPUMark</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(8, e.target.innerHTML)}>ThreadMark</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(9, e.target.innerHTML)}>Cinebench R23 Single Score</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(10, e.target.innerHTML)}>Cinebench R23 Multi Score</Dropdown.Item>
-											<Dropdown.Item onClick={(e) => onChangeBenchType(11, e.target.innerHTML)}>PassMark</Dropdown.Item>
-										</>
-									}
-								</Dropdown.Menu>
-							</Dropdown>
+							<div className="horizontal-group">
+								<NumberInput enteredValue={minPrice} setEnteredValue={onChangeMinPrice} />
+								<p>to</p>
+								<NumberInput enteredValue={maxPrice} setEnteredValue={onChangeMaxPrice} />
+							</div>
 						</div>
 					</div>
 
@@ -183,19 +214,16 @@ const Browse = () => {
 						<table className="priceperformance-table">
 							<thead>
 								<tr>
-									<th>Rank</th>
-									<th>Manufacturer</th>
-									<th>Model</th>
-									{ part !== "CPU" ? <th>Chipset</th> : <th></th> }
-									<th>Score</th>
-									<th>Price</th>
-									<th>Perf/Price Ratio</th>
+									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
+									<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
+									<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
+									{renderTableHeaders()}
 								</tr>
 							</thead>
 							<tbody>
 								{listLoading ?
 									<tr className='row-hover'>
-										<td className='table-spinner-container' colSpan='7'>
+										<td className='table-spinner-container' colSpan={tableWidth}>
 											<div className='table-spinner'>
 												<Spinner animation="border" role="status">
 													<span className="visually-hidden">Loading...</span>
@@ -205,15 +233,12 @@ const Browse = () => {
 									</tr>
 									:
 									<>
-										{partsList.map((partl, index) => (
+										{partsList.map((partl) => (
 											<tr className='row-hover' key={partl.partid}>
-    											<td>{(currentPage - 1) * pageSize + index + 1}</td>
 												<td>{partl.manufacturer}</td>
 												<td>{partl.model}</td>
-												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
-												<td>{partl.score}</td>
 												<td>{partl.price}</td>
-												<td>{parseFloat(partl.priceperformance).toFixed(4)}</td>
+												{renderRowCells(partl)}
 											</tr>
 										))}
 									</>

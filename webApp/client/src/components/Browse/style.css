@@ -46,3 +46,7 @@
 .priceperformance-table {
     margin-bottom: 0px;
 }
+
+.clickable {
+    cursor: pointer;
+}
