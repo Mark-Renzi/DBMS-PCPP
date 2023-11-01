@@ -6,6 +6,10 @@ import './style.css';
 
 class Header extends Component {
 
+	useEffect() {
+		this.fetchUserData();	
+	} [username];
+
 	componentDidMount() {
 		this.fetchUserData();
 	}
@@ -16,7 +20,9 @@ class Header extends Component {
 			if (response.data.username) {
 				localStorage.setItem('username', response?.data?.username);
 				this.setState({ username: response?.data?.username });
-			}
+			} else [
+				localStorage.removeItem('username')
+			]
 		} catch (error) {
 			console.error("Error fetching user data:", error);
 		}
