@@ -103,8 +103,9 @@ app.post('/api/newlist', ensureAuthenticated, function (req, res) {
 /**
  * @CONFIGURATOR
  */
-app.get('/api/configurator', ensureAuthenticated, function (req, res) {
-    configuratorController.getParts(req, res, db);
+app.get('/api/configurator/:listid', ensureAuthenticated, function (req, res) {
+    const listid = req.params.listid;
+    configuratorController.getParts(req, res, db, listid);
 });
 
 /**
