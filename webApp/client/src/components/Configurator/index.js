@@ -27,7 +27,7 @@ const Configurator = () => {
                 <td>{componentName}</td>
                 <td>{part.model}</td>
                 <td>{part.manufacturer}</td>
-                <td>{part.price}</td>
+                <td>${part.price}</td>
               </tr>
             );
           } 
@@ -54,7 +54,7 @@ const Configurator = () => {
   return (
     <>
       <h1>Configurator</h1>
-      <table>
+      <table id="part-table">
         <thead>
           <tr>
             <th>Component</th>
