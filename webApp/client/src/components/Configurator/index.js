@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
+import { useParams } from 'react-router-dom';
 
 const Configurator = () => {
-  const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case"];
+  const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
   const [parts, setParts] = useState([]);
+  const { listid } = useParams();
 
   useEffect(() => {
     getPartsList();
   }, []);
 
-  const addComponent = (componentName) => {
-    alert(`${componentName}`);
+  const addComponent = (index) => {
+    window.location.href = `http://localhost:3000/browse/${index}`;
   };
 
   const getPartsList = () => {
-    axios.get('/api/configurator')
+    axios.get(`/api/configurator/${listid}`)
       .then(response => {
         const partsList = componentNames.map((componentName, index) => {
           if (Object.keys(response.data[index]).length !== 0) {
@@ -34,7 +36,7 @@ const Configurator = () => {
               <tr key={index}>
                 <td>{componentName}</td>
                 <td>
-                  <button onClick={() => addComponent(componentName)}> + Choose {componentName}</button>
+                  <button onClick={() => addComponent(index)}> + Choose {componentName}</button>
                 </td>
                 <td></td>
                 <td></td>

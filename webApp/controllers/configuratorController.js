@@ -1,4 +1,4 @@
-const getParts = async (req, res, db) => {
+const getParts = async (req, res, db, listid) => {
     try {
         const tables = {
             0: 'CPU',
@@ -13,12 +13,9 @@ const getParts = async (req, res, db) => {
 
         const parts = [];
 
-        //need to change this to get list from somewhere
-        const selectedList = 'acabfdeb-b8a8-4ac4-9d45-6573071e5821';
-
         for (let i = 0; i < Object.keys(tables).length; i++) {
             //SELECT * FROM listcontains where listid = 'acabfdeb-b8a8-4ac4-9d45-6573071e5821' AND type = 0;
-            const item = await db.query(`SELECT * FROM listcontains WHERE listid = $1 AND type = $2`, [selectedList, i]);
+            const item = await db.query(`SELECT * FROM listcontains WHERE listid = $1 AND type = $2`, [listid, i]);
 
             if (item.rows.length === 0) {
                 parts.push({});

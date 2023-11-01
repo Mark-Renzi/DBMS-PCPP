@@ -19,12 +19,12 @@ const addList = async (name, description, req, res, db) => {
     let userID = req.user.id;
     const client = await db.connect();
     try {
-        client.query('BEGIN');
-        client.query(
-            'INSERT INTO partslist (userid, totalprice, name, description) VALUES ($1, $2, $3, $4);'
+        await client.query('BEGIN');
+        const newlistid = await client.query(
+            'INSERT INTO partslist (userid, totalprice, name, description) VALUES ($1, $2, $3, $4) RETURNING *;'
         , [userID, 0, name, description]);
-        client.query('COMMIT');
-        return res.status(200);
+        await client.query('COMMIT');
+        return res.status(200).json(newlistid?.rows[0]);
     } catch (e){
         console.log(e);
         client.query('ROLLBACK');

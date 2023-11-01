@@ -37,6 +37,7 @@ const HomePage = () => {
 		try {
 			const response = await axios.post(url, data);
 			console.log(response.data);
+			return response.data.listid;
 		} catch (error) {
 			console.error("Error posting list", error);
 		}
@@ -46,11 +47,12 @@ const HomePage = () => {
         setShowListModal(false);
     }
 
-	const handleListCreation = () => {
+	const handleListCreation = async () => {
 		console.log(newListName);
 		console.log(newListDescription);
 		setShowListModal(false);
-		createList();
+		const newlistid = await createList();
+		window.location.href = `http://localhost:3000/build/${newlistid}`;
 	}
 
 	const handleNewListClick = async () => {
@@ -103,13 +105,15 @@ const HomePage = () => {
 					<p className="card-text card-new text-center">+</p>
 				</button>
 				{ userLists.map((partlist) => (
-					<button className='card-button' key={partlist.listid}>
-						<p className="card-text text-center card-tit">{partlist.name}</p>
-						<hr className='hr-line' />
-						<p className="card-text text-center card-desc">{partlist.description}</p>
-						<hr className='hr-line' />
-						<p className="card-text text-center card-price">${partlist.totalprice}</p>
-					</button>
+					<Link to={`/build/${partlist.listid}`} key={partlist.listid}>
+						<button className='card-button'>
+							<p className="card-text text-center card-tit">{partlist.name}</p>
+							<hr className='hr-line' />
+							<p className="card-text text-center card-desc">{partlist.description}</p>
+							<hr className='hr-line' />
+							<p className="card-text text-center card-price">${partlist.totalprice}</p>
+						</button>
+					</Link>
 				))}
 			</div>
 		</div>
