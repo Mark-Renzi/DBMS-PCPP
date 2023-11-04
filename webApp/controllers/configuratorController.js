@@ -1,44 +1,42 @@
 const getParts = async (req, res, db, listid) => {
     try {
         const tables = {
-            0: 'CPU',
-            1: 'CPUCooler',
-            2: 'Motherboard',
-            3: 'RAM',
-            4: 'GPU',
-            5: 'Storage',
-            6: 'Tower',
-            7: 'PSU',
+            0: 'cpu',
+            1: 'cpucooler',
+            2: 'motherboard',
+            3: 'ram',
+            4: 'gpu',
+            5: 'storage',
+            6: 'tower',
+            7: 'psu',
         };
 
-        const parts = [];
+        const listItemsQuery = `
+            SELECT lc.quantity, cp.partid, cp.price, cp.manufacturer, cp.model, cp.parttype 
+            FROM listcontains lc
+            INNER JOIN computerpart cp ON lc.partid = cp.partid
+            WHERE lc.listid = $1
+        `;
+        const listItemsResult = await db.query(listItemsQuery, [listid]);
 
-        for (let i = 0; i < Object.keys(tables).length; i++) {
-            //SELECT * FROM listcontains where listid = 'acabfdeb-b8a8-4ac4-9d45-6573071e5821' AND type = 0;
-            const item = await db.query(`SELECT * FROM listcontains WHERE listid = $1 AND type = $2`, [listid, i]);
-
-            if (item.rows.length === 0) {
-                parts.push({});
-                continue;
+        const partsDetails = await Promise.all(listItemsResult.rows.map(async (item) => {
+            const partTypeTable = tables[item.parttype];
+            if (partTypeTable) {
+                const partDetailsQuery = `
+                    SELECT * FROM ${partTypeTable}
+                    WHERE partid = $1
+                `;
+                const partDetailsResult = await db.query(partDetailsQuery, [item.partid]);
+                partDetailsResult.rows[0].type = item.parttype;
+                return { ...item, ...partDetailsResult.rows[0] };
             }
+            return item;
+        }));
 
-            const partID = item.rows[0].partid;
-            const type = item.rows[0].type;
-
-            const computerpart = await db.query(`SELECT * FROM ComputerPart WHERE partID = $1`, [partID]);
-
-            if (computerpart.rows.length > 0) {
-                const {partid, price, manufacturer, model } = computerpart.rows[0];
-                parts.push({partid: partid, price: price, manufacturer: manufacturer, model:model, type:type});
-              } else {
-                parts.push({});
-              }
-        }
-
-        return res.status(200).json(parts);
+        return res.status(200).json(partsDetails);
     } catch (e) {
         console.log(e);
-        return res.status(404);
+        return res.status(500).send('Internal Server Error');
     }
 };
 

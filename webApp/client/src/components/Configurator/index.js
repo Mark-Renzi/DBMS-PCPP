@@ -29,10 +29,32 @@ const Configurator = () => {
         setListLoading(true);
         axios.get(`/api/configurator/${listid}`)
             .then(response => {
-                const newParts = componentNames.map((componentName, index) => {
-                    const hasPartData = response.data[index] && Object.keys(response.data[index]).length !== 0;
-                    return hasPartData ? response.data[index] : { name: componentName };
+                const newParts = componentNames.map(() => ({
+                    name: '',
+                    model: null,
+                    manufacturer: null,
+                    price: null,
+                    type: null,
+                }));
+    
+                response.data.forEach(part => {
+                    if (part.name) {
+                        newParts[part.type] = { ...part };
+                    } else if (part.parttype !== undefined) {
+                        newParts[part.parttype] = { ...part, name: componentNames[part.parttype] };
+                    }
                 });
+    
+                newParts.forEach((part, index) => {
+                    if (!part.model) {
+                        newParts[index] = {
+                            ...part,
+                            name: componentNames[index],
+                        };
+                    }
+                });
+    
+                console.log(newParts);
                 setParts(newParts);
                 setListLoading(false);
             })
@@ -40,20 +62,33 @@ const Configurator = () => {
                 console.error('Error fetching parts list!', error);
                 setListLoading(false);
             });
-    }
+    };
+    
 
     const renderRow = (part, index) => {
+        if (listLoading) {
+            return (
+                <tr key={index} className='config-row'>
+                    <td>{componentNames[index]}</td>
+                    <td colSpan="3" className="text-center">
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    </td>
+                </tr>
+            );
+        }
+    
         return (
-            <tr key={index}>
+            <tr key={index} className='config-row'>
                 <td>{part.name}</td>
-                <td>{part.model || (listLoading ? <Spinner animation="border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </Spinner> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>)}</td>
+                <td>{part.model || <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
                 <td>{part.manufacturer || ''}</td>
                 <td>{part.price ? `$${part.price}` : ''}</td>
             </tr>
         );
     };
+    
 
     return (
         <>

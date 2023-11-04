@@ -54,4 +54,7 @@
   background-color: transparent;
   color: black;
 }
-  
+
+.config-row {
+    height: 5rem;
+}
