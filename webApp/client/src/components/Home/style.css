@@ -40,6 +40,13 @@
     font-size: 25px;
 }
 
+.card-button.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
 .card-button {
     border: none;
     background-color: transparent;

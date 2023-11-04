@@ -75,7 +75,7 @@ function ensureAuthenticated(req, res, next) {
     } else {
         console.log("403 Forbidden")
         // 403 Forbidden
-        res.status(403);
+        res.status(403).send('Forbidden - You do not have permission to access this resource.');
     }
 }
 
@@ -95,12 +95,12 @@ function ensureListOwner(req, res, next) {
             } else {
                 console.log("403 Forbidden")
                 // 403 Forbidden
-                res.status(403);
+                res.status(403).send('Forbidden - You do not have permission to access this resource.');
             }
         })
         .catch((err) => {
             console.log(err);
-            res.status(500);
+            res.status(500).send('Internal Server Error');
         });
 }
 
@@ -126,12 +126,27 @@ app.post('/api/newlist', ensureAuthenticated, function (req, res) {
     listsController.addList(name, description, req, res, db);
 });
 
+app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.getListInfo(req, res, db);
+});
+
 /**
  * @CONFIGURATOR
  */
 app.get('/api/configurator/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
-    const listid = req.params.listid;
-    configuratorController.getParts(req, res, db, listid);
+    configuratorController.getParts(req, res, db);
+});
+
+app.post('/api/addpart/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.addPart(req, res, db);
+});
+
+app.delete('/api/deletepart/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.deletePart(req, res, db);
+});
+
+app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.updateQuantity(req, res, db);
 });
 
 /**

@@ -15,6 +15,22 @@ const getLists = async (req, res, db) => {
     }
 };
 
+const getListInfo = async (req, res, db) => {
+    let listID = req.params.listid;
+
+    try {
+        let listInfo = await db.query(`
+            SELECT * FROM partslist
+            WHERE listid = $1;
+        `, [listID]);
+
+        return res.status(200).json(listInfo?.rows[0]);
+    } catch (e){
+        console.log(e);
+        return res.status(404);
+    }
+}
+
 const addList = async (name, description, req, res, db) => {
     let userID = req.user.id;
     const client = await db.connect();
@@ -35,5 +51,7 @@ const addList = async (name, description, req, res, db) => {
 };
 
 module.exports = {
-    getLists, addList
+    getLists,
+    getListInfo,
+    addList
 };
