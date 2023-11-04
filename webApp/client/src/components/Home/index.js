@@ -5,24 +5,36 @@ import { Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
 	const [showListModal, setShowListModal] = useState(false);
 	const [newListName, setNewListName] = useState('');
 	const [newListDescription, setNewListDescription] = useState('');
+	const [listsLoading, setListsLoading] = useState(false);
 
     useEffect(() => {
         getLists();
     }, []);
 
     const getLists = async () => {
+		setListsLoading(true);
         const url = "/api/lists";
         let response;
+		console.log("Getting lists")
         try {
             response = await axios.get(url);
+			if (response.status !== 200) {
+				console.log("2")
+				setListsLoading(false);
+				return;
+			}
 			setUserLists(response.data);
+			setListsLoading(false);
         } catch {
+			console.log("1")
+			setListsLoading(false);
             console.error("Error fetching lists");
         }
     }
@@ -104,17 +116,27 @@ const HomePage = () => {
 				<button className='card-button' onClick={handleNewListClick} title='Create a new list'>
 					<p className="card-text card-new text-center">+</p>
 				</button>
-				{ userLists.map((partlist) => (
-					<Link className='card-link' to={`/build/${partlist.listid}`} key={partlist.listid}>
-						<button className='card-button'>
-							<p className="card-text text-center card-tit">{partlist.name}</p>
-							<hr className='hr-line' />
-							<p className="card-text text-center card-desc">{partlist.description}</p>
-							<hr className='hr-line' />
-							<p className="card-text text-center card-price">${partlist.totalprice}</p>
-						</button>
-					</Link>
-				))}
+				{ listsLoading ?
+					<button className='card-button spinner-container'>
+						<Spinner animation="grow" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</Spinner>
+					</button>
+					:
+					<>
+						{ userLists.map((partlist) => (
+							<Link className='card-link' to={`/build/${partlist.listid}`} key={partlist.listid}>
+								<button className='card-button'>
+									<p className="card-text text-center card-tit">{partlist.name}</p>
+									<hr className='hr-line' />
+									<p className="card-text text-center card-desc">{partlist.description}</p>
+									<hr className='hr-line' />
+									<p className="card-text text-center card-price">${partlist.totalprice}</p>
+								</button>
+							</Link>
+						))}
+					</>
+				}
 			</div>
 		</div>
 	)

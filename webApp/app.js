@@ -75,7 +75,7 @@ function ensureAuthenticated(req, res, next) {
     } else {
         console.log("403 Forbidden")
         // 403 Forbidden
-        res.status(403);
+        res.status(403).send('Forbidden - You do not have permission to access this resource.');
     }
 }
 
@@ -95,12 +95,12 @@ function ensureListOwner(req, res, next) {
             } else {
                 console.log("403 Forbidden")
                 // 403 Forbidden
-                res.status(403);
+                res.status(403).send('Forbidden - You do not have permission to access this resource.');
             }
         })
         .catch((err) => {
             console.log(err);
-            res.status(500);
+            res.status(500).send('Internal Server Error');
         });
 }
 
