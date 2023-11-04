@@ -130,8 +130,15 @@ app.post('/api/newlist', ensureAuthenticated, function (req, res) {
  * @CONFIGURATOR
  */
 app.get('/api/configurator/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
-    const listid = req.params.listid;
-    configuratorController.getParts(req, res, db, listid);
+    configuratorController.getParts(req, res, db);
+});
+
+app.post('/api/addpart/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.addPart(req, res, db);
+});
+
+app.delete('/api/deletepart/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.deletePart(req, res, db);
 });
 
 /**

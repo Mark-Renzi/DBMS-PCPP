@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretUp, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faCaretUp, faCaretDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 import './style.css';
 
 const Browse = () => {
@@ -24,10 +24,12 @@ const Browse = () => {
 	const [showEllipseModal, setShowEllipseModal] = useState(false);
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
+	const [addingPartId, setAddingPartId] = useState(null);
 
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price'];
 	const pageSize = 20;
 	const { id } = useParams();
+	const listid = new URLSearchParams(window.location.search).get('listid') || null;
 	let tableWidth = 3;
 
 	useEffect(() => {
@@ -93,33 +95,62 @@ const Browse = () => {
 		}
 	};
 
-	const renderTableHeaders = () => {
-		if (partsList.length === 0) return null;
-	
-		const partKeys = Object.keys(partsList[0]);
-	
-		const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
-	
-		tableWidth = filteredKeys.length + 3;
+	const addPartToList = async (partId) => {
+        setAddingPartId(partId);
+        try {
+            await axios.post(`/api/addpart/${listid}`, { partid: partId });
+            window.location.href = `/build/${listid}`;
+        } catch (e) {
+            console.error(e);
+            setAddingPartId(null);
+        }
+    };
 
-		return filteredKeys.map(key => (
-			<th key={key}>
-				{key.charAt(0).toUpperCase() + key.slice(1)}
-			</th>
-		));
-	};
+	const renderTableHeaders = () => {
+        const headers = partsList.length > 0 ? Object.keys(partsList[0]) : [];
+        const filteredHeaders = headers.filter(key => !blacklist.includes(key));
+
+        tableWidth = listid ? filteredHeaders.length + 4 : filteredHeaders.length + 3;
+
+        return (
+            <>
+                {filteredHeaders.map(key => (
+                    <th key={key} onClick={() => handleHeaderClick(key)}>
+                        {key.charAt(0).toUpperCase() + key.slice(1)} {renderSortArrow(key)}
+                    </th>
+                ))}
+                {listid && <th></th>}
+            </>
+        );
+    };
 	
 	const renderRowCells = (part) => {
-		const partKeys = Object.keys(part);
-	
-		const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
-	
-		return filteredKeys.map(key => (
-			<td key={`${part.partid}-${key}`}>
-				{part[key]}
-			</td>
-		));
-	};
+        const partKeys = Object.keys(part);
+        const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
+
+        return (
+            <>
+                {filteredKeys.map(key => (
+                    <td key={`${part.partid}-${key}`}>
+                        {part[key]}
+                    </td>
+                ))}
+                {listid && (
+                    <td>
+                        {addingPartId === part.partid ? (
+                            <Spinner animation="border" role="status" style={{color: '#007bff'}}>
+                                <span className="visually-hidden">Adding...</span>
+                            </Spinner>
+                        ) : (
+                            <Button variant="link" onClick={() => addPartToList(part.partid)} title='Add part to list'>
+                                <FontAwesomeIcon icon={faPlus} />
+                            </Button>
+                        )}
+                    </td>
+                )}
+            </>
+        );
+    };
 
 	const onhandleNext = () => {
         let nextPageNumber = Math.min(currentPage + 1, Math.ceil(totalResultNum / pageSize));
