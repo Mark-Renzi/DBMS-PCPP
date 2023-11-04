@@ -79,14 +79,19 @@ const Configurator = () => {
     const deletePart = (partid) => {
         axios.delete(`/api/deletepart/${listid}`, { data: { partid } })
             .then(() => {
-                // Remove the part from the UI after successful deletion
-                const updatedParts = parts.filter(part => part.partid !== partid);
+                const updatedParts = parts.map(part => {
+                    if (part.partid === partid) {
+                        return { ...part, model: null, manufacturer: null, price: null, quantity: 1 }; // Reset part details
+                    }
+                    return part;
+                });
                 setParts(updatedParts);
             })
             .catch(error => {
                 console.error('Error deleting part!', error);
             });
     };
+    
 
     const renderRow = (part, index) => {
         if (listLoading) {
