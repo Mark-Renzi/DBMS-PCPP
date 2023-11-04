@@ -126,6 +126,10 @@ app.post('/api/newlist', ensureAuthenticated, function (req, res) {
     listsController.addList(name, description, req, res, db);
 });
 
+app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.getListInfo(req, res, db);
+});
+
 /**
  * @CONFIGURATOR
  */
@@ -139,6 +143,10 @@ app.post('/api/addpart/:listid', ensureAuthenticated, ensureListOwner, function 
 
 app.delete('/api/deletepart/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
     configuratorController.deletePart(req, res, db);
+});
+
+app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    configuratorController.updateQuantity(req, res, db);
 });
 
 /**

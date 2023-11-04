@@ -50,7 +50,7 @@ const addPart = async (req, res, db) => {
 
         await client.query(`
             INSERT INTO listcontains (listid, partid, quantity)
-            VALUES ($1, $2, 0)
+            VALUES ($1, $2, 1)
         `, [listid, partid]);
 
         await client.query('COMMIT');
@@ -87,8 +87,33 @@ const deletePart = async (req, res, db) => {
     }
 };
 
+const updateQuantity = async (req, res, db) => {
+    const { listid } = req.params;
+    const { partid, quantity } = req.body;
+    const client = await db.connect();
+    try {
+        await client.query('BEGIN');
+
+        await client.query(`
+            UPDATE listcontains
+            SET quantity = $3
+            WHERE listid = $1 AND partid = $2
+        `, [listid, partid, quantity]);
+
+        await client.query('COMMIT');
+        return res.status(200).send('OK');
+    } catch (e) {
+        console.log(e);
+        await client.query('ROLLBACK');
+        return res.status(500).send('Internal Server Error');
+    } finally {
+        client.release();
+    }
+};
+
 module.exports = {
     getParts,
     addPart,
-    deletePart
+    deletePart,
+    updateQuantity
 };

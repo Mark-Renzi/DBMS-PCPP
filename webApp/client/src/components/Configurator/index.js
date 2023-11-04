@@ -9,6 +9,8 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 const Configurator = () => {
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
     const [listLoading, setListLoading] = useState(false);
+    const [listInfo, setListInfo] = useState({});
+    const [listInfoLoading, setListInfoLoading] = useState(false);
     const [parts, setParts] = useState(
         componentNames.map(name => ({
             name,
@@ -21,7 +23,18 @@ const Configurator = () => {
 
     useEffect(() => {
         getPartsList();
+        getListInfo();
     }, []);
+
+    useEffect(() => {
+        const totalPrice = parts.reduce((total, part) => {
+            if (part.price) {
+                return total + (part.price * part.quantity);
+            }
+            return total;
+        }, 0);
+        setListInfo({ ...listInfo, totalprice: totalPrice.toFixed(2) });
+    }, [parts]);
 
     const addComponent = (index) => {
         window.location.href = `http://localhost:3000/browse/${index}?listid=${listid}`;
@@ -56,7 +69,6 @@ const Configurator = () => {
                     }
                 });
     
-                console.log(newParts);
                 setParts(newParts);
                 setListLoading(false);
             })
@@ -65,16 +77,39 @@ const Configurator = () => {
                 setListLoading(false);
             });
     };
+
+    const getListInfo = () => {
+        setListInfoLoading(true);
+        axios.get(`/api/listinfo/${listid}`)
+            .then(response => {
+                setListInfo(response.data);
+                setListInfoLoading(false);
+            })
+            .catch(error => {
+                console.error('Error fetching list info!', error);
+            });
+    };
     
     const changeQuantity = (index, newQuantity) => {
-        // This function should update the quantity of the part
-        // in the parts state and then make an API call to update
-        // the quantity in the database if needed
-        // For now, it just updates the local state
         const updatedParts = [...parts];
-        updatedParts[index] = { ...updatedParts[index], quantity: newQuantity };
+        const partToUpdate = updatedParts[index];
+    
+        partToUpdate.quantity = newQuantity;
         setParts(updatedParts);
+    
+        axios.put(`/api/updatequantity/${listid}`, {
+            partid: partToUpdate.partid,
+            quantity: newQuantity
+        })
+        .then(response => {
+            // console.log(response);
+        })
+        .catch(error => {
+            console.error('Error updating quantity!', error);
+            // reset the quantity to its original value in case of error?
+        });
     };
+    
 
     const deletePart = (partid) => {
         axios.delete(`/api/deletepart/${listid}`, { data: { partid } })
@@ -92,7 +127,6 @@ const Configurator = () => {
             });
     };
     
-
     const renderRow = (part, index) => {
         if (listLoading) {
             return (
@@ -126,20 +160,28 @@ const Configurator = () => {
                         </select>
                     )}
                 </td>
-                <td>{part.price ? `$${part.price}` : ''}</td>
-                {part.model && (
-                    <td className="text-center">
-                        <FontAwesomeIcon icon={faTrash} className="text-danger trash-icon" onClick={() => deletePart(part.partid)} title='Remove this part from the list'/>
-                    </td>
-                )}
+                <td>{part.price ? `$${part.price * part.quantity}` : ''}</td>
+                {part.model ?
+                    (
+                        <td className="text-center">
+                            <FontAwesomeIcon icon={faTrash} className="text-danger trash-icon" onClick={() => deletePart(part.partid)} title='Remove this part from the list'/>
+                        </td>
+                    )
+                :
+                    <td></td>
+                }
             </tr>
         );
     };
     
 
     return (
-        <>
-            <h1>Configurator</h1>
+        <>            
+            { listInfo.name ? 
+                <h1>{listInfo.name}</h1>
+            :
+                <h1>Configurator</h1>
+            }
             <table id="part-table">
                 <thead>
                     <tr>
@@ -155,6 +197,19 @@ const Configurator = () => {
                     {parts.map(renderRow)}
                 </tbody>
             </table>
+            <div>
+                {listInfoLoading ?
+                    <Spinner animation="border" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                :
+                    <div>
+                        <p>Total Price: ${listInfo.totalprice}</p>
+                        <p>{listInfo.description}</p>
+                    </div>
+                }
+            </div>
+
         </>
     )
 };
