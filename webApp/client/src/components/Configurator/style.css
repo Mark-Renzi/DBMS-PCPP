@@ -11,7 +11,7 @@
     margin-bottom: 1.25rem;
     border-collapse: collapse;
     border: 0px;
-    box-shadow: 0;
+    box-shadow: none;
 }
 
 #component {
@@ -33,13 +33,18 @@
 }
   
 #part-table td button {
-    background: rgb(44, 133, 197);
+    background: #002358e5;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 12px;
     padding: 5px;
     color: white;
     border-radius: 4px;
     margin: 9.5px 0;
+    outline: none;
+}
+
+#part-table td button:hover {
+    background:  #001b46;
 }
 
 #part-table tr:nth-child(even) {
@@ -48,11 +53,14 @@
 
 #part-table tr {
     border: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #cecece;
 }
 
 #part-table th {
   background-color: transparent;
   color: black;
+  font-size: 11px;
 }
 
 .config-row {

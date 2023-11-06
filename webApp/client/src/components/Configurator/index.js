@@ -11,6 +11,7 @@ const Configurator = () => {
     const [listLoading, setListLoading] = useState(false);
     const [listInfo, setListInfo] = useState({});
     const [listInfoLoading, setListInfoLoading] = useState(false);
+    const [listTDP, setListTDP] = useState({});
     const [parts, setParts] = useState(
         componentNames.map(name => ({
             name,
@@ -24,6 +25,7 @@ const Configurator = () => {
     useEffect(() => {
         getPartsList();
         getListInfo();
+        getListTDP();
     }, []);
 
     useEffect(() => {
@@ -89,6 +91,16 @@ const Configurator = () => {
                 console.error('Error fetching list info!', error);
             });
     };
+
+    const getListTDP = () => {
+        axios.get(`/api/listtdp/${listid}`)
+            .then(response => {
+                setListTDP(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching list TDP!', error);
+            });
+    }
     
     const changeQuantity = (index, newQuantity) => {
         const updatedParts = [...parts];
@@ -178,9 +190,9 @@ const Configurator = () => {
     return (
         <>            
             { listInfo.name ? 
-                <h1>{listInfo.name}</h1>
+                <h2>{listInfo.name}</h2>
             :
-                <h1>Configurator</h1>
+                <h2>Configurator</h2>
             }
             <table id="part-table">
                 <thead>
@@ -190,7 +202,7 @@ const Configurator = () => {
                         <th>Manufacturer</th>
                         <th>Quantity</th>
                         <th>Price</th>
-                        <th>Delete</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -204,7 +216,8 @@ const Configurator = () => {
                     </Spinner>
                 :
                     <div>
-                        <p>Total Price: ${listInfo.totalprice}</p>
+                        <div class="tdp"><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp} W</p></div>
+                        <p><strong>Total Price:</strong> ${listInfo.totalprice}</p>
                         <p>{listInfo.description}</p>
                     </div>
                 }
