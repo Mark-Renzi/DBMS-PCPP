@@ -70,3 +70,12 @@
 .trash-icon {
     cursor: pointer;
 }
+
+select {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
