@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
@@ -16,7 +16,7 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import ListItemText from '@mui/material/ListItemText';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import Chip from '@mui/material/Chip';
 import './style.css';
@@ -45,6 +45,9 @@ const Browse = () => {
 		categorical: {}
 	});
 	const [intermediateNumericalFilters, setIntermediateNumericalFilters] = useState({});
+	const [selectionListHeight, setSelectionListHeight] = useState(0);
+	const tableRef = useRef(null);
+	const selectionListRef = useRef(null);
 
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid'];
 	const pageSize = 20;
@@ -77,6 +80,24 @@ const Browse = () => {
 		onSubmit();
 	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
 
+	useEffect(() => {
+		const updateSelectionListHeight = () => {
+			if (tableRef.current && !listLoading) {
+				const tableHeight = tableRef.current.clientHeight;
+				if (tableHeight > 0) {
+					setSelectionListHeight(tableHeight);
+				}
+			}
+		};
+
+		updateSelectionListHeight();
+
+		window.addEventListener('resize', updateSelectionListHeight);
+
+		return () => {
+			window.removeEventListener('resize', updateSelectionListHeight);
+		};
+	}, [listLoading]);
 
 	const fetchMenuItems = async () => {
 		const url = "/api/browse/menu";
@@ -124,7 +145,6 @@ const Browse = () => {
 		  
 			setDynamicFilters(newDynamicFilters);
 
-			console.log(response?.data)
 			setListLoading(false);
 		} catch (e) {
 			console.log(e)
@@ -310,7 +330,11 @@ const Browse = () => {
 					Search for {part} parts
 				</h1>
 				<div className="filters-table">
-					<div className="selection-list">
+					<div
+						className="selection-list"
+						ref={selectionListRef}
+						style={{ maxHeight: `calc(${selectionListHeight}px - 16px)`, overflowY: 'auto' }}
+					>
 						{id && id < 8 && id >= 0 ?
 							<></>
 							:
@@ -392,30 +416,32 @@ const Browse = () => {
 									<p>
 										{key.charAt(0).toUpperCase() + key.slice(1)}: {intermediateNumericalFilters[key]?.join(" - ")}
 									</p>
-									<Slider
-										value={intermediateNumericalFilters[key] || filter.range}
-										onChange={(event, newValue) => {
-											setIntermediateNumericalFilters({
-												...intermediateNumericalFilters,
-												[key]: newValue
-											});
-										}}
-										onChangeCommitted={(event, newValue) => {
-											setDynamicFilters({
-												...dynamicFilters,
-												numerical: {
-													...dynamicFilters.numerical,
-													[key]: { ...filter, value: newValue }
-												}
-											});
-										}}
-										valueLabelDisplay="auto"
-										aria-labelledby="range-slider"
-										className='slider'
-										getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
-										min={parseFloat(filter.range[0])}
-										max={parseFloat(filter.range[1])}
-									/>
+									<div className="horizontal-group slider">
+										<Slider
+											value={intermediateNumericalFilters[key] || filter.range}
+											onChange={(event, newValue) => {
+												setIntermediateNumericalFilters({
+													...intermediateNumericalFilters,
+													[key]: newValue
+												});
+											}}
+											onChangeCommitted={(event, newValue) => {
+												setDynamicFilters({
+													...dynamicFilters,
+													numerical: {
+														...dynamicFilters.numerical,
+														[key]: { ...filter, value: newValue }
+													}
+												});
+											}}
+											valueLabelDisplay="auto"
+											aria-labelledby="range-slider"
+											className='slider'
+											getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
+											min={parseFloat(filter.range[0])}
+											max={parseFloat(filter.range[1])}
+										/>
+									</div>
 								</div>
 							))
 						}
@@ -467,7 +493,7 @@ const Browse = () => {
 
 					</div>
 
-					<div className='table-scroll'>
+					<div className='table-scroll' ref={tableRef}>
 						<table className="priceperformance-table">
 							<thead>
 								<tr>
