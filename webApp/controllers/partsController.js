@@ -1,38 +1,4 @@
 
-const getTypeMapping = (partType) => {
-    let parttype = null;
-    switch (partType) {
-        case "CPU":
-            parttype = 0;
-            break;
-        case "CPUCooler":
-            parttype = 1;
-            break;
-        case "Motherboard":
-            parttype = 2;
-            break;
-        case "RAM":
-            parttype = 3;
-            break;
-        case "GPU":
-            parttype = 4;
-            break;
-        case "Storage":
-            parttype = 5;
-            break;
-        case "Tower":
-            parttype = 6;
-            break;
-        case "PSU":
-            parttype = 7;
-            break;
-        default:
-            partType = null;
-            parttype = null;
-    }
-    return [parttype, partType];
-}
-
 const browse = async (req, res, db) => {
     let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber } = req.body;
 
@@ -46,7 +12,7 @@ const browse = async (req, res, db) => {
     let conditions = [];
     let values = [];
 
-    console.log(req.body.dynamicFilters)
+    // console.log(req.body.dynamicFilters)
 
     try {
 
@@ -135,10 +101,6 @@ const browse = async (req, res, db) => {
 
         let results = await db.query(resultQuery, values);
 
-
-
-
-        //return res.status(200).json(benchmarks?.rows);
         return res.status(200).json({
             partslist: results?.rows,
             totalResultNum: resultCount?.rows[0]?.count
@@ -158,7 +120,6 @@ const menuItems = async (req, res, db) => {
     [parttype, partType] = getTypeMapping(partType);
 
     try {
-        // Initialize an array to hold parameterized values for the query
         let values = [];
         let query = `
             SELECT DISTINCT manufacturer, MAX(price) AS highest_price, MIN(price) AS lowest_price FROM computerpart
@@ -171,7 +132,6 @@ const menuItems = async (req, res, db) => {
         
         let results = await db.query(query, values);
 
-        // Extract manufacturers and price range
         let manufacturers = results.rows.map(row => row.manufacturer);
         let prices = results.rows.reduce((acc, row) => {
             acc.highest = Math.max(acc.highest, row.highest_price);
@@ -197,6 +157,40 @@ const menuItems = async (req, res, db) => {
         return res.status(404).send('Error retrieving data');
     }
 };
+
+const getTypeMapping = (partType) => {
+    let parttype = null;
+    switch (partType) {
+        case "CPU":
+            parttype = 0;
+            break;
+        case "CPUCooler":
+            parttype = 1;
+            break;
+        case "Motherboard":
+            parttype = 2;
+            break;
+        case "RAM":
+            parttype = 3;
+            break;
+        case "GPU":
+            parttype = 4;
+            break;
+        case "Storage":
+            parttype = 5;
+            break;
+        case "Tower":
+            parttype = 6;
+            break;
+        case "PSU":
+            parttype = 7;
+            break;
+        default:
+            partType = null;
+            parttype = null;
+    }
+    return [parttype, partType];
+}
 
 const getDynamicOptions = async (parttype, db, options) => {
     if (parttype === 0) {

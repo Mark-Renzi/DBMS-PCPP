@@ -94,7 +94,6 @@ const Browse = () => {
 			setMinPrice(response?.data?.numerical.price[0]);
 			setMaxPrice(response?.data?.numerical.price[1]);
 
-			// Process and create dynamic filters
 			const newDynamicFilters = {
 				numerical: {},
 				categorical: {}
