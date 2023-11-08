@@ -177,15 +177,34 @@ const menuItems = async (req, res, db) => {
             return acc;
         }, { highest: 0, lowest: Number.MAX_VALUE });
 
-        return res.status(200).json({
+        let options = {
             "categorical": {
                 "manufacturers": manufacturers
             },
             "numerical": {
                 "price": [prices.lowest, prices.highest]
             }
+        };
+
+        if (parttype === 0) {
+            let [coresResult, clockResult, tdpResult, graphicsResult, socketResult] = await Promise.all([
+                db.query('SELECT MAX(cores) AS max_cores, MIN(cores) AS min_cores FROM cpu'),
+                db.query('SELECT MAX(boostclock) AS max_boostclock, MIN(boostclock) AS min_boostclock, MAX(coreclock) AS max_coreclock, MIN(coreclock) AS min_coreclock FROM cpu'),
+                db.query('SELECT MAX(tdp) AS max_tdp, MIN(tdp) AS min_tdp FROM cpu'),
+                db.query('SELECT DISTINCT graphics FROM cpu'),
+                db.query('SELECT DISTINCT socket FROM cpu')
+            ]);
+
+            options.numerical.cores = [coresResult.rows[0].min_cores, coresResult.rows[0].max_cores];
+            options.numerical.boostclock = [clockResult.rows[0].min_boostclock, clockResult.rows[0].max_boostclock];
+            options.numerical.coreclock = [clockResult.rows[0].min_coreclock, clockResult.rows[0].max_coreclock];
+            options.numerical.tdp = [tdpResult.rows[0].min_tdp, tdpResult.rows[0].max_tdp];
+
+            options.categorical.graphics = graphicsResult.rows.filter(row => row.graphics !== null).map(row => row.graphics);
+            options.categorical.socket = socketResult.rows.filter(row => row.socket !== null).map(row => row.socket);
         }
-        );
+
+        return res.status(200).json(options);
 
     } catch (e) {
         console.log(e);

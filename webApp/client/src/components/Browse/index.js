@@ -65,6 +65,10 @@ const Browse = () => {
 	}, [part]);
 
 	useEffect(() => {
+		setCurrentPage(1);
+	}, [selectedManufacturers]);
+
+	useEffect(() => {
 		onSubmit();
 	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers]);
 
