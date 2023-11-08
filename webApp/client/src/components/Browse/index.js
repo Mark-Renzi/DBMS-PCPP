@@ -40,6 +40,11 @@ const Browse = () => {
 	const [addingPartId, setAddingPartId] = useState(null);
 	const [manufacturerMenuProps, setManufacturerMenuProps] = useState([]);
 	const [selectedManufacturers, setSelectedManufacturers] = useState([]);
+	const [dynamicFilters, setDynamicFilters] = useState({
+		numerical: {},
+		categorical: {}
+	});
+	const [intermediateNumericalFilters, setIntermediateNumericalFilters] = useState({});
 
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid'];
 	const pageSize = 20;
@@ -70,7 +75,7 @@ const Browse = () => {
 
 	useEffect(() => {
 		onSubmit();
-	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers]);
+	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
 
 
 	const fetchMenuItems = async () => {
@@ -88,6 +93,38 @@ const Browse = () => {
 			setIntermediateMaxPrice(response?.data?.numerical.price[1]);
 			setMinPrice(response?.data?.numerical.price[0]);
 			setMaxPrice(response?.data?.numerical.price[1]);
+
+			// Process and create dynamic filters
+			const newDynamicFilters = {
+				numerical: {},
+				categorical: {}
+			};
+		  
+			for (const key of Object.keys(response.data.numerical)) {
+				if (key !== 'price') {
+					newDynamicFilters.numerical[key] = {
+						range: response.data.numerical[key],
+						value: response.data.numerical[key] // set the default range value
+					};
+				}
+			}
+			const newIntermediateValues = {};
+			Object.keys(dynamicFilters.numerical).forEach(key => {
+				newIntermediateValues[key] = dynamicFilters.numerical[key].range;
+			});
+			setIntermediateNumericalFilters(newIntermediateValues);
+		  
+			for (const key of Object.keys(response.data.categorical)) {
+				if (key !== 'manufacturers') {
+					newDynamicFilters.categorical[key] = {
+						options: response.data.categorical[key],
+						value: [] // default to an empty selection
+					};
+				}
+			}
+		  
+			setDynamicFilters(newDynamicFilters);
+
 			console.log(response?.data)
 			setListLoading(false);
 		} catch (e) {
@@ -115,6 +152,20 @@ const Browse = () => {
 	const onSubmit = async () => {
 		setListLoading(true);
 		const url = "/api/browse";
+
+		const dynamicData = {
+			numerical: {},
+			categorical: {}
+		};
+	
+		for (const [key, value] of Object.entries(dynamicFilters.numerical)) {
+			dynamicData.numerical[key] = value.value;
+		}
+	
+		for (const [key, value] of Object.entries(dynamicFilters.categorical)) {
+			dynamicData.categorical[key] = value.value;
+		}
+
 		const data = {
 			partType: part,
 			minPrice: minPrice,
@@ -123,8 +174,10 @@ const Browse = () => {
 			orderBy: orderBy,
 			orderDir: orderDir,
 			pageNumber: currentPage,
-			limitNumber: pageSize
+			limitNumber: pageSize,
+			dynamicFilters: dynamicData
 		};
+		
 		let response;
 		try {
 			response = await axios.post(url, data);
@@ -334,6 +387,85 @@ const Browse = () => {
 								</Select>
 							</FormControl>
 						</div>
+						{
+							Object.entries(dynamicFilters.numerical).map(([key, filter]) => (
+								<div key={key} className="vertical-group slider">
+									<p>
+										{key.charAt(0).toUpperCase() + key.slice(1)}: {intermediateNumericalFilters[key]?.join(" - ")}
+									</p>
+									<Slider
+										value={intermediateNumericalFilters[key] || filter.range}
+										onChange={(event, newValue) => {
+											setIntermediateNumericalFilters({
+												...intermediateNumericalFilters,
+												[key]: newValue
+											});
+										}}
+										onChangeCommitted={(event, newValue) => {
+											setDynamicFilters({
+												...dynamicFilters,
+												numerical: {
+													...dynamicFilters.numerical,
+													[key]: { ...filter, value: newValue }
+												}
+											});
+										}}
+										valueLabelDisplay="auto"
+										aria-labelledby="range-slider"
+										className='slider'
+										getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
+										min={parseFloat(filter.range[0])}
+										max={parseFloat(filter.range[1])}
+									/>
+								</div>
+							))
+						}
+
+						{
+						Object.entries(dynamicFilters.categorical).map(([key, filter]) => (
+							<div key={key} className="vertical-group">
+							<p>
+								Select {key.charAt(0).toUpperCase() + key.slice(1)}:
+							</p>
+							<FormControl sx={{ m: 1, width: 300 }}>
+								<InputLabel id={`label-${key}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</InputLabel>
+								<Select
+								labelId={`label-${key}`}
+								id={`select-${key}`}
+								multiple
+								value={filter.value}
+								onChange={(event) => {
+									setDynamicFilters({
+									...dynamicFilters,
+									categorical: {
+										...dynamicFilters.categorical,
+										[key]: { ...filter, value: event.target.value }
+									}
+									});
+								}}
+								input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
+								renderValue={(selected) => (
+									<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+									{selected.map((value) => (
+										<Chip key={value} label={value} />
+									))}
+									</div>
+								)}
+								MenuProps={MenuProps}
+								>
+								{filter.options.map((name) => (
+									<MenuItem key={name} value={name}>
+									<Checkbox checked={filter.value.indexOf(name) > -1} />
+									<ListItemText primary={name} />
+									</MenuItem>
+								))}
+								</Select>
+							</FormControl>
+							</div>
+						))
+						}
+
+
 					</div>
 
 					<div className='table-scroll'>
