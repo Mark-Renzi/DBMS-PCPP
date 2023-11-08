@@ -160,6 +160,10 @@ app.post('/api/browse', function (req, res) {
     partsController.browse(req, res, db);
 });
 
+app.post('/api/browse/menu', function (req, res) {
+    partsController.menuItems(req, res, db);
+});
+
 
 /**
  * @AUTH

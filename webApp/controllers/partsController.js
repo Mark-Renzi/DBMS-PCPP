@@ -1,4 +1,38 @@
 
+const getTypeMapping = (partType) => {
+    let parttype = null;
+    switch (partType) {
+        case "CPU":
+            parttype = 0;
+            break;
+        case "CPUCooler":
+            parttype = 1;
+            break;
+        case "Motherboard":
+            parttype = 2;
+            break;
+        case "RAM":
+            parttype = 3;
+            break;
+        case "GPU":
+            parttype = 4;
+            break;
+        case "Storage":
+            parttype = 5;
+            break;
+        case "Tower":
+            parttype = 6;
+            break;
+        case "PSU":
+            parttype = 7;
+            break;
+        default:
+            partType = null;
+            parttype = null;
+    }
+    return [parttype, partType];
+}
+
 const browse = async (req, res, db) => {
     let { partType, minPrice, maxPrice, orderBy, orderDir, pageNumber, limitNumber } = req.body;
 
@@ -15,35 +49,8 @@ const browse = async (req, res, db) => {
     try {
 
         let parttype = null;
-        switch (partType) {
-            case "CPU":
-                parttype = 0;
-                break;
-            case "CPUCooler":
-                parttype = 1;
-                break;
-            case "Motherboard":
-                parttype = 2;
-                break;
-            case "RAM":
-                parttype = 3;
-                break;
-            case "GPU":
-                parttype = 4;
-                break;
-            case "Storage":
-                parttype = 5;
-                break;
-            case "Tower":
-                parttype = 6;
-                break;
-            case "PSU":
-                parttype = 7;
-                break;
-            default:
-                partType = null;
-                parttype = null;
-        }
+
+        [parttype, partType] = getTypeMapping(partType);
 
         if (parttype !== null && parttype >= 0 && parttype <= 7) {
             conditions.push(`parttype = $${values.length + 1}`);
@@ -127,6 +134,37 @@ const browse = async (req, res, db) => {
 
 };
 
+const menuItems = async (req, res, db) => {
+
+    let { partType } = req.body;
+
+    let parttype = null;
+    [parttype, partType] = getTypeMapping(partType);
+
+    try {
+        // return list of distinct manufacturers where parttype = parttype
+        let values = [];
+        let query = `
+            SELECT DISTINCT manufacturer FROM computerpart
+        `;
+        if (parttype !== null) {
+            query += `WHERE parttype = $${values.length + 1} `;
+            values.push(parttype);
+        }
+        query += `ORDER BY manufacturer ASC`;
+        let results = await db.query(query, values);
+        let manufacturers = results.rows.map(row => row.manufacturer);
+        return res.status(200).json({
+            manufacturers: manufacturers
+        });
+
+    } catch (e) {
+        console.log(e);
+        return res.status(404);
+    }
+};
+
 module.exports = {
-    browse
+    browse,
+    menuItems
 };

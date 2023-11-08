@@ -68,3 +68,9 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
+
+@media (max-width: 80rem) {
+    .selection-list {
+        flex-direction: column;
+    }
+}

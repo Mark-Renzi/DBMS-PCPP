@@ -11,6 +11,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Slider from '@mui/material/Slider';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import ListItemText from '@mui/material/ListItemText';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Checkbox from '@mui/material/Checkbox';
+import Chip from '@mui/material/Chip';
 import './style.css';
 
 const Browse = () => {
@@ -28,22 +36,52 @@ const Browse = () => {
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
 	const [addingPartId, setAddingPartId] = useState(null);
+	const [manufacturerMenuProps, setManufacturerMenuProps] = useState([]);
+	const [selectedManufacturers, setSelectedManufacturers] = useState([]);
 
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price'];
 	const pageSize = 20;
 	const { id } = useParams();
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
 	let tableWidth = 3;
+	const MenuProps = {
+		PaperProps: {
+			style: {
+			maxHeight: 48 * 4.5 + 8,
+			width: 250,
+			},
+		},
+	};
 
 	useEffect(() => {
+		fetchMenuItems();
 		onSubmit();
 	}, []);
+
+	useEffect(() => {
+		fetchMenuItems();
+	}, [part]);
 
 	useEffect(() => {
 		onSubmit();
 	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage]);
 
 
+	const fetchMenuItems = async () => {
+		const url = "/api/browse/menu";
+		const data = {
+			partType: part
+		};
+		let response;
+		try {
+			response = await axios.post(url, data);
+			setManufacturerMenuProps(response?.data?.manufacturers);
+			console.log(response?.data)
+			setListLoading(false);
+		} catch (e) {
+			console.log(e)
+		}
+	}
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
@@ -251,6 +289,31 @@ const Browse = () => {
 									max={10000}
 								/>
 							</div>
+						</div>
+						<div className="vertical-group">
+							<p>
+								Select Manufacturer(s):
+							</p>
+							<FormControl sx={{ m: 1, width: 300 }}>
+								<InputLabel id="demo-multiple-checkbox-label">Manufacturer(s)</InputLabel>
+								<Select
+									labelId="demo-multiple-checkbox-label"
+									id="demo-multiple-checkbox"
+									multiple
+									value={selectedManufacturers}
+									onChange={(event) => setSelectedManufacturers(event.target.value)}
+									input={<OutlinedInput label="Tag" />}
+									renderValue={(selectedManufacturers) => selectedManufacturers.join(', ')}
+									MenuProps={MenuProps}
+								>
+									{manufacturerMenuProps.map((name) => (
+										<MenuItem key={name} value={name}>
+											<Checkbox checked={selectedManufacturers.indexOf(name) > -1} />
+											<ListItemText primary={name} />
+										</MenuItem>
+									))}
+								</Select>
+							</FormControl>
 						</div>
 					</div>
 
