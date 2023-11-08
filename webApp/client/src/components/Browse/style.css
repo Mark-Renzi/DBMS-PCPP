@@ -59,7 +59,8 @@
     align-items: flex-start;
     width: 100%;
     gap: 2rem;
-}
+    height: 100%;
+  }
 
 .filters-table {
     width: 100%;
@@ -67,6 +68,20 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.horizontal-group.slider {
+    padding: 0 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection-list > .vertical-group {
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 100%;
 }
 
 @media (max-width: 80rem) {

@@ -28,6 +28,8 @@ const Browse = () => {
 	const [maxPrice, setMaxPrice] = useState(10000);
 	const [intermediateMinPrice, setIntermediateMinPrice] = useState(0);
 	const [intermediateMaxPrice, setIntermediateMaxPrice] = useState(10000);
+	const [minPriceRange, setMinPriceRange] = useState(0);
+	const [maxPriceRange, setMaxPriceRange] = useState(10000);
 	const [orderBy, setOrderBy] = useState('price');
 	const [orderDir, setOrderDir] = useState('ASC');
 	const [listLoading, setListLoading] = useState(true);
@@ -39,7 +41,7 @@ const Browse = () => {
 	const [manufacturerMenuProps, setManufacturerMenuProps] = useState([]);
 	const [selectedManufacturers, setSelectedManufacturers] = useState([]);
 
-	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price'];
+	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid'];
 	const pageSize = 20;
 	const { id } = useParams();
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
@@ -64,7 +66,7 @@ const Browse = () => {
 
 	useEffect(() => {
 		onSubmit();
-	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage]);
+	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers]);
 
 
 	const fetchMenuItems = async () => {
@@ -75,7 +77,13 @@ const Browse = () => {
 		let response;
 		try {
 			response = await axios.post(url, data);
-			setManufacturerMenuProps(response?.data?.manufacturers);
+			setManufacturerMenuProps(response?.data?.categorical.manufacturers);
+			setMinPriceRange(response?.data?.numerical.price[0]);
+			setMaxPriceRange(response?.data?.numerical.price[1]);
+			setIntermediateMinPrice(response?.data?.numerical.price[0]);
+			setIntermediateMaxPrice(response?.data?.numerical.price[1]);
+			setMinPrice(response?.data?.numerical.price[0]);
+			setMaxPrice(response?.data?.numerical.price[1]);
 			console.log(response?.data)
 			setListLoading(false);
 		} catch (e) {
@@ -107,6 +115,7 @@ const Browse = () => {
 			partType: part,
 			minPrice: minPrice,
 			maxPrice: maxPrice,
+			manufacturers: selectedManufacturers,
 			orderBy: orderBy,
 			orderDir: orderDir,
 			pageNumber: currentPage,
@@ -158,7 +167,7 @@ const Browse = () => {
         return (
             <>
                 {filteredHeaders.map(key => (
-                    <th key={key} onClick={() => handleHeaderClick(key)}>
+                    <th key={key} >
                         {key.charAt(0).toUpperCase() + key.slice(1)} {renderSortArrow(key)}
                     </th>
                 ))}
@@ -259,7 +268,7 @@ const Browse = () => {
 									</Dropdown.Toggle>
 
 									<Dropdown.Menu>
-										<Dropdown.Item onClick={() => onChangePartType('ALL')}>ALL</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('All')}>All</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
@@ -285,8 +294,8 @@ const Browse = () => {
 									aria-labelledby="range-slider"
 									className='slider'
 									getAriaValueText={() => `${intermediateMinPrice} - ${intermediateMaxPrice}`}
-									min={0}
-									max={10000}
+									min={minPriceRange}
+									max={maxPriceRange}
 								/>
 							</div>
 						</div>
@@ -302,8 +311,14 @@ const Browse = () => {
 									multiple
 									value={selectedManufacturers}
 									onChange={(event) => setSelectedManufacturers(event.target.value)}
-									input={<OutlinedInput label="Tag" />}
-									renderValue={(selectedManufacturers) => selectedManufacturers.join(', ')}
+									input={<OutlinedInput label="Manufacturer(s)" />}
+									renderValue={(selected) => (
+										<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+											{selected.map((value) => (
+												<Chip key={value} label={value} />
+											))}
+										</div>
+									)}
 									MenuProps={MenuProps}
 								>
 									{manufacturerMenuProps.map((name) => (

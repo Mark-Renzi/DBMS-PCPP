@@ -34,7 +34,7 @@ const getTypeMapping = (partType) => {
 }
 
 const browse = async (req, res, db) => {
-    let { partType, minPrice, maxPrice, orderBy, orderDir, pageNumber, limitNumber } = req.body;
+    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber } = req.body;
 
     pageNumber = parseInt(pageNumber);
     limitNumber = parseInt(limitNumber);
@@ -60,16 +60,21 @@ const browse = async (req, res, db) => {
                 WHERE computerpart.partid = ${partType}.partid
             `;
         } else {
+            // subquery = `
+            //     SELECT * FROM computerpart
+            //     LEFT JOIN cpu ON computerpart.partid = cpu.partid
+            //     LEFT JOIN cpucooler ON computerpart.partid = cpucooler.partid
+            //     LEFT JOIN motherboard ON computerpart.partid = motherboard.partid
+            //     LEFT JOIN ram ON computerpart.partid = ram.partid
+            //     LEFT JOIN gpu ON computerpart.partid = gpu.partid
+            //     LEFT JOIN storage ON computerpart.partid = storage.partid
+            //     LEFT JOIN tower ON computerpart.partid = tower.partid
+            //     LEFT JOIN psu ON computerpart.partid = psu.partid
+            //     WHERE parttype IS NOT NULL
+            // `;
             subquery = `
-                SELECT * FROM computerpart 
-                WHERE partid IN (SELECT partid FROM cpu)
-                OR partid IN (SELECT partid FROM cpucooler)
-                OR partid IN (SELECT partid FROM motherboard)
-                OR partid IN (SELECT partid FROM ram)
-                OR partid IN (SELECT partid FROM gpu)
-                OR partid IN (SELECT partid FROM storage)
-                OR partid IN (SELECT partid FROM tower)
-                OR partid IN (SELECT partid FROM psu)
+                SELECT * FROM computerpart
+                WHERE parttype IS NOT NULL
             `;
         }
 
@@ -83,6 +88,15 @@ const browse = async (req, res, db) => {
         } else if (maxPrice) {
             conditions.push(`price <= $${values.length + 1}`);
             values.push(maxPrice);
+        }
+
+        if (manufacturers && manufacturers.length > 0) {
+            let manufacturerConditions = [];
+            for (let i = 0; i < manufacturers.length; i++) {
+                manufacturerConditions.push(`manufacturer = $${values.length + 1}`);
+                values.push(manufacturers[i]);
+            }
+            conditions.push(`(${manufacturerConditions.join(' OR ')})`);
         }
         
 
@@ -142,25 +156,40 @@ const menuItems = async (req, res, db) => {
     [parttype, partType] = getTypeMapping(partType);
 
     try {
-        // return list of distinct manufacturers where parttype = parttype
+        // Initialize an array to hold parameterized values for the query
         let values = [];
         let query = `
-            SELECT DISTINCT manufacturer FROM computerpart
+            SELECT DISTINCT manufacturer, MAX(price) AS highest_price, MIN(price) AS lowest_price FROM computerpart
         `;
         if (parttype !== null) {
             query += `WHERE parttype = $${values.length + 1} `;
             values.push(parttype);
         }
-        query += `ORDER BY manufacturer ASC`;
+        query += `GROUP BY manufacturer ORDER BY manufacturer ASC`;
+        
         let results = await db.query(query, values);
+
+        // Extract manufacturers and price range
         let manufacturers = results.rows.map(row => row.manufacturer);
+        let prices = results.rows.reduce((acc, row) => {
+            acc.highest = Math.max(acc.highest, row.highest_price);
+            acc.lowest = Math.min(acc.lowest, row.lowest_price);
+            return acc;
+        }, { highest: 0, lowest: Number.MAX_VALUE });
+
         return res.status(200).json({
-            manufacturers: manufacturers
-        });
+            "categorical": {
+                "manufacturers": manufacturers
+            },
+            "numerical": {
+                "price": [prices.lowest, prices.highest]
+            }
+        }
+        );
 
     } catch (e) {
         console.log(e);
-        return res.status(404);
+        return res.status(404).send('Error retrieving data');
     }
 };
 
