@@ -14,10 +14,6 @@
     width: 100%;
 }
 
-.selection-list {
-    gap: 2rem;
-}
-
 .pagination-organize {
     display: flex;
     flex-direction: row;
@@ -49,4 +45,26 @@
 
 .clickable {
     cursor: pointer;
+}
+
+.slider {
+    width: 100%;
+
+}
+
+.selection-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 2rem;
+}
+
+.filters-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }

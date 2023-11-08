@@ -10,13 +10,16 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Slider from '@mui/material/Slider';
 import './style.css';
 
 const Browse = () => {
 	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
 	const [partsList, setPartsList] = useState([]);
 	const [minPrice, setMinPrice] = useState(0);
-	const [maxPrice, setMaxPrice] = useState(100000);
+	const [maxPrice, setMaxPrice] = useState(10000);
+	const [intermediateMinPrice, setIntermediateMinPrice] = useState(0);
+	const [intermediateMaxPrice, setIntermediateMaxPrice] = useState(10000);
 	const [orderBy, setOrderBy] = useState('price');
 	const [orderDir, setOrderDir] = useState('ASC');
 	const [listLoading, setListLoading] = useState(true);
@@ -47,13 +50,15 @@ const Browse = () => {
 		setCurrentPage(1);
 	}
 
-	const onChangeMinPrice = (minPrice) => {
-		setMinPrice(minPrice);
+	const handleChangeMinMaxPrice = (event, newValue) => {
+		setIntermediateMinPrice(newValue[0]);
+		setIntermediateMaxPrice(newValue[1]);
 		setCurrentPage(1);
-	}
+	};
 
-	const onChangeMaxPrice = (maxPrice) => {
-		setMaxPrice(maxPrice);
+	const onSubmitPrice = () => {
+		setMinPrice(intermediateMinPrice);
+		setMaxPrice(intermediateMaxPrice);
 		setCurrentPage(1);
 	}
 
@@ -201,8 +206,8 @@ const Browse = () => {
 				<h1>
 					Search for {part} parts
 				</h1>
-				<div>
-					<div className="horizontal-group selection-list">
+				<div className="filters-table">
+					<div className="selection-list">
 						{id && id < 8 && id >= 0 ?
 							<></>
 							:
@@ -229,14 +234,22 @@ const Browse = () => {
 								</Dropdown>
 							</div>
 						}
-						<div className="vertical-group">
+						<div className="vertical-group slider">
 							<p>
-								Price Range:
+								Price: ${minPrice} - ${maxPrice}
 							</p>
-							<div className="horizontal-group">
-								<NumberInput enteredValue={minPrice} setEnteredValue={onChangeMinPrice} />
-								<p>to</p>
-								<NumberInput enteredValue={maxPrice} setEnteredValue={onChangeMaxPrice} />
+							<div className="horizontal-group slider">
+								<Slider
+									value={[intermediateMinPrice, intermediateMaxPrice]}
+									onChange={handleChangeMinMaxPrice}
+									onChangeCommitted={onSubmitPrice}
+									valueLabelDisplay="auto"
+									aria-labelledby="range-slider"
+									className='slider'
+									getAriaValueText={() => `${intermediateMinPrice} - ${intermediateMaxPrice}`}
+									min={0}
+									max={10000}
+								/>
 							</div>
 						</div>
 					</div>
