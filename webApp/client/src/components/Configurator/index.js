@@ -172,7 +172,7 @@ const Configurator = () => {
                         </select>
                     )}
                 </td>
-                <td>{part.price ? `$${part.price * part.quantity}` : ''}</td>
+                <td>{part.price ? `$${(part.price * part.quantity).toFixed(2)}` : ''}</td>
                 {part.model ?
                     (
                         <td className="text-center">
