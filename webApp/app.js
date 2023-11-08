@@ -130,6 +130,10 @@ app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function 
     listsController.getListInfo(req, res, db);
 });
 
+app.get('/api/listtdp/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.getListTDP(req, res, db);
+});
+
 /**
  * @CONFIGURATOR
  */
