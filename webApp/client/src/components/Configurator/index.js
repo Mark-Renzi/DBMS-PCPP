@@ -216,7 +216,8 @@ const Configurator = () => {
                     </Spinner>
                 :
                     <div>
-                        <div class="tdp"><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp} W</p></div>
+                        <div><p><strong>PSU Wattage: </strong>{listTDP.wattage} W</p></div>
+                        <div><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp} W</p></div>
                         <p><strong>Total Price:</strong> ${listInfo.totalprice}</p>
                         <p>{listInfo.description}</p>
                     </div>

@@ -54,7 +54,7 @@ const getListTDP = async (req, res, db) => {
     let listID = req.params.listid;
     try {
         let listTDP = await db.query(`
-            SELECT SUM(tdp) AS sum_tdp
+            SELECT SUM(tdp) AS sum_tdp, SUM(psu_wattage) AS wattage
             FROM (
               SELECT
                 lc.listid,
@@ -63,15 +63,23 @@ const getListTDP = async (req, res, db) => {
                 cp.parttype,
                 (
                   CASE
-                    WHEN cp.parttype = 0 THEN (lc.quantity * (
+                    WHEN cp.parttype = 0 THEN lc.quantity * (
                       SELECT tdp FROM cpu WHERE partid = lc.partid
-                    ))
-                    WHEN cp.parttype = 4 THEN (lc.quantity * (
+                    )
+                    WHEN cp.parttype = 4 THEN lc.quantity * (
                       SELECT tdp FROM gpu WHERE partid = lc.partid
-                    ))
+                    )
                     ELSE 0
                   END
-                ) AS tdp
+                ) AS tdp,
+                (
+                  CASE
+                    WHEN cp.parttype = 7 THEN lc.quantity * (
+                      SELECT wattage FROM psu WHERE partid = lc.partid
+                    )
+                    ELSE 0
+                  END
+                ) AS psu_wattage
               FROM listcontains lc
               JOIN computerpart cp ON lc.partid = cp.partid
               WHERE lc.listid = $1
