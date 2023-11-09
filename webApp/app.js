@@ -114,6 +114,10 @@ app.post('/api/benchmarks', function (req, res) {
     benchmarksController.benchmarkPricePerf(req, res, db);
 });
 
+app.get('/api/benchmarks/:chipsetid', function (req, res) {
+    benchmarksController.getBenchmarks(req, res, db);
+});
+
 /**
  * @LISTS
  */
@@ -158,6 +162,10 @@ app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, fun
  */
 app.post('/api/browse', function (req, res) {
     partsController.browse(req, res, db);
+});
+
+app.get('/api/details/:partid', function (req, res) {
+    partsController.getPartDetails(req, res, db);
 });
 
 

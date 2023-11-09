@@ -11,6 +11,7 @@ import Browse from './components/Browse';
 
 
 import './App.css';
+import Details from './components/Details';
 
 class App extends Component {
 	render() {
@@ -27,6 +28,7 @@ class App extends Component {
 								<Route path="/build" element={<Configurator />} />
 								<Route path="/browse/:id?" element={<Browse />} />
 								<Route path="/build/:listid" element={<Configurator />} />
+								<Route path="/part/:partid" element={<Details />} />
 							</Routes>
 						</div>
 					</div>
