@@ -8,6 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const PricePerformanceLeaderboard = () => {
 	const [part, setPart] = useState('GPU');
@@ -196,7 +197,7 @@ const PricePerformanceLeaderboard = () => {
 											<tr className='row-hover' key={partl.partid}>
     											<td>{(currentPage - 1) * pageSize + index + 1}</td>
 												<td>{partl.manufacturer}</td>
-												<td>{partl.model}</td>
+												<td><Link to={`/part/${partl.partid}`}>{partl.model}</Link></td>
 												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
 												<td>{partl.score}</td>
 												<td>{partl.price}</td>
