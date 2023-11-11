@@ -7,17 +7,7 @@ const Details = () => {
     const { partid } = useParams();
     const [specs, setSpecs] = useState({});
     const [benchmarks, setBenchmarks] = useState({});
-
-    const tables = {
-        0: 'cpu',
-        1: 'cpucooler',
-        2: 'motherboard',
-        3: 'ram',
-        4: 'gpu',
-        5: 'storage',
-        6: 'tower',
-        7: 'psu',
-    };
+    const [partLists, setPartLists] = useState({});
     
     const benchmarkTypes = {
         0: 'G3Dmark',
@@ -93,6 +83,17 @@ const Details = () => {
             });
         }
     }, [specs, partid]);
+
+    useEffect(() => {
+        axios.get(`/api/listswithpart/${partid}`)
+        .then((response) => {
+            setPartLists(response.data);
+            console.log(response.data);
+        })
+        .catch((error) => {
+            console.error('Error fetching part details:', error);
+        });
+    }, []);
 
     const formatSpecs = (specs) => {
         switch(specs.parttype) {
@@ -227,6 +228,29 @@ const Details = () => {
                 </div>
             </div>
             </dl>
+            {partLists.length > 0 && (
+            <div>
+                <h2>Lists Using Part</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Total Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {partLists.map((list, index) => (
+                            <tr key={index}>
+                                <td>{list.name}</td>
+                                <td>{list.description}</td>
+                                <td>{list.totalprice}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+        )}
         </div>
     );
 };

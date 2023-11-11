@@ -92,9 +92,29 @@ const getListTDP = async (req, res, db) => {
     }
 }
 
+const getListsWithPart = async (req, res, db) => {
+  let partID = req.params.partid;
+
+  try {
+      let partslists = await db.query(`
+        SELECT * FROM partslist
+        WHERE listid IN (
+            SELECT listid FROM listcontains
+            WHERE partid = $1
+        );      
+      `, [partID]);
+      console.log(partslists?.rows);
+      return res.status(200).json(partslists?.rows);
+  } catch (e){
+      console.log(e);
+      return res.status(404);
+  }
+};
+
 module.exports = {
     getLists,
     getListInfo,
     addList,
-    getListTDP
+    getListTDP,
+    getListsWithPart
 };

@@ -138,6 +138,10 @@ app.get('/api/listtdp/:listid', ensureAuthenticated, ensureListOwner, function (
     listsController.getListTDP(req, res, db);
 });
 
+app.get('/api/listswithpart/:partid', function (req, res) {
+    listsController.getListsWithPart(req, res, db);
+});
+
 /**
  * @CONFIGURATOR
  */
