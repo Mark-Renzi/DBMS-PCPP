@@ -1,5 +1,19 @@
+:root,body{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 :root {
-    --background-c: #5E6580;
+    --background-c: #2F2F2F;
+    --foreground-c: white;
+    --foreground-button-c: #4A4A4A;
+    --nav-container-c: rgb(234, 234, 234);
+    --main-text-c: black;
+    --card-text-c: white;
+
+    --regular-shadow-intensity: 0.05;
+    --hover-shadow-intensity: 0.3;
+    --active-shadow-intensity: 0.6;
+    --navbar-shadow-intensity: 0.05;
 }
 
 html, body {

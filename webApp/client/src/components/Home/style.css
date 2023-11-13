@@ -1,17 +1,8 @@
-:root {
-    --card-c: white;
-    --card-text-c: black;
-    --hover-shadow-intensity: 0.1;
-    --active-shadow-intensity: 0.3;
-}
-
-
 .HomeContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
-    /* background-color: black; */
 }
 
 .ListsContainer {
@@ -19,8 +10,7 @@
     flex-direction: row;
     justify-content: flex-start;
     background-color: var(--background-c);
-    gap: 3rem;
-    /* overflow: hidden; */
+    gap: 2rem;
     flex-wrap: wrap;
     margin: 0 auto;
 }
@@ -33,7 +23,8 @@
 }
 
 .card-new {
-    font-size: 50px;
+    font-size: 40px;
+    color: var(--card-text-c);
 }
 
 .card-title {
@@ -52,9 +43,9 @@
     background-color: transparent;
     border-radius: 10px;
     align-items: center;
-    background: var(--card-c);
+    background: var(--foreground-button-c);
     border-radius: 10px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, var(--regular-shadow-intensity));
     display: flex;
     justify-content: center;
     align-content: center;
@@ -78,8 +69,8 @@
 .hr-line {
     border: 0;
     height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    border-bottom: 0px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.4);
     width: 10rem;
 }
 
@@ -91,7 +82,7 @@
 
 .card-desc {
     font-size:small;
-    opacity: 65%;
+    opacity: 60%;
     text-wrap: wrap;
     max-width: 100%;
     margin: 1rem;
@@ -100,7 +91,7 @@
 
 .card-price {
     font-size: large;
-    opacity: 65%;
+    opacity: 100%;
 }
 
 .card-text {
@@ -120,4 +111,18 @@
 
 .card-link {
     text-decoration: none;
+}
+
+.logged-out-card {
+    margin-top: 0rem;
+    width: 40rem;
+    font-size: x-large;
+}
+
+.card-delete {
+    border: none;
+    background-color: transparent;
+    height: 1rem;
+    width: 1rem;
+    color: var(--card-text-c);
 }

@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
@@ -79,7 +81,6 @@ const HomePage = () => {
 
 	return (
 		<div className="HomeContainer">
-
 			<Modal show={showListModal} onHide={handleModalClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>Create New List</Modal.Title>
@@ -113,9 +114,15 @@ const HomePage = () => {
 			</Modal>
 
 			<div className="ListsContainer">
-				<button className='card-button' onClick={handleNewListClick} title='Create a new list'>
-					<p className="card-text card-new text-center">+</p>
-				</button>
+				{localStorage.getItem('username') ? (
+					<button className='card-button' onClick={handleNewListClick} title='Create a new list'>
+						<FontAwesomeIcon className="card-new" icon={faPlus} />
+					</button>
+				) : (
+					<button className='card-button logged-out-card card-text' onClick={handleNewListClick} title='Create a new list'>
+						<span>Login To Create Part Lists</span>
+					</button>
+				)}
 				{ listsLoading ?
 					<button className='card-button spinner-container'>
 						<Spinner animation="grow" role="status">
@@ -125,14 +132,12 @@ const HomePage = () => {
 					:
 					<>
 						{ userLists.map((partlist) => (
-							<Link className='card-link' to={`/build/${partlist.listid}`} key={partlist.listid}>
-								<button className='card-button'>
-									<p className="card-text text-center card-tit">{partlist.name}</p>
-									<hr className='hr-line' />
-									<p className="card-text text-center card-desc">{partlist.description}</p>
-									<hr className='hr-line' />
-									<p className="card-text text-center card-price">${partlist.totalprice}</p>
-								</button>
+							<Link className='card-link card-button' to={`/build/${partlist.listid}`} key={partlist.listid}>
+								<p className="card-text text-center card-tit">{partlist.name}</p>
+								<hr className='hr-line' />
+								<p className="card-text text-center card-desc">{partlist.description}</p>
+								<hr className='hr-line' />
+								<p className="card-text text-center card-price">${partlist.totalprice}</p>
 							</Link>
 						))}
 					</>
