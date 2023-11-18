@@ -134,12 +134,16 @@ app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function 
     listsController.getListInfo(req, res, db);
 });
 
-app.get('/api/listtdp/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+app.get('/api/listtdp/:listid', function (req, res) {
     listsController.getListTDP(req, res, db);
 });
 
 app.get('/api/listswithpart/:partid', function (req, res) {
     listsController.getListsWithPart(req, res, db);
+});
+
+app.get('/api/publiclistinfo/:listid', function (req, res) {
+    listsController.getPublicBuild(req, res, db);
 });
 
 /**
@@ -159,6 +163,10 @@ app.delete('/api/deletepart/:listid', ensureAuthenticated, ensureListOwner, func
 
 app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
     configuratorController.updateQuantity(req, res, db);
+});
+
+app.get('/api/publicbuild/:listid', function (req, res) {
+    configuratorController.getParts(req, res, db);
 });
 
 /**

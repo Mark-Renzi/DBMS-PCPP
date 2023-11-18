@@ -160,7 +160,7 @@ const Configurator = () => {
         return (
             <tr key={index} className='config-row'>
                 <td>{part.name}</td>
-                <td>{<Link to={`/part/${part.partid}`}>{part.model}</Link> || <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
+                <td>{part.model ? <Link to={`/part/${part.partid}`}>{part.model}</Link> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
                 <td>{part.manufacturer || ''}</td>
                 <td>
                     {part.model && (

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 const Details = () => {
     const { partid } = useParams();
@@ -242,7 +243,7 @@ const Details = () => {
                     <tbody>
                         {partLists.map((list, index) => (
                             <tr key={index}>
-                                <td>{list.name}</td>
+                                <td><Link to={`/lists/${list.listid}`}>{list.name}</Link></td>
                                 <td>{list.description}</td>
                                 <td>{list.totalprice}</td>
                             </tr>

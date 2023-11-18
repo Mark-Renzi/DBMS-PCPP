@@ -111,10 +111,27 @@ const getListsWithPart = async (req, res, db) => {
   }
 };
 
+const getPublicBuild = async (req, res, db) => {
+  let listID = req.params.listid;
+
+  try {
+      let userBuild = await db.query(`
+          SELECT totalprice, name, description FROM partslist
+          WHERE listid = $1;
+      `, [listID]);
+
+      return res.status(200).json(userBuild?.rows[0]);
+  } catch (e){
+      console.log(e);
+      return res.status(404);
+  }
+}
+
 module.exports = {
     getLists,
     getListInfo,
     addList,
     getListTDP,
-    getListsWithPart
+    getListsWithPart,
+    getPublicBuild
 };

@@ -8,6 +8,7 @@ import Header from './components/Header';
 import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboard';
 import Configurator from './components/Configurator';
 import Browse from './components/Browse';
+import ListViewer from './components/ListViewer';
 
 
 import './App.css';
@@ -29,6 +30,7 @@ class App extends Component {
 								<Route path="/browse/:id?" element={<Browse />} />
 								<Route path="/build/:listid" element={<Configurator />} />
 								<Route path="/part/:partid" element={<Details />} />
+								<Route path="/lists/:listid" element={<ListViewer />} />
 							</Routes>
 						</div>
 					</div>
