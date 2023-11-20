@@ -1,4 +1,3 @@
-
 const getLists = async (req, res, db) => {
     let userID = req.user.id;
 
@@ -14,6 +13,18 @@ const getLists = async (req, res, db) => {
         return res.status(404);
     }
 };
+
+const deleteList = async (listid, req, res, db) => {
+    try {
+        let deleteQuery = await db.query('DELETE FROM partslist WHERE listid = $1;', [listid]);
+        return res.status(200).json(deleteQuery?.rows[0]);
+    } catch(e) {
+        console.log(e);
+        return res.status(404)
+    }
+}
+
+
 
 const getListInfo = async (req, res, db) => {
     let listID = req.params.listid;
@@ -94,6 +105,7 @@ const getListTDP = async (req, res, db) => {
 
 module.exports = {
     getLists,
+    deleteList,
     getListInfo,
     addList,
     getListTDP

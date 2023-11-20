@@ -7,13 +7,16 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
 	const [showListModal, setShowListModal] = useState(false);
+	const [showEditModal, setShowEditModal] = useState(false);
 	const [newListName, setNewListName] = useState('');
+	const [editListName, setEditListName] = useState('');
 	const [newListDescription, setNewListDescription] = useState('');
+	const [editListDescription, setEditListDescription] = useState('');
 	const [listsLoading, setListsLoading] = useState(false);
 
     useEffect(() => {
@@ -59,6 +62,7 @@ const HomePage = () => {
 
 	const handleModalClose = () => {
         setShowListModal(false);
+		setShowEditModal(false);
     }
 
 	const handleListCreation = async () => {
@@ -69,6 +73,11 @@ const HomePage = () => {
 		window.location.href = `http://localhost:3000/build/${newlistid}`;
 	}
 
+	const handleEditList = async () => {
+		console.log(editListName);
+		console.log(editListDescription);
+	}
+
 	const handleNewListClick = async () => {
 		const loggedIn = localStorage.getItem('username');
 		if (!loggedIn) {
@@ -76,6 +85,27 @@ const HomePage = () => {
 		}
 		else {
 			setShowListModal(true);
+		}
+    }
+
+	const editList = () => {
+		setEditListName();
+		setEditListDescription();
+        setShowEditModal(true);
+    }
+
+	const deleteList = async (id) => {
+		const url = '/api/deletelist';
+		const data = {
+			listid: id,
+		};
+	
+		try {
+			const response = await axios.post(url, data);
+			getLists();
+			return response.data.listid;
+		} catch (error) {
+			console.error("Error deleting list", error);
 		}
     }
 
@@ -113,13 +143,45 @@ const HomePage = () => {
 				</Modal.Footer>
 			</Modal>
 
+			<Modal show={showEditModal} onHide={handleModalClose}>
+				<Modal.Header closeButton>
+					<Modal.Title>Edit List</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					<div>
+						<label>Name</label>
+						<input
+							id='name'
+							type='text'
+							onChange={(e) => setEditListName(e.target.value)}
+							value={editListName}
+							className="description-box"
+						/>
+					</div>
+					<div>
+						<label>Description</label>
+						<input
+							id='description'
+							type='text'
+							onChange={(e) => setEditListDescription(e.target.value)}
+							value={editListDescription}
+							className="description-box"
+						/>
+					</div>
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant="secondary" onClick={handleModalClose}>Cancel</Button>
+					<Button variant="primary" onClick={handleEditList}>Edit List</Button>
+				</Modal.Footer>
+			</Modal>
+
 			<div className="ListsContainer">
 				{localStorage.getItem('username') ? (
-					<button className='card-button' onClick={handleNewListClick} title='Create a new list'>
+					<button className='card-button card-new-center' onClick={handleNewListClick} title='Create a new list'>
 						<FontAwesomeIcon className="card-new" icon={faPlus} />
 					</button>
 				) : (
-					<button className='card-button logged-out-card card-text' onClick={handleNewListClick} title='Create a new list'>
+					<button className='card-button logged-out-card card-text card-new-center' onClick={handleNewListClick} title='Create a new list'>
 						<span>Login To Create Part Lists</span>
 					</button>
 				)}
@@ -133,6 +195,14 @@ const HomePage = () => {
 					<>
 						{ userLists.map((partlist) => (
 							<Link className='card-link card-button' to={`/build/${partlist.listid}`} key={partlist.listid}>
+								<div className='card-buttons'>
+									<button className='list-button btn-info' id='edit-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); editList(e); }}>
+										<FontAwesomeIcon icon={faPenToSquare} />
+									</button>
+									<button className='list-button btn-danger' id='delete-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); deleteList(partlist.listid); }}>
+										<FontAwesomeIcon icon={faXmark} />
+									</button>
+								</div>
 								<p className="card-text text-center card-tit">{partlist.name}</p>
 								<hr className='hr-line' />
 								<p className="card-text text-center card-desc">{partlist.description}</p>

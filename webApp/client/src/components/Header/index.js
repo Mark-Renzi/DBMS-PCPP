@@ -47,9 +47,9 @@ class Header extends Component {
 					<Navbar.Collapse id="basic-navbar-nav">
 						<Nav className="me-auto navbar-container">
 							<div className="nav-container left-nav">
-								<Nav.Link href="/">Home</Nav.Link>
-								<Nav.Link href="/browse">Browse</Nav.Link>
-								<Nav.Link href="/leaderboard">Leaderboards</Nav.Link>
+								<Nav.Link className="navlink-custom" href="/">Home</Nav.Link>
+								<Nav.Link className="navlink-custom" href="/browse">Browse</Nav.Link>
+								<Nav.Link className="navlink-custom" href="/leaderboard">Leaderboards</Nav.Link>
 							</div>
 							<span className="page-title">
 								Home

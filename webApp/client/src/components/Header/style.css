@@ -27,6 +27,10 @@ ul.navbar-nav a:hover {
 	align-content: center;
 }
 
+.navbar>.container-fluid {
+	padding-left: 1rem;
+}
+
 .navbar-brand:hover {
 	color: lightblue;
 }
@@ -53,7 +57,7 @@ header span {
 }
 
 .nav-container {
-	color: black !important;
+	color: var(--main-text-c);
 }
 
 .nav-container:has(.nav-link),
@@ -121,4 +125,18 @@ header span {
 	background-color: black;
 	color: gray;
 	text-decoration: none;
+}
+
+.nav-container>a.nav-link.navlink-custom {
+    color: var(--text-c);
+}
+
+.nav-container>a.nav-link.navlink-custom:hover {
+    color: var(--text-c);
+	opacity: 70%;
+}
+
+.nav-container>a.nav-link.navlink-custom:active {
+    color: var(--main-text-c);
+	opacity: 100%;
 }

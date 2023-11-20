@@ -27,6 +27,10 @@
     color: var(--card-text-c);
 }
 
+.card-button.card-new-center {
+    justify-content: center;
+}
+
 .card-title {
     font-size: 25px;
 }
@@ -41,29 +45,28 @@
 .card-button {
     border: none;
     background-color: transparent;
-    border-radius: 10px;
+    border-radius: 0.5rem;
     align-items: center;
     background: var(--foreground-button-c);
-    border-radius: 10px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, var(--regular-shadow-intensity));
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
     flex-direction: column;
-    height: 15rem;
-    width: 15rem;
-    min-width: 15rem;
-    padding: 1rem;
+    height: var(--card-size);
+    width: var(--card-size);
     overflow-y: auto;
     transition: box-shadow 0.15s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .card-button:hover {
     box-shadow: 0 0px 50px rgba(0, 0, 0, var(--hover-shadow-intensity));
+    opacity: 80%;
 }
 
 .card-button:active {
     box-shadow: 0 0px 50px rgba(0, 0, 0, var(--active-shadow-intensity));
+    opacity: 60%;
 }
 
 .hr-line {
@@ -101,12 +104,13 @@
 
 .description-box {
     width: 100%;
-    border-radius: 0.6rem;
+    border-radius: 0.5rem;
     min-height: 3rem;
     border: 1px solid black;
     text-wrap:wrap;
     word-break: break-all;
     overflow-wrap:break-word;
+    margin-bottom: 1rem;
 }
 
 .card-link {
@@ -116,7 +120,9 @@
 .logged-out-card {
     margin-top: 0rem;
     width: 40rem;
+    height: var(--card-size);
     font-size: x-large;
+    color: var(--text-c);
 }
 
 .card-delete {
@@ -125,4 +131,26 @@
     height: 1rem;
     width: 1rem;
     color: var(--card-text-c);
+}
+
+.list-button {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    gap: 0.25rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
 }
