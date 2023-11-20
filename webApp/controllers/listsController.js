@@ -15,16 +15,20 @@ const getLists = async (req, res, db) => {
 };
 
 const deleteList = async (listid, req, res, db) => {
+    const client = await db.connect();
     try {
-        let deleteQuery = await db.query('DELETE FROM partslist WHERE listid = $1;', [listid]);
+        await client.query('BEGIN');
+        let deleteQuery = await client.query('DELETE FROM partslist WHERE listid = $1;', [listid]);
+        await client.query('COMMIT');
         return res.status(200).json(deleteQuery?.rows[0]);
     } catch(e) {
         console.log(e);
-        return res.status(404)
+        client.query('ROLLBACK');
+        return res.status(404);
+    } finally {
+        client.release();
     }
 }
-
-
 
 const getListInfo = async (req, res, db) => {
     let listID = req.params.listid;
@@ -60,6 +64,24 @@ const addList = async (name, description, req, res, db) => {
         client.release();
     }
 };
+
+const editList = async (listid, name, description, req, res, db) => {
+    const client = await db.connect();
+    try {
+        await client.query('BEGIN');
+        const newlistid = await client.query(
+            'UPDATE partslist SET name = $2, description = $3 WHERE listid = $1 RETURNING *;'
+        , [listid, name, description]);
+        await client.query('COMMIT');
+        return res.status(200).json(newlistid?.rows[0]);
+    } catch (e){
+        console.log(e);
+        client.query('ROLLBACK');
+        return res.status(404);
+    } finally {
+        client.release();
+    }
+}
 
 const getListTDP = async (req, res, db) => {
     let listID = req.params.listid;
@@ -107,6 +129,7 @@ module.exports = {
     getLists,
     deleteList,
     getListInfo,
+    editList,
     addList,
     getListTDP
 };

@@ -17,6 +17,7 @@ const HomePage = () => {
 	const [editListName, setEditListName] = useState('');
 	const [newListDescription, setNewListDescription] = useState('');
 	const [editListDescription, setEditListDescription] = useState('');
+	const [editListID, setEditListID] = useState('');
 	const [listsLoading, setListsLoading] = useState(false);
 
     useEffect(() => {
@@ -66,16 +67,29 @@ const HomePage = () => {
     }
 
 	const handleListCreation = async () => {
-		console.log(newListName);
-		console.log(newListDescription);
 		setShowListModal(false);
 		const newlistid = await createList();
 		window.location.href = `http://localhost:3000/build/${newlistid}`;
 	}
 
 	const handleEditList = async () => {
-		console.log(editListName);
-		console.log(editListDescription);
+		const url = "/api/editList";
+		const data = {
+			listid: editListID,
+			name: editListName,
+			description: editListDescription
+		};
+	
+		try {
+			const response = await axios.post(url, data);
+			console.log(response.data);
+			return response.data.listid;
+		} catch (error) {
+			console.error("Error editing list", error);
+		} finally {
+			setShowEditModal(false);
+			getLists();
+		}
 	}
 
 	const handleNewListClick = async () => {
@@ -88,9 +102,10 @@ const HomePage = () => {
 		}
     }
 
-	const editList = () => {
-		setEditListName();
-		setEditListDescription();
+	const editList = (id, name, description) => {
+		setEditListID(id);
+		setEditListName(name);
+		setEditListDescription(description);
         setShowEditModal(true);
     }
 
@@ -102,10 +117,11 @@ const HomePage = () => {
 	
 		try {
 			const response = await axios.post(url, data);
-			getLists();
 			return response.data.listid;
 		} catch (error) {
 			console.error("Error deleting list", error);
+		} finally {
+			getLists();
 		}
     }
 
@@ -196,7 +212,7 @@ const HomePage = () => {
 						{ userLists.map((partlist) => (
 							<Link className='card-link card-button' to={`/build/${partlist.listid}`} key={partlist.listid}>
 								<div className='card-buttons'>
-									<button className='list-button btn-info' id='edit-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); editList(e); }}>
+									<button className='list-button btn-info' id='edit-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); editList(partlist.listid, partlist.name, partlist.description); }}>
 										<FontAwesomeIcon icon={faPenToSquare} />
 									</button>
 									<button className='list-button btn-danger' id='delete-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); deleteList(partlist.listid); }}>

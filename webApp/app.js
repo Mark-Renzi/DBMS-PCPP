@@ -131,6 +131,11 @@ app.post('/api/deletelist', ensureAuthenticated, function (req, res) {
     listsController.deleteList(listid, req, res, db);
 });
 
+app.post('/api/editlist', ensureAuthenticated, function (req, res) {
+    const { listid, name, description } = req.body;
+    listsController.editList(listid, name, description, req, res, db);
+});
+
 app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
     listsController.getListInfo(req, res, db);
 });
