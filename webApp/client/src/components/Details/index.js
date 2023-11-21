@@ -9,7 +9,16 @@ const Details = ({ partid }) => {
     const [benchmarks, setBenchmarks] = useState({});
     const [partLists, setPartLists] = useState({});
 
-    console.log(partid)
+    if (!partid) {
+        partid = useParams().partid;
+        if (!partid) {
+            return (
+                <div>
+                    <h1>Invalid Part ID</h1>
+                </div>
+            );
+        }
+    }
 
     const benchmarkTypes = {
         0: 'G3Dmark',
@@ -204,7 +213,7 @@ const Details = ({ partid }) => {
 
     return (
         <div>
-            <h1>{specs.manufacturer} {specs.model}</h1>
+            {/* <h1>{specs.manufacturer} {specs.model}</h1> */}
 
             <dl>
             <div className="details-container">

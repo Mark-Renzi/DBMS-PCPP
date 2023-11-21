@@ -317,15 +317,15 @@ const Browse = () => {
                 </Modal.Footer>
             </Modal>
 
-			<Modal show={showDetailModal} onHide={handleCloseDetailModal}>
+			<Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
                 <Modal.Header closeButton>
                     <Modal.Title>{detailPart?.model} Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
 					{detailPart ? (
-						<Details>
-							{detailPart?.partid}
-						</Details>
+						<Details
+							{...detailPart}
+						/>
 					) : (
 						<Spinner animation="border" role="status">
 							<span className="visually-hidden">Loading...</span>

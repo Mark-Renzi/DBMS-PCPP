@@ -88,6 +88,10 @@
     height: 100%;
 }
 
+.wide-modal > .modal-dialog {
+    max-width: 80rem;
+}
+
 @media (min-width: 80rem) {
     .filters-table {
         flex-direction: row;
