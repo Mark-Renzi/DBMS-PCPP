@@ -122,8 +122,15 @@ app.get('/api/lists', ensureAuthenticated, function (req, res) {
 });
 
 app.post('/api/newlist', ensureAuthenticated, function (req, res) {
-    const { name, description } = req.body;
-    listsController.addList(name, description, req, res, db);
+    listsController.addList(req, res, db);
+});
+
+app.delete('/api/deletelist/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.deleteList(req, res, db);
+});
+
+app.post('/api/editlist/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.editList(req, res, db);
 });
 
 app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {

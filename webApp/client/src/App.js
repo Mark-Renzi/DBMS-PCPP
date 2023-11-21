@@ -23,7 +23,6 @@ class App extends Component {
 							<Routes>
 								<Route exact path="/" element={<HomePage />} />
 								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
-								{/* <Route path="/lists" element={<Lists />} /> */}
 								<Route path="/build" element={<Configurator />} />
 								<Route path="/browse/:id?" element={<Browse />} />
 								<Route path="/build/:listid" element={<Configurator />} />
