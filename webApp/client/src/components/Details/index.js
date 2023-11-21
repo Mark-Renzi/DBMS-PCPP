@@ -11,14 +11,6 @@ const Details = ({ partid }) => {
 
     console.log(partid)
 
-    if (!partid) {
-        partid = useParams().partid;
-    }
-
-    if (!partid) {
-        return null;
-    }
-    
     const benchmarkTypes = {
         0: 'G3Dmark',
         1: 'G2Dmark',

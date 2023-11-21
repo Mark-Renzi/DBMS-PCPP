@@ -293,7 +293,7 @@ const Browse = () => {
 	const handleEllipseClick = () => {
         setShowEllipseModal(true);
     }
-	const handleShowDetailModal = (partl) => () => {
+	const handleShowDetailModal = async (partl) => {
 		setDetailPart(partl);
 		setShowDetailModal(true);
 	}
@@ -319,14 +319,18 @@ const Browse = () => {
 
 			<Modal show={showDetailModal} onHide={handleCloseDetailModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>{detailPart?.name}</Modal.Title>
+                    <Modal.Title>{detailPart?.model} Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-					{detailPart !== null &&
+					{detailPart ? (
 						<Details>
-							{detailPart}
+							{detailPart?.partid}
 						</Details>
-					}
+					) : (
+						<Spinner animation="border" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</Spinner>
+					)}
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
@@ -527,7 +531,7 @@ const Browse = () => {
 										{partsList.map((partl) => (
 											<tr className='row-hover' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
-												<td><Link onClick={handleShowDetailModal(partl)}>{partl.model}</Link></td>
+												<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
 												<td>{partl.price}</td>
 												{renderRowCells(partl)}
 											</tr>
