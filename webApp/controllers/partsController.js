@@ -29,18 +29,6 @@ const browse = async (req, res, db) => {
                 WHERE computerpart.partid = ${partType}.partid
             `;
         } else {
-            // subquery = `
-            //     SELECT * FROM computerpart
-            //     LEFT JOIN cpu ON computerpart.partid = cpu.partid
-            //     LEFT JOIN cpucooler ON computerpart.partid = cpucooler.partid
-            //     LEFT JOIN motherboard ON computerpart.partid = motherboard.partid
-            //     LEFT JOIN ram ON computerpart.partid = ram.partid
-            //     LEFT JOIN gpu ON computerpart.partid = gpu.partid
-            //     LEFT JOIN storage ON computerpart.partid = storage.partid
-            //     LEFT JOIN tower ON computerpart.partid = tower.partid
-            //     LEFT JOIN psu ON computerpart.partid = psu.partid
-            //     WHERE parttype IS NOT NULL
-            // `;
             subquery = `
                 SELECT * FROM computerpart
                 WHERE parttype IS NOT NULL
