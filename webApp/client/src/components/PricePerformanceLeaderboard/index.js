@@ -7,8 +7,9 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
 import { Link } from 'react-router-dom';
+import Details from '../Details';
+import './style.css';
 
 const PricePerformanceLeaderboard = () => {
 	const [part, setPart] = useState('GPU');
@@ -20,6 +21,8 @@ const PricePerformanceLeaderboard = () => {
 	const [showEllipseModal, setShowEllipseModal] = useState(false);
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
+	const [showDetailModal, setShowDetailModal] = useState(false);
+	const [detailPart, setDetailPart] = useState(null);
 	
 	const pageSize = 20;
 
@@ -96,6 +99,14 @@ const PricePerformanceLeaderboard = () => {
 	const handleEllipseClick = () => {
         setShowEllipseModal(true);
     }
+	const handleShowDetailModal = async (partl) => {
+		setDetailPart(partl);
+		setShowDetailModal(true);
+	}
+	const handleCloseDetailModal = () => {
+		setDetailPart(null);
+		setShowDetailModal(false);
+	}
 
 	return (
 		<>
@@ -109,6 +120,27 @@ const PricePerformanceLeaderboard = () => {
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                     <Button variant="primary" onClick={handlePageSubmit}>Go to page</Button>
+                </Modal.Footer>
+            </Modal>
+
+			<Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
+                <Modal.Header closeButton>
+                    <Modal.Title>{detailPart?.manufacturer} {detailPart?.model} Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+					{detailPart ? (
+						<Details
+							{...detailPart}
+						/>
+					) : (
+						<Spinner animation="border" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</Spinner>
+					)}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
+                    {/* <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button> */}
                 </Modal.Footer>
             </Modal>
 
@@ -197,8 +229,7 @@ const PricePerformanceLeaderboard = () => {
 											<tr className='row-hover' key={partl.partid}>
     											<td>{(currentPage - 1) * pageSize + index + 1}</td>
 												<td>{partl.manufacturer}</td>
-												<td><Link to={`/part/${partl.partid}`}>{partl.model}</Link></td>
-												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
+												<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
 												<td>{partl.score}</td>
 												<td>{partl.price}</td>
 												<td>{parseFloat(partl.priceperformance).toFixed(4)}</td>

@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import './styles.css';
 import { Link } from 'react-router-dom';
+import Spinner from 'react-bootstrap/Spinner';
+import './styles.css';
 
 const Details = ({ partid }) => {
     const [specs, setSpecs] = useState({});
     const [benchmarks, setBenchmarks] = useState({});
     const [partLists, setPartLists] = useState({});
+    const [specsLoading, setSpecsLoading] = useState(false);
+    const [benchmarksLoading, setBenchmarksLoading] = useState(false);
+    const [partListsLoading, setPartListsLoading] = useState(false);
 
     if (!partid) {
         partid = useParams().partid;
@@ -74,9 +78,11 @@ const Details = ({ partid }) => {
     };
 
     useEffect(() => {
+        setSpecsLoading(true);
         axios.get(`/api/details/${partid}`)
         .then((response) => {
             setSpecs(response.data);
+            setSpecsLoading(false);
         })
         .catch((error) => {
             console.error('Error fetching part details:', error);
@@ -85,9 +91,11 @@ const Details = ({ partid }) => {
 
     useEffect(() => {
         if (specs.parttype === 0 || specs.parttype === 4) {
+            setBenchmarksLoading(true);
             axios.get(`/api/benchmarks/${parseInt(specs.chipsetid)}`)
             .then((response) => {
                 setBenchmarks(response.data);
+                setBenchmarksLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching benchmarks:', error);
@@ -96,10 +104,11 @@ const Details = ({ partid }) => {
     }, [specs, partid]);
 
     useEffect(() => {
+        setPartListsLoading(true);
         axios.get(`/api/listswithpart/${partid}`)
         .then((response) => {
             setPartLists(response.data);
-            console.log(response.data);
+            setPartListsLoading(false);
         })
         .catch((error) => {
             console.error('Error fetching part details:', error);
@@ -107,6 +116,12 @@ const Details = ({ partid }) => {
     }, []);
 
     const formatSpecs = (specs) => {
+        if (specsLoading) {
+            return (<Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>);
+        }
+        
         switch(specs.parttype) {
             case 0:
                 return (
@@ -160,7 +175,7 @@ const Details = ({ partid }) => {
                 return (
                     <div>
                         <dt>Price</dt><dd>${specs.price}</dd>
-                        <dt>Memory</dt><dd>{specs.memory}</dd>
+                        <dt>Memory</dt><dd>{specs.memory} GB</dd>
                         <dt>Core Clock</dt><dd>{specs.coreclock} MHz</dd>
                         <dt>Boost Clock</dt><dd>{specs.boostclock} MHz</dd>
                         <dt>Length</dt><dd>{specs.length} mm</dd>
@@ -230,38 +245,54 @@ const Details = ({ partid }) => {
                         }
                         return null;
                     })()}
-                    {(specs.parttype === 0 || specs.parttype === 4) && benchmarks.length > 0 && benchmarks.map((benchmark, index) => (
-                        <div key={index} className="spec">
-                            <dt>{benchmarkTypes[benchmark.type]}</dt>
-                            <dd>{benchmark.score}</dd>
-                        </div>
-                    ))}
+                    { benchmarksLoading ? 
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                        :
+                        <>
+                            { benchmarks.length > 0 && benchmarks.map((benchmark, index) => (
+                                <div key={index} className="spec">
+                                    <dt>{benchmarkTypes[benchmark.type]}</dt>
+                                    <dd>{benchmark.score}</dd>
+                                </div>
+                            ))}
+                        </>
+                    }
                 </div>
             </div>
             </dl>
-            {partLists.length > 0 && (
-            <div>
-                <h2>Lists Using Part</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Total Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {partLists.map((list, index) => (
-                            <tr key={index}>
-                                <td><Link to={`/lists/${list.listid}`}>{list.name}</Link></td>
-                                <td>{list.description}</td>
-                                <td>{list.totalprice}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        )}
+            {partListsLoading ?
+                <Spinner animation="border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </Spinner>
+                :
+                <>
+                    {partLists.length > 0 && (
+                        <div>
+                            <h2>Lists Using Part</h2>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {partLists.map((list, index) => (
+                                        <tr key={index}>
+                                            <td><Link to={`/lists/${list.listid}`}>{list.name}</Link></td>
+                                            <td>{list.description}</td>
+                                            <td>{list.totalprice}</td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    )}
+                </>
+            }
         </div>
     );
 };

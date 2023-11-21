@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './style.css';
 import { Link, useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Details from '../Details';
+import './style.css';
 
 const Configurator = () => {
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
@@ -20,6 +23,9 @@ const Configurator = () => {
             price: null,
         }))
     );
+    const [showDetailModal, setShowDetailModal] = useState(false);
+	const [detailPart, setDetailPart] = useState(null);
+
     const { listid } = useParams();
 
     useEffect(() => {
@@ -138,6 +144,15 @@ const Configurator = () => {
                 console.error('Error deleting part!', error);
             });
     };
+
+    const handleShowDetailModal = async (partl) => {
+		setDetailPart(partl);
+		setShowDetailModal(true);
+	}
+	const handleCloseDetailModal = () => {
+		setDetailPart(null);
+		setShowDetailModal(false);
+	}
     
     const renderRow = (part, index) => {
         if (listLoading) {
@@ -160,7 +175,7 @@ const Configurator = () => {
         return (
             <tr key={index} className='config-row'>
                 <td>{part.name}</td>
-                <td>{part.model ? <Link to={`/part/${part.partid}`}>{part.model}</Link> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
+                <td>{part.model ? <Link onClick={() => handleShowDetailModal(part)}>{part.model}</Link> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
                 <td>{part.manufacturer || ''}</td>
                 <td>
                     {part.model && (
@@ -188,7 +203,29 @@ const Configurator = () => {
     
 
     return (
-        <>            
+        <>
+
+            <Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
+                <Modal.Header closeButton>
+                <Modal.Title>{detailPart?.manufacturer} {detailPart?.model} Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+					{detailPart ? (
+						<Details
+							{...detailPart}
+						/>
+					) : (
+						<Spinner animation="border" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</Spinner>
+					)}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
+                    {/* <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button> */}
+                </Modal.Footer>
+            </Modal>
+
             { listInfo.name ? 
                 <h2>{listInfo.name}</h2>
             :
