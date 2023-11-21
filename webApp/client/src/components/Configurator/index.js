@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './style.css';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -160,7 +160,7 @@ const Configurator = () => {
         return (
             <tr key={index} className='config-row'>
                 <td>{part.name}</td>
-                <td>{part.model || <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
+                <td>{part.model ? <Link to={`/part/${part.partid}`}>{part.model}</Link> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
                 <td>{part.manufacturer || ''}</td>
                 <td>
                     {part.model && (
@@ -216,8 +216,8 @@ const Configurator = () => {
                     </Spinner>
                 :
                     <div>
-                        <div><p><strong>PSU Wattage: </strong>{listTDP.wattage} W</p></div>
-                        <div><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp} W</p></div>
+                        <div><p><strong>PSU Wattage: </strong>{listTDP.wattage || 0} W</p></div>
+                        <div><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp || 0} W</p></div>
                         <p><strong>Total Price:</strong> ${listInfo.totalprice}</p>
                         <p>{listInfo.description}</p>
                     </div>

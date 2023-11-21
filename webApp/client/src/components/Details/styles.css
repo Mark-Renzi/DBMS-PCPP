@@ -1,0 +1,12 @@
+.spec{
+    font-size: 1.125rem;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.details {
+    margin-right: 10rem;
+}

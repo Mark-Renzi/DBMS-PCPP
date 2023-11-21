@@ -84,7 +84,7 @@ const HomePage = () => {
 		// }
 
 		if (editListName !== '') {
-			const url = "/api/editList/";
+			let url = "/api/editList/";
 			url += editListID;
 			const data = {
 				name: editListName,
@@ -122,7 +122,7 @@ const HomePage = () => {
     }
 
 	const deleteList = async (id) => {
-		const url = '/api/deletelist/';
+		let url = '/api/deletelist/';
 		url += id;
 	
 		try {

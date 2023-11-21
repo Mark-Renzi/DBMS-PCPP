@@ -1,3 +1,4 @@
+const partTables = ["CPU", "CPUCooler", "Motherboard", "ram", "GPU", "Storage", "Tower", "PSU"];
 
 const browse = async (req, res, db) => {
     let { partType, minPrice, maxPrice, orderBy, orderDir, pageNumber, limitNumber } = req.body;
@@ -127,6 +128,27 @@ const browse = async (req, res, db) => {
 
 };
 
+const getPartDetails = async (req, res, db) => {
+    let partID = req.params.partid;
+
+    try {
+        let type = await db.query(`
+            SELECT parttype FROM computerpart WHERE partid = $1
+        `, [partID]);
+        let partType = partTables[type?.rows[0]?.parttype];
+
+        let partDetails = await db.query(`
+            SELECT * FROM computerpart, ${partType}
+            WHERE computerpart.partid = ${partType}.partid AND computerpart.partid = $1
+        `, [partID]);
+        return res.status(200).json(partDetails?.rows[0]);
+    } catch (e){
+        console.log(e);
+        return res.status(404);
+    }
+};
+
 module.exports = {
-    browse
+    browse,
+    getPartDetails
 };
