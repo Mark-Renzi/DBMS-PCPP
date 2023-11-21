@@ -8,9 +8,11 @@ import Header from './components/Header';
 import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboard';
 import Configurator from './components/Configurator';
 import Browse from './components/Browse';
+import ListViewer from './components/ListViewer';
 
 
 import './App.css';
+import Details from './components/Details';
 
 class App extends Component {
 	render() {
@@ -23,10 +25,11 @@ class App extends Component {
 							<Routes>
 								<Route exact path="/" element={<HomePage />} />
 								<Route path="/leaderboard" element={<PricePerformanceLeaderboard />} />
-								{/* <Route path="/lists" element={<Lists />} /> */}
 								<Route path="/build" element={<Configurator />} />
 								<Route path="/browse/:id?" element={<Browse />} />
 								<Route path="/build/:listid" element={<Configurator />} />
+								<Route path="/part/:partid" element={<Details />} />
+								<Route path="/lists/:listid" element={<ListViewer />} />
 							</Routes>
 						</div>
 					</div>

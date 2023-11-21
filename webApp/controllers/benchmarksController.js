@@ -46,6 +46,21 @@ const benchmarkPricePerf = async (req, res, db) => {
 
 };
 
+const getBenchmarks = async (req, res, db) => {
+    let chipsetID = req.params.chipsetid;
+
+    try {
+        let benchmarks = await db.query(`
+            SELECT * FROM benchmark WHERE chipsetid = $1
+        `, [chipsetID]);
+        return res.status(200).json(benchmarks?.rows);
+    } catch (e){
+        console.log(e);
+        return res.status(404);
+    }
+};
+
 module.exports = {
-    benchmarkPricePerf
+    benchmarkPricePerf,
+    getBenchmarks
 };

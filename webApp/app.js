@@ -114,6 +114,10 @@ app.post('/api/benchmarks', function (req, res) {
     benchmarksController.benchmarkPricePerf(req, res, db);
 });
 
+app.get('/api/benchmarks/:chipsetid', function (req, res) {
+    benchmarksController.getBenchmarks(req, res, db);
+});
+
 /**
  * @LISTS
  */
@@ -122,16 +126,27 @@ app.get('/api/lists', ensureAuthenticated, function (req, res) {
 });
 
 app.post('/api/newlist', ensureAuthenticated, function (req, res) {
-    const { name, description } = req.body;
-    listsController.addList(name, description, req, res, db);
+    listsController.addList(req, res, db);
 });
 
-app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+app.delete('/api/deletelist/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.deleteList(req, res, db);
+});
+
+app.post('/api/editlist/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+    listsController.editList(req, res, db);
+});
+
+app.get('/api/listinfo/:listid', function (req, res) {
     listsController.getListInfo(req, res, db);
 });
 
-app.get('/api/listtdp/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+app.get('/api/listtdp/:listid', function (req, res) {
     listsController.getListTDP(req, res, db);
+});
+
+app.get('/api/listswithpart/:partid', function (req, res) {
+    listsController.getListsWithPart(req, res, db);
 });
 
 /**
@@ -153,6 +168,10 @@ app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, fun
     configuratorController.updateQuantity(req, res, db);
 });
 
+app.get('/api/publicbuild/:listid', function (req, res) {
+    configuratorController.getParts(req, res, db);
+});
+
 /**
  * @BROWSE
  */
@@ -162,6 +181,10 @@ app.post('/api/browse', function (req, res) {
 
 app.post('/api/browse/menu', function (req, res) {
     partsController.menuItems(req, res, db);
+});
+
+app.get('/api/details/:partid', function (req, res) {
+    partsController.getPartDetails(req, res, db);
 });
 
 

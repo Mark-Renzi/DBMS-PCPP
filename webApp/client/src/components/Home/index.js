@@ -6,12 +6,18 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
 const HomePage = () => {
 	const [userLists, setUserLists] = useState([]);
 	const [showListModal, setShowListModal] = useState(false);
+	const [showEditModal, setShowEditModal] = useState(false);
 	const [newListName, setNewListName] = useState('');
+	const [editListName, setEditListName] = useState('');
 	const [newListDescription, setNewListDescription] = useState('');
+	const [editListDescription, setEditListDescription] = useState('');
+	const [editListID, setEditListID] = useState('');
 	const [listsLoading, setListsLoading] = useState(false);
 
     useEffect(() => {
@@ -40,6 +46,10 @@ const HomePage = () => {
     }
 
 	const createList = async () => {
+		// if (newListDescription == ''){
+		// 	setNewListDescription('_');
+		// }
+
 		const url = "/api/newlist";
 		const data = {
 			name: newListName,
@@ -57,14 +67,41 @@ const HomePage = () => {
 
 	const handleModalClose = () => {
         setShowListModal(false);
+		setShowEditModal(false);
     }
 
 	const handleListCreation = async () => {
-		console.log(newListName);
-		console.log(newListDescription);
-		setShowListModal(false);
-		const newlistid = await createList();
-		window.location.href = `http://localhost:3000/build/${newlistid}`;
+		if (newListName !== '') {
+			setShowListModal(false);
+			const newlistid = await createList();
+			window.location.href = `http://localhost:3000/build/${newlistid}`;
+		}
+	}
+
+	const handleEditList = async () => {
+		// if (editListDescription == ''){
+		// 	setEditListDescription('_');
+		// }
+
+		if (editListName !== '') {
+			let url = "/api/editList/";
+			url += editListID;
+			const data = {
+				name: editListName,
+				description: editListDescription
+			};
+		
+			try {
+				const response = await axios.post(url, data);
+				console.log(response.data);
+				return response.data.listid;
+			} catch (error) {
+				console.error("Error editing list", error);
+			} finally {
+				setShowEditModal(false);
+				getLists();
+			}
+		}
 	}
 
 	const handleNewListClick = async () => {
@@ -77,32 +114,52 @@ const HomePage = () => {
 		}
     }
 
+	const editList = (id, name, description) => {
+		setEditListID(id);
+		setEditListName(name);
+		setEditListDescription(description);
+        setShowEditModal(true);
+    }
+
+	const deleteList = async (id) => {
+		let url = '/api/deletelist/';
+		url += id;
+	
+		try {
+			const response = await axios.delete(url);
+			return response.data.listid;
+		} catch (error) {
+			console.error("Error deleting list", error);
+		} finally {
+			getLists();
+		}
+    }
+
 	return (
 		<div className="HomeContainer">
-
 			<Modal show={showListModal} onHide={handleModalClose}>
 				<Modal.Header closeButton>
-					<Modal.Title>Create New List</Modal.Title>
+					<Modal.Title>Create Part List</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<div>
-						<label>Name</label>
 						<input
 							id='name'
 							type='text'
 							onChange={(e) => setNewListName(e.target.value)}
 							value={newListName}
 							className="description-box"
+							placeholder='Name'
 						/>
 					</div>
 					<div>
-						<label>Description</label>
 						<input
 							id='description'
 							type='text'
 							onChange={(e) => setNewListDescription(e.target.value)}
 							value={newListDescription}
 							className="description-box"
+							placeholder='Description'
 						/>
 					</div>
 				</Modal.Body>
@@ -112,10 +169,48 @@ const HomePage = () => {
 				</Modal.Footer>
 			</Modal>
 
+			<Modal show={showEditModal} onHide={handleModalClose}>
+				<Modal.Header closeButton>
+					<Modal.Title>Edit Part List</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>
+					<div>
+						<input
+							id='name'
+							type='text'
+							onChange={(e) => setEditListName(e.target.value)}
+							value={editListName}
+							className="description-box"
+							placeholder='Name'
+						/>
+					</div>
+					<div>
+						<input
+							id='description'
+							type='text'
+							onChange={(e) => setEditListDescription(e.target.value)}
+							value={editListDescription}
+							className="description-box"
+							placeholder='Description'
+						/>
+					</div>
+				</Modal.Body>
+				<Modal.Footer>
+					<Button variant="secondary" onClick={handleModalClose}>Cancel</Button>
+					<Button variant="primary" onClick={handleEditList}>Edit List</Button>
+				</Modal.Footer>
+			</Modal>
+
 			<div className="ListsContainer">
-				<button className='card-button' onClick={handleNewListClick} title='Create a new list'>
-					<p className="card-text card-new text-center">+</p>
-				</button>
+				{localStorage.getItem('username') ? (
+					<button className='card-button card-new-center' onClick={handleNewListClick} title='Create a new list'>
+						<FontAwesomeIcon className="card-new" icon={faPlus} />
+					</button>
+				) : (
+					<button className='card-button logged-out-card card-text card-new-center' onClick={handleNewListClick} title='Create a new list'>
+						<span>Login To Create Part Lists</span>
+					</button>
+				)}
 				{ listsLoading ?
 					<button className='card-button spinner-container'>
 						<Spinner animation="grow" role="status">
@@ -125,14 +220,25 @@ const HomePage = () => {
 					:
 					<>
 						{ userLists.map((partlist) => (
-							<Link className='card-link' to={`/build/${partlist.listid}`} key={partlist.listid}>
-								<button className='card-button'>
-									<p className="card-text text-center card-tit">{partlist.name}</p>
+							<Link className='card-link card-button' title={`Edit Part List: ${partlist.name}`} to={`/build/${partlist.listid}`} key={partlist.listid}>
+								<div className='card-buttons'>
+									<button className='list-button btn-info' id='edit-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); editList(partlist.listid, partlist.name, partlist.description); }}>
+										<FontAwesomeIcon icon={faPenToSquare} />
+									</button>
+									<button className='list-button btn-danger' id='delete-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); deleteList(partlist.listid); }}>
+										<FontAwesomeIcon icon={faXmark} />
+									</button>
+								</div>
+								<p className="card-text text-center card-tit">{partlist.name}</p>
+								<hr className='hr-line' />
+								<p className="card-text text-center card-desc">{partlist.description}</p>
+								{/* {partlist.description !== '' ? (
 									<hr className='hr-line' />
-									<p className="card-text text-center card-desc">{partlist.description}</p>
-									<hr className='hr-line' />
-									<p className="card-text text-center card-price">${partlist.totalprice}</p>
-								</button>
+									) : (
+									null
+								)} */}
+								<hr className='hr-line' />
+								<p className="card-text text-center card-price">${partlist.totalprice}</p>
 							</Link>
 						))}
 					</>

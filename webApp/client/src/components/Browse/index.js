@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
@@ -520,7 +520,7 @@ const Browse = () => {
 										{partsList.map((partl) => (
 											<tr className='row-hover' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
-												<td>{partl.model}</td>
+												<td><Link to={`/part/${partl.partid}`}>{partl.model}</Link></td>
 												<td>{partl.price}</td>
 												{renderRowCells(partl)}
 											</tr>
