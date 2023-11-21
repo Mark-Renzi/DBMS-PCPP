@@ -23,7 +23,7 @@
     flex-direction: row;
     height: 100%;
     border: 0.5px solid gainsboro;
-    border-top: 0;
+    /* border-top: 0; */
     width: 100%;
     justify-content: flex-end;
     background-color: white;
@@ -64,7 +64,7 @@
     width: 100%;
     gap: 2rem;
     height: 100%;
-  }
+}
 
 .filters-table {
     width: 100%;
@@ -92,6 +92,12 @@
     max-width: 80rem;
 }
 
+.min-height-table {
+    min-height: 52rem;
+    width: 100%;
+    background-color: white;
+}
+
 @media (min-width: 80rem) {
     .filters-table {
         flex-direction: row;
@@ -103,7 +109,7 @@
 
     .selection-list {
         width: 25rem;
-        max-height: 57rem;
+        max-height: 100%;
         overflow-y: auto;
         flex-shrink: 0;
         margin: 1rem 0;

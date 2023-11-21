@@ -319,7 +319,7 @@ const Browse = () => {
 
 			<Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
                 <Modal.Header closeButton>
-                    <Modal.Title>{detailPart?.model} Details</Modal.Title>
+				<Modal.Title>{detailPart?.manufacturer} {detailPart?.model} Details</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
 					{detailPart ? (
@@ -334,7 +334,7 @@ const Browse = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
-                    <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button>
+                    {/* <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button> */}
                 </Modal.Footer>
             </Modal>
 
@@ -506,40 +506,42 @@ const Browse = () => {
 					</div>
 
 					<div className='table-scroll' ref={tableRef}>
-						<table className="priceperformance-table">
-							<thead>
-								<tr>
-									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
-									<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
-									<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
-									{renderTableHeaders()}
-								</tr>
-							</thead>
-							<tbody>
-								{listLoading ?
-									<tr className='row-hover'>
-										<td className='table-spinner-container' colSpan={tableWidth}>
-											<div className='table-spinner'>
-												<Spinner animation="border" role="status">
-													<span className="visually-hidden">Loading...</span>
-												</Spinner>
-											</div>
-										</td>
+						<div className='min-height-table'>
+							<table className="priceperformance-table">
+								<thead>
+									<tr>
+										<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
+										<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
+										<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
+										{renderTableHeaders()}
 									</tr>
-									:
-									<>
-										{partsList.map((partl) => (
-											<tr className='row-hover' key={partl.partid}>
-												<td>{partl.manufacturer}</td>
-												<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
-												<td>{partl.price}</td>
-												{renderRowCells(partl)}
-											</tr>
-										))}
-									</>
-								}
-							</tbody>
-						</table>
+								</thead>
+								<tbody>
+									{listLoading ?
+										<tr className='row-hover'>
+											<td className='table-spinner-container' colSpan={tableWidth}>
+												<div className='table-spinner'>
+													<Spinner animation="border" role="status">
+														<span className="visually-hidden">Loading...</span>
+													</Spinner>
+												</div>
+											</td>
+										</tr>
+										:
+										<>
+											{partsList.map((partl) => (
+												<tr className='row-hover' key={partl.partid}>
+													<td>{partl.manufacturer}</td>
+													<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
+													<td>{partl.price}</td>
+													{renderRowCells(partl)}
+												</tr>
+											))}
+										</>
+									}
+								</tbody>
+							</table>
+						</div>
 						<Pagination>
 							<div className="pagination-organize">
 								<Pagination.Prev onClick={onhandlePrev} disabled={currentPage === 1} />
