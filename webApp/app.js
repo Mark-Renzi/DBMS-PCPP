@@ -137,7 +137,7 @@ app.post('/api/editlist/:listid', ensureAuthenticated, ensureListOwner, function
     listsController.editList(req, res, db);
 });
 
-app.get('/api/listinfo/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+app.get('/api/listinfo/:listid', function (req, res) {
     listsController.getListInfo(req, res, db);
 });
 
@@ -147,10 +147,6 @@ app.get('/api/listtdp/:listid', function (req, res) {
 
 app.get('/api/listswithpart/:partid', function (req, res) {
     listsController.getListsWithPart(req, res, db);
-});
-
-app.get('/api/publiclistinfo/:listid', function (req, res) {
-    listsController.getPublicBuild(req, res, db);
 });
 
 /**

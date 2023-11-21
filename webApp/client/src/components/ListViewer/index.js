@@ -58,7 +58,7 @@ const ListViewer = () => {
       };
 
       const getListInfo = () => {
-        axios.get(`/api/publiclistinfo/${listid}`)
+        axios.get(`/api/listinfo/${listid}`)
             .then(response => {
                 setListInfo(response.data);
             })
