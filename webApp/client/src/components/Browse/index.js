@@ -1,22 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
 import NumberInput from '../NumberInput/NumberInput';
+import Details from '../Details';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretUp, faCaretDown, faPlus } from '@fortawesome/free-solid-svg-icons';
+import Slider from '@mui/material/Slider';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import ListItemText from '@mui/material/ListItemText';
+import Select from '@mui/material/Select';
+import Checkbox from '@mui/material/Checkbox';
+import Chip from '@mui/material/Chip';
 import './style.css';
 
 const Browse = () => {
 	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
 	const [partsList, setPartsList] = useState([]);
 	const [minPrice, setMinPrice] = useState(0);
-	const [maxPrice, setMaxPrice] = useState(100000);
+	const [maxPrice, setMaxPrice] = useState(10000);
+	const [intermediateMinPrice, setIntermediateMinPrice] = useState(0);
+	const [intermediateMaxPrice, setIntermediateMaxPrice] = useState(10000);
+	const [minPriceRange, setMinPriceRange] = useState(0);
+	const [maxPriceRange, setMaxPriceRange] = useState(10000);
 	const [orderBy, setOrderBy] = useState('price');
 	const [orderDir, setOrderDir] = useState('ASC');
 	const [listLoading, setListLoading] = useState(true);
@@ -25,50 +39,148 @@ const Browse = () => {
 	const [enteredPage, setEnteredPage] = useState(1);
 	const [totalResultNum, setTotalResultNum] = useState(0);
 	const [addingPartId, setAddingPartId] = useState(null);
+	const [manufacturerMenuProps, setManufacturerMenuProps] = useState([]);
+	const [selectedManufacturers, setSelectedManufacturers] = useState([]);
+	const [dynamicFilters, setDynamicFilters] = useState({
+		numerical: {},
+		categorical: {}
+	});
+	const [intermediateNumericalFilters, setIntermediateNumericalFilters] = useState({});
+	const [showDetailModal, setShowDetailModal] = useState(false);
+	const [detailPart, setDetailPart] = useState(null);
+	const tableRef = useRef(null);
+	const selectionListRef = useRef(null);
 
-	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price'];
+	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
 	const pageSize = 20;
 	const { id } = useParams();
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
 	let tableWidth = 3;
+	const MenuProps = {
+		PaperProps: {
+			style: {
+			maxHeight: 48 * 4.5 + 8,
+			width: 250,
+			},
+		},
+	};
 
 	useEffect(() => {
+		fetchMenuItems();
 		onSubmit();
 	}, []);
 
 	useEffect(() => {
+		fetchMenuItems();
+		setSelectedManufacturers([]);
+	}, [part]);
+
+	useEffect(() => {
+		setCurrentPage(1);
+	}, [selectedManufacturers]);
+
+	useEffect(() => {
 		onSubmit();
-	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage]);
+	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
 
+	const fetchMenuItems = async () => {
+		const url = "/api/browse/menu";
+		const data = {
+			partType: part
+		};
+		let response;
+		try {
+			response = await axios.post(url, data);
+			setManufacturerMenuProps(response?.data?.categorical.manufacturers);
+			setMinPriceRange(response?.data?.numerical.price[0]);
+			setMaxPriceRange(response?.data?.numerical.price[1]);
+			setIntermediateMinPrice(response?.data?.numerical.price[0]);
+			setIntermediateMaxPrice(response?.data?.numerical.price[1]);
+			setMinPrice(response?.data?.numerical.price[0]);
+			setMaxPrice(response?.data?.numerical.price[1]);
 
+			const newDynamicFilters = {
+				numerical: {},
+				categorical: {}
+			};
+		  
+			for (const key of Object.keys(response.data.numerical)) {
+				if (key !== 'price') {
+					newDynamicFilters.numerical[key] = {
+						range: response.data.numerical[key],
+						value: response.data.numerical[key] // set the default range value
+					};
+				}
+			}
+			const newIntermediateValues = {};
+			Object.keys(dynamicFilters.numerical).forEach(key => {
+				newIntermediateValues[key] = dynamicFilters.numerical[key].range;
+			});
+			setIntermediateNumericalFilters(newIntermediateValues);
+		  
+			for (const key of Object.keys(response.data.categorical)) {
+				if (key !== 'manufacturers') {
+					newDynamicFilters.categorical[key] = {
+						options: response.data.categorical[key],
+						value: [] // default to an empty selection
+					};
+				}
+			}
+		  
+			setDynamicFilters(newDynamicFilters);
+
+			setListLoading(false);
+		} catch (e) {
+			console.log(e)
+		}
+	}
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
 		setCurrentPage(1);
 	}
 
-	const onChangeMinPrice = (minPrice) => {
-		setMinPrice(minPrice);
+	const handleChangeMinMaxPrice = (event, newValue) => {
+		setIntermediateMinPrice(newValue[0]);
+		setIntermediateMaxPrice(newValue[1]);
 		setCurrentPage(1);
-	}
+	};
 
-	const onChangeMaxPrice = (maxPrice) => {
-		setMaxPrice(maxPrice);
+	const onSubmitPrice = () => {
+		setMinPrice(intermediateMinPrice);
+		setMaxPrice(intermediateMaxPrice);
 		setCurrentPage(1);
 	}
 
 	const onSubmit = async () => {
 		setListLoading(true);
 		const url = "/api/browse";
+
+		const dynamicData = {
+			numerical: {},
+			categorical: {}
+		};
+	
+		for (const [key, value] of Object.entries(dynamicFilters.numerical)) {
+			dynamicData.numerical[key] = value.value;
+		}
+	
+		for (const [key, value] of Object.entries(dynamicFilters.categorical)) {
+			dynamicData.categorical[key] = value.value;
+		}
+
 		const data = {
 			partType: part,
 			minPrice: minPrice,
 			maxPrice: maxPrice,
+			manufacturers: selectedManufacturers,
 			orderBy: orderBy,
 			orderDir: orderDir,
 			pageNumber: currentPage,
-			limitNumber: pageSize
+			limitNumber: pageSize,
+			dynamicFilters: dynamicData
 		};
+		
 		let response;
 		try {
 			response = await axios.post(url, data);
@@ -115,7 +227,7 @@ const Browse = () => {
         return (
             <>
                 {filteredHeaders.map(key => (
-                    <th key={key} onClick={() => handleHeaderClick(key)}>
+                    <th key={key} >
                         {key.charAt(0).toUpperCase() + key.slice(1)} {renderSortArrow(key)}
                     </th>
                 ))}
@@ -181,6 +293,14 @@ const Browse = () => {
 	const handleEllipseClick = () => {
         setShowEllipseModal(true);
     }
+	const handleShowDetailModal = async (partl) => {
+		setDetailPart(partl);
+		setShowDetailModal(true);
+	}
+	const handleCloseDetailModal = () => {
+		setDetailPart(null);
+		setShowDetailModal(false);
+	}
 
 	return (
 		<>
@@ -197,12 +317,36 @@ const Browse = () => {
                 </Modal.Footer>
             </Modal>
 
+			<Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
+                <Modal.Header closeButton>
+                    <Modal.Title>{detailPart?.model} Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+					{detailPart ? (
+						<Details
+							{...detailPart}
+						/>
+					) : (
+						<Spinner animation="border" role="status">
+							<span className="visually-hidden">Loading...</span>
+						</Spinner>
+					)}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
+                    <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button>
+                </Modal.Footer>
+            </Modal>
+
 			<div className="p-1">
 				<h1>
 					Search for {part} parts
 				</h1>
-				<div>
-					<div className="horizontal-group selection-list">
+				<div className="filters-table">
+					<div
+						className="selection-list"
+						ref={selectionListRef}
+					>
 						{id && id < 8 && id >= 0 ?
 							<></>
 							:
@@ -216,7 +360,7 @@ const Browse = () => {
 									</Dropdown.Toggle>
 
 									<Dropdown.Menu>
-										<Dropdown.Item onClick={() => onChangePartType('ALL')}>ALL</Dropdown.Item>
+										<Dropdown.Item onClick={() => onChangePartType('All')}>All</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
 										<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
@@ -229,19 +373,139 @@ const Browse = () => {
 								</Dropdown>
 							</div>
 						}
-						<div className="vertical-group">
+						<div className="vertical-group slider">
 							<p>
-								Price Range:
+								Price: ${minPrice} - ${maxPrice}
 							</p>
-							<div className="horizontal-group">
-								<NumberInput enteredValue={minPrice} setEnteredValue={onChangeMinPrice} />
-								<p>to</p>
-								<NumberInput enteredValue={maxPrice} setEnteredValue={onChangeMaxPrice} />
+							<div className="horizontal-group slider">
+								<Slider
+									value={[intermediateMinPrice, intermediateMaxPrice]}
+									onChange={handleChangeMinMaxPrice}
+									onChangeCommitted={onSubmitPrice}
+									valueLabelDisplay="auto"
+									aria-labelledby="range-slider"
+									className='slider'
+									getAriaValueText={() => `${intermediateMinPrice} - ${intermediateMaxPrice}`}
+									min={minPriceRange}
+									max={maxPriceRange}
+								/>
 							</div>
 						</div>
+						<div className="vertical-group">
+							<p>
+								Select Manufacturer(s):
+							</p>
+							<FormControl sx={{ m: 1, width: 300 }}>
+								<InputLabel id="demo-multiple-checkbox-label">Manufacturer(s)</InputLabel>
+								<Select
+									labelId="demo-multiple-checkbox-label"
+									id="demo-multiple-checkbox"
+									multiple
+									value={selectedManufacturers}
+									onChange={(event) => setSelectedManufacturers(event.target.value)}
+									input={<OutlinedInput label="Manufacturer(s)" />}
+									renderValue={(selected) => (
+										<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+											{selected.map((value) => (
+												<Chip key={value} label={value} />
+											))}
+										</div>
+									)}
+									MenuProps={MenuProps}
+								>
+									{manufacturerMenuProps.map((name) => (
+										<MenuItem key={name} value={name}>
+											<Checkbox checked={selectedManufacturers.indexOf(name) > -1} />
+											<ListItemText primary={name} />
+										</MenuItem>
+									))}
+								</Select>
+							</FormControl>
+						</div>
+						{
+							Object.entries(dynamicFilters.numerical).map(([key, filter]) => (
+								<div key={key} className="vertical-group slider">
+									<p>
+										{key.charAt(0).toUpperCase() + key.slice(1)}: {intermediateNumericalFilters[key]?.join(" - ")}
+									</p>
+									<div className="horizontal-group slider">
+										<Slider
+											value={intermediateNumericalFilters[key] || filter.range}
+											onChange={(event, newValue) => {
+												setIntermediateNumericalFilters({
+													...intermediateNumericalFilters,
+													[key]: newValue
+												});
+											}}
+											onChangeCommitted={(event, newValue) => {
+												setDynamicFilters({
+													...dynamicFilters,
+													numerical: {
+														...dynamicFilters.numerical,
+														[key]: { ...filter, value: newValue }
+													}
+												});
+											}}
+											valueLabelDisplay="auto"
+											aria-labelledby="range-slider"
+											className='slider'
+											getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
+											min={parseFloat(filter.range[0])}
+											max={parseFloat(filter.range[1])}
+										/>
+									</div>
+								</div>
+							))
+						}
+
+						{
+						Object.entries(dynamicFilters.categorical).map(([key, filter]) => (
+							<div key={key} className="vertical-group">
+							<p>
+								Select {key.charAt(0).toUpperCase() + key.slice(1)}:
+							</p>
+							<FormControl sx={{ m: 1, width: 300 }}>
+								<InputLabel id={`label-${key}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</InputLabel>
+								<Select
+								labelId={`label-${key}`}
+								id={`select-${key}`}
+								multiple
+								value={filter.value}
+								onChange={(event) => {
+									setDynamicFilters({
+									...dynamicFilters,
+									categorical: {
+										...dynamicFilters.categorical,
+										[key]: { ...filter, value: event.target.value }
+									}
+									});
+								}}
+								input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
+								renderValue={(selected) => (
+									<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+									{selected.map((value) => (
+										<Chip key={value} label={value} />
+									))}
+									</div>
+								)}
+								MenuProps={MenuProps}
+								>
+								{filter.options.map((name) => (
+									<MenuItem key={name} value={name}>
+									<Checkbox checked={filter.value.indexOf(name) > -1} />
+									<ListItemText primary={name} />
+									</MenuItem>
+								))}
+								</Select>
+							</FormControl>
+							</div>
+						))
+						}
+
+
 					</div>
 
-					<div className='table-scroll'>
+					<div className='table-scroll' ref={tableRef}>
 						<table className="priceperformance-table">
 							<thead>
 								<tr>
@@ -267,7 +531,7 @@ const Browse = () => {
 										{partsList.map((partl) => (
 											<tr className='row-hover' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
-												<td><Link to={`/part/${partl.partid}`}>{partl.model}</Link></td>
+												<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
 												<td>{partl.price}</td>
 												{renderRowCells(partl)}
 											</tr>

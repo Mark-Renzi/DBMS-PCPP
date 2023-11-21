@@ -1,7 +1,7 @@
 const partTables = ["CPU", "CPUCooler", "Motherboard", "ram", "GPU", "Storage", "Tower", "PSU"];
 
 const browse = async (req, res, db) => {
-    let { partType, minPrice, maxPrice, orderBy, orderDir, pageNumber, limitNumber } = req.body;
+    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber } = req.body;
 
     pageNumber = parseInt(pageNumber);
     limitNumber = parseInt(limitNumber);
@@ -13,38 +13,13 @@ const browse = async (req, res, db) => {
     let conditions = [];
     let values = [];
 
+    // console.log(req.body.dynamicFilters)
+
     try {
 
         let parttype = null;
-        switch (partType) {
-            case "CPU":
-                parttype = 0;
-                break;
-            case "CPUCooler":
-                parttype = 1;
-                break;
-            case "Motherboard":
-                parttype = 2;
-                break;
-            case "RAM":
-                parttype = 3;
-                break;
-            case "GPU":
-                parttype = 4;
-                break;
-            case "Storage":
-                parttype = 5;
-                break;
-            case "Tower":
-                parttype = 6;
-                break;
-            case "PSU":
-                parttype = 7;
-                break;
-            default:
-                partType = null;
-                parttype = null;
-        }
+
+        [parttype, partType] = getTypeMapping(partType);
 
         if (parttype !== null && parttype >= 0 && parttype <= 7) {
             conditions.push(`parttype = $${values.length + 1}`);
@@ -55,15 +30,8 @@ const browse = async (req, res, db) => {
             `;
         } else {
             subquery = `
-                SELECT * FROM computerpart 
-                WHERE partid IN (SELECT partid FROM cpu)
-                OR partid IN (SELECT partid FROM cpucooler)
-                OR partid IN (SELECT partid FROM motherboard)
-                OR partid IN (SELECT partid FROM ram)
-                OR partid IN (SELECT partid FROM gpu)
-                OR partid IN (SELECT partid FROM storage)
-                OR partid IN (SELECT partid FROM tower)
-                OR partid IN (SELECT partid FROM psu)
+                SELECT * FROM computerpart
+                WHERE parttype IS NOT NULL
             `;
         }
 
@@ -77,6 +45,15 @@ const browse = async (req, res, db) => {
         } else if (maxPrice) {
             conditions.push(`price <= $${values.length + 1}`);
             values.push(maxPrice);
+        }
+
+        if (manufacturers && manufacturers.length > 0) {
+            let manufacturerConditions = [];
+            for (let i = 0; i < manufacturers.length; i++) {
+                manufacturerConditions.push(`manufacturer = $${values.length + 1}`);
+                values.push(manufacturers[i]);
+            }
+            conditions.push(`(${manufacturerConditions.join(' OR ')})`);
         }
         
 
@@ -113,10 +90,6 @@ const browse = async (req, res, db) => {
 
         let results = await db.query(resultQuery, values);
 
-
-
-
-        //return res.status(200).json(benchmarks?.rows);
         return res.status(200).json({
             partslist: results?.rows,
             totalResultNum: resultCount?.rows[0]?.count
@@ -127,6 +100,247 @@ const browse = async (req, res, db) => {
     }
 
 };
+
+const menuItems = async (req, res, db) => {
+
+    let { partType } = req.body;
+
+    let parttype = null;
+    [parttype, partType] = getTypeMapping(partType);
+
+    try {
+        let values = [];
+        let query = `
+            SELECT DISTINCT manufacturer, MAX(price) AS highest_price, MIN(price) AS lowest_price FROM computerpart
+        `;
+        if (parttype !== null) {
+            query += `WHERE parttype = $${values.length + 1} `;
+            values.push(parttype);
+        }
+        query += `GROUP BY manufacturer ORDER BY manufacturer ASC`;
+        
+        let results = await db.query(query, values);
+
+        let manufacturers = results.rows.map(row => row.manufacturer);
+        let prices = results.rows.reduce((acc, row) => {
+            acc.highest = Math.max(acc.highest, row.highest_price);
+            acc.lowest = Math.min(acc.lowest, row.lowest_price);
+            return acc;
+        }, { highest: 0, lowest: Number.MAX_VALUE });
+
+        let options = {
+            "categorical": {
+                "manufacturers": manufacturers
+            },
+            "numerical": {
+                "price": [prices.lowest, prices.highest]
+            }
+        };
+
+        options = await getDynamicOptions(parttype, db, options);
+
+        return res.status(200).json(options);
+
+    } catch (e) {
+        console.log(e);
+        return res.status(404).send('Error retrieving data');
+    }
+};
+
+const getTypeMapping = (partType) => {
+    let parttype = null;
+    switch (partType) {
+        case "CPU":
+            parttype = 0;
+            break;
+        case "CPUCooler":
+            parttype = 1;
+            break;
+        case "Motherboard":
+            parttype = 2;
+            break;
+        case "RAM":
+            parttype = 3;
+            break;
+        case "GPU":
+            parttype = 4;
+            break;
+        case "Storage":
+            parttype = 5;
+            break;
+        case "Tower":
+            parttype = 6;
+            break;
+        case "PSU":
+            parttype = 7;
+            break;
+        default:
+            partType = null;
+            parttype = null;
+    }
+    return [parttype, partType];
+}
+
+const getDynamicOptions = async (parttype, db, options) => {
+    if (parttype === 0) {
+        let [coresResult, clockResult, tdpResult, graphicsResult, socketResult] = await Promise.all([
+            db.query('SELECT MAX(cores) AS max_cores, MIN(cores) AS min_cores FROM cpu'),
+            db.query('SELECT MAX(boostclock) AS max_boostclock, MIN(boostclock) AS min_boostclock, MAX(coreclock) AS max_coreclock, MIN(coreclock) AS min_coreclock FROM cpu'),
+            db.query('SELECT MAX(tdp) AS max_tdp, MIN(tdp) AS min_tdp FROM cpu'),
+            db.query('SELECT DISTINCT graphics FROM cpu'),
+            db.query('SELECT DISTINCT socket FROM cpu')
+        ]);
+
+        options.numerical.cores = [coresResult.rows[0].min_cores, coresResult.rows[0].max_cores];
+        options.numerical.boostclock = [clockResult.rows[0].min_boostclock, clockResult.rows[0].max_boostclock];
+        options.numerical.coreclock = [clockResult.rows[0].min_coreclock, clockResult.rows[0].max_coreclock];
+        options.numerical.tdp = [tdpResult.rows[0].min_tdp, tdpResult.rows[0].max_tdp];
+
+        options.categorical.graphics = graphicsResult.rows.filter(row => row.graphics !== null).map(row => row.graphics);
+        options.categorical.socket = socketResult.rows.filter(row => row.socket !== null).map(row => row.socket);
+    } else if (parttype === 1) {
+        // CPU Cooler
+        // numerical: size, rpm_min, rpm_max, noiselevel_min, noiselevel_max
+        // categorical: color
+        let [sizeResult, rpmMaxResult, rpmMinResult, noiselevelMaxResult, noiseLevelMinResult, colorResult] = await Promise.all([
+            db.query('SELECT MAX(size) AS max_size, MIN(size) AS min_size FROM cpucooler'),
+            db.query('SELECT MAX(rpm_max) AS rpm_max_max, MIN(rpm_max) AS rpm_max_min FROM cpucooler'),
+            db.query('SELECT MAX(rpm_min) AS rpm_min_max, MIN(rpm_min) AS rpm_min_min FROM cpucooler'),
+            db.query('SELECT MAX(noiselevel_max) AS noiselevel_max_max, MIN(noiselevel_max) AS noiselevel_max_min FROM cpucooler'),
+            db.query('SELECT MAX(noiselevel_min) AS noiselevel_min_max, MIN(noiselevel_min) AS noiselevel_min_min FROM cpucooler'),
+            db.query('SELECT DISTINCT color FROM cpucooler')
+        ]);
+
+        options.numerical.size = [sizeResult.rows[0].min_size, sizeResult.rows[0].max_size];
+        options.numerical.rpm_max = [rpmMaxResult.rows[0].rpm_max_min, rpmMaxResult.rows[0].rpm_max_max];
+        options.numerical.rpm_min = [rpmMinResult.rows[0].rpm_min_min, rpmMinResult.rows[0].rpm_min_max];
+        options.numerical.noiselevel_max = [noiselevelMaxResult.rows[0].noiselevel_max_min, noiselevelMaxResult.rows[0].noiselevel_max_max];
+        options.numerical.noiselevel_min = [noiseLevelMinResult.rows[0].noiselevel_min_min, noiseLevelMinResult.rows[0].noiselevel_min_max];
+
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+    } else if (parttype === 2) {
+        // Motherboard
+        // numerical: maxmemory, memoryslots
+        // categorical: formfactor, socket, color
+    
+        let [maxMemoryResult, memorySlotsResult, formFactorResult, socketResult, colorResult] = await Promise.all([
+            db.query('SELECT MAX(maxmemory) AS max_maxmemory, MIN(maxmemory) AS min_maxmemory FROM motherboard'),
+            db.query('SELECT MAX(memoryslots) AS max_memoryslots, MIN(memoryslots) AS min_memoryslots FROM motherboard'),
+            db.query('SELECT DISTINCT formfactor FROM motherboard'),
+            db.query('SELECT DISTINCT socket FROM motherboard'),
+            db.query('SELECT DISTINCT color FROM motherboard')
+        ]);
+
+        options.numerical.maxmemory = [maxMemoryResult.rows[0].min_maxmemory, maxMemoryResult.rows[0].max_maxmemory];
+        options.numerical.memoryslots = [memorySlotsResult.rows[0].min_memoryslots, memorySlotsResult.rows[0].max_memoryslots];
+
+        options.categorical.formfactor = formFactorResult.rows.filter(row => row.formfactor !== null).map(row => row.formfactor);
+        options.categorical.socket = socketResult.rows.filter(row => row.socket !== null).map(row => row.socket);
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+    } else if (parttype === 3) {
+        // RAM
+        // numerical: totalcapacity, MHz, pricepergb
+        // categorical: color, ddr, count, capacity
+
+        let [totalCapacityResult, MHzResult, pricePerGbResult, colorResult, ddrResult, countResult, capacityResult] = await Promise.all([
+            db.query('SELECT MAX(totalcapacity) AS max_totalcapacity, MIN(totalcapacity) AS min_totalcapacity FROM ram'),
+            db.query('SELECT MAX(mhz) AS max_mhz, MIN(mhz) AS min_mhz FROM ram'),
+            db.query('SELECT MAX(pricepergb) AS max_pricepergb, MIN(pricepergb) AS min_pricepergb FROM ram'),
+            db.query('SELECT DISTINCT color FROM ram'),
+            db.query('SELECT DISTINCT ddr FROM ram'),
+            db.query('SELECT DISTINCT count FROM ram'),
+            db.query('SELECT DISTINCT capacity FROM ram')
+        ]);
+
+        options.numerical.totalcapacity = [totalCapacityResult.rows[0].min_totalcapacity, totalCapacityResult.rows[0].max_totalcapacity];
+        options.numerical.mhz = [MHzResult.rows[0].min_mhz, MHzResult.rows[0].max_mhz];
+        options.numerical.pricepergb = [pricePerGbResult.rows[0].min_pricepergb, pricePerGbResult.rows[0].max_pricepergb];
+
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+        options.categorical.ddr = ddrResult.rows.filter(row => row.ddr !== null).map(row => row.ddr);
+        options.categorical.count = countResult.rows.filter(row => row.count !== null).map(row => row.count);
+        options.categorical.capacity = capacityResult.rows.filter(row => row.capacity !== null).map(row => row.capacity);
+    } else if (parttype === 4) {
+        // GPU
+        // numerical: coreclock, boostclock, length
+        // categorical: chipset, memory, tdp, color
+
+        let [coreClockResult, boostClockResult, lengthResult, chipsetResult, memoryResult, tdpResult, colorResult] = await Promise.all([
+            db.query('SELECT MAX(coreclock) AS max_coreclock, MIN(coreclock) AS min_coreclock FROM gpu'),
+            db.query('SELECT MAX(boostclock) AS max_boostclock, MIN(boostclock) AS min_boostclock FROM gpu'),
+            db.query('SELECT MAX(length) AS max_length, MIN(length) AS min_length FROM gpu'),
+            db.query('SELECT DISTINCT chipset FROM gpu'),
+            db.query('SELECT DISTINCT memory FROM gpu'),
+            db.query('SELECT DISTINCT tdp FROM gpu'),
+            db.query('SELECT DISTINCT color FROM gpu')
+        ]);
+
+        options.numerical.coreclock = [coreClockResult.rows[0].min_coreclock, coreClockResult.rows[0].max_coreclock];
+        options.numerical.boostclock = [boostClockResult.rows[0].min_boostclock, boostClockResult.rows[0].max_boostclock];
+        options.numerical.length = [lengthResult.rows[0].min_length, lengthResult.rows[0].max_length];
+
+        options.categorical.chipset = chipsetResult.rows.filter(row => row.chipset !== null).map(row => row.chipset);
+        options.categorical.memory = memoryResult.rows.filter(row => row.memory !== null).map(row => row.memory);
+        options.categorical.tdp = tdpResult.rows.filter(row => row.tdp !== null).map(row => row.tdp);
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+    } else if (parttype === 5) {
+        // Storage
+        // numerical: capacity, pricepergb, cache
+        // categorical: formfactor, type, interface
+
+        let [capacityResult, pricePerGbResult, cacheResult, formFactorResult, typeResult, interfaceResult] = await Promise.all([
+            db.query('SELECT MAX(capacity) AS max_capacity, MIN(capacity) AS min_capacity FROM storage'),
+            db.query('SELECT MAX(pricepergb) AS max_pricepergb, MIN(pricepergb) AS min_pricepergb FROM storage'),
+            db.query('SELECT MAX(cache) AS max_cache, MIN(cache) AS min_cache FROM storage'),
+            db.query('SELECT DISTINCT formfactor FROM storage'),
+            db.query('SELECT DISTINCT type FROM storage'),
+            db.query('SELECT DISTINCT interface FROM storage')
+        ]);
+
+        options.numerical.capacity = [capacityResult.rows[0].min_capacity, capacityResult.rows[0].max_capacity];
+        options.numerical.pricepergb = [pricePerGbResult.rows[0].min_pricepergb, pricePerGbResult.rows[0].max_pricepergb];
+        options.numerical.cache = [cacheResult.rows[0].min_cache, cacheResult.rows[0].max_cache];
+
+        options.categorical.formfactor = formFactorResult.rows.filter(row => row.formfactor !== null).map(row => row.formfactor);
+        options.categorical.type = typeResult.rows.filter(row => row.type !== null).map(row => row.type);
+        options.categorical.interface = interfaceResult.rows.filter(row => row.interface !== null).map(row => row.interface);
+    } else if (parttype === 6) {
+        // Tower
+        // numerical: 
+        // categorical: color, formfactor, sidepanel
+
+        let [colorResult, formFactorResult, sidePanelResult] = await Promise.all([
+            db.query('SELECT DISTINCT color FROM tower'),
+            db.query('SELECT DISTINCT formfactor FROM tower'),
+            db.query('SELECT DISTINCT sidepanel FROM tower')
+        ]);
+
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+        options.categorical.formfactor = formFactorResult.rows.filter(row => row.formfactor !== null).map(row => row.formfactor);
+        options.categorical.sidepanel = sidePanelResult.rows.filter(row => row.sidepanel !== null).map(row => row.sidepanel);
+    } else if (parttype === 7) {
+        // PSU
+        // numerical: wattage
+        // categorical: color, modular, efficiency, formfactor
+
+        let [wattageResult, colorResult, modularResult, efficiencyResult, formFactorResult] = await Promise.all([
+            db.query('SELECT MAX(wattage) AS max_wattage, MIN(wattage) AS min_wattage FROM psu'),
+            db.query('SELECT DISTINCT color FROM psu'),
+            db.query('SELECT DISTINCT modular FROM psu'),
+            db.query('SELECT DISTINCT efficiency FROM psu'),
+            db.query('SELECT DISTINCT formfactor FROM psu')
+        ]);
+
+        options.numerical.wattage = [wattageResult.rows[0].min_wattage, wattageResult.rows[0].max_wattage];
+
+        options.categorical.color = colorResult.rows.filter(row => row.color !== null).map(row => row.color);
+        options.categorical.modular = modularResult.rows.filter(row => row.modular !== null).map(row => row.modular);
+        options.categorical.efficiency = efficiencyResult.rows.filter(row => row.efficiency !== null).map(row => row.efficiency);
+        options.categorical.formfactor = formFactorResult.rows.filter(row => row.formfactor !== null).map(row => row.formfactor);
+    }
+
+    return options;
+}
 
 const getPartDetails = async (req, res, db) => {
     let partID = req.params.partid;
@@ -150,5 +364,6 @@ const getPartDetails = async (req, res, db) => {
 
 module.exports = {
     browse,
+    menuItems,
     getPartDetails
 };

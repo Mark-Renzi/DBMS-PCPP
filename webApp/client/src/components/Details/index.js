@@ -4,12 +4,22 @@ import { useParams } from 'react-router-dom';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
-const Details = () => {
-    const { partid } = useParams();
+const Details = ({ partid }) => {
     const [specs, setSpecs] = useState({});
     const [benchmarks, setBenchmarks] = useState({});
     const [partLists, setPartLists] = useState({});
-    
+
+    if (!partid) {
+        partid = useParams().partid;
+        if (!partid) {
+            return (
+                <div>
+                    <h1>Invalid Part ID</h1>
+                </div>
+            );
+        }
+    }
+
     const benchmarkTypes = {
         0: 'G3Dmark',
         1: 'G2Dmark',
@@ -203,7 +213,7 @@ const Details = () => {
 
     return (
         <div>
-            <h1>{specs.manufacturer} {specs.model}</h1>
+            {/* <h1>{specs.manufacturer} {specs.model}</h1> */}
 
             <dl>
             <div className="details-container">

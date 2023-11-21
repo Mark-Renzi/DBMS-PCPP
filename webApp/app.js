@@ -179,6 +179,10 @@ app.post('/api/browse', function (req, res) {
     partsController.browse(req, res, db);
 });
 
+app.post('/api/browse/menu', function (req, res) {
+    partsController.menuItems(req, res, db);
+});
+
 app.get('/api/details/:partid', function (req, res) {
     partsController.getPartDetails(req, res, db);
 });
