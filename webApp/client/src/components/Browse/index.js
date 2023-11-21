@@ -70,6 +70,7 @@ const Browse = () => {
 
 	useEffect(() => {
 		fetchMenuItems();
+		setSelectedManufacturers([]);
 	}, [part]);
 
 	useEffect(() => {
@@ -333,7 +334,7 @@ const Browse = () => {
 					<div
 						className="selection-list"
 						ref={selectionListRef}
-						style={{ maxHeight: `calc(${selectionListHeight}px - 16px)`, overflowY: 'auto' }}
+						style={{ height: `calc(${selectionListHeight}px - 16px)`, overflowY: 'auto' }}
 					>
 						{id && id < 8 && id >= 0 ?
 							<></>
