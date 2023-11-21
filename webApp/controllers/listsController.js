@@ -14,7 +14,8 @@ const getLists = async (req, res, db) => {
     }
 };
 
-const deleteList = async (listid, req, res, db) => {
+const deleteList = async (req, res, db) => {
+    const listid = req.params.listid;
     const client = await db.connect();
     try {
         await client.query('BEGIN');
@@ -46,8 +47,9 @@ const getListInfo = async (req, res, db) => {
     }
 }
 
-const addList = async (name, description, req, res, db) => {
-    let userID = req.user.id;
+const addList = async (req, res, db) => {
+    const userID = req.user.id;
+    const { name, description } = req.body;
     const client = await db.connect();
     try {
         await client.query('BEGIN');
@@ -65,7 +67,9 @@ const addList = async (name, description, req, res, db) => {
     }
 };
 
-const editList = async (listid, name, description, req, res, db) => {
+const editList = async (req, res, db) => {
+    const listid = req.params.listid;
+    const { name, description } = req.body;
     const client = await db.connect();
     try {
         await client.query('BEGIN');

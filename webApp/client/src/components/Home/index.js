@@ -84,9 +84,9 @@ const HomePage = () => {
 		// }
 
 		if (editListName !== '') {
-			const url = "/api/editList";
+			const url = "/api/editList/";
+			url += editListID;
 			const data = {
-				listid: editListID,
 				name: editListName,
 				description: editListDescription
 			};
@@ -122,13 +122,11 @@ const HomePage = () => {
     }
 
 	const deleteList = async (id) => {
-		const url = '/api/deletelist';
-		const data = {
-			listid: id,
-		};
+		const url = '/api/deletelist/';
+		url += id;
 	
 		try {
-			const response = await axios.post(url, data);
+			const response = await axios.delete(url);
 			return response.data.listid;
 		} catch (error) {
 			console.error("Error deleting list", error);
