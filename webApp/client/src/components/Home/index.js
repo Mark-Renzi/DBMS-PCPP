@@ -46,6 +46,10 @@ const HomePage = () => {
     }
 
 	const createList = async () => {
+		// if (newListDescription == ''){
+		// 	setNewListDescription('_');
+		// }
+
 		const url = "/api/newlist";
 		const data = {
 			name: newListName,
@@ -67,28 +71,36 @@ const HomePage = () => {
     }
 
 	const handleListCreation = async () => {
-		setShowListModal(false);
-		const newlistid = await createList();
-		window.location.href = `http://localhost:3000/build/${newlistid}`;
+		if (newListName !== '') {
+			setShowListModal(false);
+			const newlistid = await createList();
+			window.location.href = `http://localhost:3000/build/${newlistid}`;
+		}
 	}
 
 	const handleEditList = async () => {
-		const url = "/api/editList";
-		const data = {
-			listid: editListID,
-			name: editListName,
-			description: editListDescription
-		};
-	
-		try {
-			const response = await axios.post(url, data);
-			console.log(response.data);
-			return response.data.listid;
-		} catch (error) {
-			console.error("Error editing list", error);
-		} finally {
-			setShowEditModal(false);
-			getLists();
+		// if (editListDescription == ''){
+		// 	setEditListDescription('_');
+		// }
+
+		if (editListName !== '') {
+			const url = "/api/editList";
+			const data = {
+				listid: editListID,
+				name: editListName,
+				description: editListDescription
+			};
+		
+			try {
+				const response = await axios.post(url, data);
+				console.log(response.data);
+				return response.data.listid;
+			} catch (error) {
+				console.error("Error editing list", error);
+			} finally {
+				setShowEditModal(false);
+				getLists();
+			}
 		}
 	}
 
@@ -129,27 +141,27 @@ const HomePage = () => {
 		<div className="HomeContainer">
 			<Modal show={showListModal} onHide={handleModalClose}>
 				<Modal.Header closeButton>
-					<Modal.Title>Create New List</Modal.Title>
+					<Modal.Title>Create Part List</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<div>
-						<label>Name</label>
 						<input
 							id='name'
 							type='text'
 							onChange={(e) => setNewListName(e.target.value)}
 							value={newListName}
 							className="description-box"
+							placeholder='Name'
 						/>
 					</div>
 					<div>
-						<label>Description</label>
 						<input
 							id='description'
 							type='text'
 							onChange={(e) => setNewListDescription(e.target.value)}
 							value={newListDescription}
 							className="description-box"
+							placeholder='Description'
 						/>
 					</div>
 				</Modal.Body>
@@ -161,27 +173,27 @@ const HomePage = () => {
 
 			<Modal show={showEditModal} onHide={handleModalClose}>
 				<Modal.Header closeButton>
-					<Modal.Title>Edit List</Modal.Title>
+					<Modal.Title>Edit Part List</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>
 					<div>
-						<label>Name</label>
 						<input
 							id='name'
 							type='text'
 							onChange={(e) => setEditListName(e.target.value)}
 							value={editListName}
 							className="description-box"
+							placeholder='Name'
 						/>
 					</div>
 					<div>
-						<label>Description</label>
 						<input
 							id='description'
 							type='text'
 							onChange={(e) => setEditListDescription(e.target.value)}
 							value={editListDescription}
 							className="description-box"
+							placeholder='Description'
 						/>
 					</div>
 				</Modal.Body>
@@ -210,7 +222,7 @@ const HomePage = () => {
 					:
 					<>
 						{ userLists.map((partlist) => (
-							<Link className='card-link card-button' to={`/build/${partlist.listid}`} key={partlist.listid}>
+							<Link className='card-link card-button' title={`Edit Part List: ${partlist.name}`} to={`/build/${partlist.listid}`} key={partlist.listid}>
 								<div className='card-buttons'>
 									<button className='list-button btn-info' id='edit-button' onClick={(e) => { e.preventDefault(); e.stopPropagation(); editList(partlist.listid, partlist.name, partlist.description); }}>
 										<FontAwesomeIcon icon={faPenToSquare} />
@@ -222,6 +234,11 @@ const HomePage = () => {
 								<p className="card-text text-center card-tit">{partlist.name}</p>
 								<hr className='hr-line' />
 								<p className="card-text text-center card-desc">{partlist.description}</p>
+								{/* {partlist.description !== '' ? (
+									<hr className='hr-line' />
+									) : (
+									null
+								)} */}
 								<hr className='hr-line' />
 								<p className="card-text text-center card-price">${partlist.totalprice}</p>
 							</Link>
