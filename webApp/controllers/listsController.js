@@ -1,4 +1,3 @@
-
 const getLists = async (req, res, db) => {
     let userID = req.user.id;
 
@@ -14,6 +13,23 @@ const getLists = async (req, res, db) => {
         return res.status(404);
     }
 };
+
+const deleteList = async (req, res, db) => {
+    const listid = req.params.listid;
+    const client = await db.connect();
+    try {
+        await client.query('BEGIN');
+        let deleteQuery = await client.query('DELETE FROM partslist WHERE listid = $1;', [listid]);
+        await client.query('COMMIT');
+        return res.status(200).json(deleteQuery?.rows[0]);
+    } catch(e) {
+        console.log(e);
+        client.query('ROLLBACK');
+        return res.status(404);
+    } finally {
+        client.release();
+    }
+}
 
 const getListInfo = async (req, res, db) => {
     let listID = req.params.listid;
@@ -31,8 +47,9 @@ const getListInfo = async (req, res, db) => {
     }
 }
 
-const addList = async (name, description, req, res, db) => {
-    let userID = req.user.id;
+const addList = async (req, res, db) => {
+    const userID = req.user.id;
+    const { name, description } = req.body;
     const client = await db.connect();
     try {
         await client.query('BEGIN');
@@ -49,6 +66,26 @@ const addList = async (name, description, req, res, db) => {
         client.release();
     }
 };
+
+const editList = async (req, res, db) => {
+    const listid = req.params.listid;
+    const { name, description } = req.body;
+    const client = await db.connect();
+    try {
+        await client.query('BEGIN');
+        const newlistid = await client.query(
+            'UPDATE partslist SET name = $2, description = $3 WHERE listid = $1 RETURNING *;'
+        , [listid, name, description]);
+        await client.query('COMMIT');
+        return res.status(200).json(newlistid?.rows[0]);
+    } catch (e){
+        console.log(e);
+        client.query('ROLLBACK');
+        return res.status(404);
+    } finally {
+        client.release();
+    }
+}
 
 const getListTDP = async (req, res, db) => {
     let listID = req.params.listid;
@@ -129,7 +166,9 @@ const getPublicBuild = async (req, res, db) => {
 
 module.exports = {
     getLists,
+    deleteList,
     getListInfo,
+    editList,
     addList,
     getListTDP,
     getListsWithPart,
