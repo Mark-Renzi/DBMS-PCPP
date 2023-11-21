@@ -4,6 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
 import NumberInput from '../NumberInput/NumberInput';
+import Details from '../Details';
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import axios from 'axios';
@@ -45,11 +46,12 @@ const Browse = () => {
 		categorical: {}
 	});
 	const [intermediateNumericalFilters, setIntermediateNumericalFilters] = useState({});
-	const [selectionListHeight, setSelectionListHeight] = useState(0);
+	const [showDetailModal, setShowDetailModal] = useState(false);
+	const [detailPart, setDetailPart] = useState(null);
 	const tableRef = useRef(null);
 	const selectionListRef = useRef(null);
 
-	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid'];
+	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
 	const pageSize = 20;
 	const { id } = useParams();
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
@@ -80,25 +82,6 @@ const Browse = () => {
 	useEffect(() => {
 		onSubmit();
 	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
-
-	useEffect(() => {
-		const updateSelectionListHeight = () => {
-			if (tableRef.current && !listLoading) {
-				const tableHeight = tableRef.current.clientHeight;
-				if (tableHeight > 0) {
-					setSelectionListHeight(tableHeight);
-				}
-			}
-		};
-
-		updateSelectionListHeight();
-
-		window.addEventListener('resize', updateSelectionListHeight);
-
-		return () => {
-			window.removeEventListener('resize', updateSelectionListHeight);
-		};
-	}, [listLoading]);
 
 	const fetchMenuItems = async () => {
 		const url = "/api/browse/menu";
@@ -310,6 +293,14 @@ const Browse = () => {
 	const handleEllipseClick = () => {
         setShowEllipseModal(true);
     }
+	const handleShowDetailModal = (partl) => () => {
+		setDetailPart(partl);
+		setShowDetailModal(true);
+	}
+	const handleCloseDetailModal = () => {
+		setDetailPart(null);
+		setShowDetailModal(false);
+	}
 
 	return (
 		<>
@@ -326,6 +317,23 @@ const Browse = () => {
                 </Modal.Footer>
             </Modal>
 
+			<Modal show={showDetailModal} onHide={handleCloseDetailModal}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{detailPart?.name}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+					{detailPart !== null &&
+						<Details>
+							{detailPart}
+						</Details>
+					}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
+                    <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button>
+                </Modal.Footer>
+            </Modal>
+
 			<div className="p-1">
 				<h1>
 					Search for {part} parts
@@ -334,7 +342,6 @@ const Browse = () => {
 					<div
 						className="selection-list"
 						ref={selectionListRef}
-						style={{ height: `calc(${selectionListHeight}px - 16px)`, overflowY: 'auto' }}
 					>
 						{id && id < 8 && id >= 0 ?
 							<></>
@@ -520,7 +527,7 @@ const Browse = () => {
 										{partsList.map((partl) => (
 											<tr className='row-hover' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
-												<td><Link to={`/part/${partl.partid}`}>{partl.model}</Link></td>
+												<td><Link onClick={handleShowDetailModal(partl)}>{partl.model}</Link></td>
 												<td>{partl.price}</td>
 												{renderRowCells(partl)}
 											</tr>

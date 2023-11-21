@@ -4,11 +4,20 @@ import { useParams } from 'react-router-dom';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
-const Details = () => {
-    const { partid } = useParams();
+const Details = ({ partid }) => {
     const [specs, setSpecs] = useState({});
     const [benchmarks, setBenchmarks] = useState({});
     const [partLists, setPartLists] = useState({});
+
+    console.log(partid)
+
+    if (!partid) {
+        partid = useParams().partid;
+    }
+
+    if (!partid) {
+        return null;
+    }
     
     const benchmarkTypes = {
         0: 'G3Dmark',
