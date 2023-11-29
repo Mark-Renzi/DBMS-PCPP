@@ -104,15 +104,15 @@ const Browse = () => {
 				categorical: {}
 			};
 		  
-			for (const key of Object.keys(response.data.numerical)) {
-				if (key !== 'price') {
-					newDynamicFilters.numerical[key] = {
-						range: response.data.numerical[key],
-						value: response.data.numerical[key] // set the default range value
-					};
-				}
-			}
 			const newIntermediateValues = {};
+
+        for (const key of Object.keys(response.data.numerical)) {
+            newDynamicFilters.numerical[key] = {
+                range: response.data.numerical[key],
+                value: response.data.numerical[key] // set the default range value
+            };
+            newIntermediateValues[key] = response.data.numerical[key];
+        }
 			Object.keys(dynamicFilters.numerical).forEach(key => {
 				newIntermediateValues[key] = dynamicFilters.numerical[key].range;
 			});
