@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Details from '../Details';
@@ -157,7 +157,7 @@ const Configurator = () => {
     const renderRow = (part, index) => {
         if (listLoading) {
             return (
-                <tr key={index} className='config-row'>
+                <tr key={index} className='Table-Base-TR'>
                     <td>{componentNames[index]}</td>
                     <td colSpan="5" className="text-center">
                         <Spinner animation="border" role="status">
@@ -173,9 +173,10 @@ const Configurator = () => {
         ));
 
         return (
-            <tr key={index} className='config-row'>
-                <td>{part.name}</td>
-                <td>{part.model ? <Link onClick={() => handleShowDetailModal(part)}>{part.model}</Link> : <button onClick={() => addComponent(index)}> + Choose {part.name}</button>}</td>
+            <tr key={index} className='Table-Base-TR'>
+                <td id='TD-Start'>{part.name}</td>
+                {/* + Choose {part.name}</button>} */}
+                <td>{part.model ? <Link className='btn text-primary' onClick={() => handleShowDetailModal(part)}>{part.model}</Link> : <button className='btn btn-primary' onClick={() => addComponent(index)}>Add Part</button>}</td>
                 <td>{part.manufacturer || ''}</td>
                 <td>
                     {part.model && (
@@ -190,12 +191,14 @@ const Configurator = () => {
                 <td>{part.price ? `$${(part.price * part.quantity).toFixed(2)}` : ''}</td>
                 {part.model ?
                     (
-                        <td className="text-center">
-                            <FontAwesomeIcon icon={faTrash} className="text-danger trash-icon" onClick={() => deletePart(part.partid)} title='Remove this part from the list'/>
+                        <td id='TD-End'>
+                            <button className='list-button btn-danger' onClick={() => deletePart(part.partid)} title='Remove this part from the list'>
+                                <FontAwesomeIcon icon={faXmark} />
+                            </button>
                         </td>
                     )
                 :
-                    <td></td>
+                    <td id='TD-End'></td>
                 }
             </tr>
         );
@@ -226,40 +229,52 @@ const Configurator = () => {
                 </Modal.Footer>
             </Modal>
 
-            { listInfo.name ? 
+            {/* { listInfo.name ? 
                 <h2>{listInfo.name}</h2>
             :
                 <h2>Configurator</h2>
-            }
-            <table id="part-table">
-                <thead>
-                    <tr>
-                        <th>Component</th>
-                        <th>Name</th>
-                        <th>Manufacturer</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {parts.map(renderRow)}
-                </tbody>
-            </table>
-            <div>
-                {listInfoLoading ?
-                    <Spinner animation="border" role="status">
-                        <span className="visually-hidden">Loading...</span>
-                    </Spinner>
-                :
-                    <div>
-                        <div><p><strong>PSU Wattage: </strong>{listTDP.wattage || 0} W</p></div>
-                        <div><p><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp || 0} W</p></div>
-                        <p><strong>Total Price:</strong> ${listInfo.totalprice}</p>
-                        <p>{listInfo.description}</p>
-                    </div>
-                }
+            } */}
+            <div className='Page-Content-Container'>
+                {/* <table id="part-table"> */}
+                <table className='Table-Base'>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Name</th>
+                            <th>Manufacturer</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {parts.map(renderRow)}
+                    </tbody>
+                </table>
             </div>
+            <div className='Page-Content-Container Spacer'>
+                <div>
+                    {listInfoLoading ?
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    :
+                        <div className='Bottom-Info-Container'>
+                            <div className='Bottom-Info'>
+                                <span><strong>PSU Wattage: </strong>{listTDP.wattage || 0} W</span>
+                                <span><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp || 0} W</span>
+                                <span><strong>Total Price:</strong> ${listInfo.totalprice}</span>
+                            </div>
+                            {listInfo.description !== '' ? (
+									<span className='Info-Desc'>{listInfo.description}</span>
+                                ) : (
+									null
+                            )}
+                        </div>
+                    }
+                </div>
+            </div>
+            
 
         </>
     )
