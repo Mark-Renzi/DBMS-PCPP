@@ -15,7 +15,11 @@
     --hover-shadow-intensity: 0.3;
     --active-shadow-intensity: 0.6;
     --navbar-shadow-intensity: 0.2;
-    --card-size: 14rem;
+    --card-size: 15rem;
+
+    --odd-table-color: rgb(232, 232, 232);
+    --even-table-color: rgb(240, 240, 240);
+    --info-container: white;
 }
 
 html, body {
@@ -74,4 +78,109 @@ td {
 th {
     background-color: rgb(0, 35, 88);
     color: rgb(255, 255, 255);
+}
+
+
+/* General Table Stuff*/
+.Page-Content-Container {
+    width: 100%;
+    height: 100%;
+    background-color: var(--foreground-button-c);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, var(--regular-shadow-intensity));
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: scroll;
+}
+
+.Page-Content-Container.Spacer {
+    padding: 1.5rem;
+    background-color: var(--info-container);
+}
+
+.Table-Base {
+    font-size: medium;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1rem;
+}
+
+#TD-Start{
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+#TD-End{
+    background-color: var(--even-table-color);
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 4rem;
+}
+
+.Table-Base-TR td {
+    height: 3rem;
+    background-color: var(--even-table-color);
+    text-align: center;
+    line-height: 3rem;
+    text-wrap: nowrap;
+}
+
+.Table-Base th {
+    font-size: large;
+    background-color: transparent;
+    color: black;
+}
+
+.Table-Base tr {
+    border: none;
+}
+
+.Table-Base-TR {
+    border: none;
+}
+
+.Bottom-Info-Container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    word-break: break-all;
+    overflow-wrap:break-word;
+    margin: 0rem 2rem;
+}
+
+.Bottom-Info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 0.5rem 1.75rem;
+    background-color: var(--odd-table-color);
+    border-radius: 0.5rem;
+}
+
+.Spacer {
+    margin-top: 1rem;
+}
+
+.Info-Desc {
+    margin-top: 1.5rem;
+}
+
+.Table-Base-TR td:nth-child(odd), #TD-Start{
+    background: var(--odd-table-color);
 }

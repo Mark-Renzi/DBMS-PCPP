@@ -232,12 +232,11 @@ const HomePage = () => {
 								<p className="card-text text-center card-tit">{partlist.name}</p>
 								<hr className='hr-line' />
 								<p className="card-text text-center card-desc">{partlist.description}</p>
-								{/* {partlist.description !== '' ? (
+								{partlist.description !== '' ? (
 									<hr className='hr-line' />
 									) : (
 									null
-								)} */}
-								<hr className='hr-line' />
+								)}
 								<p className="card-text text-center card-price">${partlist.totalprice}</p>
 							</Link>
 						))}
