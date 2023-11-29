@@ -55,6 +55,11 @@ passport.use(new GitHubStrategy({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+    res.setHeader('Connection', 'keep-alive');
+    next();
+});
+
 passport.serializeUser(function (user, done) {
     done(null, user);
 });
@@ -246,6 +251,11 @@ app.get('/favicon.ico', (req, res) =>
 // 	res.sendFile(path.join(__dirname + '/client/build/index.html'));
 // });
 
-http.createServer(app).listen(app.get('port'), function () {
+var server = http.createServer(app);
+
+server.keepAliveTimeout = 30000;
+server.maxHeadersCount = 100;
+
+server.listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
 });
