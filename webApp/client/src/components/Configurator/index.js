@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 import Details from '../Details';
 import './style.css';
 
-const Configurator = () => {
+const Configurator = ({ updatePageTitle }) =>{
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
     const [listLoading, setListLoading] = useState(false);
     const [listInfo, setListInfo] = useState({});
@@ -42,6 +42,7 @@ const Configurator = () => {
             return total;
         }, 0);
         setListInfo({ ...listInfo, totalprice: totalPrice.toFixed(2) });
+        updatePageTitle(listInfo.name);
     }, [parts]);
 
     const addComponent = (index) => {
@@ -82,7 +83,6 @@ const Configurator = () => {
             })
             .catch(error => {
                 console.error('Error fetching parts list!', error);
-                setListLoading(false);
             });
     };
 
@@ -160,9 +160,11 @@ const Configurator = () => {
                 <tr key={index} className='Table-Base-TR'>
                     <td>{componentNames[index]}</td>
                     <td colSpan="5" className="text-center">
-                        <Spinner animation="border" role="status">
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
+                        <div className='table-spinner'>
+                            <Spinner animation="border" role="status">
+                                <span className="visually-hidden">Loading...</span>
+                            </Spinner>
+                        </div>
                     </td>
                 </tr>
             );
@@ -212,7 +214,7 @@ const Configurator = () => {
                 <Modal.Header closeButton>
                 <Modal.Title>{detailPart?.manufacturer} {detailPart?.model} Details</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
+                <Modal.Body className='body-details'>
 					{detailPart ? (
 						<Details
 							{...detailPart}

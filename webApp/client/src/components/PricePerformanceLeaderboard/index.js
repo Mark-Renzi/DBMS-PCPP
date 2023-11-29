@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import Details from '../Details';
 import './style.css';
 
-const PricePerformanceLeaderboard = () => {
+const PricePerformanceLeaderboard = ({ updatePageTitle }) =>{
 	const [part, setPart] = useState('GPU');
 	const [benchType, setBenchType] = useState(0);
 	const [benchName, setBenchName] = useState('G3Dmark');
@@ -28,6 +28,7 @@ const PricePerformanceLeaderboard = () => {
 
 
 	useEffect(() => {
+		updatePageTitle("Leaderboards");
 		onSubmit();
 	}, []);
 

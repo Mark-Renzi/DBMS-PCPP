@@ -22,7 +22,7 @@ import Checkbox from '@mui/material/Checkbox';
 import Chip from '@mui/material/Chip';
 import './style.css';
 
-const Browse = () => {
+const Browse = ({ updatePageTitle }) =>{
 	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
 	const [partsList, setPartsList] = useState([]);
 	const [minPrice, setMinPrice] = useState(0);
@@ -66,6 +66,7 @@ const Browse = () => {
 	};
 
 	useEffect(() => {
+		updatePageTitle("Browse");
 		fetchMenuItems();
 		onSubmit();
 	}, []);

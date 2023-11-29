@@ -9,7 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 
-const HomePage = () => {
+const HomePage = ({ updatePageTitle }) =>{
 	const [userLists, setUserLists] = useState([]);
 	const [showListModal, setShowListModal] = useState(false);
 	const [showEditModal, setShowEditModal] = useState(false);
@@ -21,6 +21,7 @@ const HomePage = () => {
 	const [listsLoading, setListsLoading] = useState(false);
 
     useEffect(() => {
+		updatePageTitle('Home');
         getLists();
     }, []);
 
@@ -230,10 +231,10 @@ const HomePage = () => {
 									</button>
 								</div>
 								<p className="card-text text-center card-tit">{partlist.name}</p>
-								<hr className='hr-line' />
+								<hr className='hr-line divider' />
 								<p className="card-text text-center card-desc">{partlist.description}</p>
 								{partlist.description !== '' ? (
-									<hr className='hr-line' />
+									<hr className='hr-line divider' />
 									) : (
 									null
 								)}
