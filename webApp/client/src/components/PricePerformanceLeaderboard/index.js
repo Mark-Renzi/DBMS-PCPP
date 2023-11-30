@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
@@ -9,9 +9,10 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 import Details from '../Details';
+import PageTitleContext from '../../context/pageTitleContext';
 import './style.css';
 
-const PricePerformanceLeaderboard = ({ updatePageTitle }) =>{
+const PricePerformanceLeaderboard = () =>{
 	const [part, setPart] = useState('GPU');
 	const [benchType, setBenchType] = useState(0);
 	const [benchName, setBenchName] = useState('G3Dmark');
@@ -24,6 +25,7 @@ const PricePerformanceLeaderboard = ({ updatePageTitle }) =>{
 	const [showDetailModal, setShowDetailModal] = useState(false);
 	const [detailPart, setDetailPart] = useState(null);
 	
+	const { updatePageTitle } = useContext(PageTitleContext);
 	const pageSize = 20;
 
 

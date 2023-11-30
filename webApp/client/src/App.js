@@ -6,6 +6,7 @@ import PricePerformanceLeaderboard from './components/PricePerformanceLeaderboar
 import Configurator from './components/Configurator';
 import Browse from './components/Browse';
 import ListViewer from './components/ListViewer';
+import PageTitleContext from './context/pageTitleContext';
 
 import './App.css';
 import Details from './components/Details';
@@ -25,25 +26,31 @@ class App extends Component {
 	render() {
 		const { pageTitle } = this.state;
 
+		const contextValue = {
+            pageTitle: pageTitle,
+            updatePageTitle: this.updatePageTitle
+        };
+
 		return (
 			<BrowserRouter>
-				<Header className="page-title" pageTitle={pageTitle}/>
-				<main className="">
-					<div className="container">
-						<div className="page-container">
-							<Routes>
-								<Route exact path="/" element={<HomePage updatePageTitle={this.updatePageTitle} />}/>
-								<Route path="/leaderboard" element={<PricePerformanceLeaderboard updatePageTitle={this.updatePageTitle} />} />
-								<Route path="/build" element={<Configurator updatePageTitle={this.updatePageTitle} />} />
-								<Route path="/browse/:id?" element={<Browse updatePageTitle={this.updatePageTitle} />} />
-								<Route path="/build/:listid" element={<Configurator updatePageTitle={this.updatePageTitle} />} />
-								<Route path="/part/:partid" element={<Details updatePageTitle={this.updatePageTitle} />} />
-								<Route path="/lists/:listid" element={<ListViewer updatePageTitle={this.updatePageTitle} />} />
-							</Routes>
+				<PageTitleContext.Provider value={contextValue}>
+					<Header className="page-title" pageTitle={pageTitle}/>
+					<main className="">
+						<div className="container">
+							<div className="page-container">
+								<Routes>
+									<Route exact path="/" element={<HomePage/>}/>
+									<Route path="/leaderboard" element={<PricePerformanceLeaderboard/>}/>
+									<Route path="/build" element={<Configurator/>}/>
+									<Route path="/browse/:id?" element={<Browse/>}/>
+									<Route path="/build/:listid" element={<Configurator/>}/>
+									<Route path="/part/:partid" element={<Details/>}/>
+									<Route path="/lists/:listid" element={<ListViewer/>}/>
+								</Routes>
+							</div>
 						</div>
-					</div>
-				</main>
-
+					</main>
+				</PageTitleContext.Provider>
 			</BrowserRouter>
 		)
 	}

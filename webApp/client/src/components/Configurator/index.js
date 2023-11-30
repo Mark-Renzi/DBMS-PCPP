@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Details from '../Details';
+import PageTitleContext from '../../context/pageTitleContext';
 import './style.css';
 
-const Configurator = ({ updatePageTitle }) =>{
+const Configurator = () =>{
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
     const [listLoading, setListLoading] = useState(false);
     const [listInfo, setListInfo] = useState({});
@@ -27,8 +28,10 @@ const Configurator = ({ updatePageTitle }) =>{
 	const [detailPart, setDetailPart] = useState(null);
 
     const { listid } = useParams();
+    const { updatePageTitle } = useContext(PageTitleContext);
 
     useEffect(() => {
+        updatePageTitle("Configurator");
         getPartsList();
         getListInfo();
         getListTDP();
