@@ -15,7 +15,7 @@
     --hover-shadow-intensity: 0.3;
     --active-shadow-intensity: 0.6;
     --navbar-shadow-intensity: 0.2;
-    --card-size: 15rem;
+    --card-size: 16rem;
 
     --odd-table-color: rgb(232, 232, 232);
     --even-table-color: rgb(240, 240, 240);
@@ -117,7 +117,6 @@ th {
 }
 
 #TD-End{
-    background-color: var(--even-table-color);
     border-radius: 0rem 0.5rem 0.5rem 0rem;
     display: flex;
     justify-content: center;
@@ -183,4 +182,20 @@ th {
 
 .Table-Base-TR td:nth-child(odd), #TD-Start{
     background: var(--odd-table-color);
+}
+
+.page-title {
+	font-size: xx-large;
+	position: absolute;
+	left: 50vw;
+	transform: translateX(-50%);
+	font-weight: 800;
+}
+
+.body-details{
+    background-color: var(--foreground-c);
+}
+
+.text-center {
+    text-align: center;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
@@ -20,9 +20,10 @@ import ListItemText from '@mui/material/ListItemText';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import Chip from '@mui/material/Chip';
+import PageTitleContext from '../../context/pageTitleContext';
 import './style.css';
 
-const Browse = () => {
+const Browse = () =>{
 	const [part, setPart] = useState(['CPU', 'CPUCooler', 'Motherboard', 'RAM', 'GPU', 'Storage', 'Tower', 'PSU'][useParams().id] || 'CPU');
 	const [partsList, setPartsList] = useState([]);
 	const [minPrice, setMinPrice] = useState(0);
@@ -54,6 +55,7 @@ const Browse = () => {
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
 	const pageSize = 20;
 	const { id } = useParams();
+	const { updatePageTitle } = useContext(PageTitleContext);
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
 	let tableWidth = 3;
 	const MenuProps = {
@@ -66,6 +68,7 @@ const Browse = () => {
 	};
 
 	useEffect(() => {
+		updatePageTitle("Browse");
 		fetchMenuItems();
 		onSubmit();
 	}, []);

@@ -1,5 +1,5 @@
 .spec{
-    font-size: 1.125rem;
+    font-size: medium;
 }
 
 .details-container {
@@ -7,6 +7,51 @@
     flex-direction: row;
 }
 
-.details {
-    margin-right: 10rem;
+/* .details {
+    margin-right: 2.5rem;
+} */
+
+/* .Spacer-B {
+    margin-bottom: 2.5rem;
+} */
+
+.details-body-container {
+    padding: 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 0;
+}
+
+.details-cell {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    outline: 1px solid rgba(0, 0, 0, 0.1);
+    min-width: 17rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.next-to {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.hr-line.divider{
+    width: calc(100% + 4rem);
+    margin: 1rem -2rem;
+}
+
+.Specs-Bench {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 2.5rem;
+    margin: 0;
 }
