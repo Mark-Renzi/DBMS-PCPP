@@ -54,11 +54,11 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    height: calc(var(--card-size) + 1rem);
+    height: var(--card-size);
     width: var(--card-size);
     overflow-y: auto;
     transition: box-shadow 0.15s cubic-bezier(0.25, 1, 0.5, 1);
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .card-button:hover {

@@ -40,6 +40,8 @@ class Header extends Component {
 
 	render() {
 		const { username } = this.state;
+		const { pageTitle } = this.props;
+
 		return (
 			<Navbar expand="lg" className="fixed-top navbar-color">
 				<div className="container-fluid">
@@ -51,9 +53,7 @@ class Header extends Component {
 								<Nav.Link className="navlink-custom" href="/browse">Browse</Nav.Link>
 								<Nav.Link className="navlink-custom" href="/leaderboard">Leaderboards</Nav.Link>
 							</div>
-							<span className="page-title">
-								Home
-							</span>
+							<span className="page-title">{pageTitle}</span>
 							<div className="nav-container right-nav">
 								{username ? (
 									<div className="github">

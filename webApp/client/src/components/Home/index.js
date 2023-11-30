@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './style.css';
 import { Grid } from '@mui/material';
@@ -8,8 +8,9 @@ import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faXmark, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
+import PageTitleContext from '../../context/pageTitleContext';
 
-const HomePage = () => {
+const HomePage = () =>{
 	const [userLists, setUserLists] = useState([]);
 	const [showListModal, setShowListModal] = useState(false);
 	const [showEditModal, setShowEditModal] = useState(false);
@@ -20,7 +21,10 @@ const HomePage = () => {
 	const [editListID, setEditListID] = useState('');
 	const [listsLoading, setListsLoading] = useState(false);
 
+	const { updatePageTitle } = useContext(PageTitleContext);
+
     useEffect(() => {
+		updatePageTitle('Home');
         getLists();
     }, []);
 
@@ -230,10 +234,10 @@ const HomePage = () => {
 									</button>
 								</div>
 								<p className="card-text text-center card-tit">{partlist.name}</p>
-								<hr className='hr-line' />
+								<hr className='hr-line divider' />
 								<p className="card-text text-center card-desc">{partlist.description}</p>
 								{partlist.description !== '' ? (
-									<hr className='hr-line' />
+									<hr className='hr-line divider' />
 									) : (
 									null
 								)}
