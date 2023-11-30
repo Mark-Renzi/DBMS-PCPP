@@ -13,8 +13,6 @@ const browse = async (req, res, db) => {
     let conditions = [];
     let values = [];
 
-    // console.log(req.body.dynamicFilters)
-
     try {
 
         let parttype = null;
@@ -81,9 +79,6 @@ const browse = async (req, res, db) => {
         if (conditions.length > 0) {
             subquery += ` AND ${conditions.join(' AND ')}`;
         }
-
-        console.log(subquery)
-        console.log(values)
 
         let resultCountQuery = `
             SELECT COUNT(*) FROM (${subquery}) AS subquery
