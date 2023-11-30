@@ -66,6 +66,21 @@ const Browse = () =>{
 			},
 		},
 	};
+	const efficiencyMapping = {
+		0: "Gold", 1: "Bronze", 2: "Platinum", 3: "Plus", 4: "No rating", 5: "Titanium", 6: "Silver"
+	};
+
+	const formFactorMapping = {
+		0: "ATX", 1: "Micro ATX", 2: "Mini ITX", 3: "EATX", 4: "ATX Mid Tower", 5: "MicroATX Mini Tower", 6: "ATX Full Tower", 7: "MicroATX Mid Tower", 8: "Mini ITX Desktop", 9: "Mini ITX Tower", 10: "HTPC", 11: "ATX Mini Tower", 12: "ATX Desktop", 13: "MicroATX Slim", 14: "MicroATX Desktop", 15: "ATX Test Bench", 16: "SFX", 17: "TFX", 18: "Flex ATX"
+	};
+	
+	const modularMapping = {
+		0: "Full", 1: "None", 2: "Semi"
+	};
+
+	const reverseEfficiencyMapping = Object.fromEntries(Object.entries(efficiencyMapping).map(([key, value]) => [value, key]));
+	const reverseFormFactorMapping = Object.fromEntries(Object.entries(formFactorMapping).map(([key, value]) => [value, key]));
+	const reverseModularMapping = Object.fromEntries(Object.entries(modularMapping).map(([key, value]) => [value, key]));
 
 	useEffect(() => {
 		updatePageTitle("Browse");
@@ -74,17 +89,29 @@ const Browse = () =>{
 	}, []);
 
 	useEffect(() => {
+		dynamicFilters.numerical = {};
+		dynamicFilters.categorical = {};
+		setDynamicFilters(dynamicFilters);
+		setIntermediateNumericalFilters({});
+		setMinPriceRange(0);
+		setMaxPriceRange(10000);
+		setIntermediateMinPrice(0);
+		setIntermediateMaxPrice(10000);
 		fetchMenuItems();
 		setSelectedManufacturers([]);
 	}, [part]);
 
 	useEffect(() => {
-		setCurrentPage(1);
+		setSafeCurrentPage(currentPage);
 	}, [selectedManufacturers]);
 
 	useEffect(() => {
 		onSubmit();
 	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
+
+	const setSafeCurrentPage = (newPage) => {
+		setCurrentPage(Math.max(1, Math.min(newPage, Math.ceil(totalResultNum / pageSize))));
+	}
 
 	const fetchMenuItems = async () => {
 		const url = "/api/browse/menu";
@@ -110,10 +137,12 @@ const Browse = () =>{
 			const newIntermediateValues = {};
 
         for (const key of Object.keys(response.data.numerical)) {
-            newDynamicFilters.numerical[key] = {
-                range: response.data.numerical[key],
-                value: response.data.numerical[key] // set the default range value
-            };
+			if (key !== 'price') {
+				newDynamicFilters.numerical[key] = {
+					range: response.data.numerical[key],
+					value: response.data.numerical[key] // set the default range value
+				};	
+			}
             newIntermediateValues[key] = response.data.numerical[key];
         }
 			Object.keys(dynamicFilters.numerical).forEach(key => {
@@ -140,19 +169,19 @@ const Browse = () =>{
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
-		setCurrentPage(1);
+		setSafeCurrentPage(currentPage);
 	}
 
 	const handleChangeMinMaxPrice = (event, newValue) => {
 		setIntermediateMinPrice(newValue[0]);
 		setIntermediateMaxPrice(newValue[1]);
-		setCurrentPage(1);
+		setSafeCurrentPage(currentPage);
 	};
 
 	const onSubmitPrice = () => {
 		setMinPrice(intermediateMinPrice);
 		setMaxPrice(intermediateMaxPrice);
-		setCurrentPage(1);
+		setSafeCurrentPage(currentPage);
 	}
 
 	const onSubmit = async () => {
@@ -165,7 +194,9 @@ const Browse = () =>{
 		};
 	
 		for (const [key, value] of Object.entries(dynamicFilters.numerical)) {
-			dynamicData.numerical[key] = value.value;
+			if (value.range[0] !== value.value[0] || value.range[1] !== value.value[1]) {
+				dynamicData.numerical[key] = value.value;
+			}
 		}
 	
 		for (const [key, value] of Object.entries(dynamicFilters.categorical)) {
@@ -247,7 +278,10 @@ const Browse = () =>{
             <>
                 {filteredKeys.map(key => (
                     <td key={`${part.partid}-${key}`}>
-                        {part[key]}
+                        {key === 'efficiency' ? efficiencyMapping[part[key]] :
+							key === 'formfactor' ? formFactorMapping[part[key]] :
+							key === 'modular' ? modularMapping[part[key]] :
+							part[key]}
                     </td>
                 ))}
                 {listid && (
@@ -269,11 +303,11 @@ const Browse = () =>{
 
 	const onhandleNext = () => {
         let nextPageNumber = Math.min(currentPage + 1, Math.ceil(totalResultNum / pageSize));
-        setCurrentPage(nextPageNumber);
+        setSafeCurrentPage(nextPageNumber);
     }
     const onhandlePrev = () => {
         let prevPageNumber = Math.max(currentPage - 1, 1);
-        setCurrentPage(prevPageNumber);
+        setSafeCurrentPage(prevPageNumber);
     }
 	const calcPagesToShow = () => {
         let start = Math.max(currentPage - 2, 1);
@@ -290,7 +324,7 @@ const Browse = () =>{
     }
     const handlePageSubmit = () => {
         let newPage = Math.max(1, Math.min(parseInt(enteredPage), Math.ceil(totalResultNum / pageSize)));
-        setCurrentPage(newPage);
+        setSafeCurrentPage(newPage);
         setShowEllipseModal(false);
     }
 	const handleEllipseClick = () => {
@@ -304,6 +338,55 @@ const Browse = () =>{
 		setDetailPart(null);
 		setShowDetailModal(false);
 	}
+
+	const renderFilterOptions = (filterKey, options, selectedValues) => {
+		let mapping, reverseMapping;
+		if (filterKey === 'efficiency') {
+			mapping = efficiencyMapping;
+			reverseMapping = reverseEfficiencyMapping;
+		} else if (filterKey === 'formfactor') {
+			mapping = formFactorMapping;
+			reverseMapping = reverseFormFactorMapping;
+		} else if (filterKey === 'modular') {
+			mapping = modularMapping;
+			reverseMapping = reverseModularMapping;
+		}
+	
+		return options.map(option => {
+			const displayValue = mapping ? mapping[option] : option;
+			const isMapped = !!mapping;
+
+			selectedValues = selectedValues.map(val => val.toString());
+
+			const isChecked = isMapped ? selectedValues.includes(reverseMapping[displayValue].toString()) : selectedValues.includes(option.toString());
+	
+			return (
+				<MenuItem key={option} value={option}>
+					<Checkbox checked={isChecked} />
+					<ListItemText primary={displayValue} />
+				</MenuItem>
+			);
+		});
+	};	
+
+	const renderFilterValue = (key, selectedValues) => {
+		let mapping;
+		if (key === 'efficiency') {
+			mapping = efficiencyMapping;
+		} else if (key === 'formfactor') {
+			mapping = formFactorMapping;
+		} else if (key === 'modular') {
+			mapping = modularMapping;
+		}
+	
+		return (
+			<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+				{selectedValues.map((value) => (
+					<Chip key={value} label={mapping ? mapping[value] : value} />
+				))}
+			</div>
+		);
+	};	
 
 	return (
 		<>
@@ -470,35 +553,32 @@ const Browse = () =>{
 							<FormControl sx={{ m: 1, width: 300 }}>
 								<InputLabel id={`label-${key}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</InputLabel>
 								<Select
-								labelId={`label-${key}`}
-								id={`select-${key}`}
-								multiple
-								value={filter.value}
-								onChange={(event) => {
-									setDynamicFilters({
-									...dynamicFilters,
-									categorical: {
-										...dynamicFilters.categorical,
-										[key]: { ...filter, value: event.target.value }
-									}
-									});
-								}}
-								input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
-								renderValue={(selected) => (
-									<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
-									{selected.map((value) => (
-										<Chip key={value} label={value} />
-									))}
-									</div>
-								)}
-								MenuProps={MenuProps}
+									labelId={`label-${key}`}
+									id={`select-${key}`}
+									multiple
+									value={filter.value}
+									onChange={(event) => {
+										const reverseMapping = key === 'efficiency' ? reverseEfficiencyMapping :
+																key === 'formfactor' ? reverseFormFactorMapping :
+																key === 'modular' ? reverseModularMapping : null;
+								
+										const newSelectedValues = event.target.value.map(val => 
+											(reverseMapping && reverseMapping[val] !== undefined) ? reverseMapping[val] : val
+										);
+								
+										setDynamicFilters({
+											...dynamicFilters,
+											categorical: {
+												...dynamicFilters.categorical,
+												[key]: { ...filter, value: newSelectedValues }
+											}
+										});
+									}}
+									input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
+									renderValue={(selected) => renderFilterValue(key, selected)}
+    								MenuProps={MenuProps}
 								>
-								{filter.options.map((name) => (
-									<MenuItem key={name} value={name}>
-									<Checkbox checked={filter.value.indexOf(name) > -1} />
-									<ListItemText primary={name} />
-									</MenuItem>
-								))}
+									{renderFilterOptions(key, filter.options, filter.value)}
 								</Select>
 							</FormControl>
 							</div>
@@ -536,7 +616,7 @@ const Browse = () =>{
 												<tr className='row-hover' key={partl.partid}>
 													<td>{partl.manufacturer}</td>
 													<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
-													<td>{partl.price}</td>
+													<td>${partl.price}</td>
 													{renderRowCells(partl)}
 												</tr>
 											))}
