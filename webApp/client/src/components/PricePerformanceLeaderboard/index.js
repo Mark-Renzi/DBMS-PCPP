@@ -234,7 +234,7 @@ const PricePerformanceLeaderboard = () =>{
 												<td>{partl.manufacturer}</td>
 												<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>												{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
 												<td>{partl.score}</td>
-												<td>{partl.price}</td>
+												<td>${partl.price}</td>
 												<td>{parseFloat(partl.priceperformance).toFixed(4)}</td>
 											</tr>
 										))}

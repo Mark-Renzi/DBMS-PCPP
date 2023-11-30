@@ -1,7 +1,7 @@
 const partTables = ["CPU", "CPUCooler", "Motherboard", "ram", "GPU", "Storage", "Tower", "PSU"];
 
 const browse = async (req, res, db) => {
-    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber } = req.body;
+    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber, dynamicFilters } = req.body;
 
     pageNumber = parseInt(pageNumber);
     limitNumber = parseInt(limitNumber);
@@ -12,8 +12,6 @@ const browse = async (req, res, db) => {
     let subquery = ``;
     let conditions = [];
     let values = [];
-
-    // console.log(req.body.dynamicFilters)
 
     try {
 
@@ -55,7 +53,28 @@ const browse = async (req, res, db) => {
             }
             conditions.push(`(${manufacturerConditions.join(' OR ')})`);
         }
-        
+
+        if (dynamicFilters && Object.keys(dynamicFilters).length > 0) {
+            Object.entries(dynamicFilters).forEach(([filterType, filters]) => {
+                Object.entries(filters).forEach(([filterKey, filterValue]) => {
+                    if (validColumnNames[partType] && validColumnNames[partType].includes(filterKey)) {
+                        if (filterType === 'numerical' && filterValue.length === 2) {
+                            conditions.push(`${filterKey} BETWEEN $${values.length + 1} AND $${values.length + 2}`);
+                            values.push(filterValue[0], filterValue[1]);
+                        } else if (filterType === 'categorical' && filterValue.length > 0) {
+                            let categoricalConditions = filterValue.map(value => {
+                                values.push(value);
+                                return `${filterKey} = $${values.length}`;
+                            });
+                            conditions.push(`(${categoricalConditions.join(' OR ')})`);
+                        }
+                    } else {
+                        console.log(`Invalid filter key: ${filterKey}`);
+                        return res.status(403).send('Forbidden - You do not have permission to access this resource.');
+                    }
+                });
+            });
+        }
 
         if (conditions.length > 0) {
             subquery += ` AND ${conditions.join(' AND ')}`;
@@ -180,6 +199,17 @@ const getTypeMapping = (partType) => {
     }
     return [parttype, partType];
 }
+
+const validColumnNames = {
+    'CPU': ['cores', 'boostclock', 'coreclock', 'tdp', 'graphics', 'socket'],
+    'CPUCooler': ['size', 'rpm_max', 'rpm_min', 'noiselevel_max', 'noiselevel_min', 'color'],
+    'Motherboard': ['maxmemory', 'memoryslots', 'formfactor', 'socket', 'color'],
+    'RAM': ['totalcapacity', 'mhz', 'pricepergb', 'color', 'ddr', 'count', 'capacity'],
+    'GPU': ['coreclock', 'boostclock', 'length', 'chipset', 'memory', 'tdp', 'color'],
+    'Storage': ['capacity', 'pricepergb', 'cache', 'formfactor', 'type', 'interface'],
+    'Tower': ['color', 'formfactor', 'sidepanel'],
+    'PSU': ['wattage', 'color', 'modular', 'efficiency', 'formfactor']
+};
 
 const getDynamicOptions = async (parttype, db, options) => {
     if (parttype === 0) {

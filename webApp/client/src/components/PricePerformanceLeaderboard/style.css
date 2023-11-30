@@ -46,3 +46,9 @@
 .priceperformance-table {
     margin-bottom: 0px;
 }
+
+@media (max-width: 80rem) {
+    .table-scroll:has(.priceperformance-table) {
+        margin-top: 0;
+    }
+}
