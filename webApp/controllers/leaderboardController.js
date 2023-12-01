@@ -1,5 +1,5 @@
 const getListTDPs = async (req, res, db) => {
-  const { pageNumber, limitNumber } = req.params;
+  const { pageNumber, limitNumber } = req.body;
   let lists = await db.query(`
             SELECT
             pl.userid,
@@ -39,7 +39,6 @@ const getListTDPs = async (req, res, db) => {
 
 const getListScores = async (req, res, db) => {
   const { pageNumber, limitNumber, cpuBenchType, gpuBenchType } = req.body;
-  console.log(cpuBenchType, gpuBenchType, pageNumber, limitNumber);
   let lists = await db.query(`
     SELECT
         userid,
@@ -90,7 +89,6 @@ const getListScores = async (req, res, db) => {
     GROUP BY
         userid, totalprice, name, description, listid
         OFFSET $3 LIMIT $4;`, [cpuBenchType, gpuBenchType, pageNumber, limitNumber]);
-    console.log(lists.rows);
     let listCount = await db.query(`
         SELECT COUNT(*) FROM partslist;`);
         

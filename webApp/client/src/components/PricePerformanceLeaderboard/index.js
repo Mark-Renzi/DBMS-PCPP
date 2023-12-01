@@ -110,8 +110,6 @@ const PricePerformanceLeaderboard = () =>{
 		let response;
 		try {
 			response = await axios.post(url, data);
-			console.log(response.data);
-			console.log(data);
 			setUserLists(response?.data?.lists);
 			setTotalResultNum(response?.data?.totalResultNum);
 			setListLoading(false);
@@ -139,6 +137,12 @@ const PricePerformanceLeaderboard = () =>{
 
 	const onChangeMetric = (metric) => {
 		setMetric(metric);
+		if (metric === 'Score') {
+			setCPUBenchName('CPUMark');
+			setCPUBenchType(7);
+			setGPUBenchName('G3Dmark');
+			setGPUBenchType(0);
+		}
 		setCurrentPage(1);
 	}
 
