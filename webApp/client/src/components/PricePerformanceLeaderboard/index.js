@@ -17,6 +17,11 @@ const PricePerformanceLeaderboard = () =>{
 	const [benchType, setBenchType] = useState(0);
 	const [benchName, setBenchName] = useState('G3Dmark');
 	const [comparison, setComparison] = useState('Price');
+	const [metric, setMetric] = useState('TDP');
+	const [cpuBenchType, setCPUBenchType] = useState(7);
+	const [gpuBenchType, setGPUBenchType] = useState(0);
+	const [cpuBenchName, setCPUBenchName] = useState('CPUMark');
+	const [gpuBenchName, setGPUBenchName] = useState('G3Dmark');
 	const [partsList, setPartsList] = useState([]);
 	const [userLists, setUserLists] = useState([]);
 	const [listLoading, setListLoading] = useState(true);
@@ -49,7 +54,7 @@ const PricePerformanceLeaderboard = () =>{
 		if (showListTable) {
 			onChangeLists();
 		}
-	}, [tableType, currentPage]);
+	}, [tableType, metric, cpuBenchType, gpuBenchType, currentPage]);
 
 
 
@@ -71,10 +76,22 @@ const PricePerformanceLeaderboard = () =>{
 		setCurrentPage(1);
 	}
 
+	const onChangeCPUBenchType = (benchType, benchName) => {
+		setCPUBenchType(benchType);
+		setCPUBenchName(benchName);
+		setCurrentPage(1);
+	}
+
+	const onChangeGPUBenchType = (benchType, benchName) => {
+		setGPUBenchType(benchType);
+		setGPUBenchName(benchName);
+		setCurrentPage(1);
+	}
+
 	const onSubmit = async () => {
 		setListLoading(true);
-		const url = `/api/benchmarks/${comparison}`;
-		const data = { partType: part, benchType: benchType, pageNumber: currentPage, limitNumber: pageSize };
+		const url = `/api/benchmarks`;
+		const data = { comparisonType: comparison, partType: part, benchType: benchType, pageNumber: currentPage, limitNumber: pageSize };
 		let response;
 		try {
 			response = await axios.post(url, data);
@@ -88,11 +105,13 @@ const PricePerformanceLeaderboard = () =>{
 
 	const onChangeLists = async () => {
 		setListLoading(true);
-		const url = "/api/leaderboards";
-		const data = { pageNumber: currentPage, limitNumber: pageSize };
+		const url = `/api/leaderboards/${metric}`;
+		const data = { pageNumber: currentPage, limitNumber: pageSize, cpuBenchType: cpuBenchType, gpuBenchType: gpuBenchType};
 		let response;
 		try {
 			response = await axios.post(url, data);
+			console.log(response.data);
+			console.log(data);
 			setUserLists(response?.data?.lists);
 			setTotalResultNum(response?.data?.totalResultNum);
 			setListLoading(false);
@@ -115,6 +134,11 @@ const PricePerformanceLeaderboard = () =>{
 
 	const onChangeComparison = (comparison) => {
 		setComparison(comparison);
+		setCurrentPage(1);
+	}
+
+	const onChangeMetric = (metric) => {
+		setMetric(metric);
 		setCurrentPage(1);
 	}
 
@@ -177,7 +201,7 @@ const PricePerformanceLeaderboard = () =>{
 			  <th>Total Price</th>
 			  <th>Name</th>
 			  <th>Description</th>
-			  <th>TDP</th>
+			  <th>{metric === 'TDP' ? 'TDP' : 'Score'}</th>
 			</tr>
 		  );
 		}
@@ -207,7 +231,7 @@ const PricePerformanceLeaderboard = () =>{
 					<td>${list.totalprice}</td>
 					<td><Link className='btn text-primary' to={`/lists/${list.listid}`}>{list.name}</Link></td>
 					<td>{list.description}</td>
-					<td>{list.sum_tdp}</td>
+					<td>{metric === 'TDP' ? list.sum_tdp : list.listscore}</td>
 				</tr>
 				))}
 			</>
@@ -337,6 +361,68 @@ const PricePerformanceLeaderboard = () =>{
 										</Dropdown.Menu>
 									</Dropdown>
 								</div>
+							</>
+						)}
+						{showListTable && (
+							<>
+								<div className="vertical-group">
+									<p>
+										Metric:
+									</p>
+									<Dropdown>
+										<Dropdown.Toggle variant="success" id="dropdown-basic-gpu">
+											{metric}
+										</Dropdown.Toggle>
+								
+										<Dropdown.Menu>
+											<Dropdown.Item onClick={() => onChangeMetric('TDP')}>TDP</Dropdown.Item>
+											<Dropdown.Item onClick={() => onChangeMetric('Score')}>Score</Dropdown.Item>
+										</Dropdown.Menu>
+									</Dropdown>
+								</div>
+								{metric === 'Score' && (
+									<>
+										<div className="vertical-group">
+											<p>
+												GPU Benchmark:
+											</p>
+											<Dropdown>
+												<Dropdown.Toggle variant="success" id="dropdown-basic-gpu">
+													{gpuBenchName}
+												</Dropdown.Toggle>
+
+												<Dropdown.Menu>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(0, e.target.innerHTML)}>G3Dmark</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(1, e.target.innerHTML)}>G2Dmark</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(2, e.target.innerHTML)}>CUDA</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(3, e.target.innerHTML)}>Metal</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(4, e.target.innerHTML)}>OpenCL</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(5, e.target.innerHTML)}>Vulkan</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(6, e.target.innerHTML)}>PassMark</Dropdown.Item>
+												</Dropdown.Menu>
+											</Dropdown>
+										</div>
+
+										<div className="vertical-group">
+											<p>
+												CPU Benchmark:
+											</p>
+											<Dropdown>
+												<Dropdown.Toggle variant="success" id="dropdown-basic-cpu">
+													{cpuBenchName}
+												</Dropdown.Toggle>
+
+												<Dropdown.Menu>
+													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(7, e.target.innerHTML)}>CPUMark</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(8, e.target.innerHTML)}>ThreadMark</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(9, e.target.innerHTML)}>Cinebench R23 Single Score</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(10, e.target.innerHTML)}>Cinebench R23 Multi Score</Dropdown.Item>
+													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(11, e.target.innerHTML)}>PassMark</Dropdown.Item>
+												</Dropdown.Menu>
+											</Dropdown>
+										</div>
+									</>
+								)}
 							</>
 						)}
 					</div>

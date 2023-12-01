@@ -116,12 +116,8 @@ function ensureListOwner(req, res, next) {
 /**
  * @BENCHMARKS
  */
-app.post('/api/benchmarks/Price', function (req, res) {
-    benchmarksController.benchmarkPricePerf(req, res, db);
-});
-
-app.post('/api/benchmarks/TDP', function (req, res) {
-    benchmarksController.benchmarkTDPPerf(req, res, db);
+app.post('/api/benchmarks', function (req, res) {
+    benchmarksController.benchmarkPerfRatio(req, res, db);
 });
 
 app.get('/api/benchmarks/:chipsetid', function (req, res) {
@@ -200,8 +196,12 @@ app.get('/api/details/:partid', function (req, res) {
 /**
  * @LEADERBOARDS
  */
-app.post('/api/leaderboards', function (req, res) {
+app.post('/api/leaderboards/TDP', function (req, res) {
     leaderboardController.getListTDPs(req, res, db);
+});
+
+app.post('/api/leaderboards/Score', function (req, res) {
+    leaderboardController.getListScores(req, res, db);
 });
 
 

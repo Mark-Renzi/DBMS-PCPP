@@ -37,6 +37,74 @@ const getListTDPs = async (req, res, db) => {
   }
 };
 
+const getListScores = async (req, res, db) => {
+  const { pageNumber, limitNumber, cpuBenchType, gpuBenchType } = req.body;
+  console.log(cpuBenchType, gpuBenchType, pageNumber, limitNumber);
+  let lists = await db.query(`
+    SELECT
+        userid,
+        totalprice,
+        name,
+        description,
+        listid,
+        SUM(score) AS listscore
+    FROM (
+        SELECT
+            pl.userid,
+            pl.totalprice,
+            pl.name,
+            pl.description,
+            lc.listid,
+            benchmark.score
+        FROM
+            listcontains lc
+            JOIN computerpart cp ON lc.partid = cp.partid
+            JOIN partslist pl ON lc.listid = pl.listid
+            JOIN cpu ON cpu.partid = cp.partid
+            JOIN benchmark ON benchmark.chipsetid = cpu.chipsetid
+        WHERE
+            benchmark.type = $1
+        GROUP BY
+            pl.userid, pl.totalprice, pl.name, pl.description, lc.listid, cpu.chipsetid, benchmark.score
+
+        UNION ALL
+
+        SELECT
+            pl.userid,
+            pl.totalprice,
+            pl.name,
+            pl.description,
+            lc.listid,
+            benchmark.score
+        FROM
+            listcontains lc
+            JOIN computerpart cp ON lc.partid = cp.partid
+            JOIN partslist pl ON lc.listid = pl.listid
+            JOIN gpu ON gpu.partid = cp.partid
+            JOIN benchmark ON benchmark.chipsetid = gpu.chipsetid
+        WHERE
+            benchmark.type = $2
+        GROUP BY
+            pl.userid, pl.totalprice, pl.name, pl.description, lc.listid, benchmark.score
+    ) AS scores
+    GROUP BY
+        userid, totalprice, name, description, listid
+        OFFSET $3 LIMIT $4;`, [cpuBenchType, gpuBenchType, pageNumber, limitNumber]);
+    console.log(lists.rows);
+    let listCount = await db.query(`
+        SELECT COUNT(*) FROM partslist;`);
+        
+        try {
+          return res.status(200).json({
+            lists: lists?.rows,
+            totalResultNum: listCount?.rows[0]?.count
+        });}catch (e) {
+    console.log(e);
+    return res.status(500);
+  }
+};
+
 module.exports = {
-    getListTDPs
+    getListTDPs,
+    getListScores
 };
