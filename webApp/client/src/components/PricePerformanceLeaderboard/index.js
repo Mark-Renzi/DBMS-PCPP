@@ -204,7 +204,7 @@ const PricePerformanceLeaderboard = () =>{
 				<tr className='row-hover' key={index}>
 					<td>{(currentPage - 1) * pageSize + index + 1}</td>
 					<td>{list.userid}</td>
-					<td>{list.totalprice}</td>
+					<td>${list.totalprice}</td>
 					<td><Link className='btn text-primary' to={`/lists/${list.listid}`}>{list.name}</Link></td>
 					<td>{list.description}</td>
 					<td>{list.sum_tdp}</td>
