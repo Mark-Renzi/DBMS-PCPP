@@ -82,7 +82,7 @@ header span {
 	font-weight: 800;
 	overflow-wrap: break-word;
 	word-break: break-all;
-	max-width: 17rem;
+	/* max-width: 17rem; */
 	max-height: 3rem;
 	overflow: hidden;
 	text-align: center;

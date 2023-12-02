@@ -83,7 +83,7 @@ const Browse = () =>{
 	const reverseModularMapping = Object.fromEntries(Object.entries(modularMapping).map(([key, value]) => [value, key]));
 
 	useEffect(() => {
-		updatePageTitle("Browse");
+		updatePageTitle("Search For " + part);
 		fetchMenuItems();
 		onSubmit();
 	}, []);
@@ -169,6 +169,7 @@ const Browse = () =>{
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
+		updatePageTitle("Search For " + partType);
 		setSafeCurrentPage(currentPage);
 	}
 
@@ -357,8 +358,8 @@ const Browse = () =>{
 			const isMapped = !!mapping;
 
 			selectedValues = selectedValues.map(val => val.toString());
-
-			const isChecked = isMapped ? selectedValues.includes(reverseMapping[displayValue].toString()) : selectedValues.includes(option.toString());
+			
+			const isChecked = isMapped ? selectedValues.includes(reverseMapping[displayValue]?.toString()) : selectedValues.includes(option?.toString());
 	
 			return (
 				<MenuItem key={option} value={option}>
@@ -425,9 +426,9 @@ const Browse = () =>{
             </Modal>
 
 			<div className="p-1">
-				<h1>
+				{/* <h1>
 					Search for {part} parts
-				</h1>
+				</h1> */}
 				<div className="filters-table">
 					<div
 						className="selection-list"
