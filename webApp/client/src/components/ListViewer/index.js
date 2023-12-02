@@ -79,31 +79,41 @@ const ListViewer = () => {
     
     return (
         <>
-            <h1>{listInfo.name}</h1>
-            <table id="part-table">
-              <thead>
-                  <tr>
-                    <th>Component</th>
-                    <th>Name</th>
-                    <th>Manufacturer</th>
-                    <th>Price</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  {parts.map((part, index) => (
-                      <tr key={index}>
-                          <td><strong>{part.name}</strong></td>
-                          <td>{part.model}</td>
-                          <td>{part.manufacturer}</td>
-                          <td>{part.price}</td>
-                      </tr>
-                  ))}
-              </tbody>
-            </table>
-            <div>
-                <p>Price: ${listInfo.totalprice}</p>
-                <p>TDP: {listTDP.sum_tdp} W</p>
-                <p>{listInfo.description}</p>
+            {/* <h1>{listInfo.name}</h1> */}
+            <div className='Page-Content-Container'>
+                <table className='Table-Base'>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Name</th>
+                            <th>Manufacturer</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {parts.map((part, index) => (
+                            <tr key={index} className='Table-Base-TR'>
+                                <td id='TD-Start'><strong>{part.name}</strong></td>
+                                <td>{part.model}</td>
+                                <td>{part.manufacturer}</td>
+                                <td id='TD-End'>{part.price}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            <div className='Page-Content-Container Spacer'>
+                 <div className='Bottom-Info-Container'>
+                    <div className='Bottom-Info'>
+                        <span>Price: ${listInfo.totalprice}</span>
+                        <span>TDP: {listTDP.sum_tdp} W</span>
+                    </div>
+                    {listInfo.description !== '' ? (
+                            <span className='Info-Desc'>{listInfo.description}</span>
+                        ) : (
+                            null
+                    )}
+                </div>
             </div>
         </>
     )
