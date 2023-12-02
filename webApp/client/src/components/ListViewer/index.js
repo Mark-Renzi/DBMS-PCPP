@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import PageTitleContext from '../../context/pageTitleContext';
 
 const ListViewer = () => {
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
@@ -16,11 +17,18 @@ const ListViewer = () => {
     const [listTDP, setListTDP] = useState({});
     const { listid } = useParams();
 
+    const { updatePageTitle } = useContext(PageTitleContext);
+
     useEffect(() => {
       getPartsList();
       getListInfo();
       getListTDP();
+      updatePageTitle("Part List");
   }, []);
+
+  useEffect(() => {
+    getListInfo();
+  }, [listInfo])
 
   const getPartsList = () => {
     axios.get(`/api/publicbuild/${listid}`)
@@ -57,17 +65,18 @@ const ListViewer = () => {
         });
       };
 
-      const getListInfo = () => {
+    const getListInfo = () => {
         axios.get(`/api/listinfo/${listid}`)
             .then(response => {
                 setListInfo(response.data);
+                updatePageTitle("List: " + listInfo.name);
             })
             .catch(error => {
                 console.error('Error fetching list info!', error);
             });
     };
 
-      const getListTDP = () => {
+    const getListTDP = () => {
         axios.get(`/api/listtdp/${listid}`)
             .then(response => {
                 setListTDP(response.data);
@@ -79,7 +88,6 @@ const ListViewer = () => {
     
     return (
         <>
-            {/* <h1>{listInfo.name}</h1> */}
             <div className='Page-Content-Container'>
                 <table className='Table-Base'>
                     <thead>
