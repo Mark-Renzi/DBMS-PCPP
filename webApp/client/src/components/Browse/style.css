@@ -39,6 +39,10 @@
     cursor: pointer;
 }
 
+.clickable:has(svg) {
+    white-space: nowrap;
+}
+
 .slider {
     width: 100%;
 
