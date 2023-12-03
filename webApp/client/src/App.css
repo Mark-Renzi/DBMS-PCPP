@@ -88,14 +88,14 @@ th {
     background-color: var(--foreground-button-c);
     box-shadow: 0 20px 50px rgba(0, 0, 0, var(--regular-shadow-intensity));
     border-radius: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .Page-Content-Container.Spacer {
@@ -110,27 +110,17 @@ th {
     border: none;
     box-shadow: none;
     margin-bottom: 1rem;
-}
-
-#TD-Start{
-    border-radius: 0.5rem 0rem 0rem 0.5rem;
-}
-
-#TD-End{
-    border-radius: 0rem 0.5rem 0.5rem 0rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    height: 4rem;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .Table-Base-TR td {
-    height: 3rem;
+    height: 2rem;
     background-color: var(--even-table-color);
     text-align: center;
-    line-height: 3rem;
-    text-wrap: nowrap;
+    word-break: break-all;
+    overflow-wrap:break-word;
+    padding: 0.75rem 0;
 }
 
 .Table-Base th {
@@ -184,6 +174,14 @@ th {
     background: var(--odd-table-color);
 }
 
+.Table-Base-TR td:first-child{
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
+}
+
+.Table-Base-TR td:last-child{
+    border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
 .page-title {
 	font-size: xx-large;
 	position: absolute;
@@ -198,4 +196,39 @@ th {
 
 .text-center {
     text-align: center;
+}
+
+.list-button {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0.2rem 0.375rem;
+}
+
+.pagination-organize {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    border: 0.5px solid gainsboro;
+    width: 100%;
+    justify-content: flex-end;
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.Table-List {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.pagination {
+    top: 3000rem;
+    position: sticky;
 }

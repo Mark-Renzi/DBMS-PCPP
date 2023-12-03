@@ -179,9 +179,13 @@ const Configurator = () =>{
 
         return (
             <tr key={index} className='Table-Base-TR'>
-                <td id='TD-Start'>{part.name}</td>
+                <td>{part.name}</td>
                 {/* + Choose {part.name}</button>} */}
-                <td>{part.model ? <Link className='btn text-primary' onClick={() => handleShowDetailModal(part)}>{part.model}</Link> : <button className='btn btn-primary' onClick={() => addComponent(index)}>Add Part</button>}</td>
+                <td>{part.model ? 
+                    <Link className='btn text-primary' onClick={() => handleShowDetailModal(part)}>{part.model}</Link> 
+                    : 
+                    <button className='btn btn-primary' onClick={() => addComponent(index)}>Add Part</button>}
+                </td>
                 <td>{part.manufacturer || ''}</td>
                 <td>
                     {part.model && (
@@ -194,17 +198,14 @@ const Configurator = () =>{
                     )}
                 </td>
                 <td>{part.price ? `$${(part.price * part.quantity).toFixed(2)}` : ''}</td>
-                {part.model ?
-                    (
-                        <td id='TD-End'>
-                            <button className='list-button btn-danger' onClick={() => deletePart(part.partid)} title='Remove this part from the list'>
-                                <FontAwesomeIcon icon={faXmark} />
-                            </button>
-                        </td>
-                    )
-                :
-                    <td id='TD-End'></td>
-                }
+
+                <td>{part.model ? 
+                    <button className='list-button btn btn-danger' onClick={() => deletePart(part.partid)} title='Remove this part from the list'>
+                        <FontAwesomeIcon icon={faXmark} />
+                    </button>
+                    : 
+                    null}
+                </td>
             </tr>
         );
     };

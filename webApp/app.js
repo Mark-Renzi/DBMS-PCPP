@@ -157,7 +157,7 @@ app.get('/api/listswithpart/:partid', function (req, res) {
 /**
  * @CONFIGURATOR
  */
-app.get('/api/configurator/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
+app.get('/api/configurator/:listid', function (req, res) {
     configuratorController.getParts(req, res, db);
 });
 
@@ -171,10 +171,6 @@ app.delete('/api/deletepart/:listid', ensureAuthenticated, ensureListOwner, func
 
 app.put('/api/updatequantity/:listid', ensureAuthenticated, ensureListOwner, function (req, res) {
     configuratorController.updateQuantity(req, res, db);
-});
-
-app.get('/api/publicbuild/:listid', function (req, res) {
-    configuratorController.getParts(req, res, db);
 });
 
 /**
