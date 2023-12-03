@@ -110,7 +110,6 @@
     }
 
     .selection-list {
-        width: 25rem;
         max-height: calc(58rem - 2px);
         overflow-y: auto;
         flex-shrink: 0;

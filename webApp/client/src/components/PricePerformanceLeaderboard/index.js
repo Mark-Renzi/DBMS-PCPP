@@ -34,6 +34,9 @@ const PricePerformanceLeaderboard = () =>{
 	const [tableType, setTableType] = useState('Parts');
 	const [showPartsTable, setShowPartsTable] = useState(true);
 	const [showListTable, setShowListTable] = useState(false);
+
+	const gpuOptions = ["G3Dmark", "G2Dmark", "CUDA", "Metal", "OpenCL", "Vulkan", "PassMark"];
+	const cpuOptions = ["CPUMark", "ThreadMark", "Cinebench R23 Single Score", "Cinebench R23 Multi Score", "PassMark"];
 	
 	const { updatePageTitle } = useContext(PageTitleContext);
 	const pageSize = 20;
@@ -77,6 +80,7 @@ const PricePerformanceLeaderboard = () =>{
 	}
 
 	const onChangeCPUBenchType = (benchType, benchName) => {
+		console.log("benchType", benchType, "benchName", benchName)
 		setCPUBenchType(benchType);
 		setCPUBenchName(benchName);
 		setCurrentPage(1);
@@ -289,16 +293,11 @@ const PricePerformanceLeaderboard = () =>{
 							<p>
 								Table:
 							</p>
-							<Dropdown>
-								<Dropdown.Toggle variant="success" id="dropdown-basic">
-									{tableType}
-								</Dropdown.Toggle>
 
-								<Dropdown.Menu>
-									<Dropdown.Item onClick={() => onChangeTable('Parts')}>Parts</Dropdown.Item>
-									<Dropdown.Item onClick={() => onChangeTable('Lists')}>Lists</Dropdown.Item>
-								</Dropdown.Menu>
-							</Dropdown>
+							<select value={tableType} onChange={(e) => onChangeTable(e.target.value)}>
+								<option value="Parts">Parts</option>
+								<option value="Lists">Lists</option>
+							</select>
 						</div>
 						
 						{showPartsTable && (
@@ -307,63 +306,48 @@ const PricePerformanceLeaderboard = () =>{
 									<p>
 										Comparison:
 									</p>
-									<Dropdown>
-										<Dropdown.Toggle variant="success" id="dropdown-basic">
-											{comparison}
-										</Dropdown.Toggle>
 
-										<Dropdown.Menu>
-											<Dropdown.Item onClick={() => onChangeComparison('Price')}>Price</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangeComparison('TDP')}>TDP</Dropdown.Item>
-										</Dropdown.Menu>
-									</Dropdown>
+									<select value={comparison} onChange={(e) => onChangeComparison(e.target.value)}>
+										<option value="Price">Price</option>
+										<option value="TDP">TDP</option>
+									</select>
 								</div>
 								<div className="vertical-group">
 									<p>
 										Computer part:
 									</p>
-									<Dropdown>
-										<Dropdown.Toggle variant="success" id="dropdown-basic">
-											{part}
-										</Dropdown.Toggle>
 
-										<Dropdown.Menu>
-											<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
-										</Dropdown.Menu>
-									</Dropdown>
+									<select value={part} onChange={(e) => onChangePartType(e.target.value)}>
+										<option value="GPU">GPU</option>
+										<option value="CPU">CPU</option>
+									</select>
 								</div>
 								<div className="vertical-group">
 									<p>
 										Benchmark Type:
 									</p>
-									<Dropdown>
-										<Dropdown.Toggle variant="success" id="dropdown-basic">
-											{benchName}
-										</Dropdown.Toggle>
 
-										<Dropdown.Menu>
-											{part === 'GPU' ?
-												<>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(0, e.target.innerHTML)}>G3Dmark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(1, e.target.innerHTML)}>G2Dmark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(2, e.target.innerHTML)}>CUDA</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(3, e.target.innerHTML)}>Metal</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(4, e.target.innerHTML)}>OpenCL</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(5, e.target.innerHTML)}>Vulkan</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(6, e.target.innerHTML)}>PassMark</Dropdown.Item>
-												</>
-												:
-												<>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(7, e.target.innerHTML)}>CPUMark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(8, e.target.innerHTML)}>ThreadMark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(9, e.target.innerHTML)}>Cinebench R23 Single Score</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(10, e.target.innerHTML)}>Cinebench R23 Multi Score</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeBenchType(11, e.target.innerHTML)}>PassMark</Dropdown.Item>
-												</>
-											}
-										</Dropdown.Menu>
-									</Dropdown>
+									<select value={benchName} onChange={(e) => onChangeBenchType(e.target.value)}>
+										{part === 'GPU' ?
+											<>
+												<option value="G3Dmark">G3Dmark</option>
+												<option value="G2Dmark">G2Dmark</option>
+												<option value="CUDA">CUDA</option>
+												<option value="Metal">Metal</option>
+												<option value="OpenCL">OpenCL</option>
+												<option value="Vulkan">Vulkan</option>
+												<option value="PassMark">PassMark</option>
+											</>
+											:
+											<>
+												<option value="CPUMark">CPUMark</option>
+												<option value="ThreadMark">ThreadMark</option>
+												<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
+												<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
+												<option value="PassMark">PassMark</option>
+											</>
+										}
+									</select>
 								</div>
 							</>
 						)}
@@ -373,16 +357,11 @@ const PricePerformanceLeaderboard = () =>{
 									<p>
 										Metric:
 									</p>
-									<Dropdown>
-										<Dropdown.Toggle variant="success" id="dropdown-basic-gpu">
-											{metric}
-										</Dropdown.Toggle>
-								
-										<Dropdown.Menu>
-											<Dropdown.Item onClick={() => onChangeMetric('TDP')}>TDP</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangeMetric('Score')}>Score</Dropdown.Item>
-										</Dropdown.Menu>
-									</Dropdown>
+
+									<select value={metric} onChange={(e) => onChangeMetric(e.target.value)}>
+										<option value="TDP">TDP</option>
+										<option value="Score">Score</option>
+									</select>
 								</div>
 								{metric === 'Score' && (
 									<>
@@ -390,7 +369,8 @@ const PricePerformanceLeaderboard = () =>{
 											<p>
 												GPU Benchmark:
 											</p>
-											<Dropdown>
+											{/* bootstrap */}
+											{/* <Dropdown>
 												<Dropdown.Toggle variant="success" id="dropdown-basic-gpu">
 													{gpuBenchName}
 												</Dropdown.Toggle>
@@ -404,26 +384,36 @@ const PricePerformanceLeaderboard = () =>{
 													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(5, e.target.innerHTML)}>Vulkan</Dropdown.Item>
 													<Dropdown.Item onClick={(e) => onChangeGPUBenchType(6, e.target.innerHTML)}>PassMark</Dropdown.Item>
 												</Dropdown.Menu>
-											</Dropdown>
+											</Dropdown> */}
+											{/* mui */}
+											<select 
+												value={gpuBenchName} 
+												onChange={(e) => onChangeGPUBenchType(gpuOptions.indexOf(e.target.value), e.target.value)}
+											>
+												<option value="G3Dmark">G3Dmark</option>
+												<option value="G2Dmark">G2Dmark</option>
+												<option value="CUDA">CUDA</option>
+												<option value="Metal">Metal</option>
+												<option value="OpenCL">OpenCL</option>
+												<option value="Vulkan">Vulkan</option>
+												<option value="PassMark">PassMark</option>
+											</select>
 										</div>
 
 										<div className="vertical-group">
 											<p>
 												CPU Benchmark:
 											</p>
-											<Dropdown>
-												<Dropdown.Toggle variant="success" id="dropdown-basic-cpu">
-													{cpuBenchName}
-												</Dropdown.Toggle>
-
-												<Dropdown.Menu>
-													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(7, e.target.innerHTML)}>CPUMark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(8, e.target.innerHTML)}>ThreadMark</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(9, e.target.innerHTML)}>Cinebench R23 Single Score</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(10, e.target.innerHTML)}>Cinebench R23 Multi Score</Dropdown.Item>
-													<Dropdown.Item onClick={(e) => onChangeCPUBenchType(11, e.target.innerHTML)}>PassMark</Dropdown.Item>
-												</Dropdown.Menu>
-											</Dropdown>
+											<select 
+												value={cpuBenchName} 
+												onChange={(e) => onChangeCPUBenchType(cpuOptions.indexOf(e.target.value), e.target.value)}
+											>
+												<option value="CPUMark">CPUMark</option>
+												<option value="ThreadMark">ThreadMark</option>
+												<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
+												<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
+												<option value="PassMark">PassMark</option>
+											</select>
 										</div>
 									</>
 								)}

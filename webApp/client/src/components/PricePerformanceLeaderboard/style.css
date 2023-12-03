@@ -14,8 +14,9 @@
     width: 100%;
 }
 
-.selection-list {
+.selection-list.horizontal-group {
     gap: 2rem;
+    flex-direction: row;
 }
 
 .pagination-organize {
