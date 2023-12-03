@@ -205,7 +205,6 @@ const PricePerformanceLeaderboard = () =>{
 		  return (
 			<tr>
 			  <th>Rank</th>
-			  <th>User ID</th>
 			  <th>Total Price</th>
 			  <th>Name</th>
 			  <th>Description</th>
@@ -235,7 +234,6 @@ const PricePerformanceLeaderboard = () =>{
 				{userLists.map((list, index) => (
 				<tr className='row-hover' key={index}>
 					<td>{(currentPage - 1) * pageSize + index + 1}</td>
-					<td>{list.userid}</td>
 					<td>${list.totalprice}</td>
 					<td><Link className='btn text-primary' to={`/lists/${list.listid}`}>{list.name}</Link></td>
 					<td>{list.description}</td>

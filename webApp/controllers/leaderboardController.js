@@ -88,7 +88,8 @@ const getListScores = async (req, res, db) => {
     ) AS scores
     GROUP BY
         userid, totalprice, name, description, listid
-        OFFSET $3 LIMIT $4;`, [cpuBenchType, gpuBenchType, pageNumber, limitNumber]);
+    ORDER BY listscore DESC
+    OFFSET $3 LIMIT $4;`, [cpuBenchType, gpuBenchType, pageNumber, limitNumber]);
     let listCount = await db.query(`
         SELECT COUNT(*) FROM partslist;`);
         
