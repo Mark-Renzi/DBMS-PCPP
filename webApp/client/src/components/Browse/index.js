@@ -444,23 +444,26 @@ const Browse = () =>{
 									<p>
 										Computer part:
 									</p>
-									<Dropdown>
-										<Dropdown.Toggle variant="success" id="dropdown-basic">
-											{part}
-										</Dropdown.Toggle>
-
-										<Dropdown.Menu>
-											<Dropdown.Item onClick={() => onChangePartType('All')}>All</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('RAM')}>RAM</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('Storage')}>Storage</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('Tower')}>Tower</Dropdown.Item>
-											<Dropdown.Item onClick={() => onChangePartType('PSU')}>PSU</Dropdown.Item>
-										</Dropdown.Menu>
-									</Dropdown>
+									<FormControl sx={{ m: 1, width: 300 }}>
+										<InputLabel id="demo-simple-select-label">Part</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+											value={part}
+											label="Part"
+											onChange={(event) => onChangePartType(event.target.value)}
+										>
+											<MenuItem value={'All'}>All</MenuItem>
+											<MenuItem value={'CPU'}>CPU</MenuItem>
+											<MenuItem value={'CPUCooler'}>CPUCooler</MenuItem>
+											<MenuItem value={'Motherboard'}>Motherboard</MenuItem>
+											<MenuItem value={'RAM'}>RAM</MenuItem>
+											<MenuItem value={'GPU'}>GPU</MenuItem>
+											<MenuItem value={'Storage'}>Storage</MenuItem>
+											<MenuItem value={'Tower'}>Tower</MenuItem>
+											<MenuItem value={'PSU'}>PSU</MenuItem>
+										</Select>
+									</FormControl>
 								</div>
 							}
 							<div className="vertical-group slider">

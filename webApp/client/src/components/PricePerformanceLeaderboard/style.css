@@ -14,9 +14,9 @@
     width: 100%;
 }
 
-/* .selection-list {
-    gap: 2rem;
-} */
+.selection-list.horizontal-group {
+    flex-direction: row;
+}
 
 .table-spinner-container {
     height: 100%;

@@ -229,5 +229,6 @@ th {
 }
 
 .pagination {
-    justify-content: flex-end;
+    top: 3000rem;
+    position: sticky;
 }
