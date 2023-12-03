@@ -15,20 +15,7 @@
 }
 
 .selection-list.horizontal-group {
-    gap: 2rem;
     flex-direction: row;
-}
-
-.pagination-organize {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    border: 0.5px solid gainsboro;
-    /* border-top: 0; */
-    width: 100%;
-    justify-content: flex-end;
-    background-color: white;
-    padding: 0.3rem;
 }
 
 .table-spinner-container {

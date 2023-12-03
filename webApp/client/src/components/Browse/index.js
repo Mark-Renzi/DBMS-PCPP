@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
 import NumberInput from '../NumberInput/NumberInput';
@@ -52,8 +51,13 @@ const Browse = () =>{
 	const tableRef = useRef(null);
 	const selectionListRef = useRef(null);
 
+	// const selectionListHeight = document.querySelector('.selection-list').clientHeight;
+	// const tableOutlineElement = document.querySelector('.Table-Outline');
+	// const maxMinHeight = 60;
+	// tableOutlineElement.style.minHeight = `${Math.min(selectionListHeight, maxMinHeight)}rem`;
+
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
-	const pageSize = 20;
+	const pageSize = 15;
 	const { id } = useParams();
 	const { updatePageTitle } = useContext(PageTitleContext);
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
@@ -83,7 +87,7 @@ const Browse = () =>{
 	const reverseModularMapping = Object.fromEntries(Object.entries(modularMapping).map(([key, value]) => [value, key]));
 
 	useEffect(() => {
-		updatePageTitle("Browse");
+		updatePageTitle("Search For " + part);
 		fetchMenuItems();
 		onSubmit();
 	}, []);
@@ -169,6 +173,7 @@ const Browse = () =>{
 
 	const onChangePartType = (partType) => {
 		setPart(partType);
+		updatePageTitle("Search For " + partType);
 		setSafeCurrentPage(currentPage);
 	}
 
@@ -357,8 +362,8 @@ const Browse = () =>{
 			const isMapped = !!mapping;
 
 			selectedValues = selectedValues.map(val => val.toString());
-
-			const isChecked = isMapped ? selectedValues.includes(reverseMapping[displayValue].toString()) : selectedValues.includes(option.toString());
+			
+			const isChecked = isMapped ? selectedValues.includes(reverseMapping[displayValue]?.toString()) : selectedValues.includes(option?.toString());
 	
 			return (
 				<MenuItem key={option} value={option}>
@@ -424,207 +429,204 @@ const Browse = () =>{
                 </Modal.Footer>
             </Modal>
 
-			<div className="p-1">
-				<h1>
+			<div className="Page-Content-Container">
+				{/* <h1>
 					Search for {part} parts
-				</h1>
+				</h1> */}
 				<div className="filters-table">
-					<div
-						className="selection-list"
-						ref={selectionListRef}
-					>
-						{id && id < 8 && id >= 0 ?
-							<></>
-							:
+					<div className='filters-container'>
+						<div className="selection-list" ref={selectionListRef}>
+							{id && id < 8 && id >= 0 ?
+								<></>
+								:
+								<div className="vertical-group">
+									<p>
+										Computer part:
+									</p>
+									<FormControl sx={{ m: 1, width: 300 }}>
+										<InputLabel id="demo-simple-select-label">Part</InputLabel>
+										<Select
+											labelId="demo-simple-select-label"
+											id="demo-simple-select"
+											value={part}
+											label="Part"
+											onChange={(event) => onChangePartType(event.target.value)}
+										>
+											<MenuItem value={'All'}>All</MenuItem>
+											<MenuItem value={'CPU'}>CPU</MenuItem>
+											<MenuItem value={'CPUCooler'}>CPUCooler</MenuItem>
+											<MenuItem value={'Motherboard'}>Motherboard</MenuItem>
+											<MenuItem value={'RAM'}>RAM</MenuItem>
+											<MenuItem value={'GPU'}>GPU</MenuItem>
+											<MenuItem value={'Storage'}>Storage</MenuItem>
+											<MenuItem value={'Tower'}>Tower</MenuItem>
+											<MenuItem value={'PSU'}>PSU</MenuItem>
+										</Select>
+									</FormControl>
+								</div>
+							}
+							<div className="vertical-group slider">
+								<p>
+									Price: ${minPrice} - ${maxPrice}
+								</p>
+								<div className="horizontal-group slider">
+									<Slider
+										value={[intermediateMinPrice, intermediateMaxPrice]}
+										onChange={handleChangeMinMaxPrice}
+										onChangeCommitted={onSubmitPrice}
+										valueLabelDisplay="auto"
+										aria-labelledby="range-slider"
+										className='slider'
+										getAriaValueText={() => `${intermediateMinPrice} - ${intermediateMaxPrice}`}
+										min={minPriceRange}
+										max={maxPriceRange}
+									/>
+								</div>
+							</div>
 							<div className="vertical-group">
 								<p>
-									Computer part:
+									Select Manufacturer(s):
 								</p>
-								<Dropdown>
-									<Dropdown.Toggle variant="success" id="dropdown-basic">
-										{part}
-									</Dropdown.Toggle>
-
-									<Dropdown.Menu>
-										<Dropdown.Item onClick={() => onChangePartType('All')}>All</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('CPU')}>CPU</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('CPUCooler')}>CPUCooler</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('Motherboard')}>Motherboard</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('RAM')}>RAM</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('GPU')}>GPU</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('Storage')}>Storage</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('Tower')}>Tower</Dropdown.Item>
-										<Dropdown.Item onClick={() => onChangePartType('PSU')}>PSU</Dropdown.Item>
-									</Dropdown.Menu>
-								</Dropdown>
+								<FormControl sx={{ m: 1, width: 300 }}>
+									<InputLabel id="demo-multiple-checkbox-label">Manufacturer(s)</InputLabel>
+									<Select
+										labelId="demo-multiple-checkbox-label"
+										id="demo-multiple-checkbox"
+										multiple
+										value={selectedManufacturers}
+										onChange={(event) => setSelectedManufacturers(event.target.value)}
+										input={<OutlinedInput label="Manufacturer(s)" />}
+										renderValue={(selected) => (
+											<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
+												{selected.map((value) => (
+													<Chip key={value} label={value} />
+												))}
+											</div>
+										)}
+										MenuProps={MenuProps}
+									>
+										{manufacturerMenuProps.map((name) => (
+											<MenuItem key={name} value={name}>
+												<Checkbox checked={selectedManufacturers.indexOf(name) > -1} />
+												<ListItemText primary={name} />
+											</MenuItem>
+										))}
+									</Select>
+								</FormControl>
 							</div>
-						}
-						<div className="vertical-group slider">
-							<p>
-								Price: ${minPrice} - ${maxPrice}
-							</p>
-							<div className="horizontal-group slider">
-								<Slider
-									value={[intermediateMinPrice, intermediateMaxPrice]}
-									onChange={handleChangeMinMaxPrice}
-									onChangeCommitted={onSubmitPrice}
-									valueLabelDisplay="auto"
-									aria-labelledby="range-slider"
-									className='slider'
-									getAriaValueText={() => `${intermediateMinPrice} - ${intermediateMaxPrice}`}
-									min={minPriceRange}
-									max={maxPriceRange}
-								/>
-							</div>
-						</div>
-						<div className="vertical-group">
-							<p>
-								Select Manufacturer(s):
-							</p>
-							<FormControl sx={{ m: 1, width: 300 }}>
-								<InputLabel id="demo-multiple-checkbox-label">Manufacturer(s)</InputLabel>
-								<Select
-									labelId="demo-multiple-checkbox-label"
-									id="demo-multiple-checkbox"
-									multiple
-									value={selectedManufacturers}
-									onChange={(event) => setSelectedManufacturers(event.target.value)}
-									input={<OutlinedInput label="Manufacturer(s)" />}
-									renderValue={(selected) => (
-										<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
-											{selected.map((value) => (
-												<Chip key={value} label={value} />
-											))}
+							{
+								Object.entries(dynamicFilters.numerical).map(([key, filter]) => (
+									<div key={key} className="vertical-group slider">
+										<p>
+											{key.charAt(0).toUpperCase() + key.slice(1)}: {intermediateNumericalFilters[key]?.join(" - ")}
+										</p>
+										<div className="horizontal-group slider">
+											<Slider
+												value={intermediateNumericalFilters[key] || filter.range}
+												onChange={(event, newValue) => {
+													setIntermediateNumericalFilters({
+														...intermediateNumericalFilters,
+														[key]: newValue
+													});
+												}}
+												onChangeCommitted={(event, newValue) => {
+													setDynamicFilters({
+														...dynamicFilters,
+														numerical: {
+															...dynamicFilters.numerical,
+															[key]: { ...filter, value: newValue }
+														}
+													});
+												}}
+												valueLabelDisplay="auto"
+												aria-labelledby="range-slider"
+												className='slider'
+												getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
+												min={parseFloat(filter.range[0])}
+												max={parseFloat(filter.range[1])}
+											/>
 										</div>
-									)}
-									MenuProps={MenuProps}
-								>
-									{manufacturerMenuProps.map((name) => (
-										<MenuItem key={name} value={name}>
-											<Checkbox checked={selectedManufacturers.indexOf(name) > -1} />
-											<ListItemText primary={name} />
-										</MenuItem>
-									))}
-								</Select>
-							</FormControl>
-						</div>
-						{
-							Object.entries(dynamicFilters.numerical).map(([key, filter]) => (
-								<div key={key} className="vertical-group slider">
-									<p>
-										{key.charAt(0).toUpperCase() + key.slice(1)}: {intermediateNumericalFilters[key]?.join(" - ")}
-									</p>
-									<div className="horizontal-group slider">
-										<Slider
-											value={intermediateNumericalFilters[key] || filter.range}
-											onChange={(event, newValue) => {
-												setIntermediateNumericalFilters({
-													...intermediateNumericalFilters,
-													[key]: newValue
-												});
-											}}
-											onChangeCommitted={(event, newValue) => {
-												setDynamicFilters({
-													...dynamicFilters,
-													numerical: {
-														...dynamicFilters.numerical,
-														[key]: { ...filter, value: newValue }
-													}
-												});
-											}}
-											valueLabelDisplay="auto"
-											aria-labelledby="range-slider"
-											className='slider'
-											getAriaValueText={() => intermediateNumericalFilters[key]?.join(" - ")}
-											min={parseFloat(filter.range[0])}
-											max={parseFloat(filter.range[1])}
-										/>
 									</div>
+								))
+							}
+
+							{
+							Object.entries(dynamicFilters.categorical).map(([key, filter]) => (
+								<div key={key} className="vertical-group">
+								<p>
+									Select {key.charAt(0).toUpperCase() + key.slice(1)}:
+								</p>
+								<FormControl sx={{ m: 1, width: 300 }}>
+									<InputLabel id={`label-${key}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</InputLabel>
+									<Select
+										labelId={`label-${key}`}
+										id={`select-${key}`}
+										multiple
+										value={filter.value}
+										onChange={(event) => {
+											const reverseMapping = key === 'efficiency' ? reverseEfficiencyMapping :
+																	key === 'formfactor' ? reverseFormFactorMapping :
+																	key === 'modular' ? reverseModularMapping : null;
+									
+											const newSelectedValues = event.target.value.map(val => 
+												(reverseMapping && reverseMapping[val] !== undefined) ? reverseMapping[val] : val
+											);
+									
+											setDynamicFilters({
+												...dynamicFilters,
+												categorical: {
+													...dynamicFilters.categorical,
+													[key]: { ...filter, value: newSelectedValues }
+												}
+											});
+										}}
+										input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
+										renderValue={(selected) => renderFilterValue(key, selected)}
+										MenuProps={MenuProps}
+									>
+										{renderFilterOptions(key, filter.options, filter.value)}
+									</Select>
+								</FormControl>
 								</div>
 							))
-						}
-
-						{
-						Object.entries(dynamicFilters.categorical).map(([key, filter]) => (
-							<div key={key} className="vertical-group">
-							<p>
-								Select {key.charAt(0).toUpperCase() + key.slice(1)}:
-							</p>
-							<FormControl sx={{ m: 1, width: 300 }}>
-								<InputLabel id={`label-${key}`}>{key.charAt(0).toUpperCase() + key.slice(1)}</InputLabel>
-								<Select
-									labelId={`label-${key}`}
-									id={`select-${key}`}
-									multiple
-									value={filter.value}
-									onChange={(event) => {
-										const reverseMapping = key === 'efficiency' ? reverseEfficiencyMapping :
-																key === 'formfactor' ? reverseFormFactorMapping :
-																key === 'modular' ? reverseModularMapping : null;
-								
-										const newSelectedValues = event.target.value.map(val => 
-											(reverseMapping && reverseMapping[val] !== undefined) ? reverseMapping[val] : val
-										);
-								
-										setDynamicFilters({
-											...dynamicFilters,
-											categorical: {
-												...dynamicFilters.categorical,
-												[key]: { ...filter, value: newSelectedValues }
-											}
-										});
-									}}
-									input={<OutlinedInput label={key.charAt(0).toUpperCase() + key.slice(1)} />}
-									renderValue={(selected) => renderFilterValue(key, selected)}
-    								MenuProps={MenuProps}
-								>
-									{renderFilterOptions(key, filter.options, filter.value)}
-								</Select>
-							</FormControl>
-							</div>
-						))
-						}
-
-
-					</div>
-
-					<div className='table-scroll' ref={tableRef}>
-						<div className='min-height-table'>
-							<table className="priceperformance-table">
-								<thead>
-									<tr>
-										<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
-										<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
-										<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
-										{renderTableHeaders()}
-									</tr>
-								</thead>
-								<tbody>
-									{listLoading ?
-										<tr className='row-hover'>
-											<td className='table-spinner-container' colSpan={tableWidth}>
-												<div className='table-spinner'>
-													<Spinner animation="border" role="status">
-														<span className="visually-hidden">Loading...</span>
-													</Spinner>
-												</div>
-											</td>
-										</tr>
-										:
-										<>
-											{partsList.map((partl) => (
-												<tr className='row-hover' key={partl.partid}>
-													<td>{partl.manufacturer}</td>
-													<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
-													<td>${partl.price}</td>
-													{renderRowCells(partl)}
-												</tr>
-											))}
-										</>
-									}
-								</tbody>
-							</table>
+							}
 						</div>
+					</div>
+					<div className='Table-Outline' ref={tableRef}>
+						<table className="Table-Base Browse-Table">
+							<thead>
+								<tr>
+									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
+									<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
+									<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
+									{renderTableHeaders()}
+								</tr>
+							</thead>
+							<tbody>
+								{listLoading ?
+									<tr className='Table-Base-TR Browse-Table'>
+										<td className='table-spinner-container' colSpan={tableWidth}>
+											<div className='table-spinner'>
+												<Spinner animation="border" role="status">
+													<span className="visually-hidden">Loading...</span>
+												</Spinner>
+											</div>
+										</td>
+									</tr>
+									:
+									<>
+										{partsList.map((partl) => (
+											<tr className='Table-Base-TR Browse-Table' key={partl.partid}>
+												<td>{partl.manufacturer}</td>
+												<td><Link className="btn text-primary" onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
+												<td>${partl.price}</td>
+												{renderRowCells(partl)}
+											</tr>
+										))}
+									</>
+								}
+							</tbody>
+						</table>
 						<Pagination>
 							<div className="pagination-organize">
 								<Pagination.Prev onClick={onhandlePrev} disabled={currentPage === 1} />
