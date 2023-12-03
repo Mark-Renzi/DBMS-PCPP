@@ -1,5 +1,5 @@
 .page-container:has(.filters-table) {
-    max-width: 120rem;
+    max-width: 105rem;
 }
 
 .vertical-group {
@@ -47,7 +47,7 @@
 .filters-container{
     border: 0.5px solid gainsboro;
     border-radius: 0.5rem;
-    height: 60rem;
+    height: 45rem;
 }
 
 .selection-list {
@@ -67,7 +67,7 @@
     border-radius: 0.5rem;
     border: 0.5px solid gainsboro;
     padding: 2rem;
-    min-height: 60rem;
+    min-height: 45rem;
 }
 
 .filters-table {
@@ -97,6 +97,18 @@
     max-width: 80rem;
 }
 
+dl, ol, ul {
+    margin: 0;
+}
+
+.Table-Base-TR.Browse-Table td {
+    padding: 0.1rem 0;
+}
+
+.Table-Base.Browse-Table {
+    border-spacing: 0 0.25rem;
+}
+
 @media (min-width: 80rem) {
     .filters-table {
         flex-direction: row;
@@ -117,8 +129,4 @@
         border-top: 0.5px solid gainsboro;
         border-bottom: 0.5px solid gainsboro; */
     }
-}
-
-dl, ol, ul {
-    margin: 0;
 }

@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Dropdown from 'react-bootstrap/Dropdown';
 import Pagination from 'react-bootstrap/Pagination';
 import Modal from 'react-bootstrap/Modal';
 import NumberInput from '../NumberInput/NumberInput';
@@ -58,7 +57,7 @@ const Browse = () =>{
 	// tableOutlineElement.style.minHeight = `${Math.min(selectionListHeight, maxMinHeight)}rem`;
 
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
-	const pageSize = 20;
+	const pageSize = 15;
 	const { id } = useParams();
 	const { updatePageTitle } = useContext(PageTitleContext);
 	const listid = new URLSearchParams(window.location.search).get('listid') || null;
@@ -594,7 +593,7 @@ const Browse = () =>{
 						</div>
 					</div>
 					<div className='Table-Outline' ref={tableRef}>
-						<table className="Table-Base">
+						<table className="Table-Base Browse-Table">
 							<thead>
 								<tr>
 									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
@@ -605,7 +604,7 @@ const Browse = () =>{
 							</thead>
 							<tbody>
 								{listLoading ?
-									<tr className='Table-Base-TR'>
+									<tr className='Table-Base-TR Browse-Table'>
 										<td className='table-spinner-container' colSpan={tableWidth}>
 											<div className='table-spinner'>
 												<Spinner animation="border" role="status">
@@ -617,7 +616,7 @@ const Browse = () =>{
 									:
 									<>
 										{partsList.map((partl) => (
-											<tr className='Table-Base-TR' key={partl.partid}>
+											<tr className='Table-Base-TR Browse-Table' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
 												<td><Link className="btn text-primary" onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
 												<td>${partl.price}</td>
