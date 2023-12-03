@@ -406,7 +406,7 @@ const PricePerformanceLeaderboard = () =>{
 											</p>
 											<select 
 												value={cpuBenchName} 
-												onChange={(e) => onChangeCPUBenchType(cpuOptions.indexOf(e.target.value), e.target.value)}
+												onChange={(e) => onChangeCPUBenchType(cpuOptions.indexOf(e.target.value) + 7, e.target.value)}
 											>
 												<option value="CPUMark">CPUMark</option>
 												<option value="ThreadMark">ThreadMark</option>
