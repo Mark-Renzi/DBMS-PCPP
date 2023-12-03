@@ -23,12 +23,18 @@ ul.navbar-nav a:hover {
 .container-fluid {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: center;
 	align-content: center;
+	width: 100%;
 }
 
 .navbar>.container-fluid {
-	padding-left: 1rem;
+	padding: 0 1rem;
+}
+
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .navbar-brand:hover {
