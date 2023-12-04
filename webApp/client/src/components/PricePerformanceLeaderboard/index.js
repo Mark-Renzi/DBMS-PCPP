@@ -193,7 +193,7 @@ const PricePerformanceLeaderboard = () =>{
 		  return (
 			<tr>
 			  <th>Rank</th>
-			  <th>Manufacturer</th>
+			  <th>Brand</th>
 			  <th>Model</th>
 			  {part !== "CPU" ? <th>Chipset</th> : null}
 			  <th>Score</th>

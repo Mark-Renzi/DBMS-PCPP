@@ -221,7 +221,7 @@ const Details = ({ partid }) => {
                     <div>
                         <div className='next-to'><dt>Price:</dt><dd>${specs.price}</dd></div>
                         <div className='next-to'><dt>Price:</dt><dd>${specs.price}</dd></div>
-                        <div className='next-to'><dt>Manufacturer:</dt><dd>{specs.manufacturer}</dd></div>
+                        <div className='next-to'><dt>Brand:</dt><dd>{specs.manufacturer}</dd></div>
                         <div className='next-to'><dt>Model:</dt><dd>{specs.model}</dd></div>
                         <div className='next-to'><dt>Form Factor:</dt><dd>{formFactors[specs.formfactor]}</dd></div>
                         <div className='next-to'><dt>Wattage:</dt><dd>{specs.wattage} W</dd></div>

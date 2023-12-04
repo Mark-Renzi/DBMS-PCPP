@@ -481,10 +481,10 @@ const Browse = () =>{
 							</div>
 							<div className="vertical-group left-start">
 								<p>
-									Select Manufacturer(s):
+									Select Brand(s):
 								</p>
 								<FormControl sx={{ m: 1, width: 300 }}>
-									<InputLabel id="demo-multiple-checkbox-label">Manufacturer(s)</InputLabel>
+									<InputLabel id="demo-multiple-checkbox-label">Brand(s)</InputLabel>
 									<Select
 										labelId="demo-multiple-checkbox-label"
 										id="demo-multiple-checkbox"
@@ -492,6 +492,7 @@ const Browse = () =>{
 										value={selectedManufacturers}
 										onChange={(event) => setSelectedManufacturers(event.target.value)}
 										input={<OutlinedInput label="Manufacturer(s)" />}
+										input={<OutlinedInput label="Brand(s)" />}
 										renderValue={(selected) => (
 											<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
 												{selected.map((value) => (
@@ -592,7 +593,7 @@ const Browse = () =>{
 						<table className="Table-Base Browse-Table">
 							<thead>
 								<tr>
-									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Manufacturer {renderSortArrow('manufacturer')}</th>
+									<th onClick={() => handleHeaderClick('manufacturer')} className="clickable">Brand {renderSortArrow('manufacturer')}</th>
 									<th onClick={() => handleHeaderClick('model')} className="clickable">Model {renderSortArrow('model')}</th>
 									<th onClick={() => handleHeaderClick('price')} className="clickable">Price {renderSortArrow('price')}</th>
 									{renderTableHeaders()}

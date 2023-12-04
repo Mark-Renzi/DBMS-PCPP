@@ -248,7 +248,7 @@ const Configurator = () =>{
                         <tr>
                             <th>Component</th>
                             <th>Name</th>
-                            <th>Manufacturer</th>
+                            <th>Brand</th>
                             <th>Quantity</th>
                             <th>Price</th>
                             <th></th>
