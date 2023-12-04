@@ -9,29 +9,27 @@ const getListTDPs = async (req, res, db) => {
   
   let lists = await db.query(`
             SELECT
-            pl.userid,
-            pl.totalprice,
-            pl.name,
-            pl.description,
-            lc.listid,
-            SUM(
-              CASE
-                WHEN cp.parttype = 0 THEN lc.quantity * (
-                  SELECT tdp FROM cpu WHERE partid = lc.partid
-                )
-                WHEN cp.parttype = 4 THEN lc.quantity * (
-                  SELECT tdp FROM gpu WHERE partid = lc.partid
-                )
-                ELSE 0
-              END
-            ) AS sum_tdp
-          FROM listcontains lc
-          JOIN computerpart cp ON lc.partid = cp.partid
-          JOIN partslist pl ON lc.listid = pl.listid
-          GROUP BY pl.userid, pl.totalprice, pl.name, pl.description, lc.listid
-          ORDER BY sum_tdp DESC
-          OFFSET $1 LIMIT $2;`, [pageNumber, limitNumber]);
-    let listCount = await db.query(`
+              pl.userid,
+              pl.totalprice,
+              pl.name,
+              pl.description,
+              pl.listid,
+              COALESCE(SUM(
+                CASE
+                  WHEN cp.parttype = 0 THEN lc.quantity * COALESCE(c.tdp, 0)
+                  WHEN cp.parttype = 4 THEN lc.quantity * COALESCE(g.tdp, 0)
+                  ELSE 0
+                END
+              ), 0) AS sum_tdp
+            FROM partslist pl
+            LEFT JOIN listcontains lc ON pl.listid = lc.listid
+            LEFT JOIN computerpart cp ON lc.partid = cp.partid
+            LEFT JOIN cpu c ON cp.partid = c.partid
+            LEFT JOIN gpu g ON cp.partid = g.partid
+            GROUP BY pl.userid, pl.totalprice, pl.name, pl.description, pl.listid
+            ORDER BY sum_tdp DESC
+            OFFSET $1 LIMIT $2;`, [pageNumber, limitNumber]);
+  let listCount = await db.query(`
             SELECT COUNT(*) FROM partslist;`);
   try {
     return res.status(200).json({
