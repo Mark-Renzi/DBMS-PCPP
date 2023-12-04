@@ -298,7 +298,9 @@ const Details = ({ partid }) => {
                                 <tbody>
                                     {partLists.map((list, index) => (
                                         <tr key={index} className='Table-Base-TR'>
-                                            <td><Link className='btn text-primary' to={`/lists/${list.listid}`}>{list.name}</Link></td>
+                                            <td><Link className='btn text-primary'
+                                            onClick={(e) => {window.location.href = `/lists/${list.listid}`}}
+                                            >{list.name}</Link></td>
                                             <td>{list.description}</td>
                                             <td>${list.totalprice}</td>
                                         </tr>
