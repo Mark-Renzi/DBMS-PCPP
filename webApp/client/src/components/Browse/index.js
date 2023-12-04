@@ -275,28 +275,28 @@ const Browse = () =>{
         );
     };
 	
-	const renderRowCells = (part) => {
-        const partKeys = Object.keys(part);
+	const renderRowCells = (partl) => {
+        const partKeys = Object.keys(partl);
         const filteredKeys = partKeys.filter(key => !blacklist.includes(key));
 
         return (
             <>
                 {filteredKeys.map(key => (
-                    <td key={`${part.partid}-${key}`}>
-                        {key === 'efficiency' ? efficiencyMapping[part[key]] :
-							key === 'formfactor' ? formFactorMapping[part[key]] :
-							key === 'modular' ? modularMapping[part[key]] :
-							part[key]}
+                    <td key={`${partl.partid}-${key}`}>
+                        {key === 'efficiency' ? efficiencyMapping[partl[key]] :
+							key === 'formfactor' && part != 'Storage' ? formFactorMapping[partl[key]] :
+							key === 'modular' ? modularMapping[partl[key]] :
+							partl[key]}
                     </td>
                 ))}
                 {listid && (
                     <td>
-                        {addingPartId === part.partid ? (
+                        {addingPartId === partl.partid ? (
                             <Spinner animation="border" role="status" style={{color: '#007bff'}}>
                                 <span className="visually-hidden">Adding...</span>
                             </Spinner>
                         ) : (
-                            <Button variant="link" onClick={() => addPartToList(part.partid)} title='Add part to list'>
+                            <Button variant="link" onClick={() => addPartToList(partl.partid)} title='Add part to list'>
                                 <FontAwesomeIcon icon={faPlus} />
                             </Button>
                         )}
@@ -349,7 +349,7 @@ const Browse = () =>{
 		if (filterKey === 'efficiency') {
 			mapping = efficiencyMapping;
 			reverseMapping = reverseEfficiencyMapping;
-		} else if (filterKey === 'formfactor') {
+		} else if (filterKey === 'formfactor' && part != 'Storage') {
 			mapping = formFactorMapping;
 			reverseMapping = reverseFormFactorMapping;
 		} else if (filterKey === 'modular') {
