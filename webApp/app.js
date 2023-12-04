@@ -22,7 +22,7 @@ const partsController = require("./controllers/partsController");
 const leaderboardController = require("./controllers/leaderboardController");
 
 app.set('port', process.env.PORT || 3001);
-app.use(favicon(__dirname + '/public/images/favicon.png'));
+// app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
@@ -251,7 +251,7 @@ app.get('/favicon.ico', (req, res) =>
     res.sendFile(path.join(__dirname, '/client/build/favicon.ico'))
 );
 
-// app.use(express.static(path.join(__dirname, 'client/build'))); // only in production
+app.use(express.static(path.join(__dirname, 'client/build'))); // only in production
 
 // The "catchall" handler: for any request that doesn't
 // match one above, send back React's index.html file.
