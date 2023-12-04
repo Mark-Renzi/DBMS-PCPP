@@ -24,7 +24,7 @@ const HomePage = () =>{
 	const { updatePageTitle } = useContext(PageTitleContext);
 
     useEffect(() => {
-		updatePageTitle('Home');
+		updatePageTitle('Części Komputerowe');
         getLists();
     }, []);
 
