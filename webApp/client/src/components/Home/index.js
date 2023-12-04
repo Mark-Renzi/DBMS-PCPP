@@ -201,7 +201,7 @@ const HomePage = () =>{
 				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleModalClose}>Cancel</Button>
-					<Button variant="primary" onClick={handleEditList}>Edit List</Button>
+					<Button variant="primary" onClick={handleEditList}>Save</Button>
 				</Modal.Footer>
 			</Modal>
 
