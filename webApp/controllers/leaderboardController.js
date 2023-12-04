@@ -1,5 +1,12 @@
 const getListTDPs = async (req, res, db) => {
-  const { pageNumber, limitNumber } = req.body;
+  let { pageNumber, limitNumber } = req.body;
+
+  pageNumber = parseInt(pageNumber);
+  limitNumber = parseInt(limitNumber);
+  pageNumber = Math.max(1, pageNumber);
+  pageNumber = pageNumber - 1;
+  pageNumber = pageNumber * limitNumber;
+  
   let lists = await db.query(`
             SELECT
             pl.userid,
@@ -38,7 +45,14 @@ const getListTDPs = async (req, res, db) => {
 };
 
 const getListScores = async (req, res, db) => {
-  const { pageNumber, limitNumber, cpuBenchType, gpuBenchType } = req.body;
+  let { pageNumber, limitNumber, cpuBenchType, gpuBenchType } = req.body;
+
+  pageNumber = parseInt(pageNumber);
+  limitNumber = parseInt(limitNumber);
+  pageNumber = Math.max(1, pageNumber);
+  pageNumber = pageNumber - 1;
+  pageNumber = pageNumber * limitNumber;
+  
   let lists = await db.query(`
     SELECT
         userid,
