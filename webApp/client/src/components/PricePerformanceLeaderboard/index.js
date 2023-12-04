@@ -195,7 +195,7 @@ const PricePerformanceLeaderboard = () =>{
 			  <th>Rank</th>
 			  <th>Manufacturer</th>
 			  <th>Model</th>
-			  {part !== "CPU" ? <th>Chipset</th> : <th></th>}
+			  {part !== "CPU" ? <th>Chipset</th> : null}
 			  <th>Score</th>
 			  <th>Price</th>
 			  <th>Perf/{comparison} Ratio</th>
@@ -217,11 +217,11 @@ const PricePerformanceLeaderboard = () =>{
 	const renderTableBody = () => {
 		if (showPartsTable) {
 			return (partsList.map((partl, index) => (
-				<tr className='row-hover' key={partl.partid}>
+				<tr className='Table-Base-TR Browse-Table' key={partl.partid}>
 					<td>{(currentPage - 1) * pageSize + index + 1}</td>
 					<td>{partl.manufacturer}</td>
-					<td><Link onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
-					{ part !== "CPU" ? <td>{partl.chipset}</td> : <td></td> }
+					<td><Link className='btn text-primary' onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
+					{ part !== "CPU" ? <td>{partl.chipset}</td> : null }
 					<td>{partl.score}</td>
 					<td>${partl.price}</td>
 					<td>{parseFloat(comparison === 'Price' ? partl.priceperformance : partl.tdpperformance).toFixed(4)}</td>
@@ -232,7 +232,7 @@ const PricePerformanceLeaderboard = () =>{
 			return (
 			<>
 				{userLists.map((list, index) => (
-				<tr className='row-hover' key={index}>
+				<tr className='Table-Base-TR Browse-Table' key={index}>
 					<td>{(currentPage - 1) * pageSize + index + 1}</td>
 					<td>${list.totalprice}</td>
 					<td><Link className='btn text-primary' to={`/lists/${list.listid}`}>{list.name}</Link></td>
@@ -281,161 +281,157 @@ const PricePerformanceLeaderboard = () =>{
                 </Modal.Footer>
             </Modal>
 
-			<div className="p-1">
-				<h1>
-					Price-Performance Leaderboard
-				</h1>
-				<div>
-					<div className="horizontal-group selection-list">
-						<div className="vertical-group">
-							<p>
-								Table:
-							</p>
+			<div className="Page-Content-Container">
+				<div className="horizontal-group selection-list">
+					<div className="vertical-group">
+						<p>
+							Table:
+						</p>
 
-							<select value={tableType} onChange={(e) => onChangeTable(e.target.value)}>
-								<option value="Parts">Parts</option>
-								<option value="Lists">Lists</option>
-							</select>
-						</div>
-						
-						{showPartsTable && (
-							<>
-								<div className="vertical-group">
-									<p>
-										Comparison:
-									</p>
-
-									<select value={comparison} onChange={(e) => onChangeComparison(e.target.value)}>
-										<option value="Price">Price</option>
-										<option value="TDP">TDP</option>
-									</select>
-								</div>
-								<div className="vertical-group">
-									<p>
-										Computer part:
-									</p>
-
-									<select value={part} onChange={(e) => onChangePartType(e.target.value)}>
-										<option value="GPU">GPU</option>
-										<option value="CPU">CPU</option>
-									</select>
-								</div>
-								<div className="vertical-group">
-									<p>
-										Benchmark Type:
-									</p>
-										{part === 'GPU' ?
-											<select value={benchName} onChange={(e) => onChangeBenchType(gpuOptions.indexOf(e.target.value), e.target.value)}>
-												<option value="G3Dmark">G3Dmark</option>
-												<option value="G2Dmark">G2Dmark</option>
-												<option value="CUDA">CUDA</option>
-												<option value="Metal">Metal</option>
-												<option value="OpenCL">OpenCL</option>
-												<option value="Vulkan">Vulkan</option>
-												<option value="PassMark">PassMark</option>
-											</select>
-										:
-											<select value={benchName} onChange={(e) => onChangeBenchType(cpuOptions.indexOf(e.target.value) + 7, e.target.value)}>
-												<option value="CPUMark">CPUMark</option>
-												<option value="ThreadMark">ThreadMark</option>
-												<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
-												<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
-												<option value="PassMark">PassMark</option>
-											</select>
-										}
-								</div>
-							</>
-						)}
-						{showListTable && (
-							<>
-								<div className="vertical-group">
-									<p>
-										Metric:
-									</p>
-
-									<select value={metric} onChange={(e) => onChangeMetric(e.target.value)}>
-										<option value="TDP">TDP</option>
-										<option value="Score">Score</option>
-									</select>
-								</div>
-								{metric === 'Score' && (
-									<>
-										<div className="vertical-group">
-											<p>
-												GPU Benchmark:
-											</p>
-											<select 
-												value={gpuBenchName} 
-												onChange={(e) => onChangeGPUBenchType(gpuOptions.indexOf(e.target.value), e.target.value)}
-											>
-												<option value="G3Dmark">G3Dmark</option>
-												<option value="G2Dmark">G2Dmark</option>
-												<option value="CUDA">CUDA</option>
-												<option value="Metal">Metal</option>
-												<option value="OpenCL">OpenCL</option>
-												<option value="Vulkan">Vulkan</option>
-												<option value="PassMark">PassMark</option>
-											</select>
-										</div>
-
-										<div className="vertical-group">
-											<p>
-												CPU Benchmark:
-											</p>
-											<select 
-												value={cpuBenchName} 
-												onChange={(e) => onChangeCPUBenchType(cpuOptions.indexOf(e.target.value) + 7, e.target.value)}
-											>
-												<option value="CPUMark">CPUMark</option>
-												<option value="ThreadMark">ThreadMark</option>
-												<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
-												<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
-												<option value="PassMark">PassMark</option>
-											</select>
-										</div>
-									</>
-								)}
-							</>
-						)}
+						<select value={tableType} onChange={(e) => onChangeTable(e.target.value)}>
+							<option value="Parts">Parts</option>
+							<option value="Lists">Lists</option>
+						</select>
 					</div>
+					
+					{showPartsTable && (
+						<>
+							<div className="vertical-group">
+								<p>
+									Comparison:
+								</p>
 
-					<div className='table-scroll'>
-						<table className="priceperformance-table">
-							<thead>
-								{renderTableHeader()}
-							</thead>
-							<tbody>
-								{listLoading ?
-									<tr className='row-hover'>
-										<td className='table-spinner-container' colSpan='7'>
-											<div className='table-spinner'>
-												<Spinner animation="border" role="status">
-													<span className="visually-hidden">Loading...</span>
-												</Spinner>
-											</div>
-										</td>
-									</tr>
-									:
-									<>
-										{renderTableBody()}
-									</>
-								}
-							</tbody>
-						</table>
-						<Pagination>
-							<div className="pagination-organize">
-								<Pagination.Prev onClick={onhandlePrev} disabled={currentPage === 1} />
-								{
-									calcPagesToShow().map(page =>
-										<Pagination.Item key={page} active={page === currentPage} onClick={() => setCurrentPage(page)}>{page}</Pagination.Item>
-									)
-								}
-								{Math.ceil(totalResultNum / pageSize) > 5 && <Pagination.Ellipsis onClick={handleEllipseClick} />}
-								{Math.ceil(totalResultNum / pageSize) > 5 && currentPage < Math.ceil(totalResultNum / pageSize) - 2 && <Pagination.Item onClick={() => setCurrentPage(Math.ceil(totalResultNum / pageSize))}>{Math.ceil(totalResultNum / pageSize)}</Pagination.Item>}
-								<Pagination.Next onClick={onhandleNext} disabled={currentPage === Math.ceil(totalResultNum / pageSize)} />
+								<select value={comparison} onChange={(e) => onChangeComparison(e.target.value)}>
+									<option value="Price">Price</option>
+									<option value="TDP">TDP</option>
+								</select>
 							</div>
-						</Pagination>
-					</div>
+							<div className="vertical-group">
+								<p>
+									Computer part:
+								</p>
+
+								<select value={part} onChange={(e) => onChangePartType(e.target.value)}>
+									<option value="GPU">GPU</option>
+									<option value="CPU">CPU</option>
+								</select>
+							</div>
+							<div className="vertical-group">
+								<p>
+									Benchmark Type:
+								</p>
+									{part === 'GPU' ?
+										<select value={benchName} onChange={(e) => onChangeBenchType(gpuOptions.indexOf(e.target.value), e.target.value)}>
+											<option value="G3Dmark">G3Dmark</option>
+											<option value="G2Dmark">G2Dmark</option>
+											<option value="CUDA">CUDA</option>
+											<option value="Metal">Metal</option>
+											<option value="OpenCL">OpenCL</option>
+											<option value="Vulkan">Vulkan</option>
+											<option value="PassMark">PassMark</option>
+										</select>
+									:
+										<select value={benchName} onChange={(e) => onChangeBenchType(cpuOptions.indexOf(e.target.value) + 7, e.target.value)}>
+											<option value="CPUMark">CPUMark</option>
+											<option value="ThreadMark">ThreadMark</option>
+											<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
+											<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
+											<option value="PassMark">PassMark</option>
+										</select>
+									}
+							</div>
+						</>
+					)}
+					{showListTable && (
+						<>
+							<div className="vertical-group">
+								<p>
+									Metric:
+								</p>
+
+								<select value={metric} onChange={(e) => onChangeMetric(e.target.value)}>
+									<option value="TDP">TDP</option>
+									<option value="Score">Score</option>
+								</select>
+							</div>
+							{metric === 'Score' && (
+								<>
+									<div className="vertical-group">
+										<p>
+											GPU Benchmark:
+										</p>
+										<select 
+											value={gpuBenchName} 
+											onChange={(e) => onChangeGPUBenchType(gpuOptions.indexOf(e.target.value), e.target.value)}
+										>
+											<option value="G3Dmark">G3Dmark</option>
+											<option value="G2Dmark">G2Dmark</option>
+											<option value="CUDA">CUDA</option>
+											<option value="Metal">Metal</option>
+											<option value="OpenCL">OpenCL</option>
+											<option value="Vulkan">Vulkan</option>
+											<option value="PassMark">PassMark</option>
+										</select>
+									</div>
+
+									<div className="vertical-group">
+										<p>
+											CPU Benchmark:
+										</p>
+										<select 
+											value={cpuBenchName} 
+											onChange={(e) => onChangeCPUBenchType(cpuOptions.indexOf(e.target.value) + 7, e.target.value)}
+										>
+											<option value="CPUMark">CPUMark</option>
+											<option value="ThreadMark">ThreadMark</option>
+											<option value="Cinebench R23 Single Score">Cinebench R23 Single Score</option>
+											<option value="Cinebench R23 Multi Score">Cinebench R23 Multi Score</option>
+											<option value="PassMark">PassMark</option>
+										</select>
+									</div>
+								</>
+							)}
+						</>
+					)}
+				</div>
+			</div>
+			<div className="Page-Content-Container Spacer">
+				<div className='Table-Pag'>
+					<table className="Table-Base">
+						<thead>
+							{renderTableHeader()}
+						</thead>
+						<tbody>
+							{listLoading ?
+								<tr className='Table-Base-TR Browse-Table'>
+									<td className='table-spinner-container' colSpan='7'>
+										<div className='table-spinner'>
+											<Spinner animation="border" role="status">
+												<span className="visually-hidden">Loading...</span>
+											</Spinner>
+										</div>
+									</td>
+								</tr>
+								:
+								<>
+									{renderTableBody()}
+								</>
+							}
+						</tbody>
+					</table>
+					<Pagination>
+						<div className="pagination-organize">
+							<Pagination.Prev onClick={onhandlePrev} disabled={currentPage === 1} />
+							{
+								calcPagesToShow().map(page =>
+									<Pagination.Item key={page} active={page === currentPage} onClick={() => setCurrentPage(page)}>{page}</Pagination.Item>
+								)
+							}
+							{Math.ceil(totalResultNum / pageSize) > 5 && <Pagination.Ellipsis onClick={handleEllipseClick} />}
+							{Math.ceil(totalResultNum / pageSize) > 5 && currentPage < Math.ceil(totalResultNum / pageSize) - 2 && <Pagination.Item onClick={() => setCurrentPage(Math.ceil(totalResultNum / pageSize))}>{Math.ceil(totalResultNum / pageSize)}</Pagination.Item>}
+							<Pagination.Next onClick={onhandleNext} disabled={currentPage === Math.ceil(totalResultNum / pageSize)} />
+						</div>
+					</Pagination>
 				</div>
 			</div>
 		</>
