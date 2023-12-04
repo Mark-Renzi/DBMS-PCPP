@@ -141,16 +141,18 @@ const ListViewer = () => {
                                     <th>Component</th>
                                     <th>Name</th>
                                     <th>Manufacturer</th>
+                                    <th>Quantity</th>
                                     <th>Price</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {parts.map((part, index) => (
                                     <tr key={index} className='Table-Base-TR'>
-                                        <td id='TD-Start'><strong>{part.name}</strong></td>
+                                        <td><strong>{part.name}</strong></td>
                                         <td><Link className="btn text-primary" onClick={(e) => handleShowDetailModal(e, part)}>{part.model}</Link></td>
                                         <td>{part.manufacturer}</td>
-                                        <td id='TD-End'>{part.price}</td>
+                                        <td>{part.quantity}</td>
+                                        <td>${(part.price * part.quantity).toFixed(2)}</td>
                                     </tr>
                                 ))}
                             </tbody>

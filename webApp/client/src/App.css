@@ -169,7 +169,7 @@ th {
     margin-top: 1.5rem;
 }
 
-.Table-Base-TR td:nth-child(odd), #TD-Start{
+.Table-Base-TR td:nth-child(odd){
     background: var(--odd-table-color);
 }
 
