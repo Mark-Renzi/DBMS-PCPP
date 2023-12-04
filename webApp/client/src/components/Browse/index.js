@@ -491,7 +491,6 @@ const Browse = () =>{
 										multiple
 										value={selectedManufacturers}
 										onChange={(event) => setSelectedManufacturers(event.target.value)}
-										input={<OutlinedInput label="Manufacturer(s)" />}
 										input={<OutlinedInput label="Brand(s)" />}
 										renderValue={(selected) => (
 											<div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem' }}>
