@@ -283,7 +283,7 @@ const PricePerformanceLeaderboard = () =>{
 
 			<div className="Page-Content-Container">
 				<div className="horizontal-group selection-list">
-					<div className="vertical-group">
+					<div className="vertical-group-pp">
 						<p>
 							Table:
 						</p>
@@ -296,7 +296,7 @@ const PricePerformanceLeaderboard = () =>{
 					
 					{showPartsTable && (
 						<>
-							<div className="vertical-group">
+							<div className="vertical-group-pp">
 								<p>
 									Comparison:
 								</p>
@@ -306,7 +306,7 @@ const PricePerformanceLeaderboard = () =>{
 									<option value="TDP">TDP</option>
 								</select>
 							</div>
-							<div className="vertical-group">
+							<div className="vertical-group-pp">
 								<p>
 									Computer part:
 								</p>
@@ -316,7 +316,7 @@ const PricePerformanceLeaderboard = () =>{
 									<option value="CPU">CPU</option>
 								</select>
 							</div>
-							<div className="vertical-group">
+							<div className="vertical-group-pp">
 								<p>
 									Benchmark Type:
 								</p>
@@ -344,7 +344,7 @@ const PricePerformanceLeaderboard = () =>{
 					)}
 					{showListTable && (
 						<>
-							<div className="vertical-group">
+							<div className="vertical-group-pp">
 								<p>
 									Metric:
 								</p>
@@ -356,7 +356,7 @@ const PricePerformanceLeaderboard = () =>{
 							</div>
 							{metric === 'Score' && (
 								<>
-									<div className="vertical-group">
+									<div className="vertical-group-pp">
 										<p>
 											GPU Benchmark:
 										</p>
@@ -374,7 +374,7 @@ const PricePerformanceLeaderboard = () =>{
 										</select>
 									</div>
 
-									<div className="vertical-group">
+									<div className="vertical-group-pp">
 										<p>
 											CPU Benchmark:
 										</p>
