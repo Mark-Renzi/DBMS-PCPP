@@ -92,7 +92,7 @@ const Configurator = () =>{
         setListInfoLoading(true);
         axios.get(`/api/listinfo/${listid}`)
             .then(response => {
-                setListInfo(response.data);
+                setListInfo({ ...listInfo, ...response.data });
                 updatePageTitle(response?.data.name || "Configurator");
                 setListInfoLoading(false);
             })
