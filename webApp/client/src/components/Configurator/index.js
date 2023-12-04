@@ -111,19 +111,19 @@ const Configurator = () =>{
             });
     }
     
-    const changeQuantity = (index, newQuantity) => {
+    const changeQuantity = async (index, newQuantity) => {
         const updatedParts = [...parts];
         const partToUpdate = updatedParts[index];
     
         partToUpdate.quantity = newQuantity;
         setParts(updatedParts);
     
-        axios.put(`/api/updatequantity/${listid}`, {
+        await axios.put(`/api/updatequantity/${listid}`, {
             partid: partToUpdate.partid,
             quantity: newQuantity
         })
         .then(response => {
-            // console.log(response);
+            getListTDP();
         })
         .catch(error => {
             console.error('Error updating quantity!', error);
@@ -132,8 +132,8 @@ const Configurator = () =>{
     };
     
 
-    const deletePart = (partid) => {
-        axios.delete(`/api/deletepart/${listid}`, { data: { partid } })
+    const deletePart = async (partid) => {
+        await axios.delete(`/api/deletepart/${listid}`, { data: { partid } })
             .then(() => {
                 const updatedParts = parts.map(part => {
                     if (part.partid === partid) {
@@ -142,6 +142,7 @@ const Configurator = () =>{
                     return part;
                 });
                 setParts(updatedParts);
+                getListTDP();
             })
             .catch(error => {
                 console.error('Error deleting part!', error);
