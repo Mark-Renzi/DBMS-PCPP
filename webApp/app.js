@@ -19,6 +19,7 @@ const benchmarksController = require("./controllers/benchmarksController");
 const listsController = require("./controllers/listsController");
 const configuratorController = require("./controllers/configuratorController");
 const partsController = require("./controllers/partsController");
+const leaderboardController = require("./controllers/leaderboardController");
 
 app.set('port', process.env.PORT || 3001);
 app.use(favicon(__dirname + '/public/images/favicon.png'));
@@ -116,7 +117,7 @@ function ensureListOwner(req, res, next) {
  * @BENCHMARKS
  */
 app.post('/api/benchmarks', function (req, res) {
-    benchmarksController.benchmarkPricePerf(req, res, db);
+    benchmarksController.benchmarkPerfRatio(req, res, db);
 });
 
 app.get('/api/benchmarks/:chipsetid', function (req, res) {
@@ -186,6 +187,17 @@ app.post('/api/browse/menu', function (req, res) {
 
 app.get('/api/details/:partid', function (req, res) {
     partsController.getPartDetails(req, res, db);
+});
+
+/**
+ * @LEADERBOARDS
+ */
+app.post('/api/leaderboards/TDP', function (req, res) {
+    leaderboardController.getListTDPs(req, res, db);
+});
+
+app.post('/api/leaderboards/Score', function (req, res) {
+    leaderboardController.getListScores(req, res, db);
 });
 
 

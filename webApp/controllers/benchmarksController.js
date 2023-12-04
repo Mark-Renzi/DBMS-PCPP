@@ -1,6 +1,5 @@
-
-const benchmarkPricePerf = async (req, res, db) => {
-    let { partType, benchType, pageNumber, limitNumber } = req.body;
+const benchmarkPerfRatio = async (req, res, db) => {
+    let { comparisonType, partType, benchType, pageNumber, limitNumber } = req.body;
 
     pageNumber = parseInt(pageNumber);
     limitNumber = parseInt(limitNumber);
@@ -14,10 +13,20 @@ const benchmarkPricePerf = async (req, res, db) => {
 
         switch (partType) {
             case "GPU":
-                table = "GPUPricePerformance";
+                if (comparisonType === "Price") {
+                    table = "GPUPricePerformance";
+                }
+                else {
+                    table = "GPUTDPPerformance";
+                }
                 break;
             case "CPU":
-                table = "CPUPricePerformance";
+                if (comparisonType === "Price") {
+                    table = "CPUPricePerformance";
+                }
+                else {
+                    table = "CPUTDPPerformance";
+                }
                 break;
         }
 
@@ -61,6 +70,6 @@ const getBenchmarks = async (req, res, db) => {
 };
 
 module.exports = {
-    benchmarkPricePerf,
+    benchmarkPerfRatio,
     getBenchmarks
 };
