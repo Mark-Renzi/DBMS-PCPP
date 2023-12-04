@@ -335,7 +335,8 @@ const Browse = () =>{
 	const handleEllipseClick = () => {
         setShowEllipseModal(true);
     }
-	const handleShowDetailModal = async (partl) => {
+	const handleShowDetailModal = async (e, partl) => {
+		e.preventDefault();
 		setDetailPart(partl);
 		setShowDetailModal(true);
 	}
@@ -618,7 +619,7 @@ const Browse = () =>{
 										{partsList.map((partl) => (
 											<tr className='Table-Base-TR Browse-Table' key={partl.partid}>
 												<td>{partl.manufacturer}</td>
-												<td><Link className="btn text-primary" onClick={() => handleShowDetailModal(partl)}>{partl.model}</Link></td>
+												<td><Link className="btn text-primary" onClick={(e) => handleShowDetailModal(e, partl)}>{partl.model}</Link></td>
 												<td>${partl.price}</td>
 												{renderRowCells(partl)}
 											</tr>
