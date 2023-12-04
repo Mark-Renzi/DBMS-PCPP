@@ -51,11 +51,6 @@ const Browse = () =>{
 	const tableRef = useRef(null);
 	const selectionListRef = useRef(null);
 
-	// const selectionListHeight = document.querySelector('.selection-list').clientHeight;
-	// const tableOutlineElement = document.querySelector('.Table-Outline');
-	// const maxMinHeight = 60;
-	// tableOutlineElement.style.minHeight = `${Math.min(selectionListHeight, maxMinHeight)}rem`;
-
 	const blacklist = ['partid', 'parttype', 'manufacturer', 'model', 'price', 'chipsetid', 'smt', 'psu', 'firstword', 'cas', 'size'];
 	const pageSize = 15;
 	const { id } = useParams();

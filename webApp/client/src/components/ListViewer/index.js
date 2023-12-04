@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Spinner } from 'react-bootstrap';
 import PageTitleContext from '../../context/pageTitleContext';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Details from '../Details';
 
 const ListViewer = () => {
     const componentNames = ["CPU", "CPU Cooler", "Motherboard", "Memory", "Graphics Card", "Storage", "Case", "Power Supply"];
@@ -19,6 +22,8 @@ const ListViewer = () => {
     const [configuratorLoading, setcConfiguratorLoading] = useState(false);
     const [listInfoLoading, setListInfoLoading] = useState(false);
     const [listTDPLoading, setListTDPLoading] = useState(false);
+    const [showDetailModal, setShowDetailModal] = useState(false);
+	const [detailPart, setDetailPart] = useState(null);
 
     const { listid } = useParams();
 
@@ -90,9 +95,39 @@ const ListViewer = () => {
                 console.error('Error fetching list TDP!', error);
             });
     };
+
+    const handleShowDetailModal = async (e, partl) => {
+		e.preventDefault();
+		setDetailPart(partl);
+		setShowDetailModal(true);
+	}
+	const handleCloseDetailModal = () => {
+		setDetailPart(null);
+		setShowDetailModal(false);
+	}
     
     return (
         <>
+            <Modal show={showDetailModal} onHide={handleCloseDetailModal} className="wide-modal">
+                <Modal.Header closeButton>
+                <Modal.Title>{detailPart?.manufacturer} {detailPart?.model} Details</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {detailPart ? (
+                        <Details
+                            {...detailPart}
+                        />
+                    ) : (
+                        <Spinner animation="border" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </Spinner>
+                    )}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={handleCloseDetailModal}>Close</Button>
+                    {/* <Button variant="primary" href={`/part/${detailPart?.partid}`}>Go to part</Button> */}
+                </Modal.Footer>
+            </Modal>
             <div className='Page-Content-Container'>
                 { configuratorLoading ? 
                     (
@@ -113,7 +148,7 @@ const ListViewer = () => {
                                 {parts.map((part, index) => (
                                     <tr key={index} className='Table-Base-TR'>
                                         <td id='TD-Start'><strong>{part.name}</strong></td>
-                                        <td>{part.model}</td>
+                                        <td><Link className="btn text-primary" onClick={(e) => handleShowDetailModal(e, part)}>{part.model}</Link></td>
                                         <td>{part.manufacturer}</td>
                                         <td id='TD-End'>{part.price}</td>
                                     </tr>
