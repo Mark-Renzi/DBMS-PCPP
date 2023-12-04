@@ -51,7 +51,7 @@
 .filters-container{
     border: 0.5px solid gainsboro;
     border-radius: 0.5rem;
-    height: 45rem;
+    height: 52.75rem;
 }
 
 .selection-list {
@@ -71,7 +71,7 @@
     border-radius: 0.5rem;
     border: 0.5px solid gainsboro;
     padding: 2rem;
-    min-height: 45rem;
+    height: 52.75rem;
 }
 
 .filters-table {
