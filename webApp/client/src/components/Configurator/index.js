@@ -45,7 +45,6 @@ const Configurator = () =>{
             return total;
         }, 0);
         setListInfo({ ...listInfo, totalprice: totalPrice.toFixed(2) });
-        updatePageTitle(listInfo.name);
     }, [parts]);
 
     const addComponent = (index) => {
@@ -94,6 +93,7 @@ const Configurator = () =>{
         axios.get(`/api/listinfo/${listid}`)
             .then(response => {
                 setListInfo(response.data);
+                updatePageTitle(response?.data.name || "Configurator");
                 setListInfoLoading(false);
             })
             .catch(error => {
