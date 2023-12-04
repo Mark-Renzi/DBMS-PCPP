@@ -132,7 +132,7 @@ const Details = ({ partid }) => {
                         <div className='next-to'>{specs.boostclock && <><dt>Boost Clock:</dt><dd>{specs.boostclock} MHz</dd></>}</div>
                         <div className='next-to'>{specs.graphics && <><dt>Graphics:</dt><dd>{specs.graphics}</dd></>}</div>
                         <div className='next-to'>{specs.socket && <><dt>Socket:</dt><dd>{specs.socket}</dd></>}</div>
-                        <div className='next-to'><dt>TDP:</dt><dd>{specs.tdp} W</dd></div>
+                        <div className='next-to'><dt>TDP:</dt><dd>{specs?.tdp || "Unknown"} W</dd></div>
                         {specs.smt !== null && specs.smt !== "" && (
                             <div className='next-to'>
                                 {specs.smt && (
@@ -189,7 +189,7 @@ const Details = ({ partid }) => {
                         <div className='next-to'><dt>Boost Clock:</dt><dd>{specs.boostclock} MHz</dd></div>
                         <div className='next-to'><dt>Length:</dt><dd>{specs.length} mm</dd></div>
                         <div className='next-to'><dt>Color:</dt><dd>{specs.color}</dd></div>
-                        <div className='next-to'><dt>TDP:</dt><dd>{specs.tdp} W</dd></div>
+                        <div className='next-to'><dt>TDP:</dt><dd>{specs?.tdp || "Unknown"} W</dd></div>
                     </div>
                 );
             case 5:
