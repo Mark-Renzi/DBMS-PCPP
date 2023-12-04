@@ -435,7 +435,7 @@ const Browse = () =>{
 							{id && id < 8 && id >= 0 ?
 								<></>
 								:
-								<div className="vertical-group">
+								<div className="vertical-group left-start">
 									<p>
 										Computer part:
 									</p>
@@ -479,7 +479,7 @@ const Browse = () =>{
 									/>
 								</div>
 							</div>
-							<div className="vertical-group">
+							<div className="vertical-group left-start">
 								<p>
 									Select Manufacturer(s):
 								</p>
@@ -548,7 +548,7 @@ const Browse = () =>{
 
 							{
 							Object.entries(dynamicFilters.categorical).map(([key, filter]) => (
-								<div key={key} className="vertical-group">
+								<div key={key} className="vertical-group left-start">
 								<p>
 									Select {key.charAt(0).toUpperCase() + key.slice(1)}:
 								</p>
