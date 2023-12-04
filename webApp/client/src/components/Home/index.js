@@ -32,18 +32,15 @@ const HomePage = () =>{
 		setListsLoading(true);
         const url = "/api/lists";
         let response;
-		console.log("Getting lists")
         try {
             response = await axios.get(url);
 			if (response.status !== 200) {
-				console.log("2")
 				setListsLoading(false);
 				return;
 			}
 			setUserLists(response.data);
 			setListsLoading(false);
         } catch {
-			console.log("1")
 			setListsLoading(false);
             console.error("Error fetching lists");
         }
@@ -62,7 +59,6 @@ const HomePage = () =>{
 	
 		try {
 			const response = await axios.post(url, data);
-			console.log(response.data);
 			return response.data.listid;
 		} catch (error) {
 			console.error("Error posting list", error);
@@ -97,7 +93,6 @@ const HomePage = () =>{
 		
 			try {
 				const response = await axios.post(url, data);
-				console.log(response.data);
 				return response.data.listid;
 			} catch (error) {
 				console.error("Error editing list", error);

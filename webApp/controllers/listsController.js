@@ -140,7 +140,6 @@ const getListsWithPart = async (req, res, db) => {
             WHERE partid = $1
         );      
       `, [partID]);
-      console.log(partslists?.rows);
       return res.status(200).json(partslists?.rows);
   } catch (e){
       console.log(e);
