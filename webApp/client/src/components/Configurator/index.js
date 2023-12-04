@@ -272,7 +272,7 @@ const Configurator = () =>{
                                 <span><strong>CPU + GPU TDP: </strong>{listTDP.sum_tdp || 0} W</span>
                                 <span><strong>Total Price:</strong> ${listInfo.totalprice}</span>
                             </div>
-                            {listInfo.description !== '' ? (
+                            {listInfo?.description && listInfo.description !== '' ? (
 									<span className='Info-Desc'>{listInfo.description}</span>
                                 ) : (
 									null
