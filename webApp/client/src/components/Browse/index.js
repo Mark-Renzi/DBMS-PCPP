@@ -378,7 +378,7 @@ const Browse = () =>{
 		let mapping;
 		if (key === 'efficiency') {
 			mapping = efficiencyMapping;
-		} else if (key === 'formfactor') {
+		} else if (key === 'formfactor' && part != 'Storage') {
 			mapping = formFactorMapping;
 		} else if (key === 'modular') {
 			mapping = modularMapping;
