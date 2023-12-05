@@ -104,7 +104,7 @@ const HomePage = () =>{
 	}
 
 	const handleNewListClick = async () => {
-		const loggedIn = localStorage.getItem('username');
+		const loggedIn = localStorage.getItem('username') || userLists.length > 0;
 		if (!loggedIn) {
 			window.location.href = 'http://localhost:3001/auth/github';
 		}
@@ -201,7 +201,7 @@ const HomePage = () =>{
 			</Modal>
 
 			<div className="ListsContainer">
-				{localStorage.getItem('username') ? (
+				{localStorage.getItem('username') || userLists.length > 0 ? (
 					<button className='card-button card-new-center' onClick={handleNewListClick} title='Create a new list'>
 						<FontAwesomeIcon className="card-new" icon={faPlus} />
 					</button>
