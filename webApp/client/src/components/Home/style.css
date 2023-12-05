@@ -127,11 +127,12 @@
 }
 
 .logged-out-card {
-    margin-top: 0rem;
+    margin: 0rem;
     width: 40rem;
     height: var(--card-size);
     font-size: x-large;
     color: var(--text-c);
+    margin-right: -2rem;
 }
 
 .card-delete {
