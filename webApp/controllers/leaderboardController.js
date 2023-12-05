@@ -58,7 +58,7 @@ const getListScores = async (req, res, db) => {
         pl.name,
         pl.description,
         pl.listid,
-        COALESCE(SUM(benchmark.score), 0) AS listscore
+        COALESCE(SUM(benchmark.score * lc.quantity), 0) AS listscore
     FROM partslist pl
     LEFT JOIN listcontains lc ON pl.listid = lc.listid
     LEFT JOIN computerpart cp ON lc.partid = cp.partid
