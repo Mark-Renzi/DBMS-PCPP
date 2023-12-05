@@ -6,13 +6,11 @@
 }
 
 .ListsContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     background-color: var(--background-c);
     gap: 2rem;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-size), max-content));
+    justify-content: center;
 }
   
 .card-body {
