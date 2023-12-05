@@ -183,7 +183,7 @@ const Configurator = () =>{
                 <td>{part.name}</td>
                 {/* + Choose {part.name}</button>} */}
                 <td>{part.model ? 
-                    <Link className='btn text-primary' onClick={() => handleShowDetailModal(part)}>{part.model}</Link> 
+                    <Link className='btn text-primary' onClick={() => handleShowDetailModal(part)}>{part.chipset} {part.model}</Link> 
                     : 
                     <button className='btn btn-primary' onClick={() => addComponent(index)}>Add Part</button>}
                 </td>
