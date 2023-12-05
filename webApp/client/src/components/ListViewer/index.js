@@ -149,7 +149,7 @@ const ListViewer = () => {
                                 {parts.map((part, index) => (
                                     <tr key={index} className='Table-Base-TR'>
                                         <td><strong>{part.name}</strong></td>
-                                        <td><Link className="btn text-primary" onClick={(e) => handleShowDetailModal(e, part)}>{part.model}</Link></td>
+                                        <td><Link className="btn text-primary" onClick={(e) => handleShowDetailModal(e, part)}>{part.chipset} {part.model}</Link></td>
                                         <td>{part.manufacturer}</td>
                                         <td>{part.quantity}</td>
                                         <td>${(part.price * part.quantity).toFixed(2)}</td>

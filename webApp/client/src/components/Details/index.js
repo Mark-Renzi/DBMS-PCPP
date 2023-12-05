@@ -127,7 +127,6 @@ const Details = ({ partid }) => {
                 return (
                     <div>
                         <div className='next-to'><dt>Price:</dt><dd>${specs.price}</dd></div>
-                        <div className='next-to'><dt>Chipset:</dt><dd>{specs.chipset}</dd></div>
                         <div className='next-to'><dt>Cores:</dt><dd>{specs.cores}</dd></div>
                         <div className='next-to'><dt>Core Clock:</dt><dd>{specs.coreclock} MHz</dd></div>
                         <div className='next-to'>{specs.boostclock && <><dt>Boost Clock:</dt><dd>{specs.boostclock} MHz</dd></>}</div>
