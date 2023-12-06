@@ -171,7 +171,7 @@ const Browse = () =>{
 		setPart(partType);
 		updatePageTitle("Search For " + partType);
 		setSearchQueryParam('');
-		setSafeCurrentPage(currentPage);
+		setSafeCurrentPage(1);
 	}
 
 	const handleChangeMinMaxPrice = (event, newValue) => {
