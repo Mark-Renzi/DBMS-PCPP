@@ -58,7 +58,8 @@ const browse = async (req, res, db) => {
             // match word partial against '${manufacturer} ${model}'. e.g. 'MD RYZEN' matches 'AMD Ryzen 5 3600'
             if (fuzzySearch) {
                 if (parttype == 4){
-                    conditions.push(`(manufacturer || ' ' || chipset || ' ' || model ILIKE $${values.length + 1})`);
+                    const value = values.length + 1;
+                    conditions.push(`((manufacturer || ' ' || chipset || ' ' || model ILIKE $${value}) OR (manufacturer || ' ' || model || ' ' || chipset ILIKE $${value}))`);
                     values.push(`%${fuzzySearch}%`);
                 } else {
                     conditions.push(`(manufacturer || ' ' || model ILIKE $${values.length + 1})`);
