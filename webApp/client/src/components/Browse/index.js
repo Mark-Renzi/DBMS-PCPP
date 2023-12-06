@@ -48,6 +48,7 @@ const Browse = () =>{
 	const [intermediateNumericalFilters, setIntermediateNumericalFilters] = useState({});
 	const [showDetailModal, setShowDetailModal] = useState(false);
 	const [detailPart, setDetailPart] = useState(null);
+	const [searchQueryParam, setSearchQueryParam] = useState('');
 	const tableRef = useRef(null);
 	const selectionListRef = useRef(null);
 
@@ -106,7 +107,7 @@ const Browse = () =>{
 
 	useEffect(() => {
 		onSubmit();
-	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters]);
+	}, [part, minPrice, maxPrice, orderBy, orderDir, currentPage, selectedManufacturers, dynamicFilters, searchQueryParam]);
 
 	const setSafeCurrentPage = (newPage) => {
 		setCurrentPage(Math.max(1, Math.min(newPage, Math.ceil(totalResultNum / pageSize))));
@@ -169,6 +170,7 @@ const Browse = () =>{
 	const onChangePartType = (partType) => {
 		setPart(partType);
 		updatePageTitle("Search For " + partType);
+		setSearchQueryParam('');
 		setSafeCurrentPage(currentPage);
 	}
 
@@ -212,6 +214,7 @@ const Browse = () =>{
 			orderDir: orderDir,
 			pageNumber: currentPage,
 			limitNumber: pageSize,
+			fuzzySearch: searchQueryParam,
 			dynamicFilters: dynamicData
 		};
 		
@@ -340,6 +343,11 @@ const Browse = () =>{
 		setShowDetailModal(false);
 	}
 
+	const setSearchQuery = (query) => {
+		setSearchQueryParam(query);
+		setSafeCurrentPage(1);
+	}
+
 	const renderFilterOptions = (filterKey, options, selectedValues) => {
 		let mapping, reverseMapping;
 		if (filterKey === 'efficiency') {
@@ -461,6 +469,22 @@ const Browse = () =>{
 									</FormControl>
 								</div>
 							}
+
+							<div className="vertical-group slider">
+								<p>
+									Search:
+								</p>
+								<FormControl sx={{ m: 1, width: 300 }}>
+									<InputLabel htmlFor="search-input">Search</InputLabel>
+									<OutlinedInput
+										id="search-input"
+										type="text"
+										value={searchQueryParam}
+										onChange={(event) => setSearchQuery(event.target.value)}
+										label="Search"
+									/>
+								</FormControl>
+							</div>
 							<div className="vertical-group slider">
 								<p>
 									Price: ${minPrice} - ${maxPrice}

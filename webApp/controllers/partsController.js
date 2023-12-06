@@ -1,7 +1,7 @@
 const partTables = ["CPU", "CPUCooler", "Motherboard", "ram", "GPU", "Storage", "Tower", "PSU"];
 
 const browse = async (req, res, db) => {
-    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber, dynamicFilters } = req.body;
+    let { partType, minPrice, maxPrice, manufacturers, orderBy, orderDir, pageNumber, limitNumber, fuzzySearch, dynamicFilters } = req.body;
 
     pageNumber = parseInt(pageNumber);
     limitNumber = parseInt(limitNumber);
@@ -54,6 +54,14 @@ const browse = async (req, res, db) => {
             conditions.push(`(${manufacturerConditions.join(' OR ')})`);
         }
 
+        if (fuzzySearch && fuzzySearch.length > 0) {
+            // match word partial against '${manufacturer} ${model}'. e.g. 'MD RYZEN' matches 'AMD Ryzen 5 3600'
+            if (fuzzySearch) {
+                conditions.push(`(manufacturer || ' ' || model ILIKE $${values.length + 1})`);
+                values.push(`%${fuzzySearch}%`);
+            }            
+        }
+        
         if (dynamicFilters && Object.keys(dynamicFilters).length > 0) {
             Object.entries(dynamicFilters).forEach(([filterType, filters]) => {
                 Object.entries(filters).forEach(([filterKey, filterValue]) => {
