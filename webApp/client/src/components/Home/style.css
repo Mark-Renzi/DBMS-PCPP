@@ -133,7 +133,6 @@
     height: var(--card-size);
     font-size: x-large;
     color: var(--text-c);
-    margin-right: -2rem;
 }
 
 .card-delete {
